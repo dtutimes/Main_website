@@ -10,6 +10,15 @@ import "assets/demo/react-demo.css";
 // pages
 import Index from "views/Index.js";
 import About from "views/About.js";
+import GalleryLanding from "./views/Gallery/gallery_landing";
+import GalleryFest from './views/Gallery/gallery_fest';
+import YuvaanFest from "./views/Gallery/fests/fest_yuvaan";
+import TimesCanvas from "./views/Gallery/times_canvas/canvas";
+import Seniors from "./views/Gallery/seniors_of_dtu/seniors";
+import AahvaanFest from "./views/Gallery/fests/fest_aahvaan";
+import EngiFest from "./views/Gallery/fests/fest_engi";
+import EngiEvents from "./views/Gallery/fests/engi_envents/engi_event1";
+import FreshersDtu from "./views/Gallery/freshers_of_dtu/freshers";
 
 
 // import NucleoIcons from "views/NucleoIcons.js";
@@ -46,6 +55,49 @@ const Routes = () => (
         <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/about" component={About} />
+            <Route
+            path="/gallery"
+            exact={true}
+            render = {props => <GalleryLanding {...props}/>}
+            />
+            <Route
+                path="/gallery/fest"
+                exact={true}
+                render = {props => <GalleryFest {...props}/>}
+            />
+            <Route
+                path="/gallery/seniors_of_dtu"
+                exact={true}
+                render = {props => <Seniors {...props}/>}
+            />
+            <Route
+                path="/gallery/freshers_of_dtu"
+                exact={true}
+                render = {props => <FreshersDtu {...props}/>}
+            />
+            <Route
+                path="/gallery/fest/yuvaan"
+                exact={true}
+                render = {props => <YuvaanFest {...props}/>}
+            />
+            <Route
+                path="/gallery/fest/aahvaan"
+                exact={true}
+                render = {props => <AahvaanFest {...props}/>}
+            />
+            <Route
+                path="/gallery/times_canvas"
+                render = {props => <TimesCanvas {...props}/>}
+            />
+            <Route
+                path="/gallery/fest/engifest"
+                exact= {true}
+                render = {props => <EngiFest {...props}/>}
+            />
+            <Route
+                path="/gallery/fest/engifest/:slug"
+                render = {props => <EngiEvents {...props}/>}
+            />
         </Switch>
         <MainFooter />
     </div>
