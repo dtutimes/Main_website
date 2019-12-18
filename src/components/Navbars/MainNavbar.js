@@ -97,6 +97,9 @@ function ColorNavbar() {
                             <NavItem>
                                 <NavLink href="/gallery">gallery</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/team">team</NavLink>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Container>
