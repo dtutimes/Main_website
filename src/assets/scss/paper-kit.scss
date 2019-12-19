@@ -94,3 +94,14 @@
 
 // React Differences
 @import "react/react-differences";
+
+
+.navbar-transparent .navlink, [class*="bg"] {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+a {
+    color: #66615B;
+    font-weight: 700;
+}

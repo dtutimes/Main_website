@@ -7,9 +7,12 @@ import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
 import "assets/demo/demo.css";
 import "assets/demo/react-demo.css";
+
 // pages
-import Index from "views/Index.js";
-import About from "views/About.js";
+import Index from "views/Index";
+import About from "views/About";
+import Gallery from "views/Gallery";
+
 import GalleryLanding from "./views/Gallery/gallery_landing";
 import GalleryFest from './views/Gallery/gallery_fest';
 import YuvaanFest from "./views/Gallery/fests/fest_yuvaan";
@@ -56,7 +59,20 @@ const Routes = () => (
         <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/about" component={About} />
-            <Route
+            <Route path="/editions" component={About} />
+            <Route path="/about" component={About} />
+            <Route path="/gallery" component={Gallery} />
+            {/* <Route path="/gallery" compoent={About} /> */}
+            
+        </Switch>
+        <MainFooter />
+    </div>
+);
+
+
+ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
+
+{/* <Route
             path="/gallery"
             exact={true}
             render = {props => <GalleryLanding {...props}/>}
@@ -102,14 +118,8 @@ const Routes = () => (
             <Route
                 path="/team"
                 render = {props => <SectionTeam {...props}/>}
-            />
-        </Switch>
-        <MainFooter />
-    </div>
-);
+            /> */}
 
-
-ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
 
 // ReactDOM.render(
 //   <BrowserRouter>
