@@ -12,7 +12,8 @@ import "assets/demo/react-demo.css";
 import Index from "views/Index";
 import About from "views/About";
 import Gallery from "views/Gallery";
-
+import BlogPosts from "views/BlogPosts";
+import BlogSingle from "views/BlogSingle"
 // import GalleryLanding from "./views/Gallery/gallery_landing";
 // import GalleryFest from './views/Gallery/gallery_fest';
 // import YuvaanFest from "./views/Gallery/fests/fest_yuvaan";
@@ -62,8 +63,8 @@ const Routes = () => (
             <Route path="/editions" component={About} />
             <Route path="/about" component={About} />
             <Route path="/gallery" component={Gallery} />
-            {/* <Route path="/gallery" compoent={About} /> */}
-            
+            <Route path="/story" exact={true} component={BlogPosts} />
+            <Route path="/story/" component={BlogSingle} />
         </Switch>
         <MainFooter />
     </div>
@@ -73,7 +74,7 @@ const Routes = () => (
 ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
 
 
-{/* <Route
+/* <Route
             path="/gallery"
             exact={true}
             render = {props => <GalleryLanding {...props}/>}
@@ -119,7 +120,7 @@ ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementBy
             <Route
                 path="/team"
                 render = {props => <SectionTeam {...props}/>}
-            /> */}
+            /> */
 
 
 // ReactDOM.render(
