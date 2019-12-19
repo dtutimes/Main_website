@@ -83,7 +83,7 @@ export default class GalleryLanding extends React.Component {
           {this.state.albums &&
             this.state.albums.map(album => {
               const style = {
-                backgroundImage: 'url("' + album.album_imgUrl + '")',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),'+ 'url("' + album.album_imgUrl + '")',
                 backgroundSize: "cover",
                 
               };
@@ -93,9 +93,9 @@ export default class GalleryLanding extends React.Component {
                   key={album.slug}
                   style={style}
                 >
-                  <h3 className="" >
-                    <Link className="item-inner">{album.name}</Link>
-                  </h3>
+                  <h5 className="">
+                    <Link className="item-inner" to={`gallery/${album.slug}`}>{album.name}</Link>
+                  </h5>
                 </div>
               );
             })}
