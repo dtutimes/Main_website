@@ -14,6 +14,9 @@ import About from "views/About";
 import Gallery from "views/Gallery";
 import GallerySingle from "views/GallerySingle";
 
+import BlogPosts from "views/BlogPosts";
+import BlogSingle from "views/BlogSingle"
+// import GalleryLanding from "./views/Gallery/gallery_landing";
 // import GalleryFest from './views/Gallery/gallery_fest';
 // import YuvaanFest from "./views/Gallery/fests/fest_yuvaan";
 // import TimesCanvas from "./views/Gallery/times_canvas/canvas";
@@ -63,7 +66,8 @@ const Routes = () => (
             <Route path="/about" component={About} />
             <Route exact path="/gallery" component={Gallery} />
             <Route path="/gallery/:slug" component={GallerySingle} />
-            
+            <Route path="/story" exact={true} component={BlogPosts} />
+            <Route path="/story/" component={BlogSingle} />
         </Switch>
         <MainFooter />
     </div>
