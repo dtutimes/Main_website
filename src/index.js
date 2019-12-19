@@ -19,6 +19,7 @@ import AahvaanFest from "./views/Gallery/fests/fest_aahvaan";
 import EngiFest from "./views/Gallery/fests/fest_engi";
 import EngiEvents from "./views/Gallery/fests/engi_envents/engi_event1";
 import FreshersDtu from "./views/Gallery/freshers_of_dtu/freshers";
+import SectionTeam from './views/sections-sections/SectionTeam'
 
 
 // import NucleoIcons from "views/NucleoIcons.js";
@@ -97,6 +98,10 @@ const Routes = () => (
             <Route
                 path="/gallery/fest/engifest/:slug"
                 render = {props => <EngiEvents {...props}/>}
+            />
+            <Route
+                path="/team"
+                render = {props => <SectionTeam {...props}/>}
             />
         </Switch>
         <MainFooter />
