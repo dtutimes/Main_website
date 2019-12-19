@@ -5,19 +5,19 @@ import AboutUsHeader from "components/Headers/AboutUsHeader";
 import Section1 from "./about-sections/Section-1.js";
 import Section2 from "./about-sections/Section-2.js";
 
-// sections for this page
-import SectionSummary from "./presentation-sections/SectionSummary.js";
-import SectionComponents from "./presentation-sections/SectionComponents.js";
-import SectionCards from "./presentation-sections/SectionCards.js";
-import SectionContent from "./presentation-sections/SectionContent.js";
-import SectionSections from "./presentation-sections/SectionSections.js";
-import SectionExamples from "./presentation-sections/SectionExamples.js";
+// // sections for this page
+// import SectionSummary from "./presentation-sections/SectionSummary.js";
+// import SectionComponents from "./presentation-sections/SectionComponents.js";
+// import SectionCards from "./presentation-sections/SectionCards.js";
+// import SectionContent from "./presentation-sections/SectionContent.js";
+// import SectionSections from "./presentation-sections/SectionSections.js";
+// import SectionExamples from "./presentation-sections/SectionExamples.js";
 
-import SectionFreeDemo from "./presentation-sections/SectionFreeDemo.js";
-import SectionResponsive from "./presentation-sections/SectionResponsive.js";
-import SectionOverview from "./presentation-sections/SectionOverview.js";
-import SectionTestimonials from "./presentation-sections/SectionTestimonials.js";
-import SectionSharing from "./presentation-sections/SectionSharing.js";
+// import SectionFreeDemo from "./presentation-sections/SectionFreeDemo.js";
+// import SectionResponsive from "./presentation-sections/SectionResponsive.js";
+// import SectionOverview from "./presentation-sections/SectionOverview.js";
+// import SectionTestimonials from "./presentation-sections/SectionTestimonials.js";
+// import SectionSharing from "./presentation-sections/SectionSharing.js";
 
 const About = () => {
     document.documentElement.classList.remove("nav-open");
