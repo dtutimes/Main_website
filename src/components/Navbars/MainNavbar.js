@@ -92,7 +92,7 @@ function ColorNavbar() {
                                 <NavLink href="/edition">edition</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/blog">blog</NavLink>
+                                <NavLink href="/story">blog</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/gallery">gallery</NavLink>

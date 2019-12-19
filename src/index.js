@@ -20,8 +20,8 @@ import EngiFest from "./views/Gallery/fests/fest_engi";
 import EngiEvents from "./views/Gallery/fests/engi_envents/engi_event1";
 import FreshersDtu from "./views/Gallery/freshers_of_dtu/freshers";
 import SectionTeam from './views/sections-sections/SectionTeam'
-
-
+import Posts from "./views//BlogPosts";
+import BlogSingle from "./views//BlogSingle";
 // import NucleoIcons from "views/NucleoIcons.js";
 // import Sections from "views/Sections.js";
 // import Presentation from "views/Presentation.js";
@@ -102,6 +102,15 @@ const Routes = () => (
             <Route
                 path="/team"
                 render = {props => <SectionTeam {...props}/>}
+            />
+            <Route 
+                path="/story"
+                exact={true}
+                render = {props => <Posts {...props}/>}
+            />
+            <Route 
+                path="/story/"
+                render = {props => <BlogSingle {...props}/>}
             />
         </Switch>
         <MainFooter />
