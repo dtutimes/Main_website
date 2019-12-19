@@ -11,7 +11,7 @@ import "assets/demo/react-demo.css";
 // pages
 import Index from "views/Index";
 import About from "views/About";
-import Gallery from "views/Gallery";
+import GalleryIndex from "views/GalleryIndex";
 import GallerySingle from "views/GallerySingle";
 
 import BlogPosts from "views/BlogPosts";
@@ -64,7 +64,7 @@ const Routes = () => (
             <Route path="/about" component={About} />
             <Route path="/editions" component={About} />
             <Route path="/about" component={About} />
-            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
             <Route path="/story" exact={true} component={BlogPosts} />
             <Route path="/story/" component={BlogSingle} />

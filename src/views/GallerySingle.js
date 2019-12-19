@@ -2,23 +2,38 @@ import React from "react";
 import Axios from "axios";
 
 // // Sections and Components
-// import GallerySingleHeader from "components/Headers/GallerySingleHeader";
-// import GalleryHeader from "components/Headers/GalleryHeader";
-// import GalleryCarousel from "./gallery-sections/GalleryCarousel";
+import GallerySingleHeader from "components/Headers/GallerySingleHeader";
+import GalleryCarousel from "./gallery-sections/GalleryCarousel";
+import GalleryImages from "./gallery-sections/GalleryImages";
 
 class GallerySingle extends React.Component {
-  componentWillMount = () => {
-    console.log(this.props.match.params);
-    const { slug } = this.props.match.params;
-    Axios.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
-      this.setState({ slug: slug, album: res.data });
-      //   console.log(this.state)
-    });
+  state = {
+    album: {}
   };
 
+  componentDidMount() {
+    const { slug } = this.props.match.params;
+    Axios.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
+      this.setState({ album: res.data });
+      //   console.log(this.state)
+    });
+    console.log(slug);
+  }
+
   render() {
-    //   console.log(this.props.match)
-    return <>{this.props.match.params.slug}</>;
+    console.log(this.state);
+    const {album} = this.state
+    return (
+      <>
+        <GallerySingleHeader
+          title={album.name}
+          biliner={album.biliner}
+          img={album.album_imgUrl}
+        />
+        {album.subs_info && album.subs_info.length > 0 && <GalleryCarousel albums={album.subs_info} /> }
+        {album.image_info && album.image_info.length > 0 && <GalleryImages images={album.image_info} />}
+      </>
+    );
   }
 }
 
@@ -49,11 +64,7 @@ class GallerySingle extends React.Component {
 //       <>
 //         {album.name && (
 //           <>
-//             <GallerySingleHeader
-//               title={album.name}
-//               biliner={album.biliner}
-//               img={album.album_imgUrl}
-//             />
+//
 //             <GalleryCarousel albums={album} />
 //           </>
 //         )}

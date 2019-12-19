@@ -38,22 +38,21 @@ class Single extends Component {
         console.log(err);
       });
 
-      //call for related posts
-      instance
+    //call for related posts
+    instance
       .get("/story?page=1")
       .then(res => {
         let temp = [{ ...res.data }];
         let resData = temp[0]["data"];
-        console.log("hhhhhhhhhhhhhhhhh")
+        console.log("hhhhhhhhhhhhhhhhh");
         console.log(resData);
         this.setState({
-          blogPosts: resData,
+          blogPosts: resData
         });
       })
       .catch(err => {
         console.log(err);
       });
-
   }
   render() {
     var { currentBlogData, blogBody, blogPosts } = this.state;
@@ -61,15 +60,15 @@ class Single extends Component {
       console.log("no data");
       return <div></div>;
     }
-    if(!blogPosts) {
-        console.log("no data");
-        return <div></div>;
+    if (!blogPosts) {
+      console.log("no data");
+      return <div></div>;
     }
     var htmlToReactParser = new HtmlToReactParser();
     blogBody = htmlToReactParser.parse(currentBlogData.body);
     return (
       <>
-      <AboutUsHeader />
+        <AboutUsHeader />
         {/* <ColorNavbar /> */}
         <div className="wrapper">
           <div className="main">
@@ -83,18 +82,18 @@ class Single extends Component {
                 <Row>
                   <Col className="ml-auto mr-auto" md="8">
                     <div className="text-center">
-                    <Row md="8">
-                          <a>
-                            <img
-                              alt="..."
-                              className="img-rounded img-responsive"
-                              src={currentBlogData && currentBlogData.imgUrl}
-                            />
-                          </a>
-                        </Row>
-                        <br />
-                        <br />
-                        <br />
+                      <Row md="8">
+                        <a>
+                          <img
+                            alt="..."
+                            className="img-rounded img-responsive"
+                            src={currentBlogData && currentBlogData.imgUrl}
+                          />
+                        </a>
+                      </Row>
+                      <br />
+                      <br />
+                      <br />
                       <Badge className="main-tag" color="warning">
                         Trending
                       </Badge>
@@ -104,10 +103,8 @@ class Single extends Component {
                       </h6>
                     </div>
                   </Col>
-                  <Col className="ml-auto mr-auto" md="8"> 
-                    <div className="article-content">
-                      {blogBody}
-                    </div>
+                  <Col className="ml-auto mr-auto" md="8">
+                    <div className="article-content">{blogBody}</div>
                     <hr />
                     <Container>
                       <Row>
@@ -116,7 +113,7 @@ class Single extends Component {
                             className="pull-left"
                             href="#pablo"
                             onClick={e => e.preventDefault()}
-                          > 
+                          >
                             <div className="avatar big-avatar">
                               <Media
                                 alt="..."
@@ -196,4 +193,3 @@ class Single extends Component {
 }
 
 export default Single;
-

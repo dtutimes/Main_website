@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 
-import GalleryCarousel from './GalleryCarousel';
+import GalleryCarousel from './gallery-sections/GalleryCarousel';
+import GalleryHeader from "components/Headers/GalleryHeader";
 
 export default class GalleryLanding extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class GalleryLanding extends React.Component {
     // console.log(this.state);
     return (
       <>
+        <GalleryHeader />
         {this.state.albums.length && <GalleryCarousel albums={this.state.albums} /> }
       </>
     );
