@@ -21,6 +21,7 @@ import {
 
 // core components
 import TeamCard from 'components/TeamCard/teamCard';
+import TeamHeader from 'components/Headers/ProfilePageHeader';
 
 export default class SectionTeam extends React.Component {
   state = {
@@ -46,6 +47,7 @@ export default class SectionTeam extends React.Component {
   return (
     <>
       <div className="section section-team cd-section" id="teams">
+        <TeamHeader />
         {/* ********* TEAM 1 *********/}
         {/* <div className="team-1">
           <Container>
