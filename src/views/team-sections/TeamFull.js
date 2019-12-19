@@ -2,12 +2,6 @@ import React from "react";
 import axios from "axios";
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardImg,
-  CardTitle,
   NavItem,
   NavLink,
   Nav,

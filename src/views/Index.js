@@ -1,12 +1,15 @@
 import React from 'react';
 import IndexHeader from "components/Headers/IndexHeader.js";
-import Section1 from "./index-sections/Section1";
-
+import Section1 from "./homepage-sections/Section1";
+import EditionCards from "./homepage-sections/cards";
 const Index = () => (
-    <div>
+    <>
         <IndexHeader />
+        
+        {/* <EditionCards /> */}
+        
         <Section1 />
-    </div>
+    </>
 );
 
 export default Index;

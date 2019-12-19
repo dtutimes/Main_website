@@ -198,7 +198,7 @@ class BlogPosts extends Component {
                         onClick={this.handlePrevClick}
                       >
                         <i className="fa fa-angle-left mr-1" />
-                        Previous Posts
+                        Previous
                       </Button>
                     </div>
                     <div className="pull-right">
@@ -209,7 +209,7 @@ class BlogPosts extends Component {
                         onClick={this.handleNextClick}
 
                       >
-                        Next Posts <i className="fa fa-angle-right" />
+                        Next <i className="fa fa-angle-right" />
                       </Button>
                     </div>
                   </Col>

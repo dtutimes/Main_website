@@ -55,7 +55,7 @@ import MainFooter from "components/Footers/MainFooter";
 
 
 const Routes = () => (
-    <div>
+    <>
         <MainNavbar />
         <Switch>
             <Route exact path="/" component={Index} />
@@ -69,7 +69,7 @@ const Routes = () => (
             <Route path="/team" component={Team} />
         </Switch>
         <MainFooter />
-    </div>
+    </>
 );
 
 

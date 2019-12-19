@@ -14,12 +14,13 @@ class Single extends Component {
     blogBody: "",
     nextBlogSlug: "",
     currentblogSlug: "",
-    blogPosts: []
+    blogPosts: [],
+    loaded: false
   };
   componentDidMount() {
     var slug = window.location.pathname;
-    console.log(window.location)
-    console.log(slug)
+    console.log(window.location);
+    console.log(slug);
     instance
       .get(slug)
       .then(res => {
@@ -47,7 +48,8 @@ class Single extends Component {
         let temp = [{ ...res.data }];
         let resData = temp[0]["data"];
         this.setState({
-          blogPosts: resData
+          blogPosts: resData,
+          loaded: true
         });
       })
       .catch(err => {
@@ -55,91 +57,95 @@ class Single extends Component {
       });
   }
   render() {
-    var { currentBlogData, blogBody, blogPosts } = this.state;
-    if (!currentBlogData) {
-      console.log("no data");
-      return <div></div>;
-    }
-    if (!blogPosts) {
-      console.log("no data");
-      return <div></div>;
-    }
-    var htmlToReactParser = new HtmlToReactParser();
-    blogBody = htmlToReactParser.parse(currentBlogData.body);
-    return (
-      <>
-        <AboutUsHeader />
-        {/* <ColorNavbar /> */}
-        <div className="wrapper">
-          <div className="main">
-            <div className="section section-white">
-              <Container>
-                <Row>
-                  <Col className="ml-auto mr-auto text-center title" md="6">
-                    <h2>{currentBlogData && currentBlogData.title}</h2>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col className="ml-auto mr-auto" md="8">
-                    <div className="text-center">
-                      <Row md="8">
-                        <a>
-                          <img
-                            alt="..."
-                            className="img-rounded img-responsive"
-                            src={currentBlogData && currentBlogData.imgUrl}
-                          />
-                        </a>
-                      </Row>
-                      <br />
-                      <br />
-                      <br />
-                      <Badge className="main-tag" color="warning">
-                        Trending
-                      </Badge>
-                      <h6 className="title-uppercase">
-                        {currentBlogData.media &&
-                          " " + currentBlogData.media[0].created_at}
-                      </h6>
-                    </div>
-                  </Col>
-                  <Col className="ml-auto mr-auto" md="8">
-                    <div className="article-content">{blogBody}</div>
-                    <hr />
-                    <Container>
-                      <Row>
-                        <Media>
-                          <a
-                            className="pull-left"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
-                          >
-                            <div className="avatar big-avatar">
-                              <Media
-                                alt="..."
-                                object
-                                src={require("assets/img/faces/kaci-baum-2.jpg")}
-                              />
-                            </div>
+    if (this.state.loaded === true) {
+      var { currentBlogData, blogBody, blogPosts } = this.state;
+      if (!currentBlogData) {
+        console.log("no data");
+        return <div></div>;
+      }
+      if (!blogPosts) {
+        console.log("no data");
+        return <div></div>;
+      }
+      var htmlToReactParser = new HtmlToReactParser();
+      blogBody = htmlToReactParser.parse(currentBlogData.body);
+      return (
+        <>
+          <AboutUsHeader />
+          {/* <ColorNavbar /> */}
+          <div className="wrapper">
+            <div className="main">
+              <div className="section section-white">
+                <Container>
+                  <Row>
+                    <Col className="ml-auto mr-auto text-center title" md="6">
+                      <h2>{currentBlogData && currentBlogData.title}</h2>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col className="ml-auto mr-auto" md="8">
+                      <div className="text-center">
+                        <Row md="8">
+                          <a>
+                            <img
+                              alt="..."
+                              className="img-rounded img-responsive"
+                              src={currentBlogData && currentBlogData.imgUrl}
+                            />
                           </a>
-                          <Media body>
-                            <Media heading>
-                              {currentBlogData.user && (
-                                <span>{currentBlogData.user.name}</span>
-                              )}
+                        </Row>
+                        <br />
+                        <br />
+                        <br />
+                        <Badge className="main-tag" color="warning">
+                          Trending
+                        </Badge>
+                        <h6 className="title-uppercase">
+                          {currentBlogData.media &&
+                            " " + currentBlogData.media[0].created_at}
+                        </h6>
+                      </div>
+                    </Col>
+                    <Col className="ml-auto mr-auto" md="8">
+                      <div className="article-content">{blogBody}</div>
+                      <hr />
+                      <Container>
+                        <Row>
+                          <Media>
+                            <a
+                              className="pull-left"
+                              href="#pablo"
+                              onClick={e => e.preventDefault()}
+                            >
+                              <div className="avatar big-avatar">
+                                <Media
+                                  alt="..."
+                                  object
+                                  src={
+                                    currentBlogData.user &&
+                                    currentBlogData.user.imgUrl
+                                  }
+                                />
+                              </div>
+                            </a>
+                            <Media body>
+                              <Media heading>
+                                {currentBlogData.user && (
+                                  <span>{currentBlogData.user.name}</span>
+                                )}
+                              </Media>
+                              <p>
+                                {currentBlogData.user && (
+                                  <span>{currentBlogData.user.bio}</span>
+                                )}
+                              </p>
                             </Media>
-                            <p>
-                              {currentBlogData.user && (
-                                <span>{currentBlogData.user.bio}</span>
-                              )}
-                            </p>
                           </Media>
-                        </Media>
-                      </Row>
-                    </Container>
-                  </Col>
-                </Row>
-                {/* <Row>
+                        </Row>
+                      </Container>
+                    </Col>
+                  </Row>
+                  {/* <Row>
                   <div className="related-articles">
                     <h3 className="title">Recent Articles</h3>
                     <legend />
@@ -183,12 +189,19 @@ class Single extends Component {
                     </Container>
                   </div>
                 </Row> */}
-              </Container>
+                </Container>
+              </div>
             </div>
           </div>
-        </div>
-      </>
-    );
+        </>
+      );
+    } else {
+      return (
+        <>
+          <p>Loading...</p>
+        </>
+      );
+    }
   }
 }
 
