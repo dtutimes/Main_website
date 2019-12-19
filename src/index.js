@@ -66,8 +66,8 @@ const Routes = () => (
             <Route path="/about" component={About} />
             <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
-            <Route path="/story" exact={true} component={BlogPosts} />
-            <Route path="/story/" component={BlogSingle} />
+            <Route exact path="/blog" component={BlogPosts} />
+            <Route path="/story/:slug" component={BlogSingle} />
         </Switch>
         <MainFooter />
     </div>

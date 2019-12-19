@@ -18,6 +18,8 @@ class Single extends Component {
   };
   componentDidMount() {
     var slug = window.location.pathname;
+    console.log(window.location)
+    console.log(slug)
     instance
       .get(slug)
       .then(res => {
