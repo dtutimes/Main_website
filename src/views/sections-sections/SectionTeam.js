@@ -1,5 +1,5 @@
 import React from "react";
-import axios from 'axios';
+import axios from "axios";
 
 // reactstrap components
 import {
@@ -20,8 +20,8 @@ import {
 } from "reactstrap";
 
 // core components
-import TeamCard from 'components/TeamCard/teamCard';
-import TeamHeader from 'components/Headers/ProfilePageHeader';
+import TeamCard from "components/TeamCard/teamCard";
+import TeamHeader from "components/Headers/ProfilePageHeader";
 
 export default class SectionTeam extends React.Component {
   state = {
@@ -31,25 +31,25 @@ export default class SectionTeam extends React.Component {
   };
   componentDidMount() {
     axios({
-      method: 'get',
-      url: 'https://api.dtutimes.live/v1/user/'
+      method: "get",
+      url: "https://api.dtutimes.live/v1/user/"
     }).then(res => {
-      const info = res.data
+      const info = res.data;
       this.setState({
         data: info,
         loaded: true
-      })
-      console.log(this.state.data)
-    })
+      });
+      console.log(this.state.data);
+    });
   }
   render() {
-  if(this.state.loaded===true) {
-  return (
-    <>
-      <div className="section section-team cd-section" id="teams">
-        <TeamHeader />
-        {/* ********* TEAM 1 *********/}
-        {/* <div className="team-1">
+    if (this.state.loaded === true) {
+      return (
+        <>
+          <div className="section section-team cd-section" id="teams">
+            <TeamHeader />
+            {/* ********* TEAM 1 *********/}
+            {/* <div className="team-1">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
@@ -276,9 +276,9 @@ export default class SectionTeam extends React.Component {
             </Row>
           </Container>
         </div> */}
-        {/* ********* END TEAM 1 ********* */}
-        {/* ********* TEAM 2 ********* */}
-        {/* <div
+            {/* ********* END TEAM 1 ********* */}
+            {/* ********* TEAM 2 ********* */}
+            {/* <div
           className="team-2 section-image"
           style={{
             backgroundImage:
@@ -429,365 +429,651 @@ export default class SectionTeam extends React.Component {
             </Row>
           </Container>
         </div> */}
-        {/* ********* END TEAM 2 ********* */}
-        {/* ********* TEAM 3 ********* */}
-        <div className="team-3">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">The Executive Team 3</h2>
-                <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your team. Keep you user engaged by providing meaningful
-                  information.
-                </h5>
-              </Col>
-            </Row>
-            <Row>
-            <div className="project-pills mt-4">
-                <Nav className="nav-pills-info" pills>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "1" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "1"
-                        })
-                      }}
-                    >
-                      Council
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "2" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "2"
-                        })
-                      }}
-                    >
-                      Advisiors
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "3" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "3"
-                        })
-                      }}
-                    >
-                      Columnists
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "4" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "4"
-                        })
-                      }}
-                    >
-                      Designers
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "5" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "5"
-                        })
-                      }}
-                    >
-                      Photographers
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "6" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "6"
-                        })
-                      }}
-                    >
-                      Illustrators
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "7" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "7"
-                        })
-                      }}
-                    >
-                      Developers
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className={this.state.activePill === "8" ? "active" : ""}
-                      href="#pablo"
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          activePill: "8"
-                        })
-                      }}
-                    >
-                      Alumni Advisiors
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-                {/* Pill panes */}
-                <TabContent activeTab={"pill-" + this.state.activePill}>
-                  <TabPane tabId={"pill-1"}>
-                    <div className="space-top" />
+            {/* ********* END TEAM 2 ********* */}
+            {/* ********* TEAM 3 ********* */}
+            <div className="team-3">
+              <Container>
                 <Row>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[1].name} bio={this.state.data[1].bio} img= {this.state.data[1].userImg} post="Editor-in-Chief" />
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[3].name} bio={this.state.data[3].bio} img= {this.state.data[3].userImg} post="Editor-in-Chief"/>
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[40].name} bio={this.state.data[40].bio} img= {this.state.data[40].userImg} post="Student Head"/>
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[37].name} bio={this.state.data[37].bio} img= {this.state.data[37].userImg} post="Student Head" />
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[0].name} bio={this.state.data[0].bio} img= {this.state.data[0].userImg} post="Head of Web Development"/>
-                  </Col>
-                  <Col md="6">
-                  <TeamCard name={this.state.data[38].name} bio={this.state.data[38].bio} img= {this.state.data[38].userImg} post="Head Of Illustrations"/>
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[31].name} bio={this.state.data[31].bio} img= {this.state.data[31].userImg} post="Head of Photography" />
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[39].name} bio={this.state.data[39].bio} img= {this.state.data[39].userImg} post="Head of Photography"/>
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[7].name} bio={this.state.data[7].bio} img= {this.state.data[7].userImg} post="Head Of Design"/>
-                  </Col>
-                  <Col md="6">
-                  <TeamCard name={this.state.data[44].name} bio={this.state.data[44].bio} img= {this.state.data[44].userImg} post="Managing Editor" />
-                  </Col>
-                  <Col md="6">
-                  <TeamCard name={this.state.data[42].name} bio={this.state.data[42].bio} img= {this.state.data[42].userImg} post="Managing Editior"/>
-                  </Col>
-                  <Col md="6">
-                    <TeamCard name={this.state.data[19].name} bio={this.state.data[19].bio} img= {this.state.data[19].userImg} post="Student Coordinator"/>
+                  <Col className="ml-auto mr-auto text-center" md="8">
+                    <h2 className="title">The Executive Team 3</h2>
+                    <h5 className="description">
+                      This is the paragraph where you can write more details
+                      about your team. Keep you user engaged by providing
+                      meaningful information.
+                    </h5>
                   </Col>
                 </Row>
-            </TabPane>
-                  <TabPane tabId={"pill-2"}>
-                    <Row>
-                    <Col md="6">
-                      <TeamCard name={this.state.data[19].name} bio={this.state.data[19].bio} img= {this.state.data[19].userImg} post="Student Coordinator"/>
-                    </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-3"}>
-                    <Row>
-                    <Col md="6">
-                      <TeamCard name={this.state.data[49].name} bio={this.state.data[49].bio} img= {this.state.data[49].userImg} post="Associate Editior" />
-                    </Col>
-                    <Col md="6">
-                      <TeamCard name={this.state.data[2].name} bio={this.state.data[2].bio} img= {this.state.data[2].userImg} post="Associate Editor"/>
-                    </Col>
-                    <Col md="6">
-                      <TeamCard name={this.state.data[41].name} bio={this.state.data[41].bio} img= {this.state.data[41].userImg} post="Associate Editor"/>
-                    </Col>
-                    <Col md="6">
-                      <TeamCard name={this.state.data[21].name} bio={this.state.data[21].bio} img= {this.state.data[21].userImg} post="Associate Editor" /> 
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[23].name} bio={this.state.data[23].bio} img= {this.state.data[23].userImg} post="Associate Editor"/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[27].name} bio={this.state.data[27].bio} img= {this.state.data[27].userImg} post="Associate Editor"/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[4].name} bio={this.state.data[4].bio} img= {this.state.data[4].userImg} post="Associate Editor" />
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[43].name} bio={this.state.data[43].bio} img= {this.state.data[43].userImg} post="Associate Editor"/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[17].name} bio={this.state.data[17].bio} img= {this.state.data[17].userImg} post=""/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[18].name} bio={this.state.data[18].bio} img= {this.state.data[18].userImg} post="" />
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[20].name} bio={this.state.data[20].bio} img= {this.state.data[20].userImg} post=""/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[22].name} bio={this.state.data[22].bio} img= {this.state.data[22].userImg} post=""/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[25].name} bio={this.state.data[25].bio} img= {this.state.data[25].userImg} post="" />
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[24].name} bio={this.state.data[24].bio} img= {this.state.data[24].userImg} post=""/>
-                    </Col>
-                    <Col md="6">
-                    <TeamCard name={this.state.data[29].name} bio={this.state.data[29].bio} img= {this.state.data[29].userImg} post=""/>
-                    </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-4"}>
-                    <Row>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[45].name} bio={this.state.data[45].bio} img= {this.state.data[45].userImg} post="Associate Designer" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[61].name} bio={this.state.data[61].bio} img= {this.state.data[61].userImg} post="Associate Designer"/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[6].name} bio={this.state.data[6].bio} img= {this.state.data[6].userImg} post="Associate Designer"/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[82].name} bio={this.state.data[82].bio} img= {this.state.data[82].userImg} post="Associate Designer" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[5].name} bio={this.state.data[5].bio} img= {this.state.data[5].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[10].name} bio={this.state.data[10].bio} img= {this.state.data[10].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[8].name} bio={this.state.data[8].bio} img= {this.state.data[8].userImg} post="" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[9].name} bio={this.state.data[9].bio} img= {this.state.data[9].userImg} post=""/>
-                      </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-5"}>
-                    <Row>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[55].name} bio={this.state.data[55].bio} img= {this.state.data[55].userImg} post="" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[30].name} bio={this.state.data[30].bio} img= {this.state.data[30].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[34].name} bio={this.state.data[34].bio} img= {this.state.data[34].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[32].name} bio={this.state.data[32].bio} img= {this.state.data[32].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[35].name} bio={this.state.data[35].bio} img= {this.state.data[35].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[33].name} bio={this.state.data[33].bio} img= {this.state.data[33].userImg} post="" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[36].name} bio={this.state.data[36].bio} img= {this.state.data[36].userImg} post=""/>
-                      </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-6"}>
-                    <Row>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[12].name} bio={this.state.data[12].bio} img= {this.state.data[12].userImg} post="Assistant Illustrator" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[46].name} bio={this.state.data[46].bio} img= {this.state.data[46].userImg} post="Associate  Illustrator" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[13].name} bio={this.state.data[13].bio} img= {this.state.data[13].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[11].name} bio={this.state.data[11].bio} img= {this.state.data[11].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[15].name} bio={this.state.data[15].bio} img= {this.state.data[15].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[14].name} bio={this.state.data[14].bio} img= {this.state.data[14].userImg} post=""/>
-                      </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-7"}>
-                  <Row>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[56].name} bio={this.state.data[56].bio} img= {this.state.data[56].userImg} post="Associate Developer" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[51].name} bio={this.state.data[51].bio} img= {this.state.data[51].userImg} post="Associate Developer"/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[50].name} bio={this.state.data[50].bio} img= {this.state.data[50].userImg} post="Associate Developer"/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[60].name} bio={this.state.data[60].bio} img= {this.state.data[60].userImg} post="" />
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[57].name} bio={this.state.data[57].bio} img= {this.state.data[57].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[58].name} bio={this.state.data[58].bio} img= {this.state.data[58].userImg} post=""/>
-                      </Col>
-                      <Col md="6">
-                      <TeamCard name={this.state.data[59].name} bio={this.state.data[59].bio} img= {this.state.data[59].userImg} post="" />
-                      </Col>
-                    </Row>
-                  </TabPane>
-                  <TabPane tabId={"pill-8"}>
-                  <Row>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                      <Col md="6">
-                      </Col>
-                    </Row>
-                  </TabPane>
-                </TabContent>
-              </div>
-            </Row>
-
-
-          </Container>
-        </div>
-        {/* ********* END TEAM 3 ********* */}
-        {/* ********* TEAM 4 ********* */}
-        {/* <div
+                <Row>
+                  <div className="project-pills">
+                    <Nav className="nav-pills-info" pills>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "1" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "1"
+                            });
+                          }}
+                        >
+                          Council
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "2" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "2"
+                            });
+                          }}
+                        >
+                          Advisiors
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "3" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "3"
+                            });
+                          }}
+                        >
+                          Columnists
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "4" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "4"
+                            });
+                          }}
+                        >
+                          Designers
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "5" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "5"
+                            });
+                          }}
+                        >
+                          Photographers
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "6" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "6"
+                            });
+                          }}
+                        >
+                          Illustrators
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "7" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "7"
+                            });
+                          }}
+                        >
+                          Developers
+                        </NavLink>
+                      </NavItem>
+                      <NavItem>
+                        <NavLink
+                          className={
+                            this.state.activePill === "8" ? "active" : ""
+                          }
+                          href="#pablo"
+                          onClick={e => {
+                            e.preventDefault();
+                            this.setState({
+                              activePill: "8"
+                            });
+                          }}
+                        >
+                          Alumni Advisiors
+                        </NavLink>
+                      </NavItem>
+                    </Nav>
+                    {/* Pill panes */}
+                    <TabContent activeTab={"pill-" + this.state.activePill}>
+                      <TabPane tabId={"pill-1"}>
+                        <div className="space-top" />
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[1].name}
+                              bio={this.state.data[1].bio}
+                              img={this.state.data[1].userImg}
+                              post="Editor-in-Chief"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[3].name}
+                              bio={this.state.data[3].bio}
+                              img={this.state.data[3].userImg}
+                              post="Editor-in-Chief"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[40].name}
+                              bio={this.state.data[40].bio}
+                              img={this.state.data[40].userImg}
+                              post="Student Head"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[37].name}
+                              bio={this.state.data[37].bio}
+                              img={this.state.data[37].userImg}
+                              post="Student Head"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[0].name}
+                              bio={this.state.data[0].bio}
+                              img={this.state.data[0].userImg}
+                              post="Head of Web Development"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[38].name}
+                              bio={this.state.data[38].bio}
+                              img={this.state.data[38].userImg}
+                              post="Head Of Illustrations"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[31].name}
+                              bio={this.state.data[31].bio}
+                              img={this.state.data[31].userImg}
+                              post="Head of Photography"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[39].name}
+                              bio={this.state.data[39].bio}
+                              img={this.state.data[39].userImg}
+                              post="Head of Photography"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[7].name}
+                              bio={this.state.data[7].bio}
+                              img={this.state.data[7].userImg}
+                              post="Head Of Design"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[44].name}
+                              bio={this.state.data[44].bio}
+                              img={this.state.data[44].userImg}
+                              post="Managing Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[42].name}
+                              bio={this.state.data[42].bio}
+                              img={this.state.data[42].userImg}
+                              post="Managing Editior"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[19].name}
+                              bio={this.state.data[19].bio}
+                              img={this.state.data[19].userImg}
+                              post="Student Coordinator"
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-2"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[19].name}
+                              bio={this.state.data[19].bio}
+                              img={this.state.data[19].userImg}
+                              post="Student Coordinator"
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-3"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[49].name}
+                              bio={this.state.data[49].bio}
+                              img={this.state.data[49].userImg}
+                              post="Associate Editior"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[2].name}
+                              bio={this.state.data[2].bio}
+                              img={this.state.data[2].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[41].name}
+                              bio={this.state.data[41].bio}
+                              img={this.state.data[41].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[21].name}
+                              bio={this.state.data[21].bio}
+                              img={this.state.data[21].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[23].name}
+                              bio={this.state.data[23].bio}
+                              img={this.state.data[23].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[27].name}
+                              bio={this.state.data[27].bio}
+                              img={this.state.data[27].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[4].name}
+                              bio={this.state.data[4].bio}
+                              img={this.state.data[4].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[43].name}
+                              bio={this.state.data[43].bio}
+                              img={this.state.data[43].userImg}
+                              post="Associate Editor"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[17].name}
+                              bio={this.state.data[17].bio}
+                              img={this.state.data[17].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[18].name}
+                              bio={this.state.data[18].bio}
+                              img={this.state.data[18].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[20].name}
+                              bio={this.state.data[20].bio}
+                              img={this.state.data[20].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[22].name}
+                              bio={this.state.data[22].bio}
+                              img={this.state.data[22].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[25].name}
+                              bio={this.state.data[25].bio}
+                              img={this.state.data[25].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[24].name}
+                              bio={this.state.data[24].bio}
+                              img={this.state.data[24].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[29].name}
+                              bio={this.state.data[29].bio}
+                              img={this.state.data[29].userImg}
+                              post=""
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-4"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[45].name}
+                              bio={this.state.data[45].bio}
+                              img={this.state.data[45].userImg}
+                              post="Associate Designer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[61].name}
+                              bio={this.state.data[61].bio}
+                              img={this.state.data[61].userImg}
+                              post="Associate Designer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[6].name}
+                              bio={this.state.data[6].bio}
+                              img={this.state.data[6].userImg}
+                              post="Associate Designer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[82].name}
+                              bio={this.state.data[82].bio}
+                              img={this.state.data[82].userImg}
+                              post="Associate Designer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[5].name}
+                              bio={this.state.data[5].bio}
+                              img={this.state.data[5].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[10].name}
+                              bio={this.state.data[10].bio}
+                              img={this.state.data[10].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[8].name}
+                              bio={this.state.data[8].bio}
+                              img={this.state.data[8].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[9].name}
+                              bio={this.state.data[9].bio}
+                              img={this.state.data[9].userImg}
+                              post=""
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-5"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[55].name}
+                              bio={this.state.data[55].bio}
+                              img={this.state.data[55].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[30].name}
+                              bio={this.state.data[30].bio}
+                              img={this.state.data[30].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[34].name}
+                              bio={this.state.data[34].bio}
+                              img={this.state.data[34].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[32].name}
+                              bio={this.state.data[32].bio}
+                              img={this.state.data[32].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[35].name}
+                              bio={this.state.data[35].bio}
+                              img={this.state.data[35].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[33].name}
+                              bio={this.state.data[33].bio}
+                              img={this.state.data[33].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[36].name}
+                              bio={this.state.data[36].bio}
+                              img={this.state.data[36].userImg}
+                              post=""
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-6"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[12].name}
+                              bio={this.state.data[12].bio}
+                              img={this.state.data[12].userImg}
+                              post="Assistant Illustrator"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[46].name}
+                              bio={this.state.data[46].bio}
+                              img={this.state.data[46].userImg}
+                              post="Associate  Illustrator"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[13].name}
+                              bio={this.state.data[13].bio}
+                              img={this.state.data[13].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[11].name}
+                              bio={this.state.data[11].bio}
+                              img={this.state.data[11].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[15].name}
+                              bio={this.state.data[15].bio}
+                              img={this.state.data[15].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[14].name}
+                              bio={this.state.data[14].bio}
+                              img={this.state.data[14].userImg}
+                              post=""
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-7"}>
+                        <Row>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[56].name}
+                              bio={this.state.data[56].bio}
+                              img={this.state.data[56].userImg}
+                              post="Associate Developer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[51].name}
+                              bio={this.state.data[51].bio}
+                              img={this.state.data[51].userImg}
+                              post="Associate Developer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[50].name}
+                              bio={this.state.data[50].bio}
+                              img={this.state.data[50].userImg}
+                              post="Associate Developer"
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[60].name}
+                              bio={this.state.data[60].bio}
+                              img={this.state.data[60].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[57].name}
+                              bio={this.state.data[57].bio}
+                              img={this.state.data[57].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[58].name}
+                              bio={this.state.data[58].bio}
+                              img={this.state.data[58].userImg}
+                              post=""
+                            />
+                          </Col>
+                          <Col md="6">
+                            <TeamCard
+                              name={this.state.data[59].name}
+                              bio={this.state.data[59].bio}
+                              img={this.state.data[59].userImg}
+                              post=""
+                            />
+                          </Col>
+                        </Row>
+                      </TabPane>
+                      <TabPane tabId={"pill-8"}>
+                        <Row>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                          <Col md="6"></Col>
+                        </Row>
+                      </TabPane>
+                    </TabContent>
+                  </div>
+                </Row>
+              </Container>
+            </div>
+            {/* ********* END TEAM 3 ********* */}
+            {/* ********* TEAM 4 ********* */}
+            {/* <div
           className="team-4 section-image"
           style={{
             backgroundImage:
@@ -951,9 +1237,9 @@ export default class SectionTeam extends React.Component {
             </Row>
           </Container>
         </div> */}
-        {/* ********* END TEAM 4 ********* */}
-        {/* ********* TEAM 5 ********* */}
-        {/* <div
+            {/* ********* END TEAM 4 ********* */}
+            {/* ********* TEAM 5 ********* */}
+            {/* <div
           className="team-5 section-image"
           style={{
             backgroundImage:
@@ -1190,17 +1476,16 @@ export default class SectionTeam extends React.Component {
             </Row>
           </Container>
         </div> */}
-        {/* ********* END TEAM 5 ********* */}
-      </div>
-    </>
-  )}
-  else {
-    return (
-      <div>
-        <p>Loading...</p>
-      </div>
-    )
+            {/* ********* END TEAM 5 ********* */}
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <div>
+          <p>Loading...</p>
+        </div>
+      );
+    }
   }
 }
-}
-

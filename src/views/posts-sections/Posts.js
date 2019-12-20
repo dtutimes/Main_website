@@ -81,7 +81,6 @@ class BlogPosts extends Component {
       });
   }
 
-
   render() {
     const posts = this.state.blogPosts;
     const rows = [];
@@ -100,28 +99,38 @@ class BlogPosts extends Component {
                 </a>
               </div>
               <CardBody>
-                <h6 className="card-category text-warning">posts[i].category.name</h6>
+                <h6 className="card-category text-warning">
+                  posts[i].category.name
+                </h6>
                 <CardTitle tag="h3">
                   <a href="#pablo" onClick={e => e.preventDefault()}>
                     {posts[i].title}
                   </a>
                 </CardTitle>
-                <p className="card-description" style={{marginBottom: '1rem'}}>
+                <p
+                  className="card-description"
+                  style={{ marginBottom: "1rem" }}
+                >
                   {posts[i].biliner}
                 </p>
                 <Link
                   className="btn btn-primary btn-round"
                   color="warning"
                   to={`/story/${posts[i].slug}`}
-                  // onClick={e => e.preventDefault()}
+                  onClick={e => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Read More
                 </Link>
+                <br />
+                <br />
+                <hr />
               </CardBody>
             </Card>
           </Col>
           <Col md="6">
-          <Card className="card-plain card-blog text-center">
+            <Card className="card-plain card-blog text-center">
               <div className="card-image">
                 <a href="#pablo" onClick={e => e.preventDefault()}>
                   <img
@@ -132,29 +141,39 @@ class BlogPosts extends Component {
                 </a>
               </div>
               <CardBody>
-                <h6 className="card-category text-warning">posts[i + 1].category.name</h6>
+                <h6 className="card-category text-warning">
+                  posts[i + 1].category.name
+                </h6>
                 <CardTitle tag="h3">
                   <a href="#pablo" onClick={e => e.preventDefault()}>
                     {posts[i + 1].title}
                   </a>
                 </CardTitle>
-                <p className="card-description" style={{marginBottom: '1rem'}}>
+                <p
+                  className="card-description"
+                  style={{ marginBottom: "1rem" }}
+                >
                   {posts[i + 1].biliner}
                 </p>
                 <Link
                   className="btn btn-primary btn-round"
                   color="warning"
                   to={`/story/${posts[i + 1].slug}`}
-                  // onClick={e => e.preventDefault()}
+                  onClick={e => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Read More
                 </Link>
+                <br />
+                <br />
+                <hr />
               </CardBody>
             </Card>
           </Col>
         </Row>
       );
-    };
+    }
 
     return (
       <>
@@ -186,4 +205,3 @@ export default BlogPosts;
 // // reactstrap components
 
 // // core components
-

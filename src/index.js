@@ -25,9 +25,7 @@ import BlogSingle from "views/BlogSingle"
 // import EngiFest from "./views/Gallery/fests/fest_engi";
 // import EngiEvents from "./views/Gallery/fests/engi_envents/engi_event1";
 // import FreshersDtu from "./views/Gallery/freshers_of_dtu/freshers";
-import SectionTeam from './views/sections-sections/SectionTeam'
-
-
+import Team from "views/Team";
 // import NucleoIcons from "views/NucleoIcons.js";
 // import Sections from "views/Sections.js";
 // import Presentation from "views/Presentation.js";
@@ -68,7 +66,7 @@ const Routes = () => (
             <Route path="/gallery/:slug" component={GallerySingle} />
             <Route exact path="/blog" component={BlogPosts} />
             <Route path="/story/:slug" component={BlogSingle} />
-            <Route path="/team" component={SectionTeam} />
+            <Route path="/team" component={Team} />
         </Switch>
         <MainFooter />
     </div>

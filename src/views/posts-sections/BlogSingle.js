@@ -46,8 +46,6 @@ class Single extends Component {
       .then(res => {
         let temp = [{ ...res.data }];
         let resData = temp[0]["data"];
-        console.log("hhhhhhhhhhhhhhhhh");
-        console.log(resData);
         this.setState({
           blogPosts: resData
         });
