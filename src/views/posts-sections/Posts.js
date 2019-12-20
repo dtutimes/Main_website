@@ -66,13 +66,13 @@ class BlogPosts extends Component {
         let resData = temp[0]["data"];
 
         let countPages = [];
-        console.log(res.data.last_page);
-        for (let i = 1; i <= res.data.last_page; i++) {
+        console.log(res.data.meta.last_page);
+        for (let i = 1; i <= res.data.meta.last_page; i++) {
           countPages[i - 1] = i;
         }
         this.setState({
           blogPosts: resData,
-          lastPage: res.data.last_page,
+          lastPage: res.data.meta.last_page,
           totalPages: countPages
         });
       })
@@ -183,11 +183,37 @@ class BlogPosts extends Component {
               <Container>
                 <Row>
                   <Col className="ml-auto mr-auto" md="8">
-                    <h2 className="title text-center">Latest Blogposts 4</h2>
+                    <h2 className="title text-center">DTU Blogs</h2>
                     <br />
                   </Col>
                 </Row>
                 {rows}
+                <Row>
+                  <Col md="12">
+                    <div className="pull-left">
+                      <Button
+                        className="btn-link btn-move-left"
+                        color="default"
+                        size="sm"
+                        onClick={this.handlePrevClick}
+                      >
+                        <i className="fa fa-angle-left mr-1" />
+                        Previous Posts
+                      </Button>
+                    </div>
+                    <div className="pull-right">
+                      <Button
+                        className="btn-link btn-move-right"
+                        color="default"
+                        size="sm"
+                        onClick={this.handleNextClick}
+
+                      >
+                        Next Posts <i className="fa fa-angle-right" />
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
               </Container>
             </div>
           </div>
