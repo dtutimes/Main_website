@@ -1,11 +1,24 @@
 import React, { Component } from "react";
 import { getInstance } from "../../services/axiosInstance";
-import { Badge, Button, Card, Media, Container, Row, Col } from "reactstrap";
-import BlogPostHeader from "components/Headers/BlogPostHeader.js";
+import { Badge, Media, Container, Row, Col } from "reactstrap";
 import AboutUsHeader from "components/Headers/AboutUsHeader";
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
+import styled from "styled-components";
+
+const Progress = styled.div`
+  position: fixed;
+  background: linear-gradient(
+    to right,
+    rgba(250, 224, 66, 0.8) ${props => props.scroll},
+    transparent 0
+  );
+  width: 100%;
+  height: 5px;
+  z-index: 3;
+`;
+
 var HtmlToReactParser = require("html-to-react").Parser;
 const instance = getInstance();
+
 class Single extends Component {
   state = {
     index: 0,
@@ -15,8 +28,44 @@ class Single extends Component {
     nextBlogSlug: "",
     currentblogSlug: "",
     blogPosts: [],
-    loaded: false
+    loaded: false,
+    scrollPosition: 0
   };
+
+  listenToScrollEvent = () => {
+    document.addEventListener("scroll", () => {
+      requestAnimationFrame(() => {
+        // Calculates the scroll distance
+        this.calculateScrollDistance();
+      });
+    });
+  };
+
+  getDocHeight = () => {
+    return Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    );
+  };
+
+  calculateScrollDistance = () => {
+    const scrollTop = window.pageYOffset;
+    const winHeight = window.innerHeight;
+    const docHeight = this.getDocHeight();
+
+    const totalDocScrollLength = docHeight - winHeight;
+    const scrollPostion = Math.floor((scrollTop / totalDocScrollLength) * 100);
+
+    this.setState({
+      scrollPosition: scrollPostion
+    });
+  
+  };
+
   componentDidMount() {
     var slug = window.location.pathname;
     console.log(window.location);
@@ -55,8 +104,12 @@ class Single extends Component {
       .catch(err => {
         console.log(err);
       });
+
+    // scroll login
+    this.listenToScrollEvent();
   }
   render() {
+    
     if (this.state.loaded === true) {
       var { currentBlogData, blogBody, blogPosts } = this.state;
       if (!currentBlogData) {
@@ -71,6 +124,7 @@ class Single extends Component {
       blogBody = htmlToReactParser.parse(currentBlogData.body);
       return (
         <>
+          <Progress scroll={`${this.state.scrollPosition}%`}  />
           <AboutUsHeader />
           {/* <ColorNavbar /> */}
           <div className="wrapper">

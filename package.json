@@ -23,7 +23,8 @@
     "react-scripts": "3.0.1",
     "react-select": "3.0.4",
     "react-tagsinput": "3.19.0",
-    "reactstrap": "8.0.0"
+    "reactstrap": "8.0.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
