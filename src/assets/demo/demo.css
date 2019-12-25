@@ -2986,7 +2986,13 @@ pre.prettyprint {
 }
 
 .isolayer--deco1 .grid__item:nth-child(2) {
-  margin-top: 210px;
+  margin-top: 350px;
+}
+
+@media only screen and (max-width: 900px){
+  .isolayer--deco1 .grid__item:nth-child(2) {
+    margin-top: 350px;
+  }
 }
 
 .isolayer--deco2 {
@@ -3069,16 +3075,21 @@ pre.prettyprint {
 }
 
 .fifth-card {
-  top: 360px !important;
+  top: 400px !important;
   left: 400px !important;
 }
-
+@media only screen and (max-width: 1300px){
+  .fifth-card {
+    top: 360px !important;
+    left: 400px !important;
+  }
+}
 .fifth-card .grid__img {
   width: 400px !important;
 }
 
 .sixth-card {
-  top: 1070px !important;
+  top: 880px !important;
 }
 
 .seventh-card {
@@ -3091,16 +3102,18 @@ pre.prettyprint {
 }
 
 .eight-card {
-  top: -160px !important;
+  top: -90px !important;
   left: 400px !important;
 }
+
+/* @media only screen and (max-width) */
 
 .eight-card .grid__img {
   width: 400px !important;
 }
 
 .ninth-card {
-  top: 350px !important;
+  top: 425px !important;
   left: 800px !important;
 }
 

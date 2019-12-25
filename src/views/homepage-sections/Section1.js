@@ -134,7 +134,6 @@ class SectionCards extends Component {
                         //     window.open("/story/" + posts[7].slug);
                         //   }}
                         >
-                        >
                           View Article
                         </Button>
                       </CardFooter>
