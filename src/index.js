@@ -52,6 +52,7 @@ import Team from "views/Team";
 // Components 
 import MainNavbar from "components/Navbars/MainNavbar";
 import MainFooter from "components/Footers/MainFooter";
+import Editions from "views/Editions";
 
 
 const Routes = () => (
@@ -60,7 +61,7 @@ const Routes = () => (
         <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/about" component={About} />
-            <Route path="/editions" component={About} />
+            <Route path="/editions" component={Editions} />
             <Route path="/about" component={About} />
             <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />

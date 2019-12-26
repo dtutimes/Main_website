@@ -10,15 +10,19 @@ import {
   Row,
   Col
 } from "reactstrap";
+import Carousel from 'nuka-carousel';
+
+
+import EditionCard from "views/edition_section/editionCards";
 
 // core components
 
 function SectionHeader() {
   return (
     <>
-      <div className="section section-feature cd-section" id="features">
+      {/* <div className="section section-feature cd-section" id="features"> */}
         {/* ********* FEATURES 1 ********* */}
-        <div className="features-1">
+        {/* <div className="features-1">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
@@ -122,129 +126,84 @@ function SectionHeader() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* ********* END FEATURES 1 ********* */}
         {/* ********* FEATURES 2 ********* */}
-        <div className="features-2">
+        <div className="wrapper">
+        <div className="features-2 section text-center landing-section">
           <Container>
             <Row>
-              <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Is this what you are looking for?</h2>
-                <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here.
-                </h5>
-                <br />
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 48" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/48.png" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 47" des="May-19-Jul-19" img="http://dtutimes.dtu.ac.in/img/47.png" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 46" des="Feb-19-Apr-19" img="http://dtutimes.dtu.ac.in/img/46.png" />
               </Col>
             </Row>
             <Row>
-              <Col md="4">
-                <Card
-                  data-background="image"
-                  style={{
-                    backgroundImage:
-                      "url(" +
-                      require("assets/img/sections/jan-sendereks.jpg") +
-                      ")"
-                  }}
-                >
-                  <CardBody>
-                    <h6 className="card-category">Design</h6>
-                    <div className="card-icon">
-                      <i className="nc-icon nc-world-2" />
-                    </div>
-                    <p className="card-description">
-                      Unlike fashionable design, it lasts many years – even in
-                      today’s throwaway society
-                    </p>
-                    <CardFooter>
-                      <Button
-                        className="btn-neutral"
-                        color="link"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className="fa fa-book mr-1" />
-                        Show more
-                      </Button>
-                    </CardFooter>
-                  </CardBody>
-                </Card>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 45" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/45.png" />
               </Col>
-              <Col md="4">
-                <Card
-                  data-background="image"
-                  style={{
-                    backgroundImage:
-                      "url(" +
-                      require("assets/img/sections/anders-jilden.jpg") +
-                      ")"
-                  }}
-                >
-                  <CardBody>
-                    <h6 className="card-category">UI Kits</h6>
-                    <div className="card-icon">
-                      <i className="nc-icon nc-single-copy-04" />
-                    </div>
-                    <p className="card-description">
-                      Imagine if you could go to the profile of a friend and
-                      instead of scrolling through...
-                    </p>
-                    <CardFooter>
-                      <Button
-                        className="btn-neutral"
-                        color="link"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className="fa fa-book mr-1" />
-                        Show more
-                      </Button>
-                    </CardFooter>
-                  </CardBody>
-                </Card>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 44" des="May-19-Jul-19" img="http://dtutimes.dtu.ac.in/img/44.jpg" />
               </Col>
-              <Col md="4">
-                <Card
-                  data-background="image"
-                  style={{
-                    backgroundImage:
-                      "url(" +
-                      require("assets/img/sections/uriel-soberanes.jpg") +
-                      ")"
-                  }}
-                >
-                  <CardBody>
-                    <h6 className="card-category">Development</h6>
-                    <div className="card-icon">
-                      <i className="nc-icon nc-time-alarm" />
-                    </div>
-                    <p className="card-description">
-                      For starters, it seemed like a good idea to keep a running
-                      list of Vision investments.
-                    </p>
-                    <CardFooter>
-                      <Button
-                        className="btn-neutral"
-                        color="link"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className="fa fa-book mr-1" />
-                        Show more
-                      </Button>
-                    </CardFooter>
-                  </CardBody>
-                </Card>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 43" des="Feb-19-Apr-19" img="http://dtutimes.dtu.ac.in/img/43.jpg" />
               </Col>
+            </Row>
+            <Row>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 42" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/42.jpg" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 41" des="May-19-Jul-19" img="http://dtutimes.dtu.ac.in/img/41.jpg" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 40" des="Feb-19-Apr-19" img="http://dtutimes.dtu.ac.in/img/40.jpg" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 39" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/39.jpg" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4" className="mb-5">
+                <h2 className="title text-center" style={{marginRight:'-700px'}}>Archive</h2>
+              </Col>
+            </Row>
+            <Row>
+            <Carousel slidesToShow={3} swiping={true} 
+            renderCenterLeftControls={({ previousSlide }) => (
+              <button onClick={previousSlide} className="btn-move-left btn-round btn btn-default"><i className="nc-icon nc-minimal-left"></i></button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <button className="btn-move-right btn-round btn btn-default" onClick={nextSlide}><i className="nc-icon nc-minimal-right"></i></button>
+            )}
+            renderBottomCenterControls={''}
+            cellSpacing={20}>
+              <EditionCard title="Edition 38"  img="http://dtutimes.dtu.ac.in/img/38.jpg" style={{height:'400px'}} />
+              <EditionCard title="Edition 37"  img="http://dtutimes.dtu.ac.in/img/37.jpg" style={{height:'400px'}} />
+              <EditionCard title="Edition 36"  img="http://dtutimes.dtu.ac.in/img/36.jpg" style={{height:'400px'}} />
+              <EditionCard title="Edition 35"  img="http://dtutimes.dtu.ac.in/img/35.jpg" style={{height:'400px'}} />
+              <EditionCard title="Edition 34"  img="http://dtutimes.dtu.ac.in/img/34.jpg" style={{height:'400px'}} />
+              <EditionCard title="Edition 33"  img="http://dtutimes.dtu.ac.in/img/editions/33.jpeg" style={{height:'400px'}}  />
+              <EditionCard title="Edition 32"  img="http://dtutimes.dtu.ac.in/img/editions/32.jpeg" style={{height:'400px'}}  />
+              <EditionCard title="Edition 31"  img="http://dtutimes.dtu.ac.in/img/editions/31.jpg" style={{height:'400px'}}  />
+              <EditionCard title="Edition 30"  img="http://dtutimes.dtu.ac.in/img/editions/30.jpg" style={{height:'400px'}}  />
+              <EditionCard title="Edition 29"  img="http://dtutimes.dtu.ac.in/img/editions/29.jpg" style={{height:'400px'}}  />
+              <EditionCard title="Edition 28"  img="http://dtutimes.dtu.ac.in/img/editions/28.jpg" style={{height:'400px'}}  />
+            </Carousel>
             </Row>
           </Container>
         </div>
+        </div>
         {/* ********* END FEATURES 2 ********* */}
         {/* ********* FEATURES 3 ********* */}
-        <div className="features-3">
+        {/* <div className="features-3">
           <Container>
             <Row>
               <Col md="6">
@@ -346,10 +305,10 @@ function SectionHeader() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* ********* END FEATURES 3 ********* */}
         {/* ********* FEATURES 4 ********* */}
-        <div className="features-4">
+        {/* <div className="features-4">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
@@ -412,10 +371,10 @@ function SectionHeader() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* ********* END FEATURES 4 ********* */}
         {/* ********* FEATURES 5 ********* */}
-        <div
+        {/* <div
           className="features-5 section-image"
           style={{
             backgroundImage:
@@ -489,9 +448,9 @@ function SectionHeader() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* ********* END FEATURES 5 ********* */}
-      </div>
+      {/* </div> */}
     </>
   );
 }

@@ -84,7 +84,7 @@ export default class GalleryCarousel extends React.Component {
                   style={style}
                 >
                   <h5 className="">
-                    <Link className="item-inner" to={`/gallery/${album.slug}`}>{album.name}</Link>
+                    <a className="item-inner" href={`/gallery/${album.slug}`}>{album.name}</a>
                   </h5>
                 </div>
               );
