@@ -145,29 +145,29 @@ function SectionHeader() {
             </Row>
             <Row>
               <Col md="4" className="mb-5">
-                <EditionCard title="Edition 45" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/45.png" />
+                <EditionCard title="Edition 45" des="Nov-18-Feb-19" img="http://dtutimes.dtu.ac.in/img/45.png" />
               </Col>
               <Col md="4" className="mb-5">
-                <EditionCard title="Edition 44" des="May-19-Jul-19" img="http://dtutimes.dtu.ac.in/img/44.jpg" />
+                <EditionCard title="Edition 44" des="Aug-18-Nov-18" img="http://dtutimes.dtu.ac.in/img/44.jpg" />
               </Col>
               <Col md="4" className="mb-5">
-                <EditionCard title="Edition 43" des="Feb-19-Apr-19" img="http://dtutimes.dtu.ac.in/img/43.jpg" />
-              </Col>
-            </Row>
-            <Row>
-              <Col md="4" className="mb-5">
-                <EditionCard title="Edition 42" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/42.jpg" />
-              </Col>
-              <Col md="4" className="mb-5">
-                <EditionCard title="Edition 41" des="May-19-Jul-19" img="http://dtutimes.dtu.ac.in/img/41.jpg" />
-              </Col>
-              <Col md="4" className="mb-5">
-                <EditionCard title="Edition 40" des="Feb-19-Apr-19" img="http://dtutimes.dtu.ac.in/img/40.jpg" />
+                <EditionCard title="Edition 43" des="May-18-Jul-18" img="http://dtutimes.dtu.ac.in/img/43.jpg" />
               </Col>
             </Row>
             <Row>
               <Col md="4" className="mb-5">
-                <EditionCard title="Edition 39" des="Aug-19-Oct-19" img="http://dtutimes.dtu.ac.in/img/39.jpg" />
+                <EditionCard title="Edition 42" des="Feb-18-Apr-18" img="http://dtutimes.dtu.ac.in/img/42.jpg" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 41" des="Nov-17-Jan-18" img="http://dtutimes.dtu.ac.in/img/41.jpg" />
+              </Col>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 40" des="Aug-17-Oct-17" img="http://dtutimes.dtu.ac.in/img/40.jpg" />
+              </Col>
+            </Row>
+            <Row>
+              <Col md="4" className="mb-5">
+                <EditionCard title="Edition 39" des="May-17-Jul-17" img="http://dtutimes.dtu.ac.in/img/39.jpg" />
               </Col>
             </Row>
             <Row>
