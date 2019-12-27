@@ -109,6 +109,11 @@ function ColorNavbar() {
                   team
                 </Link>
               </NavItem>
+              <NavItem>
+                <Link className="navlink nav-link" to="/contact">
+                  contact us
+                </Link>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>
