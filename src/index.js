@@ -17,10 +17,11 @@ import BlogPosts from "views/BlogPosts";
 import BlogSingle from "views/BlogSingle"
 import Team from "views/Team";
 import ContactUs from "views/contactUs"
+import Editions from "views/Editions";
 // Components 
 import MainNavbar from "components/Navbars/MainNavbar";
 import MainFooter from "components/Footers/MainFooter";
-import Editions from "views/Editions";
+
 
 
 const Routes = () => (

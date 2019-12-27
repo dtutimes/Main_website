@@ -1,10 +1,7 @@
 import React from "react";
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
+
   Container,
   Row,
   Col
@@ -206,8 +203,9 @@ window.addEventListener('resize',()=>{
               </Col>
             </Row>
             <Row>
+              <Col md='4'></Col>
               <Col md="4" className="mb-5">
-                <h2 className="title text-center" style={{marginRight:'-700px'}}>Archive</h2>
+                <h2 className="title text-center">Archive</h2>
               </Col>
             </Row>
             <Row>
