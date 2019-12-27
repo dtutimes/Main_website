@@ -10,7 +10,6 @@ import {
   Row,
   Col
 } from "reactstrap";
-import PostCard from "./PostCard";
 import { Link } from "react-router-dom";
 const instance = getInstance();
 
@@ -22,28 +21,26 @@ class BlogPosts extends Component {
     totalPages: []
   };
   handlePrevClick = async () => {
-    if (this.state.pageNo >= 1) {
+    if (this.state.pageNo > 1) {
       let newpage = this.state.pageNo - 1;
-      this.setState({ pageNo: newpage });
       //call for getting previous page's blog data
       instance
         .get("/story?page=" + newpage)
         .then(res => {
           let temp = [{ ...res.data }];
           let resData = temp[0]["data"];
-          console.log(resData);
           this.setState({ blogPosts: resData });
         })
         .catch(err => {
           console.log(err);
         });
+      this.setState({ pageNo: newpage });
+      window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
   };
   handleNextClick = async () => {
     if (this.state.pageNo < this.state.lastPage) {
       let newpage = this.state.pageNo + 1;
-      this.setState({ pageNo: newpage });
       //call for getting next page's blog data
       instance
         .get("/story?page=" + newpage)
@@ -55,8 +52,9 @@ class BlogPosts extends Component {
         .catch(err => {
           console.log(err);
         });
+      this.setState({ pageNo: newpage });
+      window.scrollTo(0, 0);
     }
-    window.scrollTo(0, 0);
   };
   componentDidMount() {
     instance
@@ -84,6 +82,7 @@ class BlogPosts extends Component {
   render() {
     const posts = this.state.blogPosts;
     const rows = [];
+    console.log(this.state.pageNo);
     for (let i = 0; i < posts.length; i += 2) {
       rows.push(
         <Row key={Math.random()}>
@@ -196,6 +195,7 @@ class BlogPosts extends Component {
                         color="default"
                         size="sm"
                         onClick={this.handlePrevClick}
+                        disabled={this.state.pageNo === 1 ? true : false}
                       >
                         <i className="fa fa-angle-left mr-1" />
                         Previous
@@ -206,8 +206,12 @@ class BlogPosts extends Component {
                         className="btn-link btn-move-right"
                         color="default"
                         size="sm"
+                        disabled={
+                          this.state.pageNo === this.state.lastPage
+                            ? true
+                            : false
+                        }
                         onClick={this.handleNextClick}
-
                       >
                         Next <i className="fa fa-angle-right" />
                       </Button>
@@ -225,9 +229,3 @@ class BlogPosts extends Component {
 }
 
 export default BlogPosts;
-
-// import React from "react";
-
-// // reactstrap components
-
-// // core components
