@@ -30,6 +30,8 @@ function LandingPageHeader() {
         style={{
           backgroundImage:
             "url(" + require("assets/img/campus/3.jpg") + ")"
+          ,
+          backgroundSize:'cover',
         }}
       >
         <div className="filter" />
@@ -50,7 +52,8 @@ function LandingPageHeader() {
                   alt="..."
                   className="grid__img layer"
                   src="http://dtutimes.dtu.ac.in/img/47.png"
-                  style={{height:'128px',width:'100px',marginLeft:'-455px'}}
+                  style={{height:'128px',width:'100px'}}
+                  className="imgRes"
                 />
               </Col>
               

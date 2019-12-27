@@ -114,6 +114,9 @@
 .takeOnMe:hover {
     opacity: 1;
 }
+.imgRes {
+    margin-left: -1300px;
+}
 .navbar-transparent .navlink, [class*="bg"] {
     color: #FFFFFF;
     font-weight: 700;
@@ -122,4 +125,67 @@
 a {
     color: #66615B;
     font-weight: 700;
+}
+
+@media screen and (max-width:1200px) {
+    .imgRes{
+        margin-left: -1050px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .imgRes{
+        margin-left: -700px;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .imgRes{
+        margin-left: -450px;
+    }
+}
+@media screen and (max-width:550px) {
+    .imgRes{
+        margin-left: -400px;
+    }
+}
+@media screen and (max-width:515px) {
+    .imgRes{
+        margin-left: -350px;
+    }
+}
+@media screen and (max-width:490px) {
+    .imgRes{
+        margin-left: -300px;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .imgRes{
+        margin-left: -250px;
+    }
+}
+
+@media screen and (max-width:417px) {
+    .imgRes{
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width:382px) {
+    .imgRes{
+        margin-left: -150px;
+    }
+}
+
+@media screen and (max-width:349px) {
+    .imgRes{
+        margin-left: -100px;
+    }
+}
+
+@media screen and (max-width:327px) {
+    .imgRes{
+        margin-left: -50px;
+    }
 }
