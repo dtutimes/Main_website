@@ -1,6 +1,14 @@
 import React from "react";
 // reactstrap components
-import { Button, Form, Input, Container, Row, Col } from "reactstrap";
+import {
+  Button,
+  Form,
+  Input,
+  Container,
+  Row,
+  Col,
+  UncontrolledTooltip
+} from "reactstrap";
 
 function ContactUs() {
   document.documentElement.classList.remove("nav-open");
@@ -24,11 +32,15 @@ function ContactUs() {
                   <Row>
                     <Col>
                       <h3 className="title">Editor-in-Chief</h3>
-                      Shivam Jha shivam.jha3@gmail.com
+                      Shivam Jha
+                      <br />
+                      shivam.jha3@gmail.com
                     </Col>
                     <Col>
                       <h3 className="title">Student Head</h3>
-                      Zara Khan zarakhan9278@gmail.com
+                      Zara Khan
+                      <br />
+                      zarakhan9278@gmail.com
                     </Col>
                   </Row>
                 </p>
@@ -39,13 +51,22 @@ function ContactUs() {
                 <h3 className="title">
                   <small>Find us on social networks</small>
                 </h3>
-                <Button className="btn-just-icon mr-1" color="instagram">
+                <Button className="btn-just-icon mr-1" color="youtube" id="top1">
+                  <UncontrolledTooltip placement="top" target="top1" delay={0}>
+                    Email us at dtutimes@dtu.ac.in
+                  </UncontrolledTooltip>
                   <i className="nc-icon nc-email-85" />
                 </Button>
-                <Button className="btn-just-icon mr-1" color="facebook">
+                <Button className="btn-just-icon mr-1" color="facebook" id="top2">
+                  <UncontrolledTooltip placement="top" target="top2" delay={0}>
+                    25K Likes
+                  </UncontrolledTooltip>
                   <i className="fa fa-facebook" />
                 </Button>
-                <Button className="btn-just-icon mr-1" color="instagram">
+                <Button className="btn-just-icon mr-1" color="twitter" id="top3">
+                  <UncontrolledTooltip placement="top" target="top3" delay={0}>
+                    6.1K Followers
+                  </UncontrolledTooltip>
                   <i className="fa fa-instagram" />
                 </Button>
               </Col>

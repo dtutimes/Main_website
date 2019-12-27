@@ -84,7 +84,7 @@ function FooterEcommerce() {
                 <hr />
                 <div className="copyright">
                   © {new Date().getFullYear()}, made with{" "}
-                  <i className="fa fa-heart heart" /> by Creative Tim
+                  <i className="fa fa-heart heart" /> by DTU Times Developers Team
                 </div>
               </div>
             </Col>
