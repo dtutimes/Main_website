@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 
 // core components
 
@@ -29,35 +29,34 @@ function LandingPageHeader() {
         ref={pageHeader}
         style={{
           backgroundImage:
-            "url(" + require("assets/img/sections/david-marcu.jpg") + ")"
+            "url(" + require("assets/img/campus/3.jpg") + ")"
         }}
       >
         <div className="filter" />
         <div className="content-center">
           <Container>
             <div className="motto">
-              <h1 className="title">Landing page</h1>
-              <h3 className="description">
-                Start designing your landing page here.
-              </h3>
+            <Row>
+              <Col>
+                <img
+                        alt="..."
+                        className="grid__img layer"
+                        src="http://dtutimes.dtu.ac.in/img/48.png"
+                        style={{height:'128px',width:'100px'}}
+                />
+              </Col>
+              <Col>
+                <img
+                  alt="..."
+                  className="grid__img layer"
+                  src="http://dtutimes.dtu.ac.in/img/47.png"
+                  style={{height:'128px',width:'100px',marginLeft:'-455px'}}
+                />
+              </Col>
+              
+            </Row>
+              <h1 className="text-left"><p><h1 className="title">Read the Latest Print</h1></p><p><h1 className="title">Editions by DTU Times.</h1></p></h1>
               <br />
-              <Button
-                className="btn-round mr-1"
-                color="neutral"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ?ref=creativetim"
-                target="_blank"
-              >
-                <i className="fa fa-play" />
-                Watch video
-              </Button>
-              <Button
-                className="btn-round"
-                color="neutral"
-                type="button"
-                outline
-              >
-                Download
-              </Button>
             </div>
           </Container>
         </div>
