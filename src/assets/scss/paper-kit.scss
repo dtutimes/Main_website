@@ -95,7 +95,15 @@
 // React Differences
 @import "react/react-differences";
 
-
+.takeOnMe {
+    transition: all;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+}
+.takeOnMe:hover {
+    opacity: 1;
+}
 .navbar-transparent .navlink, [class*="bg"] {
     color: #FFFFFF;
     font-weight: 700;

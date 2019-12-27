@@ -13,7 +13,7 @@ const EditionCard = (props) => {
             height:'420px'
         }}
       >
-        <CardBody>
+        <CardBody className="takeOnMe">
           <h6 className="card-category">{props.title}</h6>
           <div className="card-icon">
             <i className="fa fa-search" />
