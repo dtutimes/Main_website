@@ -95,6 +95,15 @@
 // React Differences
 @import "react/react-differences";
 
+.take {
+    filter: brightness(2.5);
+}
+.take:hover {
+    transition: all;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+    filter: brightness(0.9);
+}
 .takeOnMe {
     transition: all;
     transition-duration: 0.8s;

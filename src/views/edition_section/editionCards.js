@@ -12,6 +12,7 @@ const EditionCard = (props) => {
             ")",
             height:'420px'
         }}
+        className="take"
       >
         <CardBody className="takeOnMe">
           <h6 className="card-category">{props.title}</h6>
