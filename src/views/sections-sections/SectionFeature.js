@@ -1,5 +1,4 @@
 import React from "react";
-
 // reactstrap components
 import {
   Button,
@@ -17,7 +16,43 @@ import EditionCard from "views/edition_section/editionCards";
 
 // core components
 
-function SectionHeader() {
+class SectionHeader extends React.Component {
+
+  state = {
+    mob: false
+}
+componentDidMount() {
+const a =  window.innerWidth;
+console.log(a)
+if(a<=800) {
+    this.setState({
+        mob: true
+    })
+    console.log(this.state.mob);
+}
+else {
+    this.setState({
+        mob: false
+    })
+    console.log(this.state.mob);
+}
+window.addEventListener('resize',()=>{
+    const b =  window.innerWidth;
+    if(b<=600) {
+        this.setState({
+            mob: true
+        })
+        console.log(this.state.mob);
+    }
+    else {
+        this.setState({
+            mob: false
+        })
+        console.log(this.state.mob);
+    }
+})
+} 
+  render() {
   return (
     <>
       {/* <div className="section section-feature cd-section" id="features"> */}
@@ -176,7 +211,7 @@ function SectionHeader() {
               </Col>
             </Row>
             <Row>
-            <Carousel slidesToShow={3} swiping={true} 
+            <Carousel slidesToShow={this.state.mob?1:3} swiping={true} 
             renderCenterLeftControls={({ previousSlide }) => (
               <button onClick={previousSlide} className="btn-move-left btn-round btn btn-default"><i className="nc-icon nc-minimal-left"></i></button>
             )}
@@ -452,7 +487,7 @@ function SectionHeader() {
         {/* ********* END FEATURES 5 ********* */}
       {/* </div> */}
     </>
-  );
+  );}
 }
 
 export default SectionHeader;
