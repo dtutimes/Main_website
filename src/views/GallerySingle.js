@@ -12,6 +12,7 @@ class GallerySingle extends React.Component {
   };
 
   componentDidMount() {
+    document.documentElement.classList.remove("nav-open");
     const { slug } = this.props.match.params;
     Axios.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
       this.setState({ album: res.data });
@@ -22,7 +23,7 @@ class GallerySingle extends React.Component {
 
   render() {
     console.log(this.state);
-    const {album} = this.state
+    const { album } = this.state;
     return (
       <>
         <GallerySingleHeader
@@ -30,8 +31,12 @@ class GallerySingle extends React.Component {
           biliner={album.biliner}
           img={album.album_imgUrl}
         />
-        {album.subs_info && album.subs_info.length > 0 && <GalleryCarousel albums={album.subs_info} /> }
-        {album.image_info && album.image_info.length > 0 && <GalleryImages images={album.image_info} />}
+        {album.subs_info && album.subs_info.length > 0 && (
+          <GalleryCarousel albums={album.subs_info} />
+        )}
+        {album.image_info && album.image_info.length > 0 && (
+          <GalleryImages images={album.image_info} />
+        )}
       </>
     );
   }
