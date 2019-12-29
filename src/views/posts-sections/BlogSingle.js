@@ -168,8 +168,6 @@ class Single extends Component {
                           <Media>
                             <a
                               className="pull-left"
-                              href="#pablo"
-                              onClick={e => e.preventDefault()}
                             >
                               <div className="avatar big-avatar">
                                 <Media

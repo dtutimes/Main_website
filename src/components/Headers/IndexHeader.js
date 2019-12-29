@@ -15,7 +15,8 @@ const IndexHeader = (props) => {
 
     const videoRef = React.createRef();
 
-    const videoButtonClick = () => {
+    const videoButtonClick = (e) => {
+        e.preventDefault();
         if (videoPlaying) {
             setVideoPlaying(false);
             videoRef.current.pause();
