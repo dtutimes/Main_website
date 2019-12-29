@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function AboutUsHeader() {
+function SocietySingleHeader(props) {
   let pageHeader = React.createRef();
   // React.useEffect(() => {
   //   if (window.innerWidth > 991) {
@@ -39,10 +39,9 @@ function AboutUsHeader() {
         <div className="content-center">
           <Container>
             <h1>
-              Hello, <br />
-              We are DTU Times
+                {props.name}
             </h1>
-            <h3>Let us tell you more about what we do.</h3>
+            <h3>{props.des}</h3>
           </Container>
         </div>
       </div>
@@ -50,4 +49,4 @@ function AboutUsHeader() {
   );
 }
 
-export default AboutUsHeader;
+export default SocietySingleHeader;

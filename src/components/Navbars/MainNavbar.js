@@ -105,6 +105,11 @@ function ColorNavbar() {
                 </Link>
               </NavItem>
               <NavItem>
+                <Link className="navlink nav-link" to="/societies">
+                  Societies
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Link className="navlink nav-link" to="/team">
                   team
                 </Link>
