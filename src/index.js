@@ -18,10 +18,11 @@ import BlogSingle from "views/BlogSingle"
 import Team from "views/Team";
 import ContactUs from "views/contactUs"
 import Editions from "views/Editions";
+
 // Components 
 import MainNavbar from "components/Navbars/MainNavbar";
 import MainFooter from "components/Footers/MainFooter";
-
+import LandingLoader from 'views/loader-sections'
 
 
 const Routes = () => (
@@ -43,6 +44,34 @@ const Routes = () => (
     </>
 );
 
+class RoutesWrapper extends React.Component {
+    constructor(props) {
+        super(props)
 
-ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
+        this.state = {
+            loader: true
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({loader: false})
+        }, 3000);
+    }
+    
+    render() {
+        const {loader} = this.state
+
+        if (loader) return <><LandingLoader /></>
+        return (
+            <div>
+                <Routes />
+            </div>
+        )
+    }
+}
+
+
+
+ReactDOM.render(<BrowserRouter><RoutesWrapper /></BrowserRouter>, document.getElementById("root"))
 
