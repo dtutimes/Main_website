@@ -1,14 +1,30 @@
 import React from "react";
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
 // core components
 
-function SectionComponents() {
+class SectionComponents extends React.Component {
+  state = {
+    data: []
+  }
+  componentDidMount() {
+    axios.get("https://api.dtutimes.live/v1/society").then((res)=>{
+      if(res && res.data) {
+        this.setState({
+          data : res.data 
+        });
+    }
+    })
+  }
+  
+  render(){
   return (
     <>
-      <div className="section section-components section-dark">
+      <div className="section section-components section-light">
         <Row>
           <Col lg="6" md="12">
             <div className="image-container">
@@ -17,36 +33,37 @@ function SectionComponents() {
                 className="components-macbook"
                 src={require("assets/img/presentation-page/laptop-basic.png")}
               />
-              <img
-                alt="..."
-                className="table-img"
-                src={require("assets/img/presentation-page/table.jpg")}
-              />
-              <img
-                alt="..."
-                className="share-btn-img"
-                src={require("assets/img/presentation-page/share-btn.png")}
-              />
-              <img
-                alt="..."
-                className="coloured-card-btn-img"
-                src={require("assets/img/presentation-page/coloured-card-with-btn.png")}
-              />
-              <img
-                alt="..."
-                className="coloured-card-img"
-                src={require("assets/img/presentation-page/coloured-card.png")}
-              />
-              <img
-                alt="..."
-                className="social-img"
-                src={require("assets/img/presentation-page/social-row.png")}
-              />
-              <img
-                alt="..."
-                className="pin-btn-img"
-                src={require("assets/img/presentation-page/pin-btn.png")}
-              />
+              <Link to='/societies/cultural'>
+                <img
+                  alt="CULTURAL"
+                  className="table-img"
+                  src={require("assets/img/societies/cultural.jpg")}
+                />
+              </Link>
+
+              <Link to= '/societies/tech_team'>
+                <img
+                  alt="C"
+                  className="coloured-card-btn-img"
+                  src="https://raw.githubusercontent.com/mrFahrenhiet/Main-Web/master/src/assets/img/socity/tech-team.jpg"
+                />
+              </Link>
+
+              <Link to='/societies/miscellaneous'>
+                <img
+                  alt="..."
+                  className="coloured-card-img"
+                  src={'https://cdn.shopify.com/s/files/1/0969/6554/products/Class_9_grande.jpg?v=1456113288'}
+                />
+              </Link>
+
+              <Link to='/societies/technical'>
+                <img
+                  alt="..."
+                  className="social-img"
+                  src={require("assets/img/societies/tech.jpg")}
+                />
+              </Link>
             </div>
           </Col>
           <Col className="ml-auto mr-auto" lg="4" md="10">
@@ -66,7 +83,7 @@ function SectionComponents() {
         </Row>
       </div>
     </>
-  );
+  );}
 }
 
 export default SectionComponents;

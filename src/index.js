@@ -21,6 +21,8 @@ import Editions from "views/Editions";
 // Components 
 import MainNavbar from "components/Navbars/MainNavbar";
 import MainFooter from "components/Footers/MainFooter";
+import Presentation from "views/SocietiesIndex";
+import SocietySingle from "views/SocietiesSingle";
 
 
 
@@ -38,6 +40,8 @@ const Routes = () => (
             <Route path="/story/:slug" component={BlogSingle} />
             <Route path="/team" component={Team} />
             <Route path="/contact" component={ContactUs} />
+            <Route path='/societies' component={Presentation} exact />
+            <Route path='/societies/:slug' component={SocietySingle}/>
         </Switch>
         <MainFooter />
     </>
