@@ -16,10 +16,10 @@ function ProfilePageHeader() {
     <>
       <div
         className="page-header page-header-small"
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/sections/rodrigo-ardilha.jpg") + ")"
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url(" + require("assets/img/sections/rodrigo-ardilha.jpg") + ")"
+        // }}
       >
         <div className="filter" />
       </div>

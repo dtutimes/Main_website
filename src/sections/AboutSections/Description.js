@@ -1,15 +1,39 @@
-/*eslint-disable*/
 import React from "react";
-// reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+import { Blob } from "react-blob";
 
-// core components
+const BackgroundBlob = ({ style, props }) => (
+  <Blob
+    size="70vh"
+    style={{
+      position: "absolute",
+      top: "10%",
+      left: "-5%",
+      zIndex: 0,
+      backgroundColor: "#21D4FD",
+      color: "white",
+      opacity: 0.95,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 
-function SectionIcons() {
-  React.useEffect(() => { });
+const Description = () => {
+  React.useEffect(() => {});
   return (
     <>
-      <div className="section section-icons" style={{paddingBottom: 0}}>
+      <div
+        className="section section-icons"
+        style={{
+          paddingBottom: 0,
+          height: "90vh",
+          position: "relative",
+          overflow: "hidden"
+        }}
+      >
+        <BackgroundBlob />
         <Container fluid>
           <Row>
             <Col md="3">
@@ -29,16 +53,19 @@ function SectionIcons() {
             <Col className="text-center" md="6">
               <h2 className="title revealOnScroll">Who are we</h2>
               <h5 className="description">
-                DTU Times is the Official Newsletter of Delhi Technological University,formerly known as Delhi College of Engineering.
+                DTU Times is the Official Newsletter of Delhi Technological
+                University,formerly known as Delhi College of Engineering.
               </h5>
-              <hr/>
+              <hr />
               <h5 className="description">
-              Founded as DCE Times in 2009 by Anand Meena and Abhishek Bindal,
-                it was among the first college newspapers to be published across all engineering colleges in India.
-                It has since transitioned into its current form as a Quarterly Newsletter,
-                published with the aim of providing essential correspondence, news updates,
-                and palatable articles to the students of the University. Our Online and Social
-                Media presence includes a Facebook Page, an Instagram Handle, a Website, and a Blog on WordPress.
+                Founded as DCE Times in 2009 by Anand Meena and Abhishek Bindal,
+                it was among the first college newspapers to be published across
+                all engineering colleges in India. It has since transitioned
+                into its current form as a Quarterly Newsletter, published with
+                the aim of providing essential correspondence, news updates, and
+                palatable articles to the students of the University. Our Online
+                and Social Media presence includes a Facebook Page, an Instagram
+                Handle, a Website, and a Blog on WordPress.
               </h5>
               <br />
             </Col>
@@ -61,6 +88,6 @@ function SectionIcons() {
       </div>
     </>
   );
-}
+};
 
-export default SectionIcons;
+export default Description;

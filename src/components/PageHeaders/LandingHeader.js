@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
 import { Animated } from "react-animated-css";
-import { Blob } from 'react-blob'
 
 const LandingHeader = () => {
   let pageHeader = React.createRef();
@@ -12,7 +11,7 @@ const LandingHeader = () => {
         ref={pageHeader}
         style={{
           backgroundImage:
-            "url(" + require("assets/img/campus/image-1.jpg") + ")"
+            "url(" + require("assets/img/header/image-1.jpg") + ")"
         }}
       >
         <div className="filter " />

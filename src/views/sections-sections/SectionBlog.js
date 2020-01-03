@@ -446,7 +446,7 @@ function SectionBlog() {
                       <img
                         alt="..."
                         className="img img-raised"
-                        src={require("assets/img/sections/rodrigo-ardilha.jpg")}
+                        // src={require("assets/img/sections/rodrigo-ardilha.jpg")}
                       />
                     </a>
                   </div>

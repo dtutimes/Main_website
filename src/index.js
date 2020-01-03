@@ -11,7 +11,6 @@ import "assets/demo/react-demo.css";
 // pages
 import Pages from "pages"
 import Index from "views/Index";
-import About from "views/About";
 import GalleryIndex from "views/GalleryIndex";
 import GallerySingle from "views/GallerySingle";
 import BlogPosts from "views/BlogPosts";
@@ -32,8 +31,8 @@ const Routes = () => (
         <Navbar />
         <Switch>
             <Route exact path="/" component={Pages.LandingPage} />
-            {/* <Route path="/about" component={About} />
-            <Route path="/editions" component={Editions} />
+            <Route path="/about" component={Pages.AboutPage} />
+            {/* <Route path="/editions" component={Editions} />
             <Route path="/about" component={About} />
             <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
