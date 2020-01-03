@@ -22,7 +22,6 @@ import Editions from "views/Editions";
 // Components 
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
-import LandingLoader from 'views/loader-sections'
 import Presentation from "views/SocietiesIndex";
 import SocietySingle from "views/SocietiesSingle";
 
@@ -32,8 +31,8 @@ const Routes = () => (
         <Switch>
             <Route exact path="/" component={Pages.LandingPage} />
             <Route path="/about" component={Pages.AboutPage} />
-            {/* <Route path="/editions" component={Editions} />
-            <Route path="/about" component={About} />
+            <Route path="/editions" component={Pages.EditionPage} />
+            {/* <Route path="/about" component={About} />
             <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
             <Route exact path="/blog" component={BlogPosts} />

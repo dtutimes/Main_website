@@ -6,6 +6,7 @@ import BlogSinglePage from './BlogSinglePage';
 import GalleryPage from './GalleryPage';
 import SocietyPage from './SocietyPage';
 import TeamPage from './TeamPage';
+import EditionPage from './EditionPage';
 
 export default {
     LandingPage, 
@@ -15,5 +16,6 @@ export default {
     BlogSinglePage,
     GalleryPage,
     SocietyPage,
-    TeamPage 
+    TeamPage ,
+    EditionPage
 }
