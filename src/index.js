@@ -9,6 +9,7 @@ import "assets/demo/demo.css";
 import "assets/demo/react-demo.css";
 
 // pages
+import Pages from "pages"
 import Index from "views/Index";
 import About from "views/About";
 import GalleryIndex from "views/GalleryIndex";
@@ -16,24 +17,22 @@ import GallerySingle from "views/GallerySingle";
 import BlogPosts from "views/BlogPosts";
 import BlogSingle from "views/BlogSingle"
 import Team from "views/Team";
-import ContactUs from "views/contactUs"
+import ContactUs from "views/contactUs";
 import Editions from "views/Editions";
 
 // Components 
-import MainNavbar from "components/Navbars/MainNavbar";
+import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import LandingLoader from 'views/loader-sections'
 import Presentation from "views/SocietiesIndex";
 import SocietySingle from "views/SocietiesSingle";
 
-
-
 const Routes = () => (
     <>
-        <MainNavbar />
+        <Navbar />
         <Switch>
-            <Route exact path="/" component={Index} />
-            <Route path="/about" component={About} />
+            <Route exact path="/" component={Pages.LandingPage} />
+            {/* <Route path="/about" component={About} />
             <Route path="/editions" component={Editions} />
             <Route path="/about" component={About} />
             <Route exact path="/gallery" component={GalleryIndex} />
@@ -43,40 +42,11 @@ const Routes = () => (
             <Route path="/team" component={Team} />
             <Route path="/contact" component={ContactUs} />
             <Route path='/societies' component={Presentation} exact />
-            <Route path='/societies/:slug' component={SocietySingle}/>
+            <Route path='/societies/:slug' component={SocietySingle}/> */}
         </Switch>
         <MainFooter />
     </>
 );
 
-class RoutesWrapper extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            loader: true
-        }
-    }
-
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({loader: false})
-        }, 3000);
-    }
-    
-    render() {
-        const {loader} = this.state
-
-        if (loader) return <><LandingLoader /></>
-        return (
-            <div>
-                <Routes />
-            </div>
-        )
-    }
-}
-
-
-
-ReactDOM.render(<BrowserRouter><RoutesWrapper /></BrowserRouter>, document.getElementById("root"))
+ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
 

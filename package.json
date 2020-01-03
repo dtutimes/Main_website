@@ -13,6 +13,8 @@
     "nouislider": "14.0.2",
     "nuka-carousel": "^4.6.0",
     "react": "16.8.6",
+    "react-animated-css": "^1.2.1",
+    "react-blob": "^1.0.1",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-switch": "15.5.3",
     "react-datetime": "2.16.3",
