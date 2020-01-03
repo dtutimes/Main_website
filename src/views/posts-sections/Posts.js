@@ -64,7 +64,7 @@ class BlogPosts extends Component {
         let resData = temp[0]["data"];
 
         let countPages = [];
-        console.log(res.data.meta.last_page);
+        
         for (let i = 1; i <= res.data.meta.last_page; i++) {
           countPages[i - 1] = i;
         }

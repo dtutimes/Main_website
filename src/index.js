@@ -10,20 +10,20 @@ import "assets/demo/react-demo.css";
 
 // pages
 import Pages from "pages"
-import Index from "views/Index";
-import GalleryIndex from "views/GalleryIndex";
-import GallerySingle from "views/GallerySingle";
-import BlogPosts from "views/BlogPosts";
-import BlogSingle from "views/BlogSingle"
-import Team from "views/Team";
-import ContactUs from "views/contactUs";
-import Editions from "views/Editions";
+// import Index from "views/Index";
+// import GalleryIndex from "views/GalleryIndex";
+// import GallerySingle from "views/GallerySingle";
+// import BlogPosts from "views/BlogPosts";
+// import BlogSingle from "views/BlogSingle"
+// import Team from "views/Team";
+// import ContactUs from "views/contactUs";
+// import Editions from "views/Editions";
 
 // Components 
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
-import Presentation from "views/SocietiesIndex";
-import SocietySingle from "views/SocietiesSingle";
+// import Presentation from "views/SocietiesIndex";
+// import SocietySingle from "views/SocietiesSingle";
 
 const Routes = () => (
     <>
@@ -32,8 +32,8 @@ const Routes = () => (
             <Route exact path="/" component={Pages.LandingPage} />
             <Route path="/about" component={Pages.AboutPage} />
             <Route path="/editions" component={Pages.EditionPage} />
-            {/* <Route path="/about" component={About} />
-            <Route exact path="/gallery" component={GalleryIndex} />
+            <Route exact path="/blog" component={Pages.BlogPage} />
+            {/* <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
             <Route exact path="/blog" component={BlogPosts} />
             <Route path="/story/:slug" component={BlogSingle} />
