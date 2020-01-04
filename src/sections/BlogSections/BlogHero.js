@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { api } from "api";
 import { Container, Col, Row } from "reactstrap";
+import { Blob } from "react-blob";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
 import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
-import BlogPopular from 'sections/BlogSections/BlogPopular'; 
+import BlogPopular from "sections/BlogSections/BlogPopular";
 import BlogMagzine from "./BlogMagzine";
 
-export class BlogHero extends Component {
+export default class BlogHero extends Component {
   constructor(params) {
     super(params);
     this.state = {
@@ -36,11 +37,13 @@ export class BlogHero extends Component {
       <>
         <Container
           className="tim-container"
-          style={{ minHeight: "100vh !important" }}
+          style={{ minHeight: "100vh !important", overflow: 'hidden'}}
         >
+          <BackgroundBlob />
           <div id="description-areas">
             <Row>
               <Col md="8" sm="12">
+                
                 <BlogTabs
                   loading={loading}
                   posts={blogs}
@@ -49,11 +52,17 @@ export class BlogHero extends Component {
               </Col>
               <Col className="pt-5" md="4" sm="12">
                 <BlogSubsciber />
-                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+                <hr
+                  style={{ borderTop: "1px solid black", borderColor: "black" }}
+                />
                 <BlogPopular />
-                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+                <hr
+                  style={{ borderTop: "1px solid black", borderColor: "black" }}
+                />
                 <BlogMagzine />
-                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+                <hr
+                  style={{ borderTop: "1px solid black", borderColor: "black" }}
+                />
               </Col>
             </Row>
           </div>
@@ -63,4 +72,20 @@ export class BlogHero extends Component {
   }
 }
 
-export default BlogHero;
+const BackgroundBlob = ({ style, props }) => (
+  <Blob
+    size="165vh"
+    style={{
+      position: "absolute",
+      bottom: "10%",
+      right: "35%",
+      zIndex: 0,
+      backgroundColor: "#F08BA5",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);

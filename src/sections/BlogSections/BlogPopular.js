@@ -3,6 +3,25 @@ import { Link } from "react-router-dom";
 import { api } from "api";
 import { ContentLoaderPopular } from "components/ContentLoader";
 import { CardTitle } from "reactstrap";
+import { Blob } from "react-blob";
+
+const BackgroundBlob = ({ style, props }) => (
+  <Blob
+    size="25vh"
+    style={{
+      position: "absolute",
+      top: "10%",
+      left: "35%",
+      zIndex: 0,
+      backgroundColor: "#F08BA5",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 
 export default class BlogPopular extends Component {
   state = {
@@ -16,7 +35,7 @@ export default class BlogPopular extends Component {
         popular: [res.data.data[0], res.data.data[1], res.data.data[3]]
       });
       setTimeout(() => {
-        this.setState({ loading: false});
+        this.setState({ loading: false });
       }, 2000);
     });
   }
@@ -24,7 +43,8 @@ export default class BlogPopular extends Component {
   render() {
     const { popular, loading } = this.state;
     return (
-      <div>
+      <div style={{ position:'relative', overflow:'hidden'}}>
+        <BackgroundBlob />
         <h6>Popular Posts</h6>
         <p className="mb-3">Your daily dose of write some tag line here. </p>
         {loading &&

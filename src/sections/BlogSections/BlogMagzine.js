@@ -27,7 +27,7 @@ export default class BlogMagzine extends Component {
         <Card className="card-plain card-blog">
           <Row>
             {loading && [1, 2].map(item => (
-                <Col md="6">
+                <Col md="6" key={item}>
                     <ContentLoaderMagzine />
                 </Col>
             ))}
