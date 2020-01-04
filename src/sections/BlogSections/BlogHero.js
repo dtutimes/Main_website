@@ -51,46 +51,27 @@ export default class BlogHero extends Component {
                 />
               </Col>
               <Col className="pt-5" md="4" sm="12">
-                <StickyContainer>
-                  {/* Other elements can be in between `StickyContainer` and `Sticky`,
-        but certain styles can break the positioning logic used. */}
-                  <Sticky topOffset={80}>
-                    {({
-                      style,
-
-                      // the following are also available but unused in this example
-                      isSticky,
-                      wasSticky,
-                      distanceFromTop,
-                      distanceFromBottom,
-                      calculatedHeight
-                    }) => (
-                      <header style={style}>
-                        <BlogSubsciber />
-                        <hr
-                          style={{
-                            borderTop: "1px solid black",
-                            borderColor: "black"
-                          }}
-                        />
-                        <BlogPopular />
-                        <hr
-                          style={{
-                            borderTop: "1px solid black",
-                            borderColor: "black"
-                          }}
-                        />
-                        <BlogMagzine />
-                        <hr
-                          style={{
-                            borderTop: "1px solid black",
-                            borderColor: "black"
-                          }}
-                        />
-                      </header>
-                    )}
-                  </Sticky>
-                </StickyContainer>
+                <BlogSubsciber />
+                <hr
+                  style={{
+                    borderTop: "1px solid black",
+                    borderColor: "black"
+                  }}
+                />
+                <BlogPopular />
+                <hr
+                  style={{
+                    borderTop: "1px solid black",
+                    borderColor: "black"
+                  }}
+                />
+                <BlogMagzine />
+                <hr
+                  style={{
+                    borderTop: "1px solid black",
+                    borderColor: "black"
+                  }}
+                />
               </Col>
             </Row>
           </div>
