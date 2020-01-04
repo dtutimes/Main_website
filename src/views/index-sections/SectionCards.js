@@ -700,7 +700,7 @@ function SectionCards() {
                       ")"
                   }}
                 />
-                <div className="card-avatar border-white">
+                <div className="card-avatar" >
                   <a href="#pablo" onClick={e => e.preventDefault()}>
                     <img
                       alt="..."

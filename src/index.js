@@ -9,12 +9,12 @@ import "assets/demo/demo.css";
 import "assets/demo/react-demo.css";
 
 // pages
-import Pages from "pages"
+import Pages from "pages";
 // import Index from "views/Index";
 // import GalleryIndex from "views/GalleryIndex";
 // import GallerySingle from "views/GallerySingle";
 // import BlogPosts from "views/BlogPosts";
-// import BlogSingle from "views/BlogSingle"
+import BlogSingle from "views/BlogSingle"
 // import Team from "views/Team";
 // import ContactUs from "views/contactUs";
 // import Editions from "views/Editions";
@@ -33,9 +33,9 @@ const Routes = () => (
             <Route path="/about" component={Pages.AboutPage} />
             <Route path="/editions" component={Pages.EditionPage} />
             <Route exact path="/blog" component={Pages.BlogPage} />
+            <Route path="/story/:slug" component={Pages.BlogSinglePage} />
             {/* <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
-            <Route exact path="/blog" component={BlogPosts} />
             <Route path="/story/:slug" component={BlogSingle} />
             <Route path="/team" component={Team} />
             <Route path="/contact" component={ContactUs} />

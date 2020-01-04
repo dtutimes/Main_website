@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { api } from "api";
+import { Container, Col, Row } from "reactstrap";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
+import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
+
 
 export class BlogHero extends Component {
   constructor(params) {
@@ -30,7 +33,26 @@ export class BlogHero extends Component {
     const { blogs, categories, loading } = this.state;
     return (
       <>
-        <BlogTabs loading={loading} posts={blogs} categories={categories} />
+        <Container
+          className="tim-container"
+          style={{ minHeight: "100vh !important" }}
+        >
+          <div id="description-areas">
+            <Row>
+              <Col md="8" sm="12">
+                <BlogTabs
+                  loading={loading}
+                  posts={blogs}
+                  categories={categories}
+                />
+              </Col>
+              <Col className="pt-5" md="4" sm="12">
+                <BlogSubsciber />
+                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+              </Col>
+            </Row>
+          </div>
+        </Container>
       </>
     );
   }
