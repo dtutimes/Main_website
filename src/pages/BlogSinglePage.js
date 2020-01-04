@@ -1,12 +1,11 @@
 import React from 'react'
 
-import Header from "components/PageHeaders/LandingHeader";
 import LoaderComponent from "components/LoaderComponent";
-
+import BlogSingleHero from 'sections/BlogSingleSections/BlogSingleHero';
  
 const Sections = () => (
     <>
-        <Header />
+        <BlogSingleHero />
     </>
 );
 

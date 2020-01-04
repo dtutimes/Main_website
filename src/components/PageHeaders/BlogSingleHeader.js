@@ -3,18 +3,17 @@ import { Container } from "reactstrap";
 import { Animated } from "react-animated-css";
 import { Blob } from "react-blob";
 
-const BlogHeader = () => {
-
+const BlogSingleHeader = ({title, biliner, timestamp}) => {
+  const ts = new Date(timestamp);
   return (
     <>
       <section
-        className="section pb-0"
+        className="section"
         style={{
           height: "50vh",
           paddingTop: '10rem',
           position: "relative",
           overflow: "hidden",
-          paddingBottom: '0 !important'
         }}
       >
         <div className="filter " />
@@ -30,7 +29,7 @@ const BlogHeader = () => {
               animationInDelay={500}
               isVisible={true}
             >
-              <h1>BLOG</h1>
+            <h1>{title}</h1>
             </Animated>
 
             <Animated
@@ -40,9 +39,18 @@ const BlogHeader = () => {
               isVisible={true}
             >
               <h5 style={{marginTop: 2}}>
-                  Dive headlong into a world of illuminating interviews, <br/>
-                  enlightening editorials and potent prose written by some of the brightest minds of DTU.
+                  {biliner}
               </h5>
+            </Animated>
+            <Animated
+              animationIn="fadeInUp"
+              animationInDelay={1000}
+              animationInDuration={1000}
+              isVisible={true}
+            >
+              <h6 style={{marginTop: 2}}>
+                  {ts.toDateString()}
+              </h6>
             </Animated>
           </Container>
         </div>
@@ -53,11 +61,11 @@ const BlogHeader = () => {
 
 const BackgroundBlob = ({ style, props }) => (
   <Blob
-    size="75vh"
+    size="85vh"
     style={{
       position: "absolute",
-      top: "-60%",
-      left: "35%",
+      top: "-80%",
+      left: "-5%",
       zIndex: 0,
       backgroundColor: "#000333",
       color: "white",
@@ -74,7 +82,7 @@ const BackgroundBlobSmallBlue = ({ style, props }) => (
       size="40vh"
       style={{
         position: "absolute",
-        top: "-15%",
+        top: "-35%",
         right: "10%",
         zIndex: 0,
         backgroundColor: "#F08BA3",
@@ -89,11 +97,11 @@ const BackgroundBlobSmallBlue = ({ style, props }) => (
 
 const BackgroundBlobSmall = ({ style, props }) => (
   <Blob
-    size="30vh"
+    size="60vh"
     style={{
       position: "absolute",
-      top: "-15%",
-      left: "5%",
+      top: "-55%",
+      left: "45%",
       zIndex: 0,
       backgroundColor: "#F08BA5",
       color: "white",
@@ -105,4 +113,4 @@ const BackgroundBlobSmall = ({ style, props }) => (
   />
 );
 
-export default BlogHeader;
+export default BlogSingleHeader;

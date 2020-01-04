@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { api } from "api";
 import { Container, Col, Row } from "reactstrap";
 import { Blob } from "react-blob";
+import { StickyContainer, Sticky } from "react-sticky";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
 import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
@@ -37,13 +38,12 @@ export default class BlogHero extends Component {
       <>
         <Container
           className="tim-container"
-          style={{ minHeight: "100vh !important", overflow: 'hidden'}}
+          style={{ minHeight: "100vh !important", overflow: "hidden" }}
         >
           <BackgroundBlob />
           <div id="description-areas">
             <Row>
               <Col md="8" sm="12">
-                
                 <BlogTabs
                   loading={loading}
                   posts={blogs}
@@ -51,18 +51,46 @@ export default class BlogHero extends Component {
                 />
               </Col>
               <Col className="pt-5" md="4" sm="12">
-                <BlogSubsciber />
-                <hr
-                  style={{ borderTop: "1px solid black", borderColor: "black" }}
-                />
-                <BlogPopular />
-                <hr
-                  style={{ borderTop: "1px solid black", borderColor: "black" }}
-                />
-                <BlogMagzine />
-                <hr
-                  style={{ borderTop: "1px solid black", borderColor: "black" }}
-                />
+                <StickyContainer>
+                  {/* Other elements can be in between `StickyContainer` and `Sticky`,
+        but certain styles can break the positioning logic used. */}
+                  <Sticky topOffset={80}>
+                    {({
+                      style,
+
+                      // the following are also available but unused in this example
+                      isSticky,
+                      wasSticky,
+                      distanceFromTop,
+                      distanceFromBottom,
+                      calculatedHeight
+                    }) => (
+                      <header style={style}>
+                        <BlogSubsciber />
+                        <hr
+                          style={{
+                            borderTop: "1px solid black",
+                            borderColor: "black"
+                          }}
+                        />
+                        <BlogPopular />
+                        <hr
+                          style={{
+                            borderTop: "1px solid black",
+                            borderColor: "black"
+                          }}
+                        />
+                        <BlogMagzine />
+                        <hr
+                          style={{
+                            borderTop: "1px solid black",
+                            borderColor: "black"
+                          }}
+                        />
+                      </header>
+                    )}
+                  </Sticky>
+                </StickyContainer>
               </Col>
             </Row>
           </div>
