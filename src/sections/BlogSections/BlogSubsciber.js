@@ -30,7 +30,7 @@ export default class BlogSubsciber extends Component {
 
   render() {
     return (
-      <div className="" style={{ border: "black 1px" }}>
+      <div>
         <h6>Subscribe to Our NewsLetter</h6>
         <p className="mb-3">Your daily dose of write some tag line here. </p>
         <Form onSubmit={this.handleSubmit}>

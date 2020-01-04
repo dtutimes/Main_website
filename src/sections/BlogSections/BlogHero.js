@@ -4,7 +4,8 @@ import { Container, Col, Row } from "reactstrap";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
 import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
-
+import BlogPopular from 'sections/BlogSections/BlogPopular'; 
+import BlogMagzine from "./BlogMagzine";
 
 export class BlogHero extends Component {
   constructor(params) {
@@ -48,6 +49,10 @@ export class BlogHero extends Component {
               </Col>
               <Col className="pt-5" md="4" sm="12">
                 <BlogSubsciber />
+                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+                <BlogPopular />
+                <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
+                <BlogMagzine />
                 <hr style={{borderTop: '1px solid black', borderColor: 'black'}} />
               </Col>
             </Row>
