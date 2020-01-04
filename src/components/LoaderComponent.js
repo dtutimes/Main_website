@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { BoxLoading } from "react-loadingg";
+import { BoxLoading, LadderLoading } from "react-loadingg";
 
 export const Loader = () => (
     <>
@@ -11,7 +11,9 @@ export const Loader = () => (
         }}
       >
         <div className="filter filter-dark" />
-        <div className="content-center"><BoxLoading /></div>
+        <div className="content-center" >
+            <BoxLoading size="large" />
+        </div>
       </div>
     </>
 );
@@ -28,7 +30,7 @@ export default class LoaderComponent extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({loading: false})
-        }, 3000);
+        }, 2000);
     }
     
     render() {

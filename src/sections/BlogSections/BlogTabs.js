@@ -10,15 +10,15 @@ import {
   Row
 } from "reactstrap";
 
+import ContentLoaderBlog from "components/ContentLoader";
 import BlogCard from "sections/BlogSections/BlogCard";
 import BlogCategorySection from "sections/BlogSections/BlogCategorySection";
 
-const BlogTabs = ({ categories, posts }) => {
+const BlogTabs = ({ categories, posts, loading }) => {
   const [hTabs, setHTabs] = React.useState("1");
-
   return (
     <>
-      <Container className="tim-container">
+      <Container className="tim-container" style={{minHeight:'100vh !important'}}>
         <div id="description-areas">
           <Row>
             <Col md="8" sm="12">
@@ -52,7 +52,10 @@ const BlogTabs = ({ categories, posts }) => {
               </div>
               <TabContent className="text-center" activeTab={"hTabs" + hTabs}>
                 <TabPane tabId={"hTabs" + "1"} >
-                  <Container><BlogCard posts={posts} /></Container>
+                  <Container style={{minHeight:'100vh'}}>
+                    {loading && <ContentLoaderBlog />}
+                    {!loading && <BlogCard posts={posts} /> }
+                  </Container>
                 </TabPane>
                 {categories.map(item => (
                   <TabPane tabId={"hTabs" + item.id} key={item.id}>

@@ -3,7 +3,6 @@ import { api } from "api";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
 
-
 export class BlogHero extends Component {
   constructor(params) {
     super(params);
@@ -12,21 +11,27 @@ export class BlogHero extends Component {
       categories: [],
       pageNo: 1,
       lastPage: 0,
-      totalPages: []
+      totalPages: [],
+      loading: true
     };
   }
 
   componentDidMount() {
-    api.get("/story").then(res => this.setState({ blogs: res.data.data }));
-    api.get("/category").then(res => this.setState({ categories: res.data }))
+    api.get("/story").then(res => {
+      this.setState({ blogs: res.data.data });
+      setTimeout(() => {
+        this.setState({ loading: false });
+      }, 2000);
+    });
+    api.get("/category").then(res => this.setState({ categories: res.data }));
   }
 
   render() {
-    const { blogs, categories } = this.state;
+    const { blogs, categories, loading } = this.state;
     return (
-    <>
-        <BlogTabs posts={blogs} categories={categories} />
-    </>
+      <>
+        <BlogTabs loading={loading} posts={blogs} categories={categories} />
+      </>
     );
   }
 }
