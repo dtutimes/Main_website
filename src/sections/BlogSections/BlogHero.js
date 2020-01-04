@@ -8,7 +8,7 @@ import BlogTabs from "sections/BlogSections/BlogTabs";
 import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
 import BlogPopular from "sections/BlogSections/BlogPopular";
 import BlogMagzine from "./BlogMagzine";
-
+import BlogPagination from "./BlogPagination";
 export default class BlogHero extends Component {
   constructor(params) {
     super(params);
@@ -23,17 +23,33 @@ export default class BlogHero extends Component {
   }
 
   componentDidMount() {
-    api.get("/story").then(res => {
+    api.get("/story?page=" + this.state.pageNo).then(res => {
       this.setState({ blogs: res.data.data });
+      let countPages = [];
+      console.log(res.data.meta.last_page);
+      for (let i = 1; i <= res.data.meta.last_page; i++) {
+        countPages[i - 1] = i;
+      }
+      this.setState({
+        lastPage: res.data.meta.last_page,
+        totalPages: countPages
+      });
       setTimeout(() => {
         this.setState({ loading: false });
-      }, 2000);
+      }, 1200);
     });
     api.get("/category").then(res => this.setState({ categories: res.data }));
   }
 
+  changePage(newpage, newposts) {
+    this.setState({ pageNo: newpage, blogs: newposts, loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1200);
+  }
+
   render() {
-    const { blogs, categories, loading } = this.state;
+    const { blogs, categories, loading, pageNo, lastPage } = this.state;
     return (
       <>
         <Container
@@ -49,6 +65,11 @@ export default class BlogHero extends Component {
                   posts={blogs}
                   categories={categories}
                 />
+                <BlogPagination
+                  pageNo={pageNo}
+                  lastPage={lastPage}
+                  changePage={this.changePage.bind(this)}
+                />
               </Col>
               <Col className="pt-5" md="4" sm="12">
                 <BlogSubsciber />
@@ -58,7 +79,7 @@ export default class BlogHero extends Component {
                     borderColor: "black"
                   }}
                 />
-                <BlogPopular />
+                <BlogPopular pageNo={pageNo} />
                 <hr
                   style={{
                     borderTop: "1px solid black",
