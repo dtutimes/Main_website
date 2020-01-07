@@ -3,6 +3,9 @@ import React from "react";
 // reactstrap components
 import { Container } from "reactstrap";
 
+//Components
+import {Animated} from 'react-animated-css'
+
 // core components
 
 function AboutUsHeader() {
@@ -12,16 +15,31 @@ function AboutUsHeader() {
         className="page-header page-header-small"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/campus/2.jpeg") + ")"
+            "url(" + require("assets/img/campus/6.jpeg") + ")"
         }}
       >
         <div className="filter filter-primary" />
         <div className="content-center">
           <Container>
-            <h1>
-              Gallery
-            </h1>
-            <h3>Let us tell you more about what we do.</h3>
+            <Animated
+              animationIn="fadeIn"
+              animationInDelay={1000}
+              animationInDuration={1000}
+              isVisible={true}
+            >
+              <h1>
+                Gallery
+              </h1>
+            </Animated>
+            <Animated
+              animationIn="flipInX"
+              animationInDelay={1400}
+              animationInDuration={1000}
+              isVisible={true}
+            >
+              <h3>Let us tell you more about what we do.</h3>
+            </Animated>
+            
           </Container>
         </div>
       </div>

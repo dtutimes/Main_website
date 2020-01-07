@@ -7,10 +7,12 @@ import {useState} from 'react';
 import Carousel from 'nuka-carousel';
 import {Link} from 'react-router-dom';
 import {Card} from 'reactstrap';
+import {Blob} from 'react-blob'
 
 // sections for this page
 import SectionComponents from "./presentation-sections/SectionComponents.js";
 import AboutUsHeader from 'components/Headers/AboutUsHeader';
+import SocHeader from "components/PageHeaders/SocHeader.js";
 
 
 
@@ -71,14 +73,14 @@ function Presentation() {
   if(mob===false)
     return (
       <>
-        <AboutUsHeader/>
+        <SocHeader/>
         <SectionComponents />
       </>
     );
   else {
     return (
       <>
-        <AboutUsHeader/>
+        <SocHeader/>
         <Carousel 
           slidesToShow={1}
           swiping={true} 

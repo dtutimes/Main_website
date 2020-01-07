@@ -2,7 +2,8 @@ import React from "react";
 import axios from "axios";
 
 import GalleryCarousel from "./gallery-sections/GalleryCarousel";
-import GalleryHeader from "components/Headers/GalleryHeader";
+import GalleryHeader from "../components/Headers/GalleryHeader";
+import { Animated } from "react-animated-css";
 
 export default class GalleryLanding extends React.Component {
   constructor(props) {
@@ -25,9 +26,16 @@ export default class GalleryLanding extends React.Component {
     return (
       <>
         <GalleryHeader />
+        <Animated 
+        animationIn="slideInLeft"
+        animationInDelay={1600}
+        animationInDuration={1000}
+        isVisible={true}
+        >
         {this.state.albums.length && (
           <GalleryCarousel albums={this.state.albums} />
         )}
+        </Animated>
       </>
     );
   }
