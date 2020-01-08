@@ -7,7 +7,7 @@ import GalleryPage from './GalleryPage';
 import SocietyPage from './SocietyPage';
 import TeamPage from './TeamPage';
 import EditionPage from './EditionPage';
-
+import GallerySinglePage from "./GallerySinglePage";
 export default {
     LandingPage, 
     AboutPage, 
@@ -17,5 +17,6 @@ export default {
     GalleryPage,
     SocietyPage,
     TeamPage ,
-    EditionPage
+    EditionPage,
+    GallerySinglePage,
 }

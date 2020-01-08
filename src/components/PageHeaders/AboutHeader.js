@@ -58,7 +58,7 @@ const AboutHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h3>Need to fix blobs colors.</h3>
+              <h3>Get to know the team bringing you your favourite news better!</h3>
             </Animated>
           </Container>
         </div>

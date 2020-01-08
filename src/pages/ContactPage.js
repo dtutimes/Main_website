@@ -1,12 +1,14 @@
 import React from 'react'
 
-import Header from "components/PageHeaders/LandingHeader";
+import Contact from "views/contact-sections/contact";
+import ContactHeader from "components/PageHeaders/ContactHeader";
 import LoaderComponent from "components/LoaderComponent";
 
  
 const Sections = () => (
     <>
-        <Header />
+        <ContactHeader />
+        <Contact />
     </>
 );
 

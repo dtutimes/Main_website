@@ -16,14 +16,14 @@ import GallerySingle from "views/GallerySingle";
 // import BlogPosts from "views/BlogPosts";
 import BlogSingle from "views/BlogSingle"
 // import Team from "views/Team";
-// import ContactUs from "views/contactUs";
+import ContactUs from "pages/ContactPage";
 // import Editions from "views/Editions";
 
 // Components 
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
-// import Presentation from "views/SocietiesIndex";
-// import SocietySingle from "views/SocietiesSingle";
+import Presentation from "views/SocietiesIndex";
+import SocietySingle from "views/SocietiesSingle";
 
 const Routes = () => (
     <>
@@ -34,14 +34,16 @@ const Routes = () => (
             <Route path="/editions" component={Pages.EditionPage} />
             <Route exact path="/blog" component={Pages.BlogPage} />
             <Route path="/story/:slug" component={Pages.BlogSinglePage} />
-            <Route exact path="/gallery" component={GalleryIndex} />
-            <Route path="/gallery/:slug" component={GallerySingle} />
+            <Route exact path="/gallery" component={Pages.GalleryPage} />
+            <Route path="/gallery/:slug" component={Pages.GallerySinglePage} />
             <Route path="/team" component={Pages.TeamPage} />
             {/* 
             <Route path="/team" component={Team} />
+            
+            {/* <Route path="/team" component={Team} /> */}
             <Route path="/contact" component={ContactUs} />
             <Route path='/societies' component={Presentation} exact />
-            <Route path='/societies/:slug' component={SocietySingle}/> */}
+            <Route path='/societies/:slug' component={SocietySingle}/>
         </Switch>
         <MainFooter />
     </>

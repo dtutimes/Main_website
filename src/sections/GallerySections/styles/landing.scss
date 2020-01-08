@@ -1,0 +1,23 @@
+.gal-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    flex-grow: 1;
+    height: 100vh;
+    padding-top:350px;
+    padding-bottom: 320px;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.inside {
+    background: rgba(23,22,23,0.5);
+    color:white !important;
+}
+
+.item-inner {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+}

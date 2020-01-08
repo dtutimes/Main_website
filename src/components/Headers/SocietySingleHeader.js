@@ -4,6 +4,8 @@ import React from "react";
 import { Container } from "reactstrap";
 
 // core components
+import {Animated} from 'react-animated-css';
+
 
 function SocietySingleHeader(props) {
   let pageHeader = React.createRef();
@@ -27,7 +29,7 @@ function SocietySingleHeader(props) {
         ref={pageHeader}
         style={{
           backgroundImage:
-          "url(" + require("assets/img/campus/2.jpeg") + ")"
+          "url(" + require("assets/img/campus/7.jpeg") + ")"
         }}
         // style={{
           
@@ -38,10 +40,22 @@ function SocietySingleHeader(props) {
         <div className="filter filter-primary" />
         <div className="content-center">
           <Container>
+          <Animated
+              animationIn="fadeIn"
+              animationInDelay={500}
+              isVisible={true}
+            >
             <h1>
                 {props.name}
             </h1>
+          </Animated>
+          <Animated
+            animationIn="flipInX"
+            animationInDelay={1000}
+            isVisible={true}
+          >
             <h3>{props.des}</h3>
+          </Animated>
           </Container>
         </div>
       </div>
