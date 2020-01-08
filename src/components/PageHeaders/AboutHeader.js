@@ -45,7 +45,7 @@ const AboutHeader = () => {
         >
           <Container className="text-left">
             <Animated
-              animationIn="fadeIn"
+              animationIn="bounceInDown"
               animationInDelay={500}
               isVisible={true}
             >

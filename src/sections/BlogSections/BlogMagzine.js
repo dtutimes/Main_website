@@ -13,7 +13,7 @@ export default class BlogMagzine extends Component {
     api.get("/edition").then(res => {
       this.setState({ magzines: [res.data[0], res.data[1]] });
       setTimeout(() => {
-          this.setState({loading: false})
+        this.setState({ loading: false });
       }, 2000);
     });
   }
@@ -26,19 +26,21 @@ export default class BlogMagzine extends Component {
         <h6 className="mb-3">Latest Editions</h6>
         <Card className="card-plain card-blog">
           <Row>
-            {loading && [1, 2].map(item => (
+            {loading &&
+              [1, 2].map(item => (
                 <Col md="6" key={item}>
-                    <ContentLoaderMagzine />
+                  <ContentLoaderMagzine />
                 </Col>
-            ))}
-            {!loading && magzines.length &&
+              ))}
+            {!loading &&
+              magzines.length &&
               magzines.map(magzine => (
                 <Col md="6" key={magzine.id}>
                   <div className="card-image">
                     <img alt="..." className="img" src={magzine.imgUrl} />
                   </div>
                   <CardTitle tag="h5" className="text-center mt-2">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="/editions" >
                       {magzine.name}
                     </a>
                   </CardTitle>

@@ -43,7 +43,7 @@ export default class BlogPopular extends Component {
   render() {
     const { popular, loading } = this.state;
     return (
-      <div style={{ position:'relative', overflow:'hidden'}}>
+      <div style={{ position: "relative", overflow: "hidden", height: "40vh" }}>
         <BackgroundBlob />
         <h6>Popular Posts</h6>
         <p className="mb-3">Your daily dose of write some tag line here. </p>
@@ -57,7 +57,10 @@ export default class BlogPopular extends Component {
           popular.map(item => (
             <div className="mb-1" key={item.id}>
               <CardTitle tag="h3" className="mb-0">
-                <a href="#pablo" onClick={e => e.preventDefault()}>
+                <a
+                  href={`/story/${item.slug}`}
+                  // onClick={e => window.scrollTo(0, 0)}
+                >
                   {item.title}
                 </a>
               </CardTitle>

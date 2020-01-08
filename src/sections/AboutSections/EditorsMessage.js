@@ -79,7 +79,7 @@ const EditorsMessage = () => {
                       and beyond, the underlying philosophy of the team has
                       remained unwavered.
                     </p>
-                    <CardFooter>
+                    {/* <CardFooter>
                       <Button
                         className="btn-neutral mr-1"
                         color="dark"
@@ -113,7 +113,7 @@ const EditorsMessage = () => {
                       >
                         <i className="fa fa-windows" />
                       </Button>
-                    </CardFooter>
+                    </CardFooter> */}
                   </CardBody>
                 </Card>
               </Col>

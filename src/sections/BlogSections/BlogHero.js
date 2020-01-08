@@ -54,7 +54,7 @@ export default class BlogHero extends Component {
       <>
         <Container
           className="tim-container"
-          style={{ minHeight: "100vh !important", overflow: "hidden" }}
+          style={{ minHeight: "200vh !important", overflow: "hidden" }}
         >
           <BackgroundBlob />
           <div id="description-areas">

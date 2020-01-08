@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "nuka-carousel";
-
+import { Blob } from "react-blob";
 import api from "api";
 
 import EditionCard from "views/edition_section/editionCards";
@@ -70,6 +70,10 @@ class SectionHeader extends React.Component {
         <div className="wrapper">
           <div className="features-2 section text-center landing-section">
             <Container>
+            {/* <div style={{position:"relative", }} media='screen and (max-width: 700px)'>
+            <BackgroundBlob />
+            <BackgroundBlob2 />
+            </div> */}
               <Row>{columns}</Row>
               <div className="text-left" style={{padding: '5rem 0'}}>
                   <h1>Archived</h1>
@@ -107,5 +111,38 @@ class SectionHeader extends React.Component {
     );
   }
 }
-
+const BackgroundBlob = ({ style, props }) => (
+  <Blob
+    size="70vh"
+    style={{
+      position: "absolute",
+      top: "10%",
+      right: "-5%",
+      zIndex: 0,
+      backgroundColor: "#DB7F8E",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
+const BackgroundBlob2 = ({ style, props }) => (
+  <Blob
+    size="70vh"
+    style={{
+      position: "absolute",
+      bottom: "-60%",
+      right: "-5%",
+      zIndex: 0,
+      backgroundColor: "#D4B2D8",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 export default SectionHeader;

@@ -36,6 +36,7 @@ const Routes = () => (
             <Route path="/story/:slug" component={Pages.BlogSinglePage} />
             <Route exact path="/gallery" component={GalleryIndex} />
             <Route path="/gallery/:slug" component={GallerySingle} />
+            <Route path="/team" component={Pages.TeamPage} />
             {/* 
             <Route path="/team" component={Team} />
             <Route path="/contact" component={ContactUs} />

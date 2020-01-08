@@ -21,6 +21,8 @@ const BlogHeader = () => {
         <BackgroundBlob />
         <BackgroundBlobSmallBlue />
         <BackgroundBlobSmall />
+        {/* <BackgroundBlobBig /> */}
+
         <div
           className="content-center"
         >
@@ -104,5 +106,21 @@ const BackgroundBlobSmall = ({ style, props }) => (
     {...props}
   />
 );
-
+const BackgroundBlobBig = ({ style, props }) => (
+  <Blob
+    size="165vh"
+    style={{
+      position: "absolute",
+      bottom: "10%",
+      right: "35%",
+      zIndex: 0,
+      backgroundColor: "#F08BA5",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 export default BlogHeader;
