@@ -7,7 +7,7 @@ const LandingHeader = () => {
   return (
     <>
       <div
-        className="page-header page-header-large"
+        className="page-header page-header-small"
         ref={pageHeader}
         style={{
           backgroundImage:

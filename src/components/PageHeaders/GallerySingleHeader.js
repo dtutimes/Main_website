@@ -7,7 +7,7 @@ class GallerySingleHeader extends Component {
     album: {}
   };
   componentDidMount() {
-    const { slug } = this.props.match.params;
+    const { slug } = this.props.slug;
     api.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
       this.setState({ album: res.data });
       //   console.log(this.state)

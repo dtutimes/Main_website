@@ -22,8 +22,8 @@ import ContactUs from "pages/ContactPage";
 // Components 
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
-import Presentation from "views/SocietiesIndex";
-import SocietySingle from "views/SocietiesSingle";
+import Presentation from "sections/SocSection/SocietiesIndex";
+import SocietySingle from "pages/SocietiesSingle";
 
 const Routes = () => (
     <>

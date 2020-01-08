@@ -37,7 +37,7 @@ function SocietySingleHeader(props) {
         //     "url(" + require("assets/img/campus/2.jpeg") + ")"
         // }}
       >
-        <div className="filter filter-primary" />
+        <div className="filter" />
         <div className="content-center">
           <Container>
           <Animated

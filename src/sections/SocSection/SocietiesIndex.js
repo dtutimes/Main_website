@@ -7,11 +7,9 @@ import {useState} from 'react';
 import Carousel from 'nuka-carousel';
 import {Link} from 'react-router-dom';
 import {Card} from 'reactstrap';
-import {Blob} from 'react-blob'
 
 // sections for this page
-import SectionComponents from "./presentation-sections/SectionComponents.js";
-import AboutUsHeader from 'components/Headers/AboutUsHeader';
+import SectionComponents from "../../views/presentation-sections/SectionComponents.js";
 import SocHeader from "components/PageHeaders/SocHeader.js";
 
 
