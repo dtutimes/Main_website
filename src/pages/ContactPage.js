@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Contact from "views/contact-sections/contact";
+import Contact from "sections/ContactSection/contact";
 import ContactHeader from "components/PageHeaders/ContactHeader";
 import LoaderComponent from "components/LoaderComponent";
 

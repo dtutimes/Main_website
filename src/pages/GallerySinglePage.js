@@ -4,14 +4,22 @@ import Gallery from "sections/GallerySingleSections/GallerySingle";
 import LoaderComponent from "components/LoaderComponent";
 
  
-const Sections = () => (
+class Sections extends React.Component {
+
+    render(){
+    return (
     <>
-        <Header />
-        <Gallery />
+        <Header slug={this.props.slug}/>
+        <Gallery slug={this.props.slug} />
 
     </>
-);
+    )
+    };
+}
 
-const LandingPage = () => <LoaderComponent component={<Sections />} />
+const LandingPage = (props) =>{ 
+const url = props.match.params
+return (
+<LoaderComponent component={<Sections slug={url} />} /> )}
 
 export default LandingPage;

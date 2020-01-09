@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import SocietySingleHeader from 'components/Headers/SocietySingleHeader';
-import SocietiesCard from './societies/SocietiesCard';
+import SocietySingleHeader from 'components/PageHeaders/SocietySingleHeader';
+import SocietiesCard from '../sections/SocSingleSection/SocietiesCard';
 import {Animated} from 'react-animated-css';
 
 import {Col} from 'reactstrap'
