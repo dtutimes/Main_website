@@ -23,7 +23,7 @@ const TeamHeader = () => {
               isVisible={true}
             >
               <h1>
-                Team
+                Team Times
               </h1>
             </Animated>
 

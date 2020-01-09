@@ -75,7 +75,7 @@ const BackgroundBlob = ({ style, props }) => (
       top: "-60%",
       left: "25%",
       zIndex: 0,
-      backgroundColor: "#21D4FD",
+      backgroundColor: "#BCF8EC",
       color: "white",
       opacity: 0.95,
       fontSize: "50vh",
@@ -85,6 +85,7 @@ const BackgroundBlob = ({ style, props }) => (
   />
 );
 
+      
 const BackgroundBlobSmall = ({ style, props }) => (
   <Blob
     size="50vh"
@@ -93,7 +94,7 @@ const BackgroundBlobSmall = ({ style, props }) => (
       top: "-15%",
       left: "5%",
       zIndex: 0,
-      backgroundColor: "#F08BA5",
+      backgroundColor: "#84DCC6",
       color: "white",
       opacity: 0.9,
       fontSize: "50vh",
