@@ -1910,7 +1910,7 @@ License - nucleoapp.com/license/
   content: "\ea42"; }
 
 .nc-planet::before {
-  content: "\ea43"; }
+  content: url("assets/img/pokeball.svg.png"); }
 
 .nc-refresh-69::before {
   content: "\ea44"; }
@@ -6204,7 +6204,7 @@ textarea.form-control {
 
 .page-carousel:hover .carousel-control.right,
 .page-carousel:hover .carousel-control.left {
-  opacity: 1;
+  opacity: 0;
   z-index: 1; }
 
 .card .carousel .carousel-indicators {
@@ -11236,7 +11236,7 @@ License - nucleoapp.com/license/
   content: "\ea42"; }
 
 .nc-planet::before {
-  content: "\ea43"; }
+  content: url("assets/img/pokeball.svg.png"); }
 
 .nc-refresh-69::before {
   content: "\ea44"; }

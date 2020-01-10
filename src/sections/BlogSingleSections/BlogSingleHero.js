@@ -29,7 +29,6 @@ export default class BlogSingleHero extends Component {
   componentDidMount() {
     const slug = window.location.pathname;
     api.get(slug).then(res => this.setState({blog: res.data}));
-
     this.listenToScrollEvent();
   }
 

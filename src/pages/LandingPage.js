@@ -5,12 +5,13 @@ import LoaderComponent from "components/LoaderComponent";
 
 import EditionsSection from "sections/LandingSections/EditionsSection";
 import FeaturedPosts from 'sections/LandingSections/FeaturedPosts'
- 
 const Sections = () => (
     <>
         <Header />
+        <div>
         <EditionsSection />
         <FeaturedPosts />
+        </div>
     </>
 );
 

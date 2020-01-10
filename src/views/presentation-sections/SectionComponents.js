@@ -31,9 +31,9 @@ class SectionComponents extends React.Component {
     animationInDelay={1500}
     isVisible={true}
     >
-    <div className="section section-components section-light">
-      <BackgroundBlob />
-      <BackgroundBlobDark/>
+    <div className="section section-components">
+      {/* <BackgroundBlob /> */}
+      {/* <BackgroundBlobDark/> */}
       <Row>
         <Col md='3'></Col>
         <Col lg="6" md="6">

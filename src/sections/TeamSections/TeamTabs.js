@@ -109,7 +109,7 @@ export default class Example extends React.Component {
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
                   <h2 className="title">Team</h2>
-                  <h5 className="description">
+                  <h5 className="description" style={{color:"#494850"}}>
                     The only way to create great things every day is with great
                     people who truly enjoy their job. So go ahead and meet this
                     tenacious group of people who work tirelessly behind the

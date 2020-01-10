@@ -19,7 +19,7 @@ const BlogHeader = () => {
       >
         <div className="filter " />
         <BackgroundBlob />
-        <BackgroundBlobSmallBlue />
+        <BackgroundBlobSmallRight />
         <BackgroundBlobSmall />
         {/* <BackgroundBlobBig /> */}
 
@@ -61,7 +61,7 @@ const BackgroundBlob = ({ style, props }) => (
       top: "-60%",
       left: "35%",
       zIndex: 0,
-      backgroundColor: "#000333",
+      backgroundColor: "#C76D7E",
       color: "white",
       opacity: 0.25,
       fontSize: "50vh",
@@ -71,17 +71,17 @@ const BackgroundBlob = ({ style, props }) => (
   />
 );
 
-const BackgroundBlobSmallBlue = ({ style, props }) => (
+const BackgroundBlobSmallRight = ({ style, props }) => (
     <Blob
-      size="40vh"
+      size="55vh"
       style={{
         position: "absolute",
         top: "-15%",
-        right: "10%",
+        right: "-2%",
         zIndex: 0,
-        backgroundColor: "#F08BA3",
+        backgroundColor: "#E85D75",
         color: "white",
-        opacity: 0.9,
+        opacity: 0.5,
         fontSize: "50vh",
         ...style
       }}
@@ -97,7 +97,7 @@ const BackgroundBlobSmall = ({ style, props }) => (
       top: "-15%",
       left: "5%",
       zIndex: 0,
-      backgroundColor: "#F08BA5",
+      backgroundColor: "#E85D75",
       color: "white",
       opacity: 0.9,
       fontSize: "50vh",
@@ -114,7 +114,7 @@ const BackgroundBlobBig = ({ style, props }) => (
       bottom: "10%",
       right: "35%",
       zIndex: 0,
-      backgroundColor: "#F08BA5",
+      backgroundColor: "#E85D75",
       color: "white",
       opacity: 0.25,
       fontSize: "50vh",

@@ -43,7 +43,8 @@ export default class BlogPopular extends Component {
   render() {
     const { popular, loading } = this.state;
     return (
-      <div style={{ position: "relative", overflow: "hidden", height: "40vh" }}>
+      <div style={{ position: "relative", overflow: "hidden", }}>
+        {/* height commented out */}
         <BackgroundBlob />
         <h6>Popular Posts</h6>
         <p className="mb-3">Your daily dose of write some tag line here. </p>

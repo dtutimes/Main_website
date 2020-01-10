@@ -1,5 +1,5 @@
 import React from "react";
-import { Blob } from 'react-blob';
+import { Blob } from "react-blob";
 import {
   Button,
   Card,
@@ -20,9 +20,9 @@ const BackgroundBlob = ({ style, props }) => (
       top: "10%",
       right: "-5%",
       zIndex: 1,
-      backgroundColor: "#F08BA5",
+      backgroundColor: "#BCF8EC",
       color: "white",
-      opacity: 0.95,
+      opacity: 0.25,
       fontSize: "50vh",
       ...style
     }}
@@ -40,18 +40,18 @@ const EditorsMessage = () => {
         id="projects"
         style={{
           paddingTop: 0,
-          height: "90vh",
+          height: "100%",
           position: "relative",
-          overflow: "hidden"
+          // overflow: "hidden"
         }}
       >
         <BackgroundBlob />
-        <div className="project-4 section">
+        <div className="section">
           <Container>
             <Row>
               <Col className="ml-auto text-right" md="12">
                 <h2 className="title">Editors' message</h2>
-                <h5 className="description"></h5>
+                {/* <h5 className="description"></h5> */}
               </Col>
             </Row>
             <div className="space-top" />
@@ -62,23 +62,33 @@ const EditorsMessage = () => {
               <Col className="ml-auto" md="7">
                 <Card className="card-plain">
                   <CardBody>
-                    <h6 className="card-category">Shivam Jha</h6>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <CardTitle tag="h3">
-                        The need of a great product
-                      </CardTitle>
-                    </a>
-                    <p className="card-description">
-                      Back in 2009, DTU Times was started as an endeavour to
-                      bridge the gap between the administration and students of
-                      DTU (then DCE). Today, the team marks its presence on a
-                      multitude of portals, and apart from reporting news, is a
-                      content producer in its own merit. In this journey
-                      spanning nearly a decade, while DTU Times has evolved into
-                      a reliable media house with thousands of readers from DTU
-                      and beyond, the underlying philosophy of the team has
-                      remained unwavered.
-                    </p>
+                    <h6 className="card-category">Shivam Jha, Vishesh Kashyap</h6>
+                    {/* <a href="#pablo" onClick={e => e.preventDefault()}></a> */}
+                    <h5
+                      className="description"
+                      style={{ color: "#494850" }}
+                    >
+                      January 2009 saw the publication of the first edition of
+                      DCE Times, a seven-page issue developed by a team of six.
+                      Eleven years on, the fledgling newsletter has developed
+                      into a DTU’s very own media body, with over seventy
+                      members working year-round, not merely reporting the news,
+                      but also developing content across print and social
+                      avenues. Over the past decade, DTU Times has aimed to be
+                      in the vanguard of university journalism through
+                      experimentation, creativity and effectual implementation.
+                      <br />
+                      It is tempting to view the journey of DTU Times as
+                      analogous to one’s life. In the years since its inception,
+                      the team has grown in size, skill and scale, astute in the
+                      knowledge that there remains a long way to go. Each year
+                      brings opportunities to try something new, leading to an
+                      increased maturity of beliefs and aims. Yet, the target of
+                      being the one-stop destination for the administration,
+                      faculty, staff and students of DTU (and beyond) for all
+                      information regarding the university, remains firm as
+                      ever.
+                    </h5>
                     {/* <CardFooter>
                       <Button
                         className="btn-neutral mr-1"

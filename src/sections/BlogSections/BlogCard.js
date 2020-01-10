@@ -24,7 +24,7 @@ const BlogCard = ({ posts }) => {
               </a>
             </div>
             <CardBody>
-              <p className="card-description" style={{ marginBottom: "1rem" }}>
+              <p className="card-description" style={{ marginBottom: "1rem",color:"#494850" }}>
                 {post.biliner}
                 ..... <Link
                     to={`/story/${post.slug}`}

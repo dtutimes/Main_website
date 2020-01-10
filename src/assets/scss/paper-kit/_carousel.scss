@@ -1,5 +1,5 @@
 .carousel-control{
-    background-color: $danger-color;
+    // background-color: $danger-color;
     border-radius: 50%;
     opacity: 1;
     text-shadow: none;
@@ -7,7 +7,7 @@
     &:hover,
     &:focus{
         opacity: 1;
-        background-color: $danger-states-color;
+        // background-color: $danger-states-color;
     }
 }
 

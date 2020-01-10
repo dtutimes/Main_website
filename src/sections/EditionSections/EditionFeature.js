@@ -5,13 +5,11 @@ import { Blob } from "react-blob";
 import api from "api";
 
 import EditionCard from "views/edition_section/editionCards";
-
 class SectionHeader extends React.Component {
   state = {
     mob: false,
     editions: []
   };
-
   componentDidMount() {
     api.get("/edition").then(res => this.setState({ editions: res.data }));
 
@@ -68,43 +66,64 @@ class SectionHeader extends React.Component {
     return (
       <>
         <div className="wrapper">
-          <div className="features-2 section text-center landing-section">
-            <Container>
-            {/* <div style={{position:"relative", }} media='screen and (max-width: 700px)'>
+          <div
+            className="section-image text-center section"
+            style={{
+              backgroundImage:
+                "url(" + require("assets/img/campus/10.jpeg") + ")",
+                backgroundSize:"cover"
+            }}
+            
+          >
+            {/* Main_website/src/assets/img/campus/2019-08-09 05.08.52 4__01.jpg */}
+            <div className="" style={{paddingBottom:"3rem"}}>
+              <Container>
+                <h2 style={{color:"white"}}>Whatever happens in DTU, stays in DTU Times.</h2>
+                <h5 style={{ marginTop: "1rem", color:"white" }}>
+                  Visit the stories of yore preserved by us with an integration
+                  of art, fiction, imagination and satire as we rewind the clock
+                  of DTU to whichever era you wish to witness today.
+                </h5>
+              </Container>
+            </div>
+            <div className="">
+              <Container>
+                {/* <div style={{position:"relative", }} media='screen and (max-width: 700px)'>
             <BackgroundBlob />
             <BackgroundBlob2 />
             </div> */}
-              <Row>{columns}</Row>
-              <div className="text-left" style={{padding: '5rem 0'}}>
+                <Row>{columns}</Row>
+                <div className="text-left" style={{ padding: "5rem 0" }}>
                   <h1>Archived</h1>
-              </div>
-              <Row>
-                <Carousel
-                  slidesToShow={this.state.mob ? 1 : 3}
-                  swiping={true}
-                  renderCenterLeftControls={({ previousSlide }) => (
-                    <button
-                      onClick={previousSlide}
-                      className="btn-move-left btn-round btn btn-default"
-                    >
-                      <i className="nc-icon nc-minimal-left"></i>
-                    </button>
-                  )}
-                  renderCenterRightControls={({ nextSlide }) => (
-                    <button
-                      className="btn-move-right btn-round btn btn-default"
-                      onClick={nextSlide}
-                    >
-                      <i className="nc-icon nc-minimal-right"></i>
-                    </button>
-                  )}
-                  renderBottomCenterControls={""}
-                  cellSpacing={20}
-                >
-                  {carousels}
-                </Carousel>
-              </Row>
-            </Container>
+                </div>
+                <Row>
+                  <Carousel
+                    slidesToShow={this.state.mob ? 1 : 3}
+                    swiping={true}
+                    renderCenterLeftControls={({ previousSlide }) => (
+                      <button
+                        onClick={previousSlide}
+                        className="btn-move-left btn-round btn btn-default"
+                      >
+                        <i className="nc-icon nc-minimal-left"></i>
+                      </button>
+                    )}
+                    renderCenterRightControls={({ nextSlide }) => (
+                      <button
+                        className="btn-move-right btn-round btn btn-default"
+                        onClick={nextSlide}
+                      >
+                        <i className="nc-icon nc-minimal-right"></i>
+                      </button>
+                    )}
+                    renderBottomCenterControls={""}
+                    cellSpacing={20}
+                  >
+                    {carousels}
+                  </Carousel>
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
       </>

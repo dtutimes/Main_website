@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Blob} from 'react-blob';
 import api from "api";
 import { Loader } from "components/LoaderComponent";
 
@@ -13,7 +13,6 @@ import {
   Row,
   Col
 } from "reactstrap";
-
 export default class FeaturedPosts extends Component {
   constructor(props) {
     super(props);
@@ -37,8 +36,33 @@ export default class FeaturedPosts extends Component {
         <div className="section" id="cards">
           <Container className="tim-container">
             <div className="">
-              <h2 style={{ marginBottom: "4rem", marginTop: '-3rem' }}>Featured Posts</h2>
+            <Blob
+                size="10rem"
+                style={{
+                  backgroundColor: "#C4CAD0",
+                  color: "white",
+                  zIndex: -2,
+                }}
+              >
+                <img
+                  width="10%"
+                  style={{
+                    minWidth: "4rem"
+                  }}
+                  src={require("assets/img/icons/blog.png")}
+                  alt="..."
+                />
+              </Blob>
+              <h2 style={{ marginBottom: "1.4rem", marginTop: "1.3rem", fontWeight:"5rem" }}>
+                <span style={{color:"#040403"}}>Featured </span> <span style={{color:"#9F2042"}}>Posts</span>
+              </h2>
             </div>
+            <p style={{marginTop:"1rem", fontSize:"1.1rem", fontWeight:"2rem", color:"#494850", marginBottom:"2rem"}}>
+              Find out what's new in the mind's of the brightest of DTU. From
+              interviews of alumni and students alike to opinions on current
+              affairs to musings about philosophy and the conundrums of
+              Engineering, you never know what you will find here.
+            </p>
             <Row>
               <Col md="4" sm="6">
                 <Card className="card-blog">

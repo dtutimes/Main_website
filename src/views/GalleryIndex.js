@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 import GalleryCarousel from "./gallery-sections/GalleryCarousel";
-import GalleryHeader from "../components/Headers/GalleryHeader";
+import GalleryHeader from "../components/PageHeaders/GalleryHeader";
 import { Animated } from "react-animated-css";
 
 export default class GalleryLanding extends React.Component {

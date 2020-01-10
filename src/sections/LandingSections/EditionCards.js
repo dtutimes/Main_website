@@ -14,27 +14,38 @@ const EditionCards = () => (
         <Row>
           <Col lg="4" md="6">
             <div className="section-description">
-              <Blob size="10rem" style={{
-                backgroundColor: '#21D4FD',
-                color: 'white',
-                zIndex: -1,
-              }}>
+              <Blob
+                size="10rem"
+                style={{
+                  backgroundColor: "#21D4FD",
+                  color: "white",
+                  zIndex: -1
+                }}
+              >
                 <img
                   width="10%"
                   style={{
                     minWidth: "4rem"
                   }}
                   src={require("assets/img/icons/newspaper.png")}
+                  alt="..."
                 />
               </Blob>
-              <h2 style={{ marginBottom: "1rem" }}>Latest Editions</h2>
+              <h2
+                style={{ marginBottom: "1rem", fontWeight: "8rem !important" }}
+              >
+                <span style={{ color: "#040403" }}>Latest </span>{" "}
+                <span style={{ color: "#F7717D" }}>Editions</span>
+              </h2>
               <h6 className="category">By DTU Times </h6>
-              <h5 className="description">
-                We have gone above and beyond with options for you to organise
-                your information. From cards designed for blog posts, to product
-                cards or user profiles, you will have many options to choose
-                from. All the cards follow the Paper Kit style principles and
-                have a design that stands out.
+              <h5 style={{fontSize:"1.1rem", color:"#494850"}} className="description">
+                  The DTU Snapshot at a glance. Check out our latest editions,
+                  containing interviews of the dignitaries and the celebrities
+                  that visited DTU to the news of societies, faculties, students
+                  and the University itself. And while you are at it be sure to
+                  visit the Pulse section, filled to the brim with the
+                  creativity of some of the most talented writers of our
+                  University.
               </h5>
             </div>
           </Col>

@@ -13,13 +13,38 @@ const BlogContent = ({ blog }) => {
         <Container>
           <Row>
             <Col md="8">
-              <div className="blog-content" style={{ textAlign: "justify" }}>
+              <div
+                className="blog-content"
+                style={{ textAlign: "justify", color: "#494850" }}
+              >
                 <img
                   alt="..."
                   className="img-rounded img-responsive mb-5"
                   src={blog.imgUrl}
                 />
                 {body}
+                <hr />
+                <Container>
+                  <Row>
+                    <Media>
+                      <a className="pull-left">
+                        <div className="avatar big-avatar">
+                          <Media
+                            alt="..."
+                            object
+                            src={blog.user && blog.user.imgUrl}
+                          />
+                        </div>
+                      </a>
+                      <Media body>
+                        <Media heading>
+                          {blog.user && <span>{blog.user.name}</span>}
+                        </Media>
+                        <p>{blog.user && <span>{blog.user.bio}</span>}</p>
+                      </Media>
+                    </Media>
+                  </Row>
+                </Container>
               </div>
             </Col>
           </Row>
