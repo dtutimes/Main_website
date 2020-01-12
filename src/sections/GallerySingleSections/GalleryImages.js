@@ -1,11 +1,25 @@
 import React, { useState, useCallback, useEffect } from "react";
+import {Animated} from 'react-animated-css';
 
 import { Container, Row, Col } from "reactstrap";
 
 //
 import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
+import Modal from 'react-modal';
 
+
+
+const customStyles = {
+  content : {
+    background: 'rgba(21,21,21,0.0)',
+    color:'white',
+    border: 'none',
+    overflow:'visible'
+  },
+  overlay: {
+    background: 'rgba(21,21,21,0.9)',
+  }
+};
 const GalleryImages = ({ images }) => {
   console.log(images);
   const [currentImage, setCurrentImage] = useState(0);
@@ -17,7 +31,7 @@ const GalleryImages = ({ images }) => {
   }, []);
 
   const closeLightbox = () => {
-    setCurrentImage(0);
+    // setCurrentImage(0);
     setViewerIsOpen(false);
   };
 
@@ -43,7 +57,9 @@ const GalleryImages = ({ images }) => {
     photos.push({
       src: item.url,
       width: option.width,
-      height: option.height
+      height: option.height,
+      name: item.name,
+      biliner: item.biliner
     });
   });
 
@@ -53,11 +69,22 @@ const GalleryImages = ({ images }) => {
         <Container>
           <Row>
             <Col md="8" sm="8">
+            <Animated
+                animationIn="fadeIn"
+                animationInDelay={2000}
+                isVisible={true}>
               <h1>
                 Hello, <br />
                 We are DTU Times
               </h1>
+              </Animated>
+              <Animated
+              animationIn="flipInX"
+              animationInDelay={2500}
+              isVisible={true}
+              >
               <h3>Let us tell you more about what we do.</h3>
+              </Animated>
             </Col>
           </Row>
         </Container>
@@ -65,21 +92,41 @@ const GalleryImages = ({ images }) => {
 
       <div className="section">
         <Container>
-          <Gallery photos={photos} onClick={openLightbox} margin={1} />
-          <ModalGateway>
+          <Gallery photos={photos} onClick={openLightbox} margin={5} />
             {viewerIsOpen ? (
-              <Modal onClose={closeLightbox}>
-                <Carousel
-                  currentIndex={currentImage}
-                  views={photos.map(x => ({
-                    ...x,
-                    srcset: x.srcSet,
-                    caption: x.title
-                  }))}
-                />
+              
+              <Modal
+              isOpen={viewerIsOpen}
+              onRequestClose={closeLightbox}
+              style= {customStyles}
+              >
+                <a href="#" onClick={closeLightbox} style={{marginLeft:'99%'}}><img src={require("assets/icons/2.png")} height="28px" width="28px" /></a>
+                <Row>
+                  <Col md="6">
+                  <Animated
+                  animationIn='zoomIn'
+                  animationInDelay={50}
+                  isVisible={true}
+                  >
+                    <img src={photos[currentImage].src} width='95%' height='95%' style={{marginTop:'0%'}} />
+                    </Animated>
+                  </Col>
+                  <Col>
+                  <Animated
+                  animationIn='zoomIn'
+                  animationInDelay={500}
+                  isVisible={true}
+                  >
+                    <div style={{marginTop:'30%'}}>
+                    <h2>{photos[currentImage].name}</h2>
+                    <p>{photos[currentImage].biliner}</p>
+                    </div>
+                    </Animated>
+                  </Col>
+                </Row>
               </Modal>
+              
             ) : null}
-          </ModalGateway>
         </Container>
       </div>
     </>
