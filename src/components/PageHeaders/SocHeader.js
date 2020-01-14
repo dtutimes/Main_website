@@ -18,7 +18,7 @@ const SocHeader = () => {
       >
         <div className="filter " />
         <BackgroundBlob />
-        <BackgroundBlobSmallBlue />
+        {/* <BackgroundBlobSmallBlue /> */}
         <BackgroundBlobSmall />
         <div className="content-center">
           <Container className="text-left">
@@ -80,7 +80,7 @@ const BackgroundBlob = ({ style, props }) => (
       top: "-60%",
       left: "25%",
       zIndex: 0,
-      backgroundColor: "#64E9EE",
+      backgroundColor: "#9CBFA7",
       color: "white",
       opacity: 0.95,
       fontSize: "50vh",
@@ -116,7 +116,7 @@ const BackgroundBlobSmall = ({ style, props }) => (
       top: "-15%",
       left: "5%",
       zIndex: 0,
-      backgroundColor: "#3AAFB9",
+      backgroundColor: "#8FA998",
       color: "white",
       opacity: 0.9,
       fontSize: "50vh",

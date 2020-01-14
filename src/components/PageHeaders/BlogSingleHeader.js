@@ -38,7 +38,7 @@ const BlogSingleHeader = ({title, biliner, timestamp}) => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h5 style={{marginTop: 2}}>
+              <h5 style={{marginTop: 2, fontSize:""}}>
                   {biliner}
               </h5>
             </Animated>

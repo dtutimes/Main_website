@@ -9374,7 +9374,7 @@ body {
 .section {
   padding: 70px 0;
   position: relative;
-  background-color: #FFFFFF; }
+  }
   .section .card-profile {
     margin-top: 100px; }
 
@@ -9482,7 +9482,7 @@ body {
 .section {
   padding: 70px 0;
   position: relative;
-  background-color: #FFFFFF; }
+ }
 
 .section-with-space {
   padding: 60px 0; }

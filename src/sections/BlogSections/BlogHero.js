@@ -71,7 +71,8 @@ export default class BlogHero extends Component {
                   changePage={this.changePage.bind(this)}
                 />
               </Col>
-              <Col className="pt-5" md="4" sm="12">
+              <Col className="pt-5" md="4" sm="12" className="abc">
+                <div className="blog-attr">
                 <BlogSubsciber />
                 <hr
                   style={{
@@ -86,13 +87,14 @@ export default class BlogHero extends Component {
                     borderColor: "black"
                   }}
                 />
-                <BlogMagzine />
+                {/* <BlogMagzine />
                 <hr
                   style={{
                     borderTop: "1px solid black",
                     borderColor: "black"
                   }}
-                />
+                /> */}
+              </div>
               </Col>
             </Row>
           </div>
@@ -110,7 +112,7 @@ const BackgroundBlob = ({ style, props }) => (
       bottom: "10%",
       right: "35%",
       zIndex: 0,
-      backgroundColor: "#F7A9A8",
+      backgroundColor: "#F08BA5",
       color: "white",
       opacity: 0.25,
       fontSize: "50vh",
@@ -119,3 +121,45 @@ const BackgroundBlob = ({ style, props }) => (
     {...props}
   />
 );
+
+
+// {/* <StickyContainer className="container">
+//                   {/* Other elements can be in between `StickyContainer` and `Sticky`,
+//         but certain styles can break the positioning logic used. */}
+//                   <Sticky disableCompensation>
+//                     {({
+//                       style,
+
+//                       // the following are also available but unused in this example
+//                       isSticky,
+//                       wasSticky,
+//                       distanceFromTop,
+//                       distanceFromBottom,
+//                       calculatedHeight
+//                     }) => (
+//                       <header style={style}>
+//                         <BlogSubsciber />
+//                         <hr
+//                           style={{
+//                             borderTop: "1px solid black",
+//                             borderColor: "black"
+//                           }}
+//                         />
+//                         <BlogPopular />
+//                         <hr
+//                           style={{
+//                             borderTop: "1px solid black",
+//                             borderColor: "black"
+//                           }}
+//                         />
+//                         <BlogMagzine />
+//                         <hr
+//                           style={{
+//                             borderTop: "1px solid black",
+//                             borderColor: "black"
+//                           }}
+//                         />
+//                       </header>
+//                     )}
+//                   </Sticky>
+//                 </StickyContainer> */}

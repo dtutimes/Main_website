@@ -45,7 +45,7 @@ export default class BlogPopular extends Component {
     return (
       <div style={{ position: "relative", overflow: "hidden", }}>
         {/* height commented out */}
-        <BackgroundBlob />
+        {/* <BackgroundBlob /> */}
         <h6>Popular Posts</h6>
         <p className="mb-3">Your daily dose of write some tag line here. </p>
         {loading &&

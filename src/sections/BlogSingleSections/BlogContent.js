@@ -12,10 +12,11 @@ const BlogContent = ({ blog }) => {
       <div className="section pt-1">
         <Container>
           <Row>
-            <Col md="8">
+            <Col></Col>
+            <Col md="10">
               <div
                 className="blog-content"
-                style={{ textAlign: "justify", color: "#494850" }}
+                style={{ textAlign: "left", color: "#494850", lineHeight:"2rem !important", fontWeight:"400 !important" }}
               >
                 <img
                   alt="..."
@@ -47,6 +48,7 @@ const BlogContent = ({ blog }) => {
                 </Container>
               </div>
             </Col>
+            <Col></Col>
           </Row>
         </Container>
       </div>
