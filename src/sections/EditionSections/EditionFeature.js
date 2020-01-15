@@ -49,7 +49,8 @@ class SectionHeader extends React.Component {
             <EditionCard
               title={editions[index].name}
               des="Aug-19-Oct-19"
-              img={editions[index].link}
+              img={editions[index].imgUrl}
+              ajax = {editions[index].ajax}
             />
           </Col>
         );
@@ -57,7 +58,8 @@ class SectionHeader extends React.Component {
         carousels.push(
           <EditionCard
             title={editions[index].name}
-            img={editions[index].link}
+            img={editions[index].imgUrl}
+            ajax = {editions[index].ajax}
             style={{ height: "400px" }}
           />
         );
