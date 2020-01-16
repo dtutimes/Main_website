@@ -95,6 +95,12 @@
 // React Differences
 @import "react/react-differences";
 
+
+.galImg {
+  img {
+    object-fit: cover !important;
+}  
+}
 .take {
   transition: all;
   transition-duration: 0.5s;

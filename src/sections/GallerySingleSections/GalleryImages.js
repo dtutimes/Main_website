@@ -14,7 +14,7 @@ const customStyles = {
     background: 'rgba(21,21,21,0.0)',
     color:'white',
     border: 'none',
-    overflow:'visible'
+    overflow:'hidden'
   },
   overlay: {
     background: 'rgba(21,21,21,0.9)',
@@ -92,15 +92,18 @@ const GalleryImages = ({ images }) => {
 
       <div className="section">
         <Container>
+          <div className="galImg">
           <Gallery photos={photos} onClick={openLightbox} margin={5} />
+          </div>
             {viewerIsOpen ? (
               
               <Modal
               isOpen={viewerIsOpen}
               onRequestClose={closeLightbox}
               style= {customStyles}
+              
               >
-                <a href="#" onClick={closeLightbox} style={{marginLeft:'99%'}}><img src={require("assets/icons/2.png")} height="28px" width="28px" /></a>
+                <a role="button" onClick={closeLightbox} style={{marginLeft:'99%',cursor:'pointer'}}><img src={require("assets/icons/2.png")} height="28px" width="28px" /></a>
                 <Row>
                   <Col md="6">
                   <Animated
@@ -108,7 +111,7 @@ const GalleryImages = ({ images }) => {
                   animationInDelay={50}
                   isVisible={true}
                   >
-                    <img src={photos[currentImage].src} width='95%' height='95%' style={{marginTop:'0%'}} />
+                    <img src={photos[currentImage].src} width='90%' height='90%'/>
                     </Animated>
                   </Col>
                   <Col>
@@ -117,7 +120,7 @@ const GalleryImages = ({ images }) => {
                   animationInDelay={500}
                   isVisible={true}
                   >
-                    <div style={{marginTop:'30%'}}>
+                    <div style={{marginTop:'20%'}}>
                     <h2>{photos[currentImage].name}</h2>
                     <p>{photos[currentImage].biliner}</p>
                     </div>

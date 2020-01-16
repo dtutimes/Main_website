@@ -18,7 +18,33 @@ class EditionCard extends React.Component {
   // const [currentImage, setCurrentImage] = useState(0);
   // const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-
+state = {
+  mob: false
+}
+componentDidMount() {
+  const a = window.innerWidth;
+  if (a <= 800) {
+    this.setState({
+      mob: true
+    });
+  } else {
+    this.setState({
+      mob: false
+    });
+  }
+  window.addEventListener("resize", () => {
+    const b = window.innerWidth;
+    if (b <= 600) {
+      this.setState({
+        mob: true
+      });
+    } else {
+      this.setState({
+        mob: false
+      });
+    }
+  });
+}
 
 state = {
   viewerIsOpen: false
@@ -58,6 +84,7 @@ closeLightbox = () => {
             {this.props.des}
           </p>
           <CardFooter>
+            {this.state.mob?(<a href={this.props.link}>Show More</a>):(
             <Button
               className="btn-neutral"
               color="link"
@@ -65,7 +92,7 @@ closeLightbox = () => {
             >
               <i className="fa fa-book mr-1" />
               Show more
-            </Button>
+            </Button>)}
           </CardFooter>
           
         </CardBody>
