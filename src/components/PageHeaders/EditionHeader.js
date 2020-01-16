@@ -73,7 +73,7 @@ const EditionHeader = () => {
                 animationInDuration={1200}
                 isVisible={true}
               >
-                <Button
+                {/* <Button
                   className="btn-round mr-1 content-left"
                   color="info"
                   type="button"
@@ -85,7 +85,7 @@ const EditionHeader = () => {
                 >
                   <i className="fa fa-heart mr-1" />
                   View
-                </Button>
+                </Button> */}
               </Animated>
             </div>
             <br />

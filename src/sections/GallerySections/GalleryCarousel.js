@@ -5,6 +5,11 @@ import ItemsCarousel from "react-items-carousel";
 //styles
 import "./styles/landing.scss";
 
+
+
+const noOfItems = 12;
+const noOfCards = 3;
+
 export default class GalleryCarousel extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +23,7 @@ export default class GalleryCarousel extends React.Component {
   }
 
   componentDidMount = () => {
+    this.interval = setInterval(this.tick, 5000);
     const a = window.innerWidth;
     if (a <= 800) {
       this.setState({
@@ -42,7 +48,13 @@ export default class GalleryCarousel extends React.Component {
       }
     });
   };
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
+  tick = () => this.setState(prevState => ({
+    activeItemIndex: (prevState.activeItemIndex + 1) % (noOfItems-noOfCards + 1),
+  }));
 
   render() {
     //   console.log('Gallery Carousal ')
@@ -66,8 +78,8 @@ export default class GalleryCarousel extends React.Component {
           requestToChangeActive={value =>
             this.setState({ activeItemIndex: value })
           }
-          rightChevron={<i className="tim-icons icon-double-right" />}
-          leftChevron={<i className="tim-icons icon-double-left" />}
+          rightChevron={<i className="nc-icon nc-minimal-right" />}
+          leftChevron={<i className="nc-icon nc-minimal-left" />}
           className="gal-flex"
         >
           {this.props.albums &&
@@ -83,7 +95,7 @@ export default class GalleryCarousel extends React.Component {
                   key={album.slug}
                   style={style}
                 >
-                  <h5 className="">
+                  <h5 className="" >
                     <a className="item-inner" href={`/gallery/${album.slug}`}>{album.name}</a>
                   </h5>
                 </div>

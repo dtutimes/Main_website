@@ -77,7 +77,7 @@ closeLightbox = () => {
             className="yumpu_ed"
             style={{width:'820px',height:'566px'}}
             >
-              <iframe height="566px" src="https://www.yumpu.com/en/embed/view/agPX4GzeM19bVWIY" frameBorder={0} allowFullScreen="true" allowTransparency="true" />
+              <iframe height="566px" width="700px" src={this.props.ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
             </Modal>):null}
     </>  
     )}
