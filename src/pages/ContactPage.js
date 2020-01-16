@@ -7,7 +7,7 @@ import LoaderComponent from "components/LoaderComponent";
  
 const Sections = () => (
     <>
-        <ContactHeader />
+        {/* <ContactHeader /> */}
         <Contact />
     </>
 );

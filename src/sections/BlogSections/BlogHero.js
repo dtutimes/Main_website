@@ -56,7 +56,12 @@ export default class BlogHero extends Component {
           className="tim-container"
           style={{ minHeight: "200vh !important", overflow: "hidden" }}
         >
+          <div style={{
+            // position:'absolute'
+            overflow:"hidden"
+          }}>
           <BackgroundBlob />
+          </div>
           <div id="description-areas">
             <Row>
               <Col md="8" sm="12">
@@ -73,13 +78,7 @@ export default class BlogHero extends Component {
               </Col>
               <Col className="pt-5" md="4" sm="12" className="abc">
                 <div className="blog-attr">
-                <BlogSubsciber />
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    borderColor: "black"
-                  }}
-                />
+                
                 <BlogPopular pageNo={pageNo} />
                 <hr
                   style={{
@@ -87,13 +86,20 @@ export default class BlogHero extends Component {
                     borderColor: "black"
                   }}
                 />
-                {/* <BlogMagzine />
+                <BlogMagzine />
                 <hr
                   style={{
                     borderTop: "1px solid black",
                     borderColor: "black"
                   }}
-                /> */}
+                />
+                <BlogSubsciber />
+                <hr
+                  style={{
+                    borderTop: "1px solid black",
+                    borderColor: "black"
+                  }}
+                />
               </div>
               </Col>
             </Row>
@@ -109,7 +115,7 @@ const BackgroundBlob = ({ style, props }) => (
     size="165vh"
     style={{
       position: "absolute",
-      bottom: "10%",
+      bottom: "8%",
       right: "35%",
       zIndex: 0,
       backgroundColor: "#F08BA5",
