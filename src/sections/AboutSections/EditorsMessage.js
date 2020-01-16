@@ -38,11 +38,17 @@ const EditorsMessage = () => {
       <div
         className="section section-project cd-section"
         id="projects"
+        // style={{
+        //   paddingTop: 0,
+        //   height: "100%",
+        //   position: "relative",
+        //   // overflow: "hidden"
+        // }}
         style={{
-          paddingTop: 0,
+          paddingBottom: 0,
           height: "100%",
           position: "relative",
-          // overflow: "hidden"
+          overflow: "hidden"
         }}
       >
         <BackgroundBlob />
