@@ -54,7 +54,7 @@ export default class FeaturedPosts extends Component {
                 />
               </Blob>
               <h2 style={{ marginBottom: "1.4rem", marginTop: "1.3rem", fontWeight:"5rem" }}>
-                <span style={{color:"#040403"}}>Featured </span> <span style={{color:"#9F2042"}}>Posts</span>
+                <span style={{color:"#040403"}}><strong>Featured</strong></span> <span style={{color:"#6bd098 "}}><strong>Posts</strong></span>
               </h2>
             </div>
             <p style={{marginTop:"1rem", fontSize:"1.1rem", fontWeight:"2rem", color:"#494850", marginBottom:"2rem"}}>
@@ -65,19 +65,19 @@ export default class FeaturedPosts extends Component {
             </p>
             <Row>
               <Col md="4" sm="6">
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img alt="..." className="img" src={posts[0].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[0].title}</CardTitle>
-                    <div className="card-description">{posts[0].biliner}</div>
+                    <CardTitle tag="h4" style={{color:"#EBEBEB"}}><strong>{posts[0].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[0].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="danger"
+                        color="success"
                         href={"/story/" + posts[0].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[0].slug);
@@ -88,20 +88,20 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img" src={posts[6].imgUrl} />
+                      <img alt="..." className="img" src={posts[1].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[6].title}</CardTitle>
-                    <div className="card-description">{posts[6].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[1].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[1].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="danger"
-                        href={"/story/" + posts[6].slug}
+                        color="success"
+                        href={"/story/" + posts[1].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[6].slug);
                         //   }}
@@ -111,19 +111,19 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img alt="..." className="img" src={posts[2].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[2].title}</CardTitle>
-                    <div className="card-description">{posts[2].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[2].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[2].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="primary"
+                        color="success"
                         href={"/story/" + posts[2].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[2].slug);
@@ -136,20 +136,20 @@ export default class FeaturedPosts extends Component {
                 </Card>
               </Col>
               <Col md="4" sm="6">
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img" src={posts[7].imgUrl} />
+                      <img alt="..." className="img" src={posts[8].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[7].title}</CardTitle>
-                    <div className="card-description">{posts[7].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[8].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[8].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
                         color="success"
-                        href={"/story/" + posts[7].slug}
+                        href={"/story/" + posts[8].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[7].slug);
                         //   }}
@@ -159,20 +159,20 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img" src={posts[4].imgUrl} />
+                      <img alt="..." className="img" src={posts[12].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[4].title}</CardTitle>
-                    <div className="card-description">{posts[4].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[12].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[12].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="warning"
-                        href={"/story/" + posts[4].slug}
+                        color="success"
+                        href={"/story/" + posts[12].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[4].slug);
                         //   }}
@@ -182,19 +182,45 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+
+                <Card className="card-blog cardx">
+                  <div className="card-image">
+                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                      <img alt="..." className="img" src={posts[9].imgUrl} />
+                    </a>
+                  </div>
+                  <CardBody className="text-center">
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[9].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[9].biliner}</div>
+                    <CardFooter>
+                      <Button
+                        className="btn-round"
+                        color="success"
+                        href={"/story/" + posts[9].slug}
+                        //   onClick={() => {
+                        //     window.open("/story/" + posts[8].slug);
+                        //   }}
+                      >
+                        View Article
+                      </Button>
+                    </CardFooter>
+                  </CardBody>
+                </Card>
+
+
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img alt="..." className="img" src={posts[5].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[5].title}</CardTitle>
-                    <div className="card-description">{posts[5].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[5].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[5].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="info"
+                        color="success"
                         href={"/story/" + posts[5].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[5].slug);
@@ -207,20 +233,20 @@ export default class FeaturedPosts extends Component {
                 </Card>
               </Col>
               <Col md="4" sm="6">
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img" src={posts[1].imgUrl} />
+                      <img alt="..." className="img" src={posts[6].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[1].title}</CardTitle>
-                    <div className="card-description">{posts[1].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[6].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[6].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="primary"
-                        href={"/story/" + posts[1].slug}
+                        color="success"
+                        href={"/story/" + posts[6].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[1].slug);
                         //   }}
@@ -230,15 +256,16 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+                
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
                       <img alt="..." className="img" src={posts[3].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[3].title}</CardTitle>
-                    <div className="card-description">{posts[3].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[3].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[3].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -253,20 +280,20 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                <Card className="card-blog">
+                <Card className="card-blog cardx">
                   <div className="card-image">
                     <a href="#pablo" onClick={e => e.preventDefault()}>
-                      <img alt="..." className="img" src={posts[8].imgUrl} />
+                      <img alt="..." className="img" src={posts[7].imgUrl} />
                     </a>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4">{posts[8].title}</CardTitle>
-                    <div className="card-description">{posts[8].biliner}</div>
+                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[7].title}</strong></CardTitle>
+                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[7].biliner}</div>
                     <CardFooter>
                       <Button
                         className="btn-round"
-                        color="danger"
-                        href={"/story/" + posts[8].slug}
+                        color="success"
+                        href={"/story/" + posts[7].slug}
                         //   onClick={() => {
                         //     window.open("/story/" + posts[8].slug);
                         //   }}

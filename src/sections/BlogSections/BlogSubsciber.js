@@ -13,26 +13,33 @@ export default class BlogSubsciber extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    api.post("/subscriber", this.state).then(res => {
-      if (res.status === 201) {
-        this.setState({ message: "woohoo!!" });
-        } 
-    }).catch(err => {
+    api
+      .post("/subscriber", this.state)
+      .then(res => {
+        if (res.status === 201) {
+          this.setState({ message: "woohoo!!" });
+        }
+      })
+      .catch(err => {
         this.setState({ error: "Already in our mailing list." });
-    })
+      });
 
     setTimeout(() => {
-        this.clearMessage()
+      this.clearMessage();
     }, 5000);
   };
 
-  clearMessage = () => this.setState({message: "", error: ""})
+  clearMessage = () => this.setState({ message: "", error: "" });
 
   render() {
     return (
       <div>
         <h6>Subscribe to Our NewsLetter</h6>
-        <p className="mb-3">Your daily dose of write some tag line here. </p>
+        <p className="mb-3">
+          If you liked what you saw, subscribe for more! We deliver out new
+          Editions every quarter, from interviews to creative content, there is
+          something in store for everyone!
+        </p>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Input
@@ -57,9 +64,9 @@ export default class BlogSubsciber extends Component {
             Wohooo
           </Button>
         </Form>
-        <p>
+        {/* <p>
           Also stay updated on DTU Technology Review initiatives and events?
-        </p>
+        </p> */}
       </div>
     );
   }

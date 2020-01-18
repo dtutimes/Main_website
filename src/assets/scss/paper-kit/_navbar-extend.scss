@@ -276,9 +276,10 @@
 }
 #description-areas .nav-stacked .nav-link.active:before,
 #navtabs-row .nav-stacked .nav-link.active:before{
-    border-right: 11px solid #F1EAE0;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
+    border: 6px solid #F1EAE0;
+    // border-top: 11px solid transparent;
+    // border-bottom: 11px solid transparent;
+    border-radius:50%;
     content: "";
     display: inline-block;
     position: absolute;
@@ -287,9 +288,10 @@
 }
 #description-areas .nav-stacked .nav-link.active:after,
 #navtabs-row .nav-stacked .nav-link.active:after{
-    border-right: 11px solid $white-color;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
+    border: 6px solid $white-color;
+    // border-top: 11px solid transparent;
+    // border-bottom: 11px solid transparent;
+    border-radius:50%;
     content: "";
     display: inline-block;
     position: absolute;

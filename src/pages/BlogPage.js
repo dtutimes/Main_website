@@ -7,6 +7,7 @@ import BlogHero from "sections/BlogSections/BlogHero";
 const Sections = () => (
   <>
     <Header />
+    <div style={{margin:"3rem"}}></div>
     <BlogHero />
   </>
 );

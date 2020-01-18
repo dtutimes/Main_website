@@ -48,9 +48,10 @@
                 border: 0 none;
                 //height: 50px;
                 &:after{
-                    border-bottom: 11px solid $white-color;
-                    border-left: 11px solid rgba(0, 0, 0, 0);
-                    border-right: 11px solid rgba(0, 0, 0, 0);
+                    border: 6px solid $white-color;
+                    // border-left: 11px solid rgba(0, 0, 0, 0);
+                    // border-right: 11px solid rgba(0, 0, 0, 0);
+                    border-radius: 50%;
                     content: "";
                     display: inline-block;
                     position: absolute;
@@ -59,9 +60,10 @@
                 }
 
                 &:before{
-                    border-bottom: 11px solid $medium-pale-bg;
-                    border-left: 11px solid rgba(0, 0, 0, 0);
-                    border-right: 11px solid rgba(0, 0, 0, 0);
+                    border: 6px solid $medium-pale-bg;
+                    // border-left: 11px solid rgba(0, 0, 0, 0);
+                    // border-right: 11px solid rgba(0, 0, 0, 0);
+                    border-radius: 50%;
                     content: "";
                     display: inline-block;
                     position: absolute;

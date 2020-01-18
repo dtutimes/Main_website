@@ -23,8 +23,8 @@ const LandingHeader = () => {
               isVisible={true}
             >
               <h1>
-                Hello, <br />
-                We are DTU Times
+                <strong>Hello,</strong><br />
+                <strong>We are DTU Times</strong>
               </h1>
             </Animated>
 
@@ -34,7 +34,7 @@ const LandingHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h3>Let us tell you more about what we do.</h3>
+              <h3><strong>Let us tell you more about what we do.</strong></h3>
             </Animated>
           </Container>
         </div>

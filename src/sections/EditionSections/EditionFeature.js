@@ -82,11 +82,11 @@ class SectionHeader extends React.Component {
             {/* Main_website/src/assets/img/campus/2019-08-09 05.08.52 4__01.jpg */}
             <div className="" style={{paddingBottom:"3rem"}}>
               <Container>
-                <h2 style={{color:"white"}}>Whatever happens in DTU, stays in DTU Times.</h2>
+                <h2 style={{color:"white"}}><strong>Whatever happens in DTU, stays in DTU Times.</strong></h2>
                 <h5 style={{ marginTop: "1rem", color:"white" }}>
-                  Visit the stories of yore preserved by us with an integration
+                  <strong>Visit the stories of yore preserved by us with an integration
                   of art, fiction, imagination and satire as we rewind the clock
-                  of DTU to whichever era you wish to witness today.
+                  of DTU to whichever era you wish to witness today.</strong>
                 </h5>
               </Container>
             </div>
@@ -98,7 +98,7 @@ class SectionHeader extends React.Component {
             </div> */}
                 <Row>{columns}</Row>
                 <div className="text-left" style={{ padding: "5rem 0" }}>
-                  <h1>Archived</h1>
+                  <h1 style={{color:"white"}}><strong>Archived</strong></h1>
                 </div>
                 <Row>
                   <Carousel

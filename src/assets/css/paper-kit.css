@@ -6299,7 +6299,8 @@ textarea.form-control {
         .footer .links ul.stacked-links h4 {
           margin-top: 0px; }
   .footer .social-area {
-    padding: 15px 0; }
+    padding: 15px 0;
+    text-align: center; }
     .footer .social-area .btn {
       margin-bottom: 3px;
       padding: 8px; }

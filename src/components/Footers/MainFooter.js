@@ -66,36 +66,51 @@ function FooterEcommerce() {
             </Col>
             <Col className="ml-auto" md="4" sm="2">
               <div className="social-area">
-                <Button
-                  className="btn-just-icon mr-1"
-                  color="youtube"
-                  id="top1"
-                >
-                  <UncontrolledTooltip placement="top" target="top1" delay={0}>
-                    Email us at dtutimes@dtu.ac.in
-                  </UncontrolledTooltip>
-                  <i className="nc-icon nc-email-85" />
-                </Button>
-                <Button
-                  className="btn-just-icon mr-1"
-                  color="facebook"
-                  id="top2"
-                >
-                  <UncontrolledTooltip placement="top" target="top2" delay={0}>
-                    25K Likes
-                  </UncontrolledTooltip>
-                  <i className="fa fa-facebook" />
-                </Button>
-                <Button
-                  className="btn-just-icon mr-1"
-                  color="twitter"
-                  id="top3"
-                >
-                  <UncontrolledTooltip placement="top" target="top3" delay={0}>
-                    6.1K Followers
-                  </UncontrolledTooltip>
-                  <i className="fa fa-instagram" />
-                </Button>
+              <Button
+                      className="btn-just-icon mr-1"
+                      color="youtube"
+                      id="top1"
+                      
+                    >
+                      <UncontrolledTooltip
+                        placement="top"
+                        target="top1"
+                        delay={0}
+                      >
+                        Email us at dtutimes@dtu.ac.in
+                      </UncontrolledTooltip>
+                      <i className="nc-icon nc-email-85" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon mr-1"
+                      color="facebook"
+                      id="top2"
+                      href="https://www.facebook.com/dtutimes"
+                    >
+                      <UncontrolledTooltip
+                        placement="top"
+                        target="top2"
+                        delay={0}
+                      >
+                        25K Likes
+                      </UncontrolledTooltip>
+                      <i className="fa fa-facebook" />
+                    </Button>
+                    <Button
+                      className="btn-just-icon mr-1"
+                      color="twitter"
+                      id="top3"
+                      href="https://www.instagram.com/dtu_times/"
+                    >
+                      <UncontrolledTooltip
+                        placement="top"
+                        target="top3"
+                        delay={0}
+                      >
+                        6.1K Followers
+                      </UncontrolledTooltip>
+                      <i className="fa fa-instagram" />
+                    </Button>
               </div>
               {/* <hr /> */}
               <div className="copyright" style={{ color: "#494850" }}>

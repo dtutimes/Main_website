@@ -57,12 +57,12 @@ function ColorNavbar() {
       >
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand id="navbar-brand" to="/" tag={Link}>
+            <NavbarBrand id="navbar-brand" to="/" tag={Link} style={{fontSize:"14px"}}>
               DTU TIMES
             </NavbarBrand>
-            <UncontrolledTooltip placement="bottom" target="navbar-brand">
+            {/* <UncontrolledTooltip placement="bottom" target="navbar-brand">
               The Official Newsletter of DTU
-            </UncontrolledTooltip>
+            </UncontrolledTooltip> */}
             <button
               className="navbar-toggler"
               id="navigation"
@@ -81,37 +81,37 @@ function ColorNavbar() {
           <Collapse navbar isOpen={collapseOpen}>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className="navlink nav-link" to="/about">
+                <Link className="navlink nav-link" to="/about" style={{fontSize:"14px"}}>
                   about
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/editions">
+                <Link className="navlink nav-link" to="/editions" style={{fontSize:"14px"}}>
                   editions
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/blog">
+                <Link className="navlink nav-link" to="/blog" style={{fontSize:"14px"}}>
                   blog
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/gallery">
+                <Link className="navlink nav-link" to="/gallery" style={{fontSize:"14px"}}>
                   gallery
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/societies">
+                <Link className="navlink nav-link" to="/societies" style={{fontSize:"14px"}}>
                   Societies
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/team">
+                <Link className="navlink nav-link" to="/team" style={{fontSize:"14px"}}>
                   team
                 </Link>
               </NavItem>
               <NavItem>
-                <Link className="navlink nav-link" to="/contact">
+                <Link className="navlink nav-link" to="/contact" style={{fontSize:"14px"}}>
                   contact us
                 </Link>
               </NavItem>

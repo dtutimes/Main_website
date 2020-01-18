@@ -29,7 +29,9 @@ const items = [
             animationInDelay={500}
             isVisible={true}
           >
-            <h1>Gallery</h1>
+            <h1>
+              <strong>Gallery</strong>
+            </h1>
           </Animated>
 
           <Animated
@@ -38,7 +40,11 @@ const items = [
             animationInDuration={1000}
             isVisible={true}
           >
-            <h3>When we’re not writing, we let our pictures do the talking.</h3>
+            <h3>
+              <strong>
+                When we’re not writing, we let our pictures do the talking.
+              </strong>
+            </h3>
           </Animated>
         </Container>
       </div>
@@ -47,15 +53,18 @@ const items = [
     caption: ""
   },
   {
-    src:
-      "url(" +
-      require("assets/img/campus/10.jpeg") +
-      ")",
+    src: "url(" + require("assets/img/campus/10.jpeg") + ")",
     content: (
       <div className="content-center">
         <Container className="text-left">
-          <h1>Gallery</h1>
-          <h3>When we’re not writing, we let our pictures do the talking.</h3>
+          <h1>
+            <strong>Gallery</strong>
+          </h1>
+          <h3>
+            <strong>
+              When we’re not writing, we let our pictures do the talking.
+            </strong>
+          </h3>
         </Container>
       </div>
     ),
@@ -67,8 +76,14 @@ const items = [
     content: (
       <div className="content-center">
         <Container className="text-left">
-          <h1>Gallery</h1>
-          <h3>When we’re not writing, we let our pictures do the talking.</h3>
+          <h1>
+            <strong>Gallery</strong>
+          </h1>
+          <h3>
+            <strong>
+              When we’re not writing, we let our pictures do the talking.
+            </strong>
+          </h3>
         </Container>
       </div>
     ),

@@ -25,12 +25,16 @@ const EditionHeader = () => {
                   animationIn="fadeIn"
                   animationInDelay={500}
                   isVisible={true}
-                >
+                > 
                   <img
                     alt="..."
                     className="grid__img layer"
                     src="http://dtutimes.dtu.ac.in/img/48.png"
                     style={{ height: "128px", width: "100px" }}
+                    onClick={e => {
+                      e.preventDefault();
+                      
+                    }}
                   />
                 </Animated>
               </Col>
@@ -55,7 +59,7 @@ const EditionHeader = () => {
               animationInDelay={1000}
               isVisible={true}
             >
-              <h1 className="text-left">Editions</h1>
+              <h1 className="text-left"><strong>Editions</strong></h1>
             </Animated>
             <Animated
               animationIn="fadeInUp"
@@ -63,7 +67,7 @@ const EditionHeader = () => {
               isVisible={true}
             >
               <h3 className="text-left" style={{ marginTop: 0 }}>
-                Come, take a trip down the memory lane of DTU.
+                <strong>Come, take a trip down the memory lane of DTU.</strong>
               </h3>
             </Animated>
             <div style={{ position: "relative" }}>

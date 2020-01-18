@@ -121,7 +121,7 @@ const LandingHeader = () => {
   return (
     <>
       <div
-        className="page-header page-header-large"
+        className="page-headerx page-header-large"
         ref={pageHeader}
         style={{
           backgroundImage:
@@ -137,7 +137,7 @@ const LandingHeader = () => {
               isVisible={true}
             >
               <h1>
-                About Us
+                <strong>About Us</strong>
               </h1>
             </Animated>
 
@@ -147,7 +147,7 @@ const LandingHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h3>Get to know the team bringing you your favourite news better!</h3>
+              <h3><strong>Get to know the team bringing you your favourite news better!</strong></h3>
             </Animated>
           </Container>
         </div>

@@ -225,7 +225,7 @@ function LoginPage() {
                     isVisible={true}
                   >
                     <h2 className="title">
-                      If you are curious about the Times, drop us a line.
+                      <strong>If you are curious about the Times, drop us a line.</strong>
                     </h2>
                   </Animated>
                   {/* <p> */}
@@ -237,17 +237,17 @@ function LoginPage() {
                     <Row>
                       <Col>
                         <h3 className="title" style={{}}>
-                          Editor-in-Chief
+                          <strong>Editor-in-Chief</strong>
                         </h3>
-                        Shivam Jha
+                        <strong>Shivam Jha
                         <br />
-                        shivam.jha3@gmail.com
+                        shivam.jha3@gmail.com</strong>
                       </Col>
                       <Col>
-                        <h3 className="title">Student Head</h3>
-                        Zara Khan
+                        <h3 className="title"><strong>Student Head</strong></h3>
+                        <strong>Zara Khan
                         <br />
-                        zarakhan9278@gmail.com
+                        zarakhan9278@gmail.com</strong>
                       </Col>
                     </Row>
                   </Animated>
@@ -263,7 +263,7 @@ function LoginPage() {
                   <Col className="ml-auto mr-auto text-center" md="6">
                     <div style={{ margin: "2rem 0" }}>
                       {/* <h3 className="title"> */}
-                      Find us on social networks
+                      <strong>Find us on social networks</strong>
                       {/* </h3> */}
                     </div>
                     <Button

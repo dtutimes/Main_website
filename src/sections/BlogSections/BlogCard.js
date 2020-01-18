@@ -12,16 +12,16 @@ const BlogCard = ({ posts }) => {
           <Card className="card-plain card-blog text-left">
             <CardBody>
               <CardTitle tag="h3">
-                <a href="#pablo" onClick={e => e.preventDefault()}>
+                <a href={`/story/${post.slug}`} >
                   {post.title}
                 </a>
               </CardTitle>
               <br />
             </CardBody>
             <div className="card-image">
-              <a href="#pablo" onClick={e => e.preventDefault()}>
+              {/* <a href={`/story/${post.slug}`} > */}
                 <img alt="..." className="img img-raised" src={post.imgUrl} />
-              </a>
+              {/* </a> */}
             </div>
             <CardBody>
               <p className="card-description" style={{ marginBottom: "1rem",color:"#494850" }}>

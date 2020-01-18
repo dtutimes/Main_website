@@ -4,17 +4,16 @@ import { Animated } from "react-animated-css";
 import { Blob } from "react-blob";
 
 const BlogHeader = () => {
-
   return (
     <>
       <section
         className="section pb-0"
         style={{
           height: "50vh",
-          paddingTop: '10rem',
+          paddingTop: "10rem",
           position: "relative",
           overflow: "hidden",
-          paddingBottom: '0 !important'
+          paddingBottom: "0 !important"
         }}
       >
         <div className="filter " />
@@ -23,16 +22,16 @@ const BlogHeader = () => {
         <BackgroundBlobSmall />
         {/* <BackgroundBlobBig /> */}
 
-        <div
-          className="content-center"
-        >
+        <div className="content-center">
           <Container className="text-left">
             <Animated
               animationIn="fadeIn"
               animationInDelay={500}
               isVisible={true}
             >
-              <h1>BLOG</h1>
+              <h1>
+                <strong>BLOG</strong>
+              </h1>
             </Animated>
 
             <Animated
@@ -41,9 +40,12 @@ const BlogHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h5 style={{marginTop: 2}}>
-                  Dive headlong into a world of illuminating interviews, <br/>
-                  enlightening editorials and potent prose written by some of the brightest minds of DTU.
+              <h5 style={{ marginTop: "3rem" }}>
+                <strong>
+                  Dive headlong into a world of illuminating interviews, <br />
+                  enlightening editorials and potent prose written by some of
+                  the brightest minds of DTU.
+                </strong>
               </h5>
             </Animated>
           </Container>
@@ -72,22 +74,22 @@ const BackgroundBlob = ({ style, props }) => (
 );
 
 const BackgroundBlobSmallRight = ({ style, props }) => (
-    <Blob
-      size="55vh"
-      style={{
-        position: "absolute",
-        top: "-15%",
-        right: "-2%",
-        zIndex: 0,
-        backgroundColor: "#E85D75",
-        color: "white",
-        opacity: 0.5,
-        fontSize: "50vh",
-        ...style
-      }}
-      {...props}
-    />
-  );
+  <Blob
+    size="55vh"
+    style={{
+      position: "absolute",
+      top: "-15%",
+      right: "-2%",
+      zIndex: 0,
+      backgroundColor: "#E85D75",
+      color: "white",
+      opacity: 0.5,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 
 const BackgroundBlobSmall = ({ style, props }) => (
   <Blob

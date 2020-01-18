@@ -27,7 +27,7 @@ const SocHeader = () => {
               animationInDelay={500}
               isVisible={true}
             >
-              <h1>SOCIETIES OF DTU</h1>
+              <h1><strong>SOCIETIES OF DTU</strong></h1>
             </Animated>
               <br />
               <br />
@@ -41,10 +41,10 @@ const SocHeader = () => {
               isVisible={true}
             >
               <h3 style={{ marginTop: "2rem", color: "#494850" }}>
-                The societies of DTU are the ones to credit for the exhilarating
+                <strong>The societies of DTU are the ones to credit for the exhilarating
                 whirlwind of activity all year long. <br />
                 DTU has technical teams, cultural societies and a slew of others
-                for one and all to showcase their talents.
+                for one and all to showcase their talents.</strong>
               </h3>
               <br />
               <br />

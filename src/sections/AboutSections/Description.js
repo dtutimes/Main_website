@@ -51,7 +51,7 @@ const Description = () => {
               </div>
             </Col>
             <Col className="text-center" md="6">
-              <h2 className="title revealOnScroll">Who are we</h2>
+              <h2 className="title revealOnScroll" style={{fontWeight:"360"}}>Who are we</h2>
               <h5 className="description" style={{ color: "#494850" }}>
                 DTU Times is the Official Newsletter and Media Platform of Delhi
                 Technological University, formerly known as Delhi College of

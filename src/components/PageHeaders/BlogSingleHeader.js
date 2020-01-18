@@ -29,7 +29,7 @@ const BlogSingleHeader = ({title, biliner, timestamp}) => {
               animationInDelay={500}
               isVisible={true}
             >
-            <h1>{title}</h1>
+            <h1><strong>{title}</strong></h1>
             </Animated>
 
             <Animated
@@ -39,7 +39,7 @@ const BlogSingleHeader = ({title, biliner, timestamp}) => {
               isVisible={true}
             >
               <h5 style={{marginTop: 2, fontSize:""}}>
-                  {biliner}
+                  <strong>{biliner}</strong>
               </h5>
             </Animated>
             <Animated

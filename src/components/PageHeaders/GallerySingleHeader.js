@@ -36,7 +36,7 @@ class GallerySingleHeader extends Component {
                 animationInDelay={500}
                 isVisible={true}
               >
-                <h1>{album.name}</h1>
+                <h1><strong>{album.name}</strong></h1>
               </Animated>
 
               <Animated
@@ -45,7 +45,7 @@ class GallerySingleHeader extends Component {
                 animationInDuration={1000}
                 isVisible={true}
               >
-                <h3>{album.biliner}</h3>
+                <h3><strong>{album.biliner}</strong></h3>
               </Animated>
             </Container>
           </div>

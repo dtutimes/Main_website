@@ -34,9 +34,10 @@ const EditionCards = () => (
               <h2
                 style={{ marginBottom: "1rem", fontWeight: "8rem !important" }}
               >
-                <span style={{ color: "#040403" }}>Latest </span>{" "}
-                <span style={{ color: "#F7717D" }}>Editions</span>
-              </h2>
+                <span style={{ color: "#040403" }}><strong>Latest</strong></span>{" "}
+                <span style={{ color: "#6bd098" }}><strong>Editions</strong></span>
+              </h2>  
+              {/* #F7717 */}
               <h6 className="category">By DTU Times </h6>
               <h5 style={{fontSize:"1.1rem", color:"#494850"}} className="description">
                   The DTU Snapshot at a glance. Check out our latest editions,

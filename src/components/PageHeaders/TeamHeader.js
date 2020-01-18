@@ -23,7 +23,7 @@ const TeamHeader = () => {
               isVisible={true}
             >
               <h1>
-                Team Times
+                <strong>Team Times</strong>
               </h1>
             </Animated>
 
@@ -33,7 +33,7 @@ const TeamHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h3>Here's the group of magicians who create magic out of thin air</h3>
+              <h3><strong>Here's the group of magicians who create magic out of thin air</strong></h3>
             </Animated>
           </Container>
         </div>

@@ -88,8 +88,8 @@ function Presentation() {
                   alt="..."
                 />
               </Blob> 
-        <h1 className="text-left" style={{marginBottom : "2rem"}}>Societies</h1>
-        <p  style={{color: "#494850", fontSize:"1.2rem"}}>
+        {/* <h1 className="text-left" style={{marginBottom : "2rem"}}>Societies</h1> */}
+        <p  style={{color: "#494850", fontSize:"1.2rem", marginTop:"3rem"}}>
           The seventy plus societies of DTU are the crown jewels of the
           university. If electric circuits spark your interest, if you feel that
           you and Python were meant to be, if you want to conquer the podium or

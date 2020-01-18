@@ -56,14 +56,14 @@ const EditorsMessage = () => {
           <Container>
             <Row>
               <Col className="ml-auto text-right" md="12">
-                <h2 className="title">Editors' message</h2>
+                <h2 className="title" style={{fontWeight:"360"}}>Editors' message</h2>
                 {/* <h5 className="description"></h5> */}
               </Col>
             </Row>
             <div className="space-top" />
             <Row>
               <Col className="mr-auto" md="4">
-                <img width="80%" src={require("assets/img/icons/idea.png")} />
+                <img width="80%" alt="..." src={require("assets/img/icons/idea.png")} />
               </Col>
               <Col className="ml-auto" md="7">
                 <Card className="card-plain">

@@ -47,7 +47,7 @@ export default class BlogPopular extends Component {
         {/* height commented out */}
         {/* <BackgroundBlob /> */}
         <h6>Popular Posts</h6>
-        <p className="mb-3">Your daily dose of write some tag line here. </p>
+        <p className="mb-3">lorem ipsum</p>
         {loading &&
           [1, 2, 3].map(item => (
             <div key={item}>
@@ -65,9 +65,9 @@ export default class BlogPopular extends Component {
                   {item.title}
                 </a>
               </CardTitle>
-              <Link to="" className="mt-0 small">
+              {/* <Link to="" className="mt-0 small">
                 Read More
-              </Link>
+              </Link> */}
             </div>
           ))}
       </div>

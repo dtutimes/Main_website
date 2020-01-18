@@ -39,7 +39,9 @@ export default class BlogMagzine extends Component {
               magzines.map(magzine => (
                 <Col md="6" key={magzine.id}>
                   <div className="card-image">
+                    <a href="/editions">
                     <img alt="..." className="img" src={magzine.imgUrl} />
+                    </a>
                   </div>
                   <CardTitle tag="h5" className="text-center mt-2">
                     <a href="/editions" >
