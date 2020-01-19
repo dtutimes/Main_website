@@ -47,7 +47,7 @@ export default class BlogPopular extends Component {
         {/* height commented out */}
         {/* <BackgroundBlob /> */}
         <h6>Popular Posts</h6>
-        <p className="mb-3">lorem ipsum</p>
+        <p className="mb-3">Our readers loved these articles so much, we just had to give them a space of their own</p>
         {loading &&
           [1, 2, 3].map(item => (
             <div key={item}>

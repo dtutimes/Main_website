@@ -1,15 +1,74 @@
 import React from "react";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col, Button,Modal } from "reactstrap";
+import axios from 'axios';
 import { Animated } from "react-animated-css";
 
-const EditionHeader = () => {
-  let pageHeader = React.createRef();
+class EditionHeader extends React.Component {
+  state ={
+    data: [],
+    viewerIsOpen: false,
+    viewerIsOpen2: false,
+    loaded: false,
+    mob: false
+  }
+  constructor(props) {
+    super(props)
+    this.pageHeader = React.createRef();
+  }
+  componentDidMount() {
+    const a = window.innerWidth;
+  if (a <= 800) {
+    this.setState({
+      mob: true
+    });
+  } else {
+    this.setState({
+      mob: false
+    });
+  }
+  window.addEventListener("resize", () => {
+    const b = window.innerWidth;
+    if (b <= 600) {
+      this.setState({
+        mob: true
+      });
+    } else {
+      this.setState({
+        mob: false
+      });
+    }
+  });
+    axios.get('https://api.dtutimes.live/v1/edition').then(res => {
+     this.setState({ data: res.data, loaded: true });
+    })
+  }
+  openLightbox = ()=> {
+    this.setState({
+      viewerIsOpen: true
+    });
+    console.log(this.state.viewerIsOpen)
+  };
+  openLightbox2 = ()=> {
+    this.setState({
+      viewerIsOpen2: true
+    });
+    console.log(this.state.viewerIsOpen)
+  };
 
+closeLightbox = () => {
+    this.setState({
+      viewerIsOpen: false,
+      viewerIsOpen2: false
+    })
+  };
+
+  render() {
+  if(this.state.loaded) {
   return (
     <>
       <div
         className="page-header"
-        ref={pageHeader}
+        ref={this.pageHeader}
         style={{
           backgroundImage:
             "url(" + require("assets/img/header/image-3.jpg") + ")",
@@ -25,35 +84,55 @@ const EditionHeader = () => {
                   animationIn="fadeIn"
                   animationInDelay={500}
                   isVisible={true}
-                > 
+                > <a
+                  href={this.state.mob?this.state.data[0].link:null}>
                   <img
                     alt="..."
                     className="grid__img layer"
-                    src="http://dtutimes.dtu.ac.in/img/48.png"
-                    style={{ height: "128px", width: "100px" }}
-                    onClick={e => {
-                      e.preventDefault();
-                      
-                    }}
-                  />
+                    src={this.state.data[0].imgUrl}
+                    style={{ height: "128px", width: "100px",cursor:'pointer' }}
+                    onClick={this.state.mob?null:this.openLightbox}
+                  /></a>
                 </Animated>
+                
               </Col>
               <Col>
                 <Animated
                   animationIn="fadeIn"
                   animationInDelay={500}
                   isVisible={true}
-                >
+                > 
+                  <a
+                  href={this.state.mob?this.state.data[1].link:null}>
                   <img
                     alt="..."
                     className="grid__img layer"
-                    src="http://dtutimes.dtu.ac.in/img/47.png"
-                    style={{ height: "128px", width: "100px" }}
+                    src={this.state.data[1].imgUrl}
+                    style={{ height: "128px", width: "100px",cursor:'pointer' }}
                     className="imgRes"
-                  />
+                    onClick={this.state.mob?null:this.openLightbox2}
+                  /></a>
                 </Animated>
               </Col>
             </Row>
+            {this.state.viewerIsOpen?(
+            <Modal
+            isOpen={this.state.viewerIsOpen}
+            toggle={this.closeLightbox}
+            className="yumpu_ed"
+            style={{width:'820px',height:'566px'}}
+            >
+              <iframe height="566px" width="700px" src={this.state.data[0].ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
+            </Modal>):null}
+            {this.state.viewerIsOpen2?(
+            <Modal
+            isOpen={this.state.viewerIsOpen2}
+            toggle={this.closeLightbox}
+            className="yumpu_ed"
+            style={{width:'820px',height:'566px'}}
+            >
+              <iframe height="566px" width="700px" src={this.state.data[1].ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
+            </Modal>):null}
             <Animated
               animationIn="fadeInUp"
               animationInDelay={1000}
@@ -97,7 +176,12 @@ const EditionHeader = () => {
         </div>
       </div>
     </>
-  );
+  );} else {
+    return (
+      <>
+      </>
+    )
+  }
 };
-
+}
 export default EditionHeader;

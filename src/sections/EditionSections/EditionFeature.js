@@ -52,6 +52,7 @@ class SectionHeader extends React.Component {
               img={editions[index].imgUrl}
               ajax = {editions[index].ajax}
               link = {editions[index].link}
+              height = "420px"
             />
           </Col>
         );
@@ -61,7 +62,8 @@ class SectionHeader extends React.Component {
             title={editions[index].name}
             img={editions[index].imgUrl}
             ajax = {editions[index].ajax}
-            style={{ height: "400px" }}
+            height={'420px'}
+            width = {'90%'}
             link = {editions[index].link}
           />
         );

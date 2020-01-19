@@ -320,18 +320,19 @@ function LoginPage() {
               animationInDelay={2400}
               isVisible={true}
             >
-              <div style={{ textAlign: "center", marginTop: "4rem" }}>
+              <div style={{ textAlign: "center", marginTop: "9rem",marginBottom:'4rem' }} >
                 <iframe
                   title="feeback form"
                   src="https://docs.google.com/forms/d/e/1FAIpQLSdRX1t6QJ4eVkHpCUOHmfzjhgSotVNW3kuNqPjytxeT0A-x0A/viewform?embedded=true"
                   style={{
                     width: "60vw",
-                    height: "60vh",
+                    height: "101vh",
                     frameborder: "0",
                     marginheight: "0",
                     marginwidth: "0"
                     // textAlign:"center"
                   }}
+                  className="scrollbetter"
                 >
                   Loading…
                 </iframe>

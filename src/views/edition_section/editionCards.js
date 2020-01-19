@@ -71,9 +71,12 @@ closeLightbox = () => {
             "url(" +
             this.props.img +
             ")",
-            height:'420px'
+            height:this.props.height,
+            width: this.props.width
+            
         }}
         className="take"
+
       >
         <CardBody className="takeOnMe">
           <h6 className="card-category">{this.props.title}</h6>
