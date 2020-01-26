@@ -14,7 +14,7 @@ const EditionCards = () => (
         <Row>
           <Col lg="4" md="6">
             <div className="section-description">
-              <Blob
+              {/* <Blob
                 size="10rem"
                 style={{
                   backgroundColor: "#21D4FD",
@@ -30,7 +30,15 @@ const EditionCards = () => (
                   src={require("assets/img/icons/newspaper.png")}
                   alt="..."
                 />
-              </Blob>
+              </Blob> */}
+              <img
+                  width="10%"
+                  style={{
+                    minWidth: "4rem"
+                  }}
+                  src={require("assets/img/icons/newspaper.png")}
+                  alt="..."
+                />
               <h2
                 style={{ marginBottom: "1rem", fontWeight: "8rem !important" }}
               >

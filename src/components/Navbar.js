@@ -25,11 +25,13 @@ function ColorNavbar() {
         document.documentElement.scrollTop > 499 ||
         document.body.scrollTop > 499
       ) {
+        document.getElementById("img").src = require("assets/img/icons/B.png");
         setNavbarColor("");
       } else if (
         document.documentElement.scrollTop < 500 ||
         document.body.scrollTop < 500
       ) {
+        document.getElementById("img").src = require("assets/img/icons/W.png");
         setNavbarColor("navbar-transparent");
       }
     };
@@ -57,7 +59,11 @@ function ColorNavbar() {
       >
         <Container>
           <div className="navbar-translate">
+            
             <NavbarBrand id="navbar-brand" to="/" tag={Link} style={{fontSize:"14px"}}>
+            <a href="#pablo">
+            <img alt="..." id="img" src={require("assets/img/icons/W.png")} style={{height:"40px", paddingRight:"1rem"}}/>
+          </a>
               DTU TIMES
             </NavbarBrand>
             {/* <UncontrolledTooltip placement="bottom" target="navbar-brand">

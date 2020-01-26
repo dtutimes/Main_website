@@ -36,7 +36,7 @@ export default class FeaturedPosts extends Component {
         <div className="section" id="cards">
           <Container className="tim-container">
             <div className="">
-            <Blob
+            {/* <Blob
                 size="10rem"
                 style={{
                   backgroundColor: "#C4CAD0",
@@ -52,7 +52,15 @@ export default class FeaturedPosts extends Component {
                   src={require("assets/img/icons/blog.png")}
                   alt="..."
                 />
-              </Blob>
+              </Blob> */}
+               <img
+                  width="6%"
+                  style={{
+                    minWidth: "4rem"
+                  }}
+                  src={require("assets/img/icons/blog.png")}
+                  alt="..."
+                />
               <h2 style={{ marginBottom: "1.4rem", marginTop: "1.3rem", fontWeight:"5rem" }}>
                 <span style={{color:"#040403"}}><strong>Featured</strong></span> <span style={{color:"#6bd098 "}}><strong>Posts</strong></span>
               </h2>
