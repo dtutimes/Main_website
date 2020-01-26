@@ -320,7 +320,7 @@ function LoginPage() {
               animationInDelay={2400}
               isVisible={true}
             >
-              <div style={{ textAlign: "center", marginTop: "9rem",marginBottom:'4rem' }} >
+              <div style={{ textAlign: "center", marginTop: "5rem",marginBottom:'4rem' }} >
                 <iframe
                   title="feeback form"
                   src="https://docs.google.com/forms/d/e/1FAIpQLSdRX1t6QJ4eVkHpCUOHmfzjhgSotVNW3kuNqPjytxeT0A-x0A/viewform?embedded=true"
