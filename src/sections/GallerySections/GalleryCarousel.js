@@ -78,8 +78,8 @@ export default class GalleryCarousel extends React.Component {
           requestToChangeActive={value =>
             this.setState({ activeItemIndex: value })
           }
-          rightChevron={<i className="nc-icon nc-minimal-right" />}
-          leftChevron={<i className="nc-icon nc-minimal-left" />}
+          rightChevron={<i className="nc-icon nc-minimal-right" style={{color:'white',fontSize:'1.8em',fontWeight:'800'}} />}
+          leftChevron={<i className="nc-icon nc-minimal-left" style={{color:'white',fontSize:'1.8em',fontWeight:'800'}} />}
           className="gal-flex"
         >
           {this.props.albums &&

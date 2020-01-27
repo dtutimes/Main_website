@@ -65,7 +65,7 @@ const GalleryImages = ({ images }) => {
 
   return (
     <>
-      <div className="subscribe-line subscribe-line-white">
+      {/* <div className="subscribe-line subscribe-line-white">
         <Container>
           <Row>
             <Col md="8" sm="8">
@@ -88,7 +88,7 @@ const GalleryImages = ({ images }) => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
 
       <div className="section">
         <Container>

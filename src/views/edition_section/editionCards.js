@@ -81,7 +81,7 @@ closeLightbox = () => {
         <CardBody className="takeOnMe">
           <h6 className="card-category">{this.props.title}</h6>
           <div className="card-icon">
-            <i className="fa fa-search" />
+            <i className="fa fa-search" onClick={this.openLightbox} style={{cursor:'pointer'}}/>
           </div>
           <p className="card-description">
             {this.props.des}
