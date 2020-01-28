@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 import { api } from "api";
 import { ContentLoaderPopular } from "components/ContentLoader";
 import { CardTitle } from "reactstrap";
-import { Blob } from "react-blob";
+// import { Blob } from "react-blob";
 
-const BackgroundBlob = ({ style, props }) => (
-  <Blob
-    size="25vh"
-    style={{
-      position: "absolute",
-      top: "10%",
-      left: "35%",
-      zIndex: 0,
-      backgroundColor: "#F08BA5",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);
+// const BackgroundBlob = ({ style, props }) => (
+//   <Blob
+//     size="25vh"
+//     style={{
+//       position: "absolute",
+//       top: "10%",
+//       left: "35%",
+//       zIndex: 0,
+//       backgroundColor: "#F08BA5",
+//       color: "white",
+//       opacity: 0.25,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
 
 export default class BlogPopular extends Component {
   state = {

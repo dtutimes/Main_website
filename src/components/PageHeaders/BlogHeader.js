@@ -9,7 +9,7 @@ const BlogHeader = () => {
       <section
         className="section pb-0"
         style={{
-          height: "50vh",
+          height: "55vh",
           paddingTop: "10rem",
           position: "relative",
           overflow: "hidden",

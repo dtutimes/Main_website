@@ -13,9 +13,9 @@ import {
 
 const BlogPosts = props => {
   var { pageNo, lastPage, changePage } = props;
-  console.log(pageNo);
-  console.log("hhhhhhhhaaaaaaa");
-  console.log(lastPage);
+  // console.log(pageNo);
+  // console.log("hhhhhhhhaaaaaaa");
+  // console.log(lastPage);
   var handlePrevClick = async () => {
     if (pageNo > 1) {
       let newpage = pageNo - 1;

@@ -34,7 +34,7 @@ export default class LoaderComponent extends Component {
     }
     
     render() {
-        if (this.state.loading) return <><Loader /></>
+        if (this.state.loading) return (<><Loader /></>)
         return (
             <div>
                 {this.props.component}

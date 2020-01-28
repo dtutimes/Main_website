@@ -55,7 +55,7 @@ function FooterEcommerce() {
           <Row>
             <Col md="6" sm="9">
               <div className="links">
-                <p style={{ color: "#494850", paddingTop:"1rem" }}>
+                <p style={{ color: "#494850", paddingTop:"1rem", fontWeight:"400 !important" }}>
                   We extend a warm welcome to all of you to the new DTU Times
                   website, explore the societies of the college, read blog
                   articles by our editors, or just get up to date with what’s

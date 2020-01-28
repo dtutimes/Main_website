@@ -9,7 +9,6 @@ import {
   NavItem,
   Nav,
   Container,
-  UncontrolledTooltip
 } from "reactstrap";
 
 function ColorNavbar() {
@@ -47,7 +46,7 @@ function ColorNavbar() {
           id="bodyClick"
           onClick={() => {
             document.documentElement.classList.toggle("nav-open");
-            setBodyClick(false);
+            // setBodyClick(false);
             setCollapseOpen(false);
           }}
         />
@@ -61,9 +60,9 @@ function ColorNavbar() {
           <div className="navbar-translate">
             
             <NavbarBrand id="navbar-brand" to="/" tag={Link} style={{fontSize:"14px"}}>
-            <a href="#pablo">
-            <img alt="..." id="img" src={require("assets/img/icons/W.png")} style={{height:"40px", paddingRight:"1rem"}}/>
-          </a>
+            {/* <a href="#pablo"> */}
+            <img alt="..." id="img" src={require("assets/img/icons/W.png")} style={{height:"60px", paddingRight:"1rem"}}/>
+            {/* </a> */}
               DTU TIMES
             </NavbarBrand>
             {/* <UncontrolledTooltip placement="bottom" target="navbar-brand">
@@ -75,7 +74,7 @@ function ColorNavbar() {
               type="button"
               onClick={() => {
                 document.documentElement.classList.toggle("nav-open");
-                setBodyClick(true);
+                // setBodyClick(true);
                 setCollapseOpen(true);
               }}
             >

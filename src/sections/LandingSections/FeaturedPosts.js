@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {Blob} from 'react-blob';
+import { Link } from "react-router-dom";
+import { Blob } from "react-blob";
 import api from "api";
 import { Loader } from "components/LoaderComponent";
 
@@ -36,7 +37,7 @@ export default class FeaturedPosts extends Component {
         <div className="section" id="cards">
           <Container className="tim-container">
             <div className="">
-            {/* <Blob
+              {/* <Blob
                 size="10rem"
                 style={{
                   backgroundColor: "#C4CAD0",
@@ -53,19 +54,38 @@ export default class FeaturedPosts extends Component {
                   alt="..."
                 />
               </Blob> */}
-               <img
-                  width="6%"
-                  style={{
-                    minWidth: "4rem"
-                  }}
-                  src={require("assets/img/icons/blog.png")}
-                  alt="..."
-                />
-              <h2 style={{ marginBottom: "1.4rem", marginTop: "1.3rem", fontWeight:"5rem" }}>
-                <span style={{color:"#040403"}}><strong>Featured</strong></span> <span style={{color:"#6bd098 "}}><strong>Posts</strong></span>
+              <img
+                width="6%"
+                style={{
+                  minWidth: "4rem"
+                }}
+                src={require("assets/img/icons/blog.png")}
+                alt="..."
+              />
+              <h2
+                style={{
+                  marginBottom: "1.4rem",
+                  marginTop: "1.3rem",
+                  fontWeight: "5rem"
+                }}
+              >
+                <span style={{ color: "#040403" }}>
+                  <strong>Featured</strong>
+                </span>{" "}
+                <span style={{ color: "#6bd098 " }}>
+                  <strong>Posts</strong>
+                </span>
               </h2>
             </div>
-            <p style={{marginTop:"1rem", fontSize:"1.1rem", fontWeight:"2rem", color:"#494850", marginBottom:"2rem"}}>
+            <p
+              style={{
+                marginTop: "1rem",
+                fontSize: "1.1rem",
+                fontWeight: "2rem",
+                color: "#494850",
+                marginBottom: "2rem"
+              }}
+            >
               Find out what's new in the mind's of the brightest of DTU. From
               interviews of alumni and students alike to opinions on current
               affairs to musings about philosophy and the conundrums of
@@ -75,13 +95,34 @@ export default class FeaturedPosts extends Component {
               <Col md="4" sm="6">
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[0].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      {/* <a href={"/story/" + posts[0].slug}> */}
                       <img alt="..." className="img" src={posts[0].imgUrl} />
-                    </a>
+                      {/* </a> */}
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4" style={{color:"#EBEBEB"}}><strong>{posts[0].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[0].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[0].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[0].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[0].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -98,13 +139,32 @@ export default class FeaturedPosts extends Component {
                 </Card>
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[1].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
                       <img alt="..." className="img" src={posts[1].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[1].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[1].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[1].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[1].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[1].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -121,13 +181,32 @@ export default class FeaturedPosts extends Component {
                 </Card>
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[2].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
                       <img alt="..." className="img" src={posts[2].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[2].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[2].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[2].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[2].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[2].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -146,13 +225,32 @@ export default class FeaturedPosts extends Component {
               <Col md="4" sm="6">
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[8].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
                       <img alt="..." className="img" src={posts[8].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[8].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[8].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[2].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[8].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[8].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -169,13 +267,32 @@ export default class FeaturedPosts extends Component {
                 </Card>
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[12].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
                       <img alt="..." className="img" src={posts[12].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[12].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[12].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[12].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[12].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[12].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -193,13 +310,32 @@ export default class FeaturedPosts extends Component {
 
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <Link
+                      to={"/story/" + posts[9].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
                       <img alt="..." className="img" src={posts[9].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[9].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[9].biliner}</div>
+                    <Link
+                      to={"/story/" + posts[9].slug}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[9].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[9].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -215,16 +351,28 @@ export default class FeaturedPosts extends Component {
                   </CardBody>
                 </Card>
 
-
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <Link to={"/story/" + posts[5].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
                       <img alt="..." className="img" src={posts[5].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[5].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[5].biliner}</div>
+                  <Link to={"/story/" + posts[5].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[5].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[5].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -243,13 +391,26 @@ export default class FeaturedPosts extends Component {
               <Col md="4" sm="6">
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <Link to={"/story/" + posts[6].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
                       <img alt="..." className="img" src={posts[6].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[6].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[6].biliner}</div>
+                  <Link to={"/story/" + posts[6].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[6].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[6].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -264,16 +425,29 @@ export default class FeaturedPosts extends Component {
                     </CardFooter>
                   </CardBody>
                 </Card>
-                
+
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <Link to={"/story/" + posts[3].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
                       <img alt="..." className="img" src={posts[3].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[3].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[3].biliner}</div>
+                  <Link to={"/story/" + posts[3].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[3].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[3].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"
@@ -290,13 +464,26 @@ export default class FeaturedPosts extends Component {
                 </Card>
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                  <Link to={"/story/" + posts[7].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
                       <img alt="..." className="img" src={posts[7].imgUrl} />
-                    </a>
+                    </Link>
                   </div>
                   <CardBody className="text-center">
-                    <CardTitle tag="h4"style={{color:"#EBEBEB"}}><strong>{posts[7].title}</strong></CardTitle>
-                    <div className="card-description" style={{color:"#EBEBEB"}}>{posts[7].biliner}</div>
+                  <Link to={"/story/" + posts[3].slug} onClick={() => {
+                    window.scrollTo(0,0);
+                  }}>
+                      <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
+                        <strong>{posts[7].title}</strong>
+                      </CardTitle>
+                    </Link>
+                    <div
+                      className="card-description"
+                      style={{ color: "#EBEBEB" }}
+                    >
+                      {posts[7].biliner}
+                    </div>
                     <CardFooter>
                       <Button
                         className="btn-round"

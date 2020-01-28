@@ -236,7 +236,7 @@ a {
 
 .blog-content > p > a {
   color: #e15a97;
-  border-bottom: 1px solid #494850;
+//   border-bottom: 1px solid #494850;
   font-weight: 400;
 }
 
@@ -922,4 +922,6 @@ a {
         }
     }
     
-    
+    .navbar .navbar-brand {
+        padding: 10px 15px;
+    }

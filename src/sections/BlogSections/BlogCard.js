@@ -12,25 +12,29 @@ const BlogCard = ({ posts }) => {
           <Card className="card-plain card-blog text-left">
             <CardBody>
               <CardTitle tag="h3">
-                <a href={`/story/${post.slug}`} >
+                <Link to={`/story/${post.slug}`} onClick={()=> {
+                  window.scrollTo(0,0);
+                }}>
                   {post.title}
-                </a>
+                </Link>
               </CardTitle>
               <br />
             </CardBody>
             <div className="card-image">
-              {/* <a href={`/story/${post.slug}`} > */}
+              <Link to={`/story/${post.slug}`} onClick={()=> {
+                  window.scrollTo(0,0);
+                }}>
                 <img alt="..." className="img img-raised" src={post.imgUrl} />
-              {/* </a> */}
+              </Link>
             </div>
             <CardBody>
-              <p className="card-description" style={{ marginBottom: "1rem",color:"#494850" }}>
-                {post.biliner}
+              <p className="card-description" style={{ marginBottom: "1rem",color:"#494850",lineHeight:"2rem !important" }}>
+                <strong>{post.biliner}</strong>
                 ..... <Link
                     to={`/story/${post.slug}`}
                     color="primay"
-                    onClick={e => {
-                    window.scrollTo(0, 0);
+                    onClick={()=> {
+                      window.scrollTo(0,0);
                     }}
                 >
                     Read More

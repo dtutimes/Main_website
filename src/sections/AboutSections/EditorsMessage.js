@@ -56,7 +56,8 @@ const EditorsMessage = () => {
           <Container>
             <Row>
               <Col className="ml-auto text-right" md="12">
-                <h2 className="title" style={{fontWeight:"360"}}>Editors' message</h2>
+                <h2 className="title"><span style={{ color: "#040403" }}><strong>Editors'</strong></span>{" "}
+                <span style={{ color: "#6bd098" }}><strong>Message</strong></span></h2>
                 {/* <h5 className="description"></h5> */}
               </Col>
             </Row>

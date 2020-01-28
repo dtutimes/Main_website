@@ -47,7 +47,7 @@ const EditionCards = () => (
               </h2>  
               {/* #F7717 */}
               <h6 className="category">By DTU Times </h6>
-              <h5 style={{fontSize:"1.1rem", color:"#494850"}} className="description">
+              <h5 style={{fontSize:"1.1rem", color:"#494850",fontWeight:"400 !important"}} className="description">
                   The DTU Snapshot at a glance. Check out our latest editions,
                   containing interviews of the dignitaries and the celebrities
                   that visited DTU to the news of societies, faculties, students

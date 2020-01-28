@@ -1,9 +1,9 @@
 import React from "react";
-import { Container } from "reactstrap";
+// import { Container } from "reactstrap";
 import Header from "components/PageHeaders/EditionHeader";
 import LoaderComponent from "components/LoaderComponent";
 
-import EditionTagline from "sections/EditionSections/EditionTagline";
+// import EditionTagline from "sections/EditionSections/EditionTagline";
 import EditionFeature from "sections/EditionSections/EditionFeature";
 const Sections = () => (
   <>

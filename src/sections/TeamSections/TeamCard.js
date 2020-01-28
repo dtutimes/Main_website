@@ -17,14 +17,12 @@ const TeamCard = props => {
     <>
       <Card className="card-profile card-plain">
         <CardImg top tag="div">
-          <a href="#pablo" onClick={e => e.preventDefault()}>
             <img alt="..." className="img" src={img} />
-          </a>
         </CardImg>
         <CardBody>
           <CardTitle tag="h4">{name}</CardTitle>
           <h6 className="card-category">{post}</h6>
-          <p className="card-description">{bio}</p>
+          <p className="card-description"><strong>{bio}</strong></p>
           <CardFooter>
             <Button
               className="btn-link btn-just-icon mr-1"

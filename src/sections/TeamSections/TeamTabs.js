@@ -41,7 +41,7 @@ export default class Example extends React.Component {
       return false;
     }
   }
-  advisors(element) {
+  advisor(element) {
     if (element.position === "advisor") {
       return true;
     } else {
@@ -94,12 +94,12 @@ export default class Example extends React.Component {
     if (this.state.loaded === true) {
       const { data } = this.state;
       var arr1 = data.filter(this.council);
-      var arr2 = data.filter(this.advisors);
-      var arr3 = data.filter(this.columnist);
-      var arr4 = data.filter(this.designer);
-      var arr5 = data.filter(this.photographer);
-      var arr6 = data.filter(this.illustrator);
-      var arr7 = data.filter(this.developer);
+      var arr2 = data.filter(this.columnist);
+      var arr3 = data.filter(this.designer);
+      var arr4 = data.filter(this.photographer);
+      var arr5 = data.filter(this.illustrator);
+      var arr6 = data.filter(this.developer);
+      var arr7 = data.filter(this.advisor);
       var arr8 = data.filter(this.alumni);
       return (
         <>
@@ -272,7 +272,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Advisors
+                        Columnists
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -288,7 +288,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Columnists
+                        Designers
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -304,7 +304,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Designers
+                        Photographers
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -320,7 +320,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Photographers
+                        Illustrators
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -336,7 +336,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Illustrators
+                        Developers
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -352,7 +352,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Developers
+                        Advisors
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -379,7 +379,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr1.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -394,7 +394,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr2.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -424,7 +424,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr4.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -439,7 +439,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr5.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -454,7 +454,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr6.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -469,7 +469,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr7.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
@@ -484,7 +484,7 @@ export default class Example extends React.Component {
                         <Row>
                           {arr8.map(element => {
                             return (
-                              <Col md="6" key={element.id}>
+                              <Col md="3" key={element.id}>
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
