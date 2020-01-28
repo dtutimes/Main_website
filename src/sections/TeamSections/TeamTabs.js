@@ -31,7 +31,6 @@ export default class Example extends React.Component {
         data: info,
         loaded: true
       });
-      console.log(this.state.data);
     });
   }
   council(element) {
@@ -108,8 +107,15 @@ export default class Example extends React.Component {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
-                  <h2 className="title">Team</h2>
-                  <h5 className="description" style={{color:"#494850"}}>
+                  <h2 className="title">
+                    <span style={{ color: "#040403" }}>
+                      <strong>Team</strong>
+                    </span>{" "}
+                    <span style={{ color: "#6bd098" }}>
+                      <strong>Times</strong>
+                    </span>
+                  </h2>
+                  <h5 className="description" style={{ color: "#494850" }}>
                     The only way to create great things every day is with great
                     people who truly enjoy their job. So go ahead and meet this
                     tenacious group of people who work tirelessly behind the
@@ -384,6 +390,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -399,6 +408,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -414,6 +426,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -429,6 +444,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -444,6 +462,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -459,6 +480,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -474,6 +498,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );
@@ -489,6 +516,9 @@ export default class Example extends React.Component {
                                   name={element.name}
                                   bio={element.bio}
                                   img={element.userImg}
+                                  linkedin={element && element.linkedin}
+                                  facebook={element && element.facebook}
+                                  instagram={element && element.instagram}
                                 />
                               </Col>
                             );

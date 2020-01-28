@@ -270,7 +270,7 @@ function LoginPage() {
                       className="btn-just-icon mr-1"
                       color="youtube"
                       id="top1"
-                      
+                      href="mailto:dtutimes@dtu.ac.in"
                     >
                       <UncontrolledTooltip
                         placement="top"

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {Blob} from "react-blob";
+import { Blob } from "react-blob";
 // reactstrap components
 
 // core components
@@ -69,34 +69,36 @@ function Presentation() {
     return (
       <>
         <SocHeader />
-        <Container >
-        <Blob
-                size="10rem"
-                style={{
-                  backgroundColor: "#3AAFB9",
-                  color: "white",
-                  zIndex: -2,
-
-                }}
-              >
-                <img
-                  width="10%"
-                  style={{
-                    minWidth: "4rem"
-                  }}
-                  src={require("assets/img/icons/society.svg")}
-                  alt="..."
-                />
-              </Blob> 
-        {/* <h1 className="text-left" style={{marginBottom : "2rem"}}>Societies</h1> */}
-        <p  style={{color: "#494850", fontSize:"1.2rem", marginTop:"3rem"}}>
-          The seventy plus societies of DTU are the crown jewels of the
-          university. If electric circuits spark your interest, if you feel that
-          you and Python were meant to be, if you want to conquer the podium or
-          already have or if you feel you’ve found your break in break dancing,
-          these societies will stoke that raging fire inside of you or better
-          yet, ignite a spark for something that stays with you for life.
-        </p>
+        <Container>
+          <Blob
+            size="10rem"
+            style={{
+              backgroundColor: "#3AAFB9",
+              color: "white",
+              zIndex: -2
+            }}
+          >
+            <img
+              width="10%"
+              style={{
+                minWidth: "4rem"
+              }}
+              src={require("assets/img/icons/society.svg")}
+              alt="..."
+            />
+          </Blob>
+          {/* <h1 className="text-left" style={{marginBottom : "2rem"}}>Societies</h1> */}
+          <p
+            style={{ color: "#494850", fontSize: "1.2rem", marginTop: "3rem" }}
+          >
+            The seventy plus societies of DTU are the crown jewels of the
+            university. If electric circuits spark your interest, if you feel
+            that you and Python were meant to be, if you want to conquer the
+            podium or already have or if you feel you’ve found your break in
+            break dancing, these societies will stoke that raging fire inside of
+            you or better yet, ignite a spark for something that stays with you
+            for life.
+          </p>
         </Container>
         <SectionComponents />
       </>
