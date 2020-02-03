@@ -23,7 +23,7 @@ export default class GalleryCarousel extends React.Component {
   }
 
   componentDidMount = () => {
-    this.interval = setInterval(this.tick, 5000);
+    this.interval = setInterval(this.tick, 2500);
     const a = window.innerWidth;
     if (a <= 800) {
       this.setState({

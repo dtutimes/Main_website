@@ -4,7 +4,8 @@ import SocietySingleHeader from "components/PageHeaders/SocietySingleHeader";
 import SocietiesCard from "../sections/SocSingleSection/SocietiesCard";
 import { Animated } from "react-animated-css";
 
-import { Col } from "reactstrap";
+import { Col,Row } from "reactstrap";
+import { Loader } from "components/LoaderComponent";
 
 let c = [];
 let tt = [];
@@ -51,9 +52,10 @@ export default class SocietySingle extends React.Component {
               name="Cultural Societies"
               des="The Cultural Societies of DTU blow the stereotypical image of an engineer to smithereens. These societies exude vibrancy and encompass every shade of the spectrum."
             />
+            <Row>
             {c.map(cs => {
               return (
-                <Col md="4" className="mt-5">
+                <Col md="4" className="mt-5" >
                   <Animated
                     animationIn="fadeIn"
                     animationInDelay={1500}
@@ -70,6 +72,7 @@ export default class SocietySingle extends React.Component {
                 </Col>
               );
             })}
+            </Row>
           </>
         );
       } else if (this.props.match.params.slug === "tech_team") {
@@ -80,6 +83,7 @@ export default class SocietySingle extends React.Component {
               des="Constantly pushing the limits of technology, channelizing their boundless creativity and foraying into uncharted territory, that’s a regular workday for DTU’s Tech Teams.
 "
             />
+            <Row>
             {tt.map(tts => {
               return (
                 <Col md="4" className="mt-5">
@@ -99,6 +103,7 @@ export default class SocietySingle extends React.Component {
                 </Col>
               );
             })}
+            </Row>
           </>
         );
       } else if (this.props.match.params.slug === "technical") {
@@ -109,6 +114,7 @@ export default class SocietySingle extends React.Component {
               des="The technical teams of DTU ensure that the stereotypical image of a coder is not tarnished. It lives up to its stellar reputation.
 "
             />
+            <Row>
             {t.map(ts => {
               return (
                 <Col md="4" className="mt-5">
@@ -128,6 +134,7 @@ export default class SocietySingle extends React.Component {
                 </Col>
               );
             })}
+           </Row> 
           </>
         );
       } else {
@@ -138,6 +145,7 @@ export default class SocietySingle extends React.Component {
               des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it.
 "
             />
+            <Row>
             {m.map(ms => {
               return (
                 <Col md="4" className="mt-5">
@@ -157,11 +165,12 @@ export default class SocietySingle extends React.Component {
                 </Col>
               );
             })}
+            </Row>
           </>
         );
       }
     } else {
-      return <p>Loading...</p>;
+      return <Loader/>
     }
   }
 }

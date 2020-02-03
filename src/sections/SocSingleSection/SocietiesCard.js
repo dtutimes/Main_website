@@ -10,12 +10,15 @@ const SocietiesCard = (props) => {
             "url(" +
             props.img +
             ")",
+            cursor:'pointer'
         }}
         className="take"
+        onClick = {()=>{console.log("hello hello");
+        }}
       >
       <CardBody className="takeOnMe">
         <CardTitle><h3>{props.name}</h3></CardTitle>
-        <p>{props.des}</p>
+        <p style={{textOverflow: 'ellipsis;'}}>{props.des}</p>
         <CardFooter>
         <Row>
           <Col md='4'>

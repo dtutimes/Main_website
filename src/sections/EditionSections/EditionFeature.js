@@ -2,16 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "nuka-carousel";
 import { Blob } from "react-blob";
+import { Loader } from "components/LoaderComponent";
 import api from "api";
 
 import EditionCard from "views/edition_section/editionCards";
 class SectionHeader extends React.Component {
   state = {
     mob: false,
-    editions: []
+    editions: [],
+    loaded:false,
   };
   componentDidMount() {
-    api.get("/edition").then(res => this.setState({ editions: res.data }));
+    api.get("/edition").then(res => this.setState({ editions: res.data, loaded:true }));
 
     const a = window.innerWidth;
     if (a <= 800) {
@@ -68,7 +70,7 @@ class SectionHeader extends React.Component {
           />
         );
     }
-
+if(this.state.loaded===true) {
     return (
       <>
         <div className="wrapper">
@@ -133,7 +135,11 @@ class SectionHeader extends React.Component {
           </div>
         </div>
       </>
-    );
+    );} 
+    else {
+      return (
+      <Loader/>)
+    }
   }
 }
 const BackgroundBlob = ({ style, props }) => (

@@ -121,12 +121,9 @@ const LandingHeader = () => {
   return (
     <>
       <div
-        className="page-headerx page-header-large"
+        className="page-headerx page-header-large pgfa"
         ref={pageHeader}
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/header/times_logo.png") + ")"
-        }}
+        
       >
         <div className="filter " />
         <div className="content-center">
