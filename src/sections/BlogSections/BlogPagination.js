@@ -2,10 +2,10 @@ import React from "react";
 import { api } from "api";
 import {
   Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
+  // Card,
+  // CardBody,
+  // CardFooter,
+  // CardTitle,
   Container,
   Row,
   Col

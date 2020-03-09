@@ -5,7 +5,7 @@ import {
   Nav,
   TabContent,
   TabPane,
-  Container,
+  Container
 } from "reactstrap";
 
 import ContentLoaderBlog from "components/ContentLoader";
@@ -47,7 +47,10 @@ const BlogTabs = ({ categories, posts, loading }) => {
       <TabContent className="text-center" activeTab={"hTabs" + hTabs}>
         <TabPane tabId={"hTabs" + "1"}>
           <Container style={{ minHeight: "100vh" }}>
-            {loading && [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => <ContentLoaderBlog key={item} />)}
+            {loading &&
+              [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => (
+                <ContentLoaderBlog key={item} />
+              ))}
             {!loading && <BlogCard posts={posts} />}
           </Container>
         </TabPane>

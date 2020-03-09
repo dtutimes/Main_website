@@ -20,6 +20,7 @@ const BlogSingleHeader = ({title, biliner, timestamp}) => {
         <BackgroundBlob />
         <BackgroundBlobSmall />
         <BackgroundBlobSmallRight />
+        <BackgroundBlobX />
         <div
           className="content-center"
         >
@@ -112,9 +113,61 @@ const BlogSingleHeader = ({title, biliner, timestamp}) => {
 //     {...props}
 //   />
 // );
+// const BackgroundBlob = ({ style, props }) => (
+//   <Blob
+//     size="95vh"
+//     style={{
+//       position: "absolute",
+//       top: "-60%",
+//       left: "35%",
+//       zIndex: 0,
+//       backgroundColor: "#C76D7E",
+//       color: "white",
+//       opacity: 0.25,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
+
+// const BackgroundBlobSmallRight = ({ style, props }) => (
+//   <Blob
+//     size="55vh"
+//     style={{
+//       position: "absolute",
+//       top: "-15%",
+//       right: "-2%",
+//       zIndex: 0,
+//       backgroundColor: "#E85D75",
+//       color: "white",
+//       opacity: 0.5,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
+// const BackgroundBlobSmall = ({ style, props }) => (
+//   <Blob
+//     size="38vh"
+//     style={{
+//       position: "absolute",
+//       top: "-15%",
+//       left: "5%",
+//       zIndex: 0,
+//       backgroundColor: "#E85D75",
+//       color: "white",
+//       opacity: 0.9,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
 const BackgroundBlob = ({ style, props }) => (
   <Blob
-    size="95vh"
+    size="75vh"
     style={{
       position: "absolute",
       top: "-60%",
@@ -147,9 +200,10 @@ const BackgroundBlobSmallRight = ({ style, props }) => (
     {...props}
   />
 );
+
 const BackgroundBlobSmall = ({ style, props }) => (
   <Blob
-    size="38vh"
+    size="30vh"
     style={{
       position: "absolute",
       top: "-15%",
@@ -164,4 +218,40 @@ const BackgroundBlobSmall = ({ style, props }) => (
     {...props}
   />
 );
+// const BackgroundBlobBig = ({ style, props }) => (
+//   <Blob
+//     size="165vh"
+//     style={{
+//       position: "absolute",
+//       bottom: "10%",
+//       right: "35%",
+//       zIndex: 0,
+//       backgroundColor: "#E85D75",
+//       color: "white",
+//       opacity: 0.25,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
+
+const BackgroundBlobX = ({ style, props }) => (
+  <Blob
+    size="165vh"
+    style={{
+      position: "absolute",
+      bottom: "8%",
+      right: "35%",
+      zIndex: 2,
+      backgroundColor: "#F08BA5",
+      color: "white",
+      opacity: 0.25,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
+
 export default BlogSingleHeader;

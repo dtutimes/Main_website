@@ -42,22 +42,22 @@ function Presentation() {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
     const a = window.innerWidth;
-    console.log(a);
+    // console.log(a);
     if (a <= 780) {
       setMob(true);
-      console.log(mob);
+      // console.log(mob);
     } else {
       setMob(false);
-      console.log(mob);
+      // console.log(mob);
     }
     window.addEventListener("resize", () => {
       const b = window.innerWidth;
       if (b <= 780) {
         setMob(true);
-        console.log(mob);
+        // console.log(mob);
       } else {
         setMob(false);
-        console.log(mob);
+        // console.log(mob);
       }
     });
     return function cleanup() {

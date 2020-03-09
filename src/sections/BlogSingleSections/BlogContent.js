@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { getInstance } from "../../services/axiosInstance";
 import { Badge, Media, Container, Row, Col } from "reactstrap";
-
 import { Parser } from "html-to-react";
 
 const BlogContent = ({ blog }) => {
@@ -16,12 +15,18 @@ const BlogContent = ({ blog }) => {
             <Col md="10">
               <div
                 className="blog-content"
-                style={{ textAlign: "left", color: "#494850", lineHeight:"2rem !important", fontWeight:"400 !important" }}
+                style={{
+                  textAlign: "left",
+                  color: "#494850",
+                  lineHeight: "2rem !important",
+                  fontWeight: "400 !important"
+                }}
               >
                 <img
                   alt="..."
                   className="img-rounded img-responsive mb-5"
                   src={blog.imgUrl}
+                  style={{ zIndex: "99" }}
                 />
                 {body}
                 <hr />
@@ -197,5 +202,4 @@ class Single extends Component {
     }
   }
 }
-
 export default BlogContent;

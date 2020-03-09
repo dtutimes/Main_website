@@ -108,21 +108,21 @@ const BackgroundBlobSmall = ({ style, props }) => (
     {...props}
   />
 );
-const BackgroundBlobBig = ({ style, props }) => (
-  <Blob
-    size="165vh"
-    style={{
-      position: "absolute",
-      bottom: "10%",
-      right: "35%",
-      zIndex: 0,
-      backgroundColor: "#E85D75",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);
+// const BackgroundBlobBig = ({ style, props }) => (
+//   <Blob
+//     size="165vh"
+//     style={{
+//       position: "absolute",
+//       bottom: "10%",
+//       right: "35%",
+//       zIndex: 0,
+//       backgroundColor: "#E85D75",
+//       color: "white",
+//       opacity: 0.25,
+//       fontSize: "50vh",
+//       ...style
+//     }}
+//     {...props}
+//   />
+// );
 export default BlogHeader;

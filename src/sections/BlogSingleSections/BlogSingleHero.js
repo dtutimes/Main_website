@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { api } from "api";
 import styled from "styled-components";
-
 import BlogSingleHeader from "components/PageHeaders/BlogSingleHeader";
 import BlogContent from './BlogContent'
 
@@ -14,7 +13,7 @@ const Progress = styled.div`
   );
   width: 100%;
   height: 5px;
-  z-index: 3;
+  z-index: 1;
 `;
 
 export default class BlogSingleHero extends Component {

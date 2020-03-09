@@ -338,7 +338,7 @@ function LoginPage() {
                 </iframe>
               </div>
             </Animated>
-
+            
             {/* <Container>
               <div className="demo-footer text-center">
                 <h6>

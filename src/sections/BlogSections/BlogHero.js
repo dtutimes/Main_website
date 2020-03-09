@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { api } from "api";
 import { Container, Col, Row } from "reactstrap";
 import { Blob } from "react-blob";
-import { StickyContainer, Sticky } from "react-sticky";
+// import { StickyContainer, Sticky } from "react-sticky";
 
 import BlogTabs from "sections/BlogSections/BlogTabs";
 import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
@@ -18,10 +18,10 @@ export default class BlogHero extends Component {
       pageNo: 1,
       lastPage: 0,
       totalPages: [],
-      loading: true
+      loading: true,
+      mob: false
     };
   }
-
   componentDidMount() {
     api.get("/story?page=" + this.state.pageNo).then(res => {
       this.setState({ blogs: res.data.data });
@@ -39,6 +39,18 @@ export default class BlogHero extends Component {
       }, 1200);
     });
     api.get("/category").then(res => this.setState({ categories: res.data }));
+    // window.addEventListener("resize", () => {
+    //   const b = window.innerWidth;
+    //   if (b <= 900) {
+    //     this.setState({
+    //       mob: true
+    //     });
+    //   } else {
+    //     this.setState({
+    //       mob: false
+    //     });
+    //   }
+    // });
   }
 
   changePage(newpage, newposts) {
@@ -49,64 +61,117 @@ export default class BlogHero extends Component {
   }
 
   render() {
-    const { blogs, categories, loading, pageNo, lastPage } = this.state;
-    return (
-      <>
-        <Container
-          className="tim-container"
-          style={{ minHeight: "200vh !important", overflow: "hidden" }}
-        >
-          <div style={{
-            // position:'absolute'
-            overflow:"hidden"
-          }}>
-          <BackgroundBlob />
-          </div>
-          <div id="description-areas">
-            <Row>
-              <Col md="8" sm="12">
-                <BlogTabs
-                  loading={loading}
-                  posts={blogs}
-                  categories={categories}
-                />
-                <BlogPagination
-                  pageNo={pageNo}
-                  lastPage={lastPage}
-                  changePage={this.changePage.bind(this)}
-                />
-              </Col>
-              <Col className="pt-5" md="4" sm="12" className="abc">
-                <div className="blog-attr">
-                
-                <BlogPopular pageNo={pageNo} />
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    borderColor: "black"
-                  }}
-                />
-                <BlogMagzine />
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    borderColor: "black"
-                  }}
-                />
-                <BlogSubsciber />
-                <hr
-                  style={{
-                    borderTop: "1px solid black",
-                    borderColor: "black"
-                  }}
-                />
-              </div>
-              </Col>
-            </Row>
-          </div>
-        </Container>
-      </>
-    );
+    const { blogs, categories, loading, pageNo, lastPage, mob } = this.state;
+    if (window.innerWidth > 900) {
+      return (
+        <>
+          <Container
+            className="tim-container"
+            style={{ minHeight: "200vh !important", overflow: "hidden" }}
+          >
+            <div
+              style={{
+                overflow: "hidden"
+              }}
+            >
+              <BackgroundBlob />
+            </div>
+            <div id="description-areas">
+              <Row>
+                <Col md="8" sm="12">
+                  <BlogTabs
+                    loading={loading}
+                    posts={blogs}
+                    categories={categories}
+                  />
+                  <BlogPagination
+                    pageNo={pageNo}
+                    lastPage={lastPage}
+                    changePage={this.changePage.bind(this)}
+                  />
+                </Col>
+                <Col className="pt-5" md="4" sm="12" className="abc">
+                  <div className="blog-attr">
+                    <BlogPopular pageNo={pageNo} />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                    <BlogMagzine />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                    <BlogSubsciber />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Container
+            className="tim-container"
+            style={{ minHeight: "200vh !important", overflow: "hidden" }}
+          >
+            <div id="description-areas">
+              <Row>
+                <Col md="8" sm="12">
+                  <BlogTabs
+                    loading={loading}
+                    posts={blogs}
+                    categories={categories}
+                  />
+                  <BlogPagination
+                    pageNo={pageNo}
+                    lastPage={lastPage}
+                    changePage={this.changePage.bind(this)}
+                  />
+                </Col>
+                <Col className="pt-5" md="4" sm="12" className="abc">
+                  <div className="blog-attr">
+                    <BlogPopular pageNo={pageNo} />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                    <BlogMagzine />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                    <BlogSubsciber />
+                    <hr
+                      style={{
+                        borderTop: "1px solid black",
+                        borderColor: "black"
+                      }}
+                    />
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Container>
+        </>
+      );
+    }
   }
 }
 
@@ -127,7 +192,6 @@ const BackgroundBlob = ({ style, props }) => (
     {...props}
   />
 );
-
 
 // {/* <StickyContainer className="container">
 //                   {/* Other elements can be in between `StickyContainer` and `Sticky`,
