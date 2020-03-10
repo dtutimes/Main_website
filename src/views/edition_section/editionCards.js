@@ -87,7 +87,7 @@ closeLightbox = () => {
             {this.props.des}
           </p>
           <CardFooter>
-            {this.state.mob?(<a href={this.props.link}>Show More</a>):(
+            {this.state.mob||this.props.id>38?(<a href={this.props.link} >Show More</a>):(
             <Button
               className="btn-neutral"
               color="link"

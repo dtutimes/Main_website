@@ -61,6 +61,7 @@ class SectionHeader extends React.Component {
       else
         carousels.push(
           <EditionCard
+            id = {editions[index].id}
             title={editions[index].name}
             img={editions[index].imgUrl}
             ajax = {editions[index].ajax}
