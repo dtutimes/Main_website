@@ -208,7 +208,8 @@ const EditionCards = () => {
         <div
           className="section section-cards"
           style={{
-            paddingTop: "0rem"
+            paddingTop: "0rem",
+            minHeight: "900px !important"
           }}
         >
           <div className="codrops-header">
@@ -218,7 +219,7 @@ const EditionCards = () => {
                   <img
                     width="10%"
                     style={{
-                      minWidth: "4rem"
+                      minWidth: "3rem"
                     }}
                     src={require("assets/img/icons/newspaper.png")}
                     alt="..."
