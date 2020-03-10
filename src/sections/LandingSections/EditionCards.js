@@ -248,11 +248,7 @@ const EditionCards = () => {
                   >
                     The DTU Snapshot at a glance. Check out our latest editions,
                     containing interviews of the dignitaries and the celebrities
-                    that visited DTU to the news of societies, faculties,
-                    students and the University itself. And while you are at it
-                    be sure to visit the Pulse section, filled to the brim with
-                    the creativity of some of the most talented writers of our
-                    University.
+                    that visited DTU
                   </h5>
                 </div>
               </Col>

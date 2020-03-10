@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { api } from "api";
-import { Row, Card, Col, CardBody, CardTitle } from "reactstrap";
+import { Row, Card, Col, CardTitle } from "reactstrap";
 import { ContentLoaderMagzine } from "components/ContentLoader";
 
 export default class BlogMagzine extends Component {

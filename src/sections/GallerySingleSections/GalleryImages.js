@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import {Animated} from 'react-animated-css';
 
 import { Container, Row, Col } from "reactstrap";

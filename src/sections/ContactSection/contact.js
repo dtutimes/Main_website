@@ -180,10 +180,10 @@ import React from "react";
 // reactstrap components
 import {
   Button,
-  Card,
-  CardTitle,
-  Form,
-  Input,
+  // Card,
+  // CardTitle,
+  // Form,
+  // Input,
   Container,
   Row,
   Col,
