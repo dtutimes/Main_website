@@ -40,7 +40,7 @@ const BlogHeader = () => {
               animationInDuration={1000}
               isVisible={true}
             >
-              <h5 style={{ marginTop: "3rem" }}>
+              <h5 className="herosaver">
                 <strong>
                   Dive headlong into a world of illuminating interviews, <br />
                   enlightening editorials and potent prose written by some of
