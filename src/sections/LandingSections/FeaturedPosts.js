@@ -38,11 +38,11 @@ export default class FeaturedPosts extends Component {
           <Container className="tim-container">
             <div className="">
               <img
-                width="6%"
+                width="9%"
                 style={{
                   minWidth: "4rem"
                 }}
-                src={require("assets/img/icons/blog.png")}
+                src={require("assets/img/campus/post.png")}
                 alt="..."
               />
               <h2
