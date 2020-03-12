@@ -72,7 +72,7 @@ closeLightbox = () => {
         style={{
           backgroundImage:
             "url(" + require("assets/img/header/image-3.jpg") + ")",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
         }}
       >
         <div className="filter" />
@@ -96,7 +96,7 @@ closeLightbox = () => {
                 </Animated>
                 
               </Col>
-              <Col>
+              {/* <Col>
                 <Animated
                   animationIn="fadeIn"
                   animationInDelay={500}
@@ -113,7 +113,7 @@ closeLightbox = () => {
                     onClick={this.state.mob?null:this.openLightbox2}
                   /></a>
                 </Animated>
-              </Col>
+              </Col> */}
             </Row>
             {this.state.viewerIsOpen?(
             <Modal
@@ -124,7 +124,7 @@ closeLightbox = () => {
             >
               <iframe height="566px" width="700px" src={this.state.data[0].ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
             </Modal>):null}
-            {this.state.viewerIsOpen2?(
+            {/* {this.state.viewerIsOpen2?(
             <Modal
             isOpen={this.state.viewerIsOpen2}
             toggle={this.closeLightbox}
@@ -132,7 +132,7 @@ closeLightbox = () => {
             style={{width:'820px',height:'566px'}}
             >
               <iframe height="566px" width="700px" src={this.state.data[1].ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
-            </Modal>):null}
+            </Modal>):null} */}
             <Animated
               animationIn="fadeInUp"
               animationInDelay={1000}

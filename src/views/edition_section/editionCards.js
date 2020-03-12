@@ -85,12 +85,13 @@ closeLightbox = () => {
             <i className="fa fa-search" onClick={this.openLightbox} style={{cursor:'pointer'}}/>
           )}
           </div>
-          <CardFooter>
+          <CardFooter style={{marginTop:"10%"}}>
             {this.state.mob||this.props.id>38?(<a href={this.props.link} >Show More</a>):(
             <Button
               className="btn-neutral"
               color="link"
               onClick={this.openLightbox}
+              style={{marginTop:"4%"}}
             >
               <i className="fa fa-book mr-1" />
               Show more
