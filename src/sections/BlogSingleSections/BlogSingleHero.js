@@ -3,7 +3,7 @@ import { api } from "api";
 import styled from "styled-components";
 import BlogSingleHeader from "components/PageHeaders/BlogSingleHeader";
 import BlogContent from './BlogContent'
-
+import {ContentLoaderBlogSingle} from "components/ContentLoader";
 const Progress = styled.div`
   position: fixed;
   background: linear-gradient(
@@ -21,7 +21,8 @@ export default class BlogSingleHero extends Component {
       super(props);
       this.state = {
         blog: {},
-        scrollPosition: 0
+        scrollPosition: 0,
+        loaded: false,
       };
   }
 
@@ -38,6 +39,9 @@ export default class BlogSingleHero extends Component {
         this.calculateScrollDistance();
       });
     });
+    setTimeout(() => {
+      this.setState({ loaded: true });
+    }, 1200);
   };
 
   getDocHeight = () => {
@@ -71,7 +75,8 @@ export default class BlogSingleHero extends Component {
       <div>
         <Progress scroll={`${this.state.scrollPosition}%`}  />
         <BlogSingleHeader timestamp={blog.updated_at} title={blog.title} biliner={blog.biliner} />
-        <BlogContent blog={blog} />
+        {!this.state.loaded && <ContentLoaderBlogSingle />}
+        {this.state.loaded && <BlogContent blog={blog} />}
       </div>
     );
   }

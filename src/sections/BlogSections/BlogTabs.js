@@ -29,7 +29,7 @@ const BlogTabs = ({ categories, posts, loading }) => {
                 All
               </NavLink>
             </NavItem>
-            {categories.map(item => (
+            {categories.map(item => ( 
               <NavItem key={item.id}>
                 <NavLink
                   className={hTabs === item.id ? "active" : ""}

@@ -14,6 +14,7 @@ import {
 // import TeamHeader from "components/Headers/ProfilePageHeader";
 import TeamCard from "./TeamCard";
 import "./team.css";
+import { Loader } from "components/LoaderComponent";
 export default class Example extends React.Component {
   // const [activePill, setActivePill] = React.useState("1");
   state = {
@@ -69,7 +70,7 @@ export default class Example extends React.Component {
     }
   }
   illustrator(element) {
-    if (element.posiiton === "illustrator") {
+    if (element.position === "illustrator") {
       return true;
     } else {
       return false;
@@ -100,6 +101,7 @@ export default class Example extends React.Component {
       var arr6 = data.filter(this.developer);
       var arr7 = data.filter(this.advisor);
       var arr8 = data.filter(this.alumni);
+      
       return (
         <>
           {/* <TeamHeader /> */}
@@ -535,9 +537,7 @@ export default class Example extends React.Component {
       );
     } else {
       return (
-        <div>
-          <p>Loading...</p>
-        </div>
+        <Loader />
       );
     }
   }

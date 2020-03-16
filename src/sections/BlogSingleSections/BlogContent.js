@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { getInstance } from "../../services/axiosInstance";
 import { Badge, Media, Container, Row, Col } from "reactstrap";
 import { Parser } from "html-to-react";
-
 const BlogContent = ({ blog }) => {
   const body = Parser().parse(blog.body);
 
@@ -75,7 +74,10 @@ class Single extends Component {
   };
 
   componentDidMount() {
-    //call for related posts
+    setTimeout(() => {
+      this.setState({ loaded: true});
+    }, 1200);
+    
   }
   render() {
     if (this.state.loaded === true) {
@@ -196,7 +198,7 @@ class Single extends Component {
     } else {
       return (
         <>
-          <p>Loading...</p>
+        Loading...
         </>
       );
     }
