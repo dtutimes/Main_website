@@ -23,7 +23,7 @@ import ContactUs from "pages/ContactPage";
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import Presentation from "sections/SocSection/SocietiesIndex";
-import SocietySingle from "pages/SocietiesSingle";
+import SocietySingle from "pages/SocietiesSingleCategory";
 
 const Routes = () => (
     <>
