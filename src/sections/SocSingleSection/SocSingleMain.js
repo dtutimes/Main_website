@@ -4,16 +4,15 @@ import {
 
   Container,
   Row,
-  Col
+  Col,
+  Button,
+  Card
 } from "reactstrap";
-import Carousel from 'nuka-carousel';
-
-
-import EditionCard from "views/edition_section/editionCards";
-
+import Carousel from "nuka-carousel";
+import { Animated } from "react-animated-css";
 // core components
 
-class SectionHeader extends React.Component {
+class SocSingleMain extends React.Component {
 
   state = {
     mob: false
@@ -58,17 +57,41 @@ window.addEventListener('resize',()=>{
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Why our product is the best</h2>
+                <h2 className="title">Description</h2>
                 <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here.
+                 {this.props.des}
                 </h5>
               </Col>
             </Row>
             <Row>
-              <Col md="3">
+            <Col className="ml-auto mr-auto text-center" md="8">
+                <h2 className="title">News</h2>
+              </Col> 
+            </Row>
+            <Row>
+            <Carousel
+            slidesToShow={3}
+            swiping={true}
+            renderCenterLeftControls={({ previousSlide }) => (
+                <button
+                onClick={previousSlide}
+                className="btn-move-left btn-round btn btn-default"
+                >
+                <i className="nc-icon nc-minimal-left"></i>
+                </button>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+                <button
+                className="btn-move-right btn-round btn btn-default"
+                onClick={nextSlide}
+                >
+                <i className="nc-icon nc-minimal-right"></i>
+                </button>
+            )}
+            cellSpacing={1}
+            renderBottomCenterControls={""}
+        >
+              <Card>
                 <div className="info">
                   <div className="icon icon-danger">
                     <i className="nc-icon nc-palette" />
@@ -79,18 +102,10 @@ window.addEventListener('resize',()=>{
                       Spend your time generating new ideas. You don't have to
                       think of implementing.
                     </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
                   </div>
                 </div>
-              </Col>
-              <Col md="3">
+              </Card>
+              <Card>
                 <div className="info">
                   <div className="icon icon-danger">
                     <i className="nc-icon nc-bulb-63" />
@@ -101,18 +116,10 @@ window.addEventListener('resize',()=>{
                       Larger, yet dramatically thinner. More powerful, but
                       remarkably power efficient.
                     </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
                   </div>
                 </div>
-              </Col>
-              <Col md="3">
+              </Card>
+              <Card>
                 <div className="info">
                   <div className="icon icon-danger">
                     <i className="nc-icon nc-chart-bar-32" />
@@ -123,18 +130,10 @@ window.addEventListener('resize',()=>{
                       Choose from a veriety of many colors resembling sugar
                       paper pastels.
                     </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
                   </div>
                 </div>
-              </Col>
-              <Col md="3">
+              </Card>
+              <Card>
                 <div className="info">
                   <div className="icon icon-danger">
                     <i className="nc-icon nc-sun-fog-29" />
@@ -145,23 +144,53 @@ window.addEventListener('resize',()=>{
                       Find unique and handmade delightful designs related items
                       directly from our sellers.
                     </p>
-                    <Button
-                      className="btn-link"
-                      color="danger"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      See more
-                    </Button>
                   </div>
                 </div>
-              </Col>
+              </Card>
+              </Carousel>
             </Row>
+            <Row>
+                <Col className="ml-auto mr-auto text-center" md="8">
+                  <Animated
+                    animationIn="fadeInUp"
+                    animationInDelay={1500}
+                    isVisible={true}
+                  >
+                    <h2 className="title">
+                      Contact
+                    </h2>
+                  </Animated>
+                  {/* <p> */}
+                  <Animated
+                    animationIn="fadeInDown"
+                    animationInDelay={2000}
+                    isVisible={true}
+                  >
+                    <Row className="mb-5">
+                      <Col>
+                        <h3 className="title" style={{}}>
+                          Head
+                        </h3>
+                        {this.props.head}
+                        <br />
+                        {this.props.headC}
+                      </Col>
+                      <Col>
+                        <h3 className="title">PR Head</h3>
+                        {this.props.pr}
+                        <br />
+                        {this.props.prC}
+                      </Col>
+                    </Row>
+                  </Animated>
+                  {/* </p> */}
+                </Col>
+              </Row>
           </Container>
         </div>
         {/* ********* END FEATURES 1 ********* */}
         {/* ********* FEATURES 2 ********* */}
-        <div className="wrapper">
+        {/* <div className="wrapper">
         <div className="features-2 section text-center landing-section">
           <Container>
             <Row>
@@ -233,7 +262,7 @@ window.addEventListener('resize',()=>{
             </Row>
           </Container>
         </div>
-        </div>
+        </div> */}
         {/* ********* END FEATURES 2 ********* */}
         {/* ********* FEATURES 3 ********* */}
         {/* <div className="features-3">
@@ -488,4 +517,4 @@ window.addEventListener('resize',()=>{
   );}
 }
 
-export default SectionHeader;
+export default SocSingleMain;

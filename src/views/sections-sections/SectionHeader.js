@@ -199,7 +199,7 @@ function SectionHeader() {
     <>
       {/* <div className="section section-header cd-section" id="headers"> */}
         {/* ********* HEADER 1 ********* */}
-        {/* <div className="header-1">
+        <div className="header-1">
           <Navbar className="navbar-transparent navbar-absolute" expand="lg">
             <Container>
               <NavbarBrand className="mb-0" href="www.creative-tim.com">
@@ -298,7 +298,7 @@ function SectionHeader() {
               </Container>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* ********* END HEADER 1 ********* */}
         {/* ********* HEADER 2 ********* */}
         {/* <div className="header-2">

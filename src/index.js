@@ -24,6 +24,7 @@ import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import Presentation from "sections/SocSection/SocietiesIndex";
 import SocietySingle from "pages/SocietiesSingleCategory";
+import SocietySingleSingle from "pages/SocSingle";
 
 const Routes = () => (
     <>
@@ -43,7 +44,8 @@ const Routes = () => (
             {/* <Route path="/team" component={Team} /> */}
             <Route path="/contact" component={ContactUs} />
             <Route path='/societies' component={Presentation} exact />
-            <Route path='/societies/:slug' component={SocietySingle}/>
+            <Route path='/societies/:slug' component={SocietySingle} exact/>
+            <Route path='/societies/:slug/:slug2' component={SocietySingleSingle} />
         </Switch>
         <MainFooter />
     </>
