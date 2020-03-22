@@ -84,10 +84,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //1 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/48.png"
+                      src="http://app.dtutimes.com/storage/740/conversions/Screen-Shot-2020-03-07-at-2.16.20-PM-cover.jpg"
                     />
                   </a>
                 </li>
@@ -97,10 +98,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //2 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/47.png"
+                      src="http://app.dtutimes.com/storage/632/conversions/48-cover.jpg"
                     />
                   </a>
                 </li>
@@ -110,10 +112,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //7 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/42.jpg"
+                      src="http://app.dtutimes.com/storage/652/conversions/43-cover.jpg"
                     />
                   </a>
                 </li>
@@ -137,10 +140,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //5 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/44.jpg"
+                      src="http://app.dtutimes.com/storage/650/conversions/45-cover.jpg"
                     />
                   </a>
                 </li>
@@ -150,10 +154,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //6 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/43.jpg"
+                      src="http://app.dtutimes.com/storage/651/conversions/44-cover.jpg"
                     />
                   </a>
                 </li>
@@ -163,10 +168,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //3 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/46.png"
+                      src="http://app.dtutimes.com/storage/648/conversions/47-cover.jpg"
                     />
                   </a>
                 </li>
@@ -176,10 +182,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //4 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/45.png"
+                      src="http://app.dtutimes.com/storage/649/conversions/46-cover.jpg"
                     />
                   </a>
                 </li>
@@ -189,10 +196,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //8 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/41.jpg"
+                      src="http://app.dtutimes.com/storage/653/conversions/42-cover.jpg"
                     />
                   </a>
                 </li>
@@ -247,9 +255,9 @@ const EditionCards = () => {
                     }}
                     className="description"
                   >
-                    The DTU Snapshot at a glance. Check out our latest editions,
-                    containing interviews of the dignitaries and the celebrities
-                    that visited DTU
+                    The DTU snapshot at a glance. Check out our latest editions
+                    for a comprehensive summary of the happenings over the past
+                    quarter.
                   </h5>
                 </div>
               </Col>
@@ -264,10 +272,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    //1
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/48.png"
+                      src="http://app.dtutimes.com/storage/740/conversions/Screen-Shot-2020-03-07-at-2.16.20-PM-cover.jpg"
                     />
                   </a>
                 </li>
@@ -277,10 +286,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    //2
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/47.png"
+                      src="http://app.dtutimes.com/storage/632/conversions/48-cover.jpg"
                     />
                   </a>
                 </li>
@@ -290,10 +300,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //7 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/42.jpg"
+                      src="http://app.dtutimes.com/storage/652/conversions/43-cover.jpg"
                     />
                   </a>
                 </li>
@@ -317,10 +328,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //5 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/44.jpg"
+                      src="http://app.dtutimes.com/storage/650/conversions/45-cover.jpg"
                     />
                   </a>
                 </li>
@@ -330,10 +342,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //6 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/43.jpg"
+                      src="http://app.dtutimes.com/storage/651/conversions/44-cover.jpg"
                     />
                   </a>
                 </li>
@@ -343,10 +356,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    //3
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/46.png"
+                      src="http://app.dtutimes.com/storage/648/conversions/47-cover.jpg"
                     />
                   </a>
                 </li>
@@ -356,10 +370,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //4 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/45.png"
+                      src="http://app.dtutimes.com/storage/649/conversions/46-cover.jpg"
                     />
                   </a>
                 </li>
@@ -369,10 +384,11 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
+                    {/* //8 */}
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="http://dtutimes.dtu.ac.in/img/41.jpg"
+                      src="http://app.dtutimes.com/storage/653/conversions/42-cover.jpg"
                     />
                   </a>
                 </li>

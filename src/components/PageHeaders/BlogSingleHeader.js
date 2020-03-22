@@ -28,7 +28,7 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
         <section
           className="section"
           style={{
-            height: "65vh",
+            height: "55vh",
             paddingTop: "10rem",
             position: "relative",
             overflow: "hidden"
@@ -51,7 +51,7 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 </h2>
               </Animated>
 
-              <Animated
+              {/* <Animated
                 animationIn="fadeInUp"
                 animationInDelay={1000}
                 animationInDuration={1000}
@@ -60,14 +60,14 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 <h5 style={{ marginTop: "3rem", fontSize: "" }}>
                   <strong>{biliner}</strong>
                 </h5>
-              </Animated>
+              </Animated> */}
               <Animated
                 animationIn="fadeInUp"
                 animationInDelay={1000}
                 animationInDuration={1000}
                 isVisible={true}
               >
-                <h6 style={{ marginTop: 2 }}>{ts.toDateString()}</h6>
+                <h6 style={{ marginTop: "2rem" }}>{ts.toDateString()}</h6>
               </Animated>
             </Container>
           </div>
@@ -103,7 +103,7 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 </h1>
               </Animated>
 
-              <Animated
+              {/* <Animated
                 animationIn="fadeInUp"
                 animationInDelay={1000}
                 animationInDuration={1000}
@@ -112,14 +112,14 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 <h5 style={{ marginTop: "3rem", fontSize: "" }}>
                   <strong>{biliner}</strong>
                 </h5>
-              </Animated>
+              </Animated> */}
               <Animated
                 animationIn="fadeInUp"
                 animationInDelay={1000}
                 animationInDuration={1000}
                 isVisible={true}
               >
-                <h6 style={{ marginTop: 2 }}>{ts.toDateString()}</h6>
+                <h6 style={{ marginTop: "2rem" }}>{ts.toDateString()}</h6>
               </Animated>
             </Container>
           </div>
