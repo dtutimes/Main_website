@@ -3,7 +3,7 @@ import axios from "axios";
 import SocietySingleHeader from "components/PageHeaders/SocietySingleHeader";
 import SocietiesCard from "../sections/SocSingleSection/SocietiesCard";
 import { Animated } from "react-animated-css";
-
+import { Link } from "react-router-dom";
 import { Col,Row } from "reactstrap";
 import { Loader } from "components/LoaderComponent";
 
@@ -61,13 +61,15 @@ export default class SocietySingle extends React.Component {
                     animationInDelay={1500}
                     isVisible={true}
                   >
-                    <SocietiesCard
-                      img={this.state.data[cs].society_imgUrl}
-                      name={this.state.data[cs].name}
-                      des={this.state.data[cs].description}
-                      head={this.state.data[cs].head_incharge}
-                      prHead={this.state.data[cs].pr_incharge}
-                    />
+                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`}>
+                      <SocietiesCard
+                        img={this.state.data[cs].society_imgUrl}
+                        name={this.state.data[cs].name}
+                        des={this.state.data[cs].description}
+                        head={this.state.data[cs].head_incharge}
+                        prHead={this.state.data[cs].pr_incharge}
+                      />
+                    </Link>
                   </Animated>
                 </Col>
               );
