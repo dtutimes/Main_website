@@ -4,8 +4,9 @@ import SocietySingleHeader from "components/PageHeaders/SocietySingleHeader";
 import SocietiesCard from "../sections/SocSingleSection/SocietiesCard";
 import { Animated } from "react-animated-css";
 import { Link } from "react-router-dom";
-import { Col,Row } from "reactstrap";
+import { Col,Row,Card,Button, Container } from "reactstrap";
 import { Loader } from "components/LoaderComponent";
+import Carousel from "nuka-carousel";
 
 let c = [];
 let tt = [];
@@ -37,7 +38,7 @@ export default class SocietySingle extends React.Component {
       for (let i = 0; i < this.state.data.length; i++) {
         if (this.state.data[i].category === "cultural") {
           c.push(i);
-        } else if (this.state.data[i].category === "tech_team") {
+        } else if (this.state.data[i].category === "team") {
           tt.push(i);
         } else if (this.state.data[i].category === "technical") {
           t.push(i);
@@ -52,6 +53,7 @@ export default class SocietySingle extends React.Component {
               name="Cultural Societies"
               des="The Cultural Societies of DTU blow the stereotypical image of an engineer to smithereens. These societies exude vibrancy and encompass every shade of the spectrum."
             />
+            <Container>
             <Row>
             {c.map(cs => {
               return (
@@ -75,6 +77,7 @@ export default class SocietySingle extends React.Component {
               );
             })}
             </Row>
+            </Container>
           </>
         );
       } else if (this.props.match.params.slug === "tech_team") {
@@ -85,6 +88,7 @@ export default class SocietySingle extends React.Component {
               des="Constantly pushing the limits of technology, channelizing their boundless creativity and foraying into uncharted territory, that’s a regular workday for DTU’s Tech Teams.
 "
             />
+            <Container>
             <Row>
             {tt.map(tts => {
               return (
@@ -94,6 +98,7 @@ export default class SocietySingle extends React.Component {
                     animationInDelay={1500}
                     isVisible={true}
                   >
+                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[tts].slug}`}>
                     <SocietiesCard
                       img={this.state.data[tts].society_imgUrl}
                       name={this.state.data[tts].name}
@@ -101,11 +106,13 @@ export default class SocietySingle extends React.Component {
                       head={this.state.data[tts].head_incharge}
                       prHead={this.state.data[tts].pr_incharge}
                     />
+                    </Link>
                   </Animated>
                 </Col>
               );
             })}
             </Row>
+            </Container>
           </>
         );
       } else if (this.props.match.params.slug === "technical") {
@@ -116,6 +123,7 @@ export default class SocietySingle extends React.Component {
               des="The technical teams of DTU ensure that the stereotypical image of a coder is not tarnished. It lives up to its stellar reputation.
 "
             />
+            <Container>
             <Row>
             {t.map(ts => {
               return (
@@ -125,6 +133,7 @@ export default class SocietySingle extends React.Component {
                     animationInDelay={1500}
                     isVisible={true}
                   >
+                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[ts].slug}`}>
                     <SocietiesCard
                       img={this.state.data[ts].society_imgUrl}
                       name={this.state.data[ts].name}
@@ -132,11 +141,13 @@ export default class SocietySingle extends React.Component {
                       head={this.state.data[ts].head_incharge}
                       prHead={this.state.data[ts].pr_incharge}
                     />
+                    </Link>
                   </Animated>
                 </Col>
               );
             })}
            </Row> 
+           </Container>
           </>
         );
       } else {
@@ -147,6 +158,7 @@ export default class SocietySingle extends React.Component {
               des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it.
 "
             />
+            <Container>
             <Row>
             {m.map(ms => {
               return (
@@ -156,6 +168,7 @@ export default class SocietySingle extends React.Component {
                     animationInDelay={1500}
                     isVisible={true}
                   >
+                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[ms].slug}`}>
                     <SocietiesCard
                       img={this.state.data[ms].society_imgUrl}
                       name={this.state.data[ms].name}
@@ -163,11 +176,14 @@ export default class SocietySingle extends React.Component {
                       head={this.state.data[ms].head_incharge}
                       prHead={this.state.data[ms].pr_incharge}
                     />
+                    </Link>
                   </Animated>
                 </Col>
               );
             })}
             </Row>
+            </Container>
+            
           </>
         );
       }

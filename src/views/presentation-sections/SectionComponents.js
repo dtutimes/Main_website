@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-
+import './scss/soc.scss';
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
@@ -31,10 +31,58 @@ class SectionComponents extends React.Component {
     animationInDelay={1500}
     isVisible={true}
     >
+    
     <div className="section section-components">
-      {/* <BackgroundBlob /> */}
-      {/* <BackgroundBlobDark/> */}
       <Row>
+      <div className="soc">
+        <div className="container one">
+          <div className="cardsoc">
+            <h2>Cultural</h2>
+            <Link to='/societies/cultural'>
+              <i className=" nc-icon nc-minimal-right soc_i" />
+            
+            <div className="pic" />
+            <button>
+            </button>
+            </Link>
+          </div>
+          <div className="cardsoc cardsoc2">
+            <h2>Techinical</h2>
+            <Link to='/societies/technical'>
+              <i className="nc-icon nc-minimal-right soc_i" />
+            
+            <div className="pic" />
+            <button>
+            </button>
+            </Link>
+          </div>
+        </div>
+        <div className="container two">
+          <div className="cardsoc cardsoc3">
+            <h2>Miscellaneous</h2>
+            <Link to='/societies/miscellaneous'>
+              <i className="nc-icon nc-minimal-right soc_i" />
+            
+            <div className="pic" />
+            <button>
+            </button>
+            </Link>
+          </div>
+          <div className="cardsoc cardsoc4">
+            <h2>Tech-Team</h2>
+            <Link to='/societies/tech_team'>
+              <i className="nc-icon nc-minimal-right soc_i" />
+            
+            <div className="pic" />
+            <button>
+            </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      </Row>
+      {/* <Row>
         <Col md='3'></Col>
         <Col lg="6" md="6">
           <div className="image-container">
@@ -76,7 +124,7 @@ class SectionComponents extends React.Component {
             </Link>
           </div>
         </Col>
-      </Row>
+      </Row> */}
     </div>
     </Animated>
   </>
@@ -84,37 +132,3 @@ class SectionComponents extends React.Component {
 }
 
 export default SectionComponents;
-const BackgroundBlob = ({ style, props }) => (
-  <Blob
-    size="120vh"
-    style={{
-      position: "absolute",
-      top: "-30%",
-      left: "0%",
-      zIndex: 0,
-      backgroundColor: "#f993ff",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);
-const BackgroundBlobDark = ({ style, props }) => (
-  <Blob
-    size="90vh"
-    style={{
-      position: "absolute",
-      top: "-10%",
-      left: "60%",
-      zIndex: 0,
-      backgroundColor: "#110010",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);

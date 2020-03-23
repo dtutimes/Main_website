@@ -1,0 +1,180 @@
+$orange: #DA4D1D;
+$blue: #2b26c3;
+$green:#2efc05;
+$purple:#d402f4;
+$img-url: "https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80";
+$img-url2: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80";
+$img-url3:
+"https://images.unsplash.com/photo-1584593744985-ec3ff147b2a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80";
+$img-url4:
+"https://images.unsplash.com/photo-1488743196279-d2b91fd9e633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.soc_i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2{
+  pointer-events:none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.soc {
+  display:flex;
+  flex-direction: row;
+  .two {
+    margin-right: 120px !important;
+    
+  }
+  .one {
+    transform:translate(29.98px);
+    margin-left:50px;
+  }
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  margin-top:50px;
+
+  .cardsoc {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    overflow: hidden;
+    // margin-bottom: 4px;
+
+    &:before {
+      content: "";
+      z-index: 99;
+      position: absolute;
+      top: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+    }
+    &:after {
+      content: "";
+      z-index: 99;
+      position: absolute;
+      bottom: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+    }
+    h2 {
+      z-index: 99;
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      bottom: 0;
+      right: 130px;
+      font-size: 60px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nc-minimal-right {
+      z-index: 100;
+      position: absolute;
+      right: 75px;
+      bottom: 25px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .pic {
+      z-index: 100;
+      width: 700px;
+      height: 500px;
+      background-image: url($img-url);
+      background-size: 100% 100%;
+      filter: grayscale(100%);
+    }
+
+    &:hover .soc_i {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    button {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 30px;
+      height: 30px;
+      background-color: $orange;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline:none;
+      transition: all 0.3s ease;
+      mix-blend-mode: hard-light;
+
+      .soc_i {
+        font-size: 3rem;
+      }
+    }
+
+    &:hover button {
+      transform: scale(16.5);
+    }
+
+    &:hover p {
+      color: #fff;
+    }
+    
+    &:hover .pic {
+      filter: grayscale(0);
+      
+    }
+  }
+  
+  .cardsoc2 {
+    .pic {
+      background-image: url($img-url2);
+    }
+    button {
+      background-color: $blue;
+    }
+  }
+    .cardsoc3 {
+    .pic {
+      background-image: url($img-url3);
+    }
+    button {
+      background-color: $purple;
+    }
+  }
+.cardsoc4 {
+    .pic {
+      background-image: url($img-url4);
+    }
+    button {
+      background-color: $green;
+    }
+  }
+}
+}
+ 

@@ -124,62 +124,25 @@ window.addEventListener('resize',()=>{
                 cellSpacing={1}
                 renderBottomCenterControls={""}
             >
-                <Card>
-                  <div className="info">
-                    <div className="icon icon-danger">
-                      <i className="nc-icon nc-palette" />
+              {
+                this.props.news.map(x=>{
+                  return (
+                    <Card>
+                    <div className="info">
+                      <div className="icon icon-danger">
+                        <i className="nc-icon nc-palette" />
+                      </div>
+                      <div className="description">
+                  <h4 className="info-title">{x.title}</h4>
+                        <p className="description">
+                          {x.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="description">
-                      <h4 className="info-title">Beautiful Gallery</h4>
-                      <p className="description">
-                        Spend your time generating new ideas. You don't have to
-                        think of implementing.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                <Card>
-                  <div className="info">
-                    <div className="icon icon-danger">
-                      <i className="nc-icon nc-bulb-63" />
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">New Ideas</h4>
-                      <p>
-                        Larger, yet dramatically thinner. More powerful, but
-                        remarkably power efficient.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                <Card>
-                  <div className="info">
-                    <div className="icon icon-danger">
-                      <i className="nc-icon nc-chart-bar-32" />
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Statistics</h4>
-                      <p>
-                        Choose from a veriety of many colors resembling sugar
-                        paper pastels.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-                <Card>
-                  <div className="info">
-                    <div className="icon icon-danger">
-                      <i className="nc-icon nc-sun-fog-29" />
-                    </div>
-                    <div className="description">
-                      <h4 className="info-title">Delightful design</h4>
-                      <p>
-                        Find unique and handmade delightful designs related items
-                        directly from our sellers.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                  )
+                })
+              }
                 </Carousel>
             </Row>
             <Row>

@@ -6,15 +6,18 @@ import { Blob } from "react-blob";
 // core components
 import Carousel from "nuka-carousel";
 import { Link } from "react-router-dom";
-import { Card, Container } from "reactstrap";
+import { Card, Container,Row,Col } from "reactstrap";
 
 // sections for this page
 import SectionComponents from "../../views/presentation-sections/SectionComponents.js";
 import SocHeader from "components/PageHeaders/SocHeader.js";
+import Axios from "axios";
+import { Loader } from "components/LoaderComponent.js";
 
 function Presentation() {
   const [mob, setMob] = useState(false);
-
+  const [data,setData] = useState([]);
+  const [loaded,setLoaded] = useState(false);
   document.documentElement.classList.remove("nav-open");
   // function that is being called on scroll of the page
   const checkScroll = () => {
@@ -60,14 +63,21 @@ function Presentation() {
         // console.log(mob);
       }
     });
+    Axios.get(`https://api.dtutimes.live/v1/news`).then(res=>{
+      if(res && res.data) {
+        setData(res.data);
+        setLoaded(true);
+      }
+    });
     return function cleanup() {
       document.body.classList.remove("presentation-page");
       window.removeEventListener("scroll", checkScroll);
     };
-  });
-  if (mob === false)
+  },[]);
+  if (mob === false && loaded===true)
     return (
       <>
+      {console.log(data)}
         <SocHeader />
         <Container>
           <Blob
@@ -100,10 +110,61 @@ function Presentation() {
             for life.
           </p>
         </Container>
+        <Row>
         <SectionComponents />
+        </Row>
+        <Container>
+        <Row>
+            <Col className="ml-auto mr-auto text-center" md="8">
+                <h2 className="title">News</h2>
+              </Col> 
+          </Row>
+          <Row>
+              <Carousel
+                slidesToShow={3}
+                swiping={true}
+                renderCenterLeftControls={({ previousSlide }) => (
+                    <button
+                    onClick={previousSlide}
+                    className="btn-move-left btn-round btn btn-default"
+                    >
+                    <i className="nc-icon nc-minimal-left"></i>
+                    </button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                    <button
+                    className="btn-move-right btn-round btn btn-default"
+                    onClick={nextSlide}
+                    >
+                    <i className="nc-icon nc-minimal-right"></i>
+                    </button>
+                )}
+                cellSpacing={1}
+                renderBottomCenterControls={""}
+            >
+                {data.map(x=>{
+                  return (
+                  <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-palette" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">{x.title}</h4>
+                      <p className="description">
+                        {x.description.slice(0,100)}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                  )
+                })}
+                </Carousel>
+            </Row>
+            </Container>
       </>
     );
-  else {
+  else if(mob===true && loaded===true) {
     return (
       <>
         <SocHeader />
@@ -176,8 +237,60 @@ function Presentation() {
             </Card>
           </Link>
         </Carousel>
+        <Container>
+        <Row>
+            <Col className="ml-auto mr-auto text-center" md="8">
+                <h2 className="title">News</h2>
+              </Col> 
+          </Row>
+          <Row>
+              <Carousel
+                slidesToShow={1}
+                swiping={true}
+                renderCenterLeftControls={({ previousSlide }) => (
+                    <button
+                    onClick={previousSlide}
+                    className="btn-move-left btn-round btn btn-default"
+                    >
+                    <i className="nc-icon nc-minimal-left"></i>
+                    </button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                    <button
+                    className="btn-move-right btn-round btn btn-default"
+                    onClick={nextSlide}
+                    >
+                    <i className="nc-icon nc-minimal-right"></i>
+                    </button>
+                )}
+                cellSpacing={1}
+                renderBottomCenterControls={""}
+            >
+                {data.map(x=>{
+                  return (
+                  <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-palette" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">{x.title}</h4>
+                      <p className="description">
+                        {x.description.slice(0,100)}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                  )
+                })}
+                </Carousel>
+            </Row>
+            </Container>
       </>
     );
+  }
+  else {
+    return <Loader/>
   }
 }
 
