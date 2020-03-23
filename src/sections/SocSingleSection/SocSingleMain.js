@@ -65,89 +65,122 @@ window.addEventListener('resize',()=>{
             </Row>
             <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
+                <h2 className="title">Gallery</h2>
+              </Col> 
+            </Row>
+            <Row>
+              <Carousel
+                  slidesToShow={1}
+                  swiping={true}
+                  renderCenterLeftControls={({ previousSlide }) => (
+                      <button
+                      onClick={previousSlide}
+                      className="btn-move-left btn-round btn btn-default"
+                      >
+                      <i className="nc-icon nc-minimal-left"></i>
+                      </button>
+                  )}
+                  renderCenterRightControls={({ nextSlide }) => (
+                      <button
+                      className="btn-move-right btn-round btn btn-default"
+                      onClick={nextSlide}
+                      >
+                      <i className="nc-icon nc-minimal-right"></i>
+                      </button>
+                  )}
+              >
+                {this.props.src.map((x)=>{
+                  return (
+                    <img src={x} height="500px" width="100px"/>)
+                })
+                }
+              </Carousel>
+            </Row>
+            <Row>
+            <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">News</h2>
               </Col> 
             </Row>
             <Row>
-            <Carousel
-            slidesToShow={3}
-            swiping={true}
-            renderCenterLeftControls={({ previousSlide }) => (
-                <button
-                onClick={previousSlide}
-                className="btn-move-left btn-round btn btn-default"
-                >
-                <i className="nc-icon nc-minimal-left"></i>
-                </button>
-            )}
-            renderCenterRightControls={({ nextSlide }) => (
-                <button
-                className="btn-move-right btn-round btn btn-default"
-                onClick={nextSlide}
-                >
-                <i className="nc-icon nc-minimal-right"></i>
-                </button>
-            )}
-            cellSpacing={1}
-            renderBottomCenterControls={""}
-        >
-              <Card>
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-palette" />
+              <Carousel
+                slidesToShow={3}
+                swiping={true}
+                renderCenterLeftControls={({ previousSlide }) => (
+                    <button
+                    onClick={previousSlide}
+                    className="btn-move-left btn-round btn btn-default"
+                    >
+                    <i className="nc-icon nc-minimal-left"></i>
+                    </button>
+                )}
+                renderCenterRightControls={({ nextSlide }) => (
+                    <button
+                    className="btn-move-right btn-round btn btn-default"
+                    onClick={nextSlide}
+                    >
+                    <i className="nc-icon nc-minimal-right"></i>
+                    </button>
+                )}
+                cellSpacing={1}
+                renderBottomCenterControls={""}
+            >
+                <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-palette" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Beautiful Gallery</h4>
+                      <p className="description">
+                        Spend your time generating new ideas. You don't have to
+                        think of implementing.
+                      </p>
+                    </div>
                   </div>
-                  <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
-                    <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
-                    </p>
+                </Card>
+                <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-bulb-63" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">New Ideas</h4>
+                      <p>
+                        Larger, yet dramatically thinner. More powerful, but
+                        remarkably power efficient.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              <Card>
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-bulb-63" />
+                </Card>
+                <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-chart-bar-32" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Statistics</h4>
+                      <p>
+                        Choose from a veriety of many colors resembling sugar
+                        paper pastels.
+                      </p>
+                    </div>
                   </div>
-                  <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
-                    <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
-                    </p>
+                </Card>
+                <Card>
+                  <div className="info">
+                    <div className="icon icon-danger">
+                      <i className="nc-icon nc-sun-fog-29" />
+                    </div>
+                    <div className="description">
+                      <h4 className="info-title">Delightful design</h4>
+                      <p>
+                        Find unique and handmade delightful designs related items
+                        directly from our sellers.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              <Card>
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Statistics</h4>
-                    <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              <Card>
-                <div className="info">
-                  <div className="icon icon-danger">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-              </Carousel>
+                </Card>
+                </Carousel>
             </Row>
             <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
