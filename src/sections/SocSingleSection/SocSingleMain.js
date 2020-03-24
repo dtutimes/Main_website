@@ -75,17 +75,17 @@ window.addEventListener('resize',()=>{
                   renderCenterLeftControls={({ previousSlide }) => (
                       <button
                       onClick={previousSlide}
-                      className="btn-move-left btn-round btn btn-default"
+                      className="btn-move-left btn"
                       >
-                      <i className="nc-icon nc-minimal-left"></i>
+                      <i className="nc-icon nc-minimal-left" style={{color:'white',fontSize:'1.8em',fontWeight:'800'}}></i>
                       </button>
                   )}
                   renderCenterRightControls={({ nextSlide }) => (
                       <button
-                      className="btn-move-right btn-round btn btn-default"
+                      className="btn-move-right btn"
                       onClick={nextSlide}
                       >
-                      <i className="nc-icon nc-minimal-right"></i>
+                      <i className="nc-icon nc-minimal-right" style={{color:'white',fontSize:'1.8em',fontWeight:'800'}}></i>
                       </button>
                   )}
               >
