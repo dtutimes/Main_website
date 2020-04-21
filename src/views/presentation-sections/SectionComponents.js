@@ -1,12 +1,13 @@
 import React from "react";
-import axios from 'axios';
+// import axios from 'axios';
+import api from "api";
 import {Link} from 'react-router-dom';
 import './scss/soc.scss';
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
 // core components
-import {Blob} from 'react-blob';
+// import {Blob} from 'react-blob';
 import {Animated} from 'react-animated-css';
 
 class SectionComponents extends React.Component {
@@ -14,7 +15,7 @@ class SectionComponents extends React.Component {
     data: []
   }
   componentDidMount() {
-    axios.get("https://api.dtutimes.live/v1/society").then((res)=>{
+    api.get("/society").then((res)=>{
       if(res && res.data) {
         this.setState({
           data : res.data 

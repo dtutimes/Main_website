@@ -1,5 +1,5 @@
 import React from "react";
-import { api } from "api";
+import api from "api";
 // // Sections and Components
 import GalleryCarousel from "sections/GallerySections/GalleryCarousel";
 import GalleryImages from "./GalleryImages";
@@ -12,7 +12,7 @@ class GallerySingle extends React.Component {
   componentDidMount() {
     document.documentElement.classList.remove("nav-open");
     const { slug } = this.props.slug;
-    api.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
+    api.get(`/gallery/${slug}`).then(res => {
       this.setState({ album: res.data });
       //   console.log(this.state)
     });

@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import api from "api";
 // reactstrap components
 import {
   NavItem,
@@ -9,7 +10,7 @@ import {
   TabPane,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 // import TeamHeader from "components/Headers/ProfilePageHeader";
 import TeamCard from "./TeamCard";
@@ -20,19 +21,31 @@ export default class Example extends React.Component {
   state = {
     activePill: "1",
     data: [],
-    loaded: false
+    loaded: false,
   };
   componentDidMount() {
-    axios({
-      method: "get",
-      url: "https://api.dtutimes.live/v1/user/"
-    }).then(res => {
+    // api.get("/user").then(res => {
+    //   const info = res.data;
+    //   this.setState({
+    //     data: info,
+    //     loaded: true
+    //   });
+    // });
+    api.get("/user/").then((res) => {
       const info = res.data;
-      this.setState({
-        data: info,
-        loaded: true
-      });
+      this.setState({ data: info, loaded: true });
     });
+    // axios({
+    //   method: "get",
+    //   url: "https://api.dtutimes.com/v1/user/",
+    // }).then((res) => {
+    //   const info = res.data;
+    //   this.setState({
+    //     data: info,
+    //     loaded: true,
+    //   });
+    // });
+    // console.log(this.state.loaded);
   }
   council(element) {
     if (element.position === "council") {
@@ -101,7 +114,7 @@ export default class Example extends React.Component {
       var arr6 = data.filter(this.developer);
       var arr7 = data.filter(this.advisor);
       var arr8 = data.filter(this.alumni);
-      
+
       return (
         <>
           {/* <TeamHeader /> */}
@@ -257,10 +270,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "1" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "1"
+                            activePill: "1",
                           });
                         }}
                       >
@@ -273,10 +286,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "2" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "2"
+                            activePill: "2",
                           });
                         }}
                       >
@@ -289,10 +302,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "3" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "3"
+                            activePill: "3",
                           });
                         }}
                       >
@@ -305,10 +318,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "4" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "4"
+                            activePill: "4",
                           });
                         }}
                       >
@@ -321,10 +334,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "5" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "5"
+                            activePill: "5",
                           });
                         }}
                       >
@@ -337,10 +350,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "6" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "6"
+                            activePill: "6",
                           });
                         }}
                       >
@@ -353,10 +366,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "7" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "7"
+                            activePill: "7",
                           });
                         }}
                       >
@@ -369,10 +382,10 @@ export default class Example extends React.Component {
                           this.state.activePill === "8" ? "active" : ""
                         }
                         href="#pablo"
-                        onClick={e => {
+                        onClick={(e) => {
                           e.preventDefault();
                           this.setState({
-                            activePill: "8"
+                            activePill: "8",
                           });
                         }}
                       >
@@ -385,7 +398,7 @@ export default class Example extends React.Component {
                     <TabContent activeTab={"pill-" + this.state.activePill}>
                       <TabPane tabId={"pill-1"}>
                         <Row>
-                          {arr1.map(element => {
+                          {arr1.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -403,7 +416,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-2"}>
                         <Row>
-                          {arr2.map(element => {
+                          {arr2.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -421,7 +434,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-3"}>
                         <Row>
-                          {arr3.map(element => {
+                          {arr3.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -439,7 +452,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-4"}>
                         <Row>
-                          {arr4.map(element => {
+                          {arr4.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -457,7 +470,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-5"}>
                         <Row>
-                          {arr5.map(element => {
+                          {arr5.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -475,7 +488,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-6"}>
                         <Row>
-                          {arr6.map(element => {
+                          {arr6.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -493,7 +506,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-7"}>
                         <Row>
-                          {arr7.map(element => {
+                          {arr7.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -511,7 +524,7 @@ export default class Example extends React.Component {
                       </TabPane>
                       <TabPane tabId={"pill-8"}>
                         <Row>
-                          {arr8.map(element => {
+                          {arr8.map((element) => {
                             return (
                               <Col md="3" key={element.id}>
                                 <TeamCard
@@ -536,9 +549,7 @@ export default class Example extends React.Component {
         </>
       );
     } else {
-      return (
-        <Loader />
-      );
+      return <Loader />;
     }
   }
 }

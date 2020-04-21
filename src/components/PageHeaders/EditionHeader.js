@@ -1,8 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Button,Modal } from "reactstrap";
-import axios from 'axios';
 import { Animated } from "react-animated-css";
-
+import api from 'api';
+var https = require('https');
+const agent = new https.Agent({  
+  rejectUnauthorized: false
+});
 class EditionHeader extends React.Component {
   state ={
     data: [],
@@ -38,9 +41,10 @@ class EditionHeader extends React.Component {
       });
     }
   });
-    axios.get('https://api.dtutimes.live/v1/edition').then(res => {
+    api.get('/edition', {httpsAgent: agent}).then(res => {
      this.setState({ data: res.data, loaded: true });
     })
+    console.log(this.state.loaded)
   }
   openLightbox = ()=> {
     this.setState({

@@ -1,5 +1,6 @@
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "api";
 import SocietySingleHeader from "components/PageHeaders/SocietySingleHeader";
 import SocietiesCard from "../sections/SocSingleSection/SocietiesCard";
 import { Animated } from "react-animated-css";
@@ -23,7 +24,7 @@ export default class SocietySingle extends React.Component {
     tt = [];
     t = [];
     m = [];
-    axios.get("https://api.dtutimes.live/v1/society").then(res => {
+    api.get("/society").then(res => {
       if (res && res.data) {
         this.setState({
           data: res.data,

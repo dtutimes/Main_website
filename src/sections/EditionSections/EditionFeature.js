@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "nuka-carousel";
-import { Blob } from "react-blob";
 import { Loader } from "components/LoaderComponent";
 import api from "api";
 
@@ -60,6 +59,7 @@ class SectionHeader extends React.Component {
         );
       else
         carousels.push(
+          <div key={editions[index].id}>
           <EditionCard
             id = {editions[index].id}
             title={editions[index].name}
@@ -69,6 +69,7 @@ class SectionHeader extends React.Component {
             width = {'90%'}
             link = {editions[index].link}
           />
+          </div>
         );
     }
 if(this.state.loaded===true) {
@@ -143,38 +144,4 @@ if(this.state.loaded===true) {
     }
   }
 }
-const BackgroundBlob = ({ style, props }) => (
-  <Blob
-    size="70vh"
-    style={{
-      position: "absolute",
-      top: "10%",
-      right: "-5%",
-      zIndex: 0,
-      backgroundColor: "#DB7F8E",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);
-const BackgroundBlob2 = ({ style, props }) => (
-  <Blob
-    size="70vh"
-    style={{
-      position: "absolute",
-      bottom: "-60%",
-      right: "-5%",
-      zIndex: 0,
-      backgroundColor: "#D4B2D8",
-      color: "white",
-      opacity: 0.25,
-      fontSize: "50vh",
-      ...style
-    }}
-    {...props}
-  />
-);
 export default SectionHeader;

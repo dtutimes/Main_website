@@ -31,7 +31,7 @@ export default class FeaturedPosts extends Component {
   render() {
     if (!this.state.loaded) return <Loader />;
     const { posts } = this.state;
-    console.log(posts);
+    // console.log(posts);
     return (
       <>
         <div className="section" id="cards">

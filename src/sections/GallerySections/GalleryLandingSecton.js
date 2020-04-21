@@ -1,6 +1,5 @@
 import React from "react";
-import axios from "axios";
-
+import api from "api";
 import GalleryCarousel from "./GalleryCarousel";
 // import { Animated } from "react-animated-css";
 
@@ -15,7 +14,7 @@ export default class GalleryLanding extends React.Component {
 
   componentDidMount = () => {
     document.documentElement.classList.remove("nav-open");
-    axios.get("https://api.dtutimes.live/v1/gallery").then(res => {
+    api.get("/gallery").then(res => {
       if (res && res.data) this.setState({ albums: res.data });
     });
   };

@@ -18,8 +18,8 @@ const SocietiesCard = props => {
         <CardTitle>
           <h3>{props.name}</h3>
         </CardTitle>
-        <p style={{ textOverflow: "ellipsis;" }}>{props.des.slice(0,400)}...</p>
-        {console.log(props.des.slice(0,100))}
+        <p style={{ textOverflow: "ellipsis" }}>{props.des.slice(0,400)}...</p>
+        {/* {console.log(props.des.slice(0,100))} */}
         <CardFooter>
           <Row>
             <Col md="4">

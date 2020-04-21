@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "reactstrap";
-import { api } from "api";
+import api from "api";
 import { Animated } from "react-animated-css";
 class GallerySingleHeader extends Component {
   state = {
@@ -8,7 +8,7 @@ class GallerySingleHeader extends Component {
   };
   componentDidMount() {
     const { slug } = this.props.slug;
-    api.get(`https://api.dtutimes.live/v1/gallery/${slug}`).then(res => {
+    api.get(`gallery/${slug}`).then(res => {
       this.setState({ album: res.data });
       //   console.log(this.state)
     });

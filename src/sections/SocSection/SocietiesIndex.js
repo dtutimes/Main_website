@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Blob } from "react-blob";
+import api from "api";
 // reactstrap components
 
 // core components
@@ -11,7 +12,7 @@ import { Card, Container,Row,Col } from "reactstrap";
 // sections for this page
 import SectionComponents from "../../views/presentation-sections/SectionComponents.js";
 import SocHeader from "components/PageHeaders/SocHeader.js";
-import Axios from "axios";
+// import Axios from "axios";
 import { Loader } from "components/LoaderComponent.js";
 
 function Presentation() {
@@ -63,7 +64,7 @@ function Presentation() {
         // console.log(mob);
       }
     });
-    Axios.get(`https://api.dtutimes.live/v1/news`).then(res=>{
+    api.get(`/news`).then(res=>{
       if(res && res.data) {
         setData(res.data);
         setLoaded(true);

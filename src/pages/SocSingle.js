@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from "axios";
 import SocietySingle from '../components/PageHeaders/SocSingleSingle'
 import SocSingleMain from 'sections/SocSingleSection/SocSingleMain';
 import { Loader } from 'components/LoaderComponent';
+import api from "api";
 export default class SocietySingleSingle extends React.Component {
     state ={
         data: [],
@@ -11,7 +11,7 @@ export default class SocietySingleSingle extends React.Component {
         loaded:false
     }
     componentDidMount() {
-    axios.get(`https://api.dtutimes.live/v1/society/${this.props.match.params.slug2}`).then(res => {
+    api.get(`society/${this.props.match.params.slug2}`).then(res => {
       if (res && res.data) {
         this.setState({
           data: res.data,
@@ -19,7 +19,7 @@ export default class SocietySingleSingle extends React.Component {
         });
       }
     });
-    axios.get(`https://api.dtutimes.live/v1/society/${this.props.match.params.slug2}/news`).then(res => {
+    api.get(`/society/${this.props.match.params.slug2}/news`).then(res => {
       if (res && res.data) {
         this.setState({
           news: res.data,
