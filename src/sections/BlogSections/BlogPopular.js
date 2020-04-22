@@ -26,13 +26,13 @@ import { CardTitle } from "reactstrap";
 export default class BlogPopular extends Component {
   state = {
     popular: [],
-    loading: true
+    loading: true,
   };
 
   componentDidMount() {
-    api.get("/story").then(res => {
+    api.get("/story").then((res) => {
       this.setState({
-        popular: [res.data.data[0], res.data.data[1], res.data.data[3]]
+        popular: [res.data.data[0], res.data.data[1], res.data.data[3]],
       });
       setTimeout(() => {
         this.setState({ loading: false });
@@ -43,32 +43,37 @@ export default class BlogPopular extends Component {
   render() {
     const { popular, loading } = this.state;
     return (
-      <div style={{ position: "relative", overflow: "hidden", }}>
+      <div style={{ position: "relative", overflow: "hidden" }}>
         {/* height commented out */}
         {/* <BackgroundBlob /> */}
         <h6>Popular Posts</h6>
-        <p className="mb-3">Our readers loved these articles so much, we just had to give them a space of their own</p>
+        <p className="mb-3">
+          <strong>
+            Our readers loved these articles so much, we just had to give them a
+            space of their own
+          </strong>
+        </p>
         {loading &&
-          [1, 2, 3].map(item => (
+          [1, 2, 3].map((item) => (
             <div key={item}>
               <ContentLoaderPopular />
             </div>
           ))}
         {!loading &&
-          popular.map(item => (
-            <div className="mb-1" key={item.id}>
-              <CardTitle tag="h3" className="mb-0">
-                <a
-                  href={`/story/${item.slug}`}
-                  // onClick={e => window.scrollTo(0, 0)}
-                >
-                  {item.title}
-                </a>
-              </CardTitle>
-              {/* <Link to="" className="mt-0 small">
+          popular.map((item) => (
+                <div className="mb-3" key={item.id}>
+                  <CardTitle tag="h5" className="mb-2">
+                    <a
+                      href={`/story/${item.slug}`}
+                      // onClick={e => window.scrollTo(0, 0)}
+                    >
+                      {item.title}
+                    </a>
+                  </CardTitle>
+                  {/* <Link to="" className="mt-0 small">
                 Read More
               </Link> */}
-            </div>
+                </div>
           ))}
       </div>
     );

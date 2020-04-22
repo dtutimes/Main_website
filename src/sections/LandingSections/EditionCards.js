@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 
 const EditionCards = () => {
-  const [mob, setMob] = React.useState(false);
+  const [mob, setMob] = React.useState(true);
   React.useEffect(() => {
     const a = window.innerWidth;
     if (a <= 900) {
@@ -19,13 +19,13 @@ const EditionCards = () => {
       }
     });
   });
-  if (mob == false)
+  if (mob == false) {
     return (
       <>
         <div
           className="section section-cards"
           style={{
-            paddingTop: "0rem"
+            paddingTop: "0rem",
           }}
         >
           <div className="codrops-header">
@@ -35,7 +35,7 @@ const EditionCards = () => {
                   <img
                     width="10%"
                     style={{
-                      minWidth: "4rem"
+                      minWidth: "4rem",
                     }}
                     src={require("assets/img/icons/newspaper.png")}
                     alt="..."
@@ -43,7 +43,7 @@ const EditionCards = () => {
                   <h2
                     style={{
                       marginBottom: "1rem",
-                      fontWeight: "8rem !important"
+                      fontWeight: "8rem !important",
                     }}
                   >
                     <span style={{ color: "#040403" }}>
@@ -59,7 +59,7 @@ const EditionCards = () => {
                     style={{
                       fontSize: "1.1rem",
                       color: "#494850",
-                      fontWeight: "400 !important"
+                      fontWeight: "400 !important",
                     }}
                     className="description"
                   >
@@ -102,7 +102,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src=	"https://nix.dtutimes.com/storage/632/conversions/48-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/632/conversions/48-cover.jpg"
                     />
                   </a>
                 </li>
@@ -210,14 +210,14 @@ const EditionCards = () => {
         </div>
       </>
     );
-  else {
+  } else {
     return (
       <>
         <div
           className="section section-cards"
           style={{
             paddingTop: "0rem",
-            minHeight: "900px !important"
+            minHeight: "900px !important",
           }}
         >
           <div className="codrops-header">
@@ -227,7 +227,7 @@ const EditionCards = () => {
                   <img
                     width="10%"
                     style={{
-                      minWidth: "3rem"
+                      minWidth: "3rem",
                     }}
                     src={require("assets/img/icons/newspaper.png")}
                     alt="..."
@@ -235,7 +235,7 @@ const EditionCards = () => {
                   <h2
                     style={{
                       marginBottom: "1rem",
-                      fontWeight: "8rem !important"
+                      fontWeight: "8rem !important",
                     }}
                   >
                     <span style={{ color: "#040403" }}>
@@ -251,7 +251,7 @@ const EditionCards = () => {
                     style={{
                       fontSize: "1.1rem",
                       color: "#494850",
-                      fontWeight: "400 !important"
+                      fontWeight: "400 !important",
                     }}
                     className="description"
                   >

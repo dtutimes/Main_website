@@ -36,9 +36,11 @@ export default class BlogSubsciber extends Component {
       <div>
         <h6>Subscribe to Our NewsLetter</h6>
         <p className="mb-3">
+          <strong>
           If you liked what you saw, subscribe for more! We deliver out new
           Editions every quarter, from interviews to creative content, there is
           something in store for everyone!
+          </strong>
         </p>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
