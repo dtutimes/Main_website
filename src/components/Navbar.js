@@ -105,11 +105,11 @@ function ColorNavbar() {
                   gallery
                 </Link>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <Link className="navlink nav-link" to="/societies" style={{fontSize:"14px"}}>
                   Societies
                 </Link>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <Link className="navlink nav-link" to="/team" style={{fontSize:"14px"}}>
                   team
