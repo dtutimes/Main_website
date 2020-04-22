@@ -67,7 +67,9 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 animationInDuration={1000}
                 isVisible={true}
               >
-                <h6 style={{ marginTop: "2rem" }}>{ts.toDateString()}</h6>
+                <div style={{paddingTop:"2rem"}}>
+                <span><strong>Published on {ts.toDateString()}</strong></span>
+                </div>
               </Animated>
             </Container>
           </div>
@@ -119,7 +121,9 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
                 animationInDuration={1000}
                 isVisible={true}
               >
-                <h6 style={{ marginTop: "2rem" }}>{ts.toDateString()}</h6>
+                <div style={{paddingTop:"2rem"}}>
+                <span><strong>Published on {ts.toDateString()}</strong></span>
+                </div>
               </Animated>
             </Container>
           </div>
