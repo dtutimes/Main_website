@@ -15,7 +15,7 @@ const BlogContent = ({ blog }) => {
               <div
                 className="blog-content"
                 style={{
-                  textAlign: "left",
+                  textAlign: "justify",
                   color: "#494850",
                   lineHeight: "2rem !important",
                   fontWeight: "400 !important"

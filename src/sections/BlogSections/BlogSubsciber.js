@@ -63,7 +63,7 @@ export default class BlogSubsciber extends Component {
             color="default"
           >
             <i className="fa fa-unlock-alt" />
-            Woohooo
+            Subscribe
           </Button>
         </Form>
         {/* <p>
