@@ -4,9 +4,9 @@ import {
   // Button,
   Card,
   CardBody,
-  // CardFooter,
-  // CardTitle,
-  // TabPane,
+  CardFooter,
+  CardTitle,
+  TabPane,
   Container,
   Row,
   Col
@@ -81,8 +81,11 @@ const EditorsMessage = () => {
             </Row>
             <div className="space-top" />
             <Row>
-              <Col className="mr-auto" md="4">
-                <img width="80%" alt="..." src={require("assets/img/icons/idea.png")} />
+              <Col className="mr-auto mt-5" md="4">
+                <Card>
+                  <img  alt="..." src={require("assets/img/Editors/edit.jpg")}/>
+                </Card>
+                
               </Col>
               <Col className="ml-auto" md="7">
                 <Card className="card-plain">
@@ -190,7 +193,21 @@ else{
             <div className="space-top" />
             <Row>
               <Col className="mr-auto" md="4">
-                <img width="80%" alt="..." src={require("assets/img/icons/idea.png")} />
+              <Card
+               data-background="image"
+               style={{
+                 backgroundImage:
+                   "url(" +
+                    require("assets/img/Editors/edit.jpg") +
+                   ")",
+                   
+              }}>
+                <CardBody>
+                  <div className="card-icon">
+                    <i className="fa fa-search" onClick={this.openLightbox} style={{cursor:'pointer'}}/>
+                  </div>
+                </CardBody>  
+              </Card>
               </Col>
               <Col className="ml-auto" md="7">
                 <Card className="card-plain">
