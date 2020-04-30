@@ -15,6 +15,12 @@ import SocHeader from "components/PageHeaders/SocHeader.js";
 // import Axios from "axios";
 import { Loader } from "components/LoaderComponent.js";
 
+
+const imgurl= "https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80",
+imgurl2 = "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80",
+imgurl3 = "https://images.unsplash.com/photo-1584593744985-ec3ff147b2a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
+imgurl4 = "https://images.unsplash.com/photo-1488743196279-d2b91fd9e633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80";
+
 function Presentation() {
   const [mob, setMob] = useState(false);
   const [data,setData] = useState([]);
@@ -81,40 +87,7 @@ function Presentation() {
       {console.log(data)}
         <SocHeader />
         <Container>
-          <Blob
-            size="10rem"
-            style={{
-              backgroundColor: "#3AAFB9",
-              color: "white",
-              zIndex: -2
-            }}
-          >
-            <img
-              width="10%"
-              style={{
-                minWidth: "4rem"
-              }}
-              src={require("assets/img/icons/society.svg")}
-              alt="..."
-            />
-          </Blob>
-          {/* <h1 className="text-left" style={{marginBottom : "2rem"}}>Societies</h1> */}
-          <p
-            style={{ color: "#494850", fontSize: "1.2rem", marginTop: "3rem" }}
-          >
-            The seventy plus societies of DTU are the crown jewels of the
-            university. If electric circuits spark your interest, if you feel
-            that you and Python were meant to be, if you want to conquer the
-            podium or already have or if you feel you’ve found your break in
-            break dancing, these societies will stoke that raging fire inside of
-            you or better yet, ignite a spark for something that stays with you
-            for life.
-          </p>
-        </Container>
-        <Row>
-        <SectionComponents />
-        </Row>
-        <Container>
+        <BackgroundBlob/>
         <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">News</h2>
@@ -145,9 +118,9 @@ function Presentation() {
             >
                 {data.map(x=>{
                   return (
-                  <Card>
+                  <Card width="90%">
                   <div className="info">
-                    <div className="icon icon-danger">
+                    <div className="icon icon-success">
                       <i className="nc-icon nc-palette" />
                     </div>
                     <div className="description">
@@ -163,6 +136,9 @@ function Presentation() {
                 </Carousel>
             </Row>
             </Container>
+        <Row>
+          <SectionComponents />
+        </Row>
       </>
     );
   else if(mob===true && loaded===true) {
@@ -190,53 +166,56 @@ function Presentation() {
           )}
           renderBottomCenterControls={""}
           cellSpacing={20}
-          className=""
+
         >
-          <Link to="/societies/cultural">
             <Card>
+              <Link to="/societies/cultural">
               <img
                 alt="CULTURAL"
                 className=""
-                src={require("assets/img/societies/cultural.jpg")}
+                src={imgurl}
                 style={{ height: "400px" }}
               />
+              </Link>
             </Card>
-          </Link>
 
-          <Link to="/societies/tech_team">
-            <Card>
-              <img
-                alt="C"
-                className=""
-                src="https://raw.githubusercontent.com/mrFahrenhiet/Main-Web/master/src/assets/img/socity/tech-team.jpg"
-                style={{ height: "400px" }}
-              />
-            </Card>
-          </Link>
 
-          <Link to="/societies/miscellaneous">
             <Card>
-              <img
-                alt="..."
-                className=""
-                src={
-                  "https://cdn.shopify.com/s/files/1/0969/6554/products/Class_9_grande.jpg?v=1456113288"
-                }
-                style={{ height: "400px" }}
-              />
+              <Link to="/societies/tech_team">
+                <img
+                  alt="C"
+                  className=""
+                  src={imgurl2}
+                  style={{ height: "400px" }}
+                />
+              </Link>
             </Card>
-          </Link>
 
-          <Link to="/societies/technical">
+
+
             <Card>
-              <img
-                alt="..."
-                className=""
-                src={require("assets/img/societies/tech.jpg")}
-                style={{ height: "400px" }}
-              />
+              <Link to="/societies/miscellaneous">
+                <img
+                  alt="..."
+                  className=""
+                  src={imgurl3}
+                  style={{ height: "400px" }}
+                />
+              </Link>
             </Card>
-          </Link>
+
+
+            <Card>
+              <Link to="/societies/technical">
+                <img
+                  alt="..."
+                  className=""
+                  src={imgurl4}
+                  style={{ height: "400px" }}
+                />
+              </Link>
+            </Card>
+          
         </Carousel>
         <Container>
         <Row>
@@ -294,5 +273,22 @@ function Presentation() {
     return <Loader/>
   }
 }
+const BackgroundBlob = ({ style, props }) => (
+  <Blob
+    size="185vh"
+    style={{
+      position: "absolute",
+      bottom: "-10%",
+      right: "35%",
+      zIndex: 5,
+      backgroundColor: "#8FA998",
+      color: "white",
+      opacity: 0.45,
+      fontSize: "50vh",
+      ...style
+    }}
+    {...props}
+  />
+);
 
 export default Presentation;

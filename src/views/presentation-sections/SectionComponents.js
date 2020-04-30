@@ -34,7 +34,7 @@ class SectionComponents extends React.Component {
     >
     
     <div className="section section-components">
-      <Row>
+      <Row style={{margin:'auto 25%'}}>
       <div className="soc">
         <div className="container one">
           <div className="cardsoc">

@@ -29,11 +29,6 @@ h2{
   pointer-events:none;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
 .soc {
   display:flex;
   flex-direction: row;
@@ -44,6 +39,9 @@ body {
   .one {
     transform:translate(29.98px);
     margin-left:50px;
+  }
+  .center {
+    margin-left: 500px !important;
   }
 .container {
   width: 100%;
@@ -56,8 +54,8 @@ body {
 
   .cardsoc {
     position: relative;
-    width: 700px;
-    height: 500px;
+    width: 420px;
+    height: 300px;
     background-color: #fff;
     overflow: hidden;
     // margin-bottom: 4px;
@@ -90,7 +88,7 @@ body {
       position: absolute;
       bottom: 0;
       right: 130px;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: 700;
       color: #fff;
     }
@@ -100,13 +98,13 @@ body {
       position: absolute;
       right: 75px;
       bottom: 25px;
-      font-size: 40px;
+      font-size: 25px;
       cursor: pointer;
     }
     .pic {
       z-index: 100;
-      width: 700px;
-      height: 500px;
+      width: 420px;
+      height: 300px;
       background-image: url($img-url);
       background-size: 100% 100%;
       filter: grayscale(100%);
