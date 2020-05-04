@@ -178,7 +178,8 @@ else{
           paddingBottom: 0,
           height: "100%",
           position: "relative",
-          overflow: "hidden"
+          overflow: "hidden",
+          paddingTop:0
         }}
       >
         <div className="section">
