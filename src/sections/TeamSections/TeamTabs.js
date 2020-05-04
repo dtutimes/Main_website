@@ -16,6 +16,7 @@ import {
 import TeamCard from "./TeamCard";
 import "./team.css";
 import { Loader } from "components/LoaderComponent";
+import TeamCard2 from "./TeamCard2";
 export default class Example extends React.Component {
   // const [activePill, setActivePill] = React.useState("1");
   state = {
@@ -54,13 +55,13 @@ export default class Example extends React.Component {
       return false;
     }
   }
-  advisor(element) {
-    if (element.position === "advisor") {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // advisor(element) {
+  //   if (element.position === "advisor") {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
   columnist(element) {
     if (element.position === "columnist") {
       return true;
@@ -112,8 +113,8 @@ export default class Example extends React.Component {
       var arr4 = data.filter(this.photographer);
       var arr5 = data.filter(this.illustrator);
       var arr6 = data.filter(this.developer);
-      var arr7 = data.filter(this.advisor);
-      var arr8 = data.filter(this.alumni);
+      // var arr7 = data.filter(this.advisor);
+      // var arr8 = data.filter(this.alumni);
 
       return (
         <>
@@ -264,7 +265,7 @@ export default class Example extends React.Component {
               <Row>
                 <div className="project-pills">
                   <Nav className="nav-pills-danger" pills>
-                    <NavItem>
+                  <NavItem>
                       <NavLink
                         className={
                           this.state.activePill === "1" ? "active" : ""
@@ -277,7 +278,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Council
+                        Advisors
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -293,7 +294,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Columnists
+                        Council
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -309,7 +310,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Designers
+                        Columnists
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -325,7 +326,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Photographers
+                        Designers
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -341,7 +342,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Illustrators
+                        Photographers
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -357,10 +358,10 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Developers
+                        Illustrators
                       </NavLink>
                     </NavItem>
-                    {/* <NavItem>
+                    <NavItem>
                       <NavLink
                         className={
                           this.state.activePill === "7" ? "active" : ""
@@ -373,10 +374,11 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Advisors
+                        Developers
                       </NavLink>
                     </NavItem>
-                    <NavItem>
+                    
+                    {/* <NavItem>
                       <NavLink
                         className={
                           this.state.activePill === "8" ? "active" : ""
@@ -396,7 +398,7 @@ export default class Example extends React.Component {
                   {/* Pill panes */}
                   <div style={{ display: "flex" }}>
                     <TabContent activeTab={"pill-" + this.state.activePill}>
-                      <TabPane tabId={"pill-1"}>
+                      <TabPane tabId={"pill-2"}>
                         <Row>
                           {arr1.map((element) => {
                             return (
@@ -414,7 +416,7 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      <TabPane tabId={"pill-2"}>
+                      <TabPane tabId={"pill-3"}>
                         <Row>
                           {arr2.map((element) => {
                             return (
@@ -432,7 +434,7 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      <TabPane tabId={"pill-3"}>
+                      <TabPane tabId={"pill-4"}>
                         <Row>
                           {arr3.map((element) => {
                             return (
@@ -450,7 +452,7 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      <TabPane tabId={"pill-4"}>
+                      <TabPane tabId={"pill-5"}>
                         <Row>
                           {arr4.map((element) => {
                             return (
@@ -468,7 +470,7 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      <TabPane tabId={"pill-5"}>
+                      <TabPane tabId={"pill-6"}>
                         <Row>
                           {arr5.map((element) => {
                             return (
@@ -486,7 +488,7 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      <TabPane tabId={"pill-6"}>
+                      <TabPane tabId={"pill-7"}>
                         <Row>
                           {arr6.map((element) => {
                             return (
@@ -504,24 +506,50 @@ export default class Example extends React.Component {
                           })}
                         </Row>
                       </TabPane>
-                      {/* <TabPane tabId={"pill-7"}>
+                      <TabPane tabId={"pill-1"}>
                         <Row>
-                          {arr7.map((element) => {
-                            return (
-                              <Col md="3" key={element.id}>
-                                <TeamCard
-                                  name={element.name}
-                                  bio={element.bio}
-                                  img={element.userImg}
-                                  linkedin={element && element.linkedin}
-                                  facebook={element && element.facebook}
-                                  instagram={element && element.instagram}
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Prof. Yogesh Singh"
+                                  bio="Hon'ble Vice Chancellor"
+                                  img={require("assets/img/faculty/VC.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
                                 />
                               </Col>
-                            );
-                          })}
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Sh. Anoop Lather"
+                                  bio="Public Relations Officer"
+                                  img={require("assets/img/faculty/Anoop.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
+                                />
+                              </Col>
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Prof. S. Indu"
+                                  bio="HOD, ECE Department"
+                                  img={require("assets/img/faculty/sindu.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
+                                />
+                              </Col>
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Prof. Rajeshwari Pandey"
+                                  bio="Associate Dean-Academics (UG)r"
+                                  img={require("assets/img/faculty/rpandey.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
+                                />
+                              </Col>
                         </Row>
-                      </TabPane> */}
+                      </TabPane>
                       {/* <TabPane tabId={"pill-8"}>
                         <Row>
                           {arr8.map((element) => {

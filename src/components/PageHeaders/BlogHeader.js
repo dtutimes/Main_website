@@ -61,7 +61,7 @@ const BackgroundBlob = ({ style, props }) => (
     style={{
       position: "absolute",
       top: "-60%",
-      left: "37%",
+      left: "39%",
       zIndex: 0,
       backgroundColor: "#C76D7E",
       color: "white",
@@ -75,11 +75,11 @@ const BackgroundBlob = ({ style, props }) => (
 
 const BackgroundBlobSmallRight = ({ style, props }) => (
   <Blob
-    size="55vh"
+    size="59vh"
     style={{
       position: "absolute",
       top: "-15%",
-      right: "-2%",
+      right: "0%",
       zIndex: 0,
       backgroundColor: "#E85D75",
       color: "white",
