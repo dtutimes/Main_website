@@ -267,6 +267,11 @@ a {
   font-weight: 400;
 }
 
+.blog-content blockquote {
+    border-left: 5px solid #eeeeee;
+    padding-left: 1.5rem;
+}
+
 .blog-content p {
   font-weight: 400;
   line-height: 1.6;

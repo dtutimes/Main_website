@@ -44,19 +44,19 @@ class EditionHeader extends React.Component {
     api.get('/edition', {httpsAgent: agent}).then(res => {
      this.setState({ data: res.data, loaded: true });
     })
-    console.log(this.state.loaded)
+    // console.log(this.state.loaded)
   }
   openLightbox = ()=> {
     this.setState({
       viewerIsOpen: true
     });
-    console.log(this.state.viewerIsOpen)
+    // console.log(this.state.viewerIsOpen)
   };
   openLightbox2 = ()=> {
     this.setState({
       viewerIsOpen2: true
     });
-    console.log(this.state.viewerIsOpen)
+    // console.log(this.state.viewerIsOpen)
   };
 
 closeLightbox = () => {

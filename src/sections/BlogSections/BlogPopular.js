@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { api } from "api";
 import { ContentLoaderPopular } from "components/ContentLoader";
 import { CardTitle } from "reactstrap";
+import styled from "styled-components";
+const HoverText = styled.a`
+	:hover {
+		color: #E85D75;
+    cursor: pointer;
+    opacity: 0.8
+	}
+`
 // import { Blob } from "react-blob";
 
 // const BackgroundBlob = ({ style, props }) => (
@@ -63,12 +71,13 @@ export default class BlogPopular extends Component {
           popular.map((item) => (
                 <div className="mb-3" key={item.id}>
                   <CardTitle tag="h5" className="mb-2">
-                    <a
+                    {/* <a
                       href={`/story/${item.slug}`}
                       // onClick={e => window.scrollTo(0, 0)}
                     >
                       {item.title}
-                    </a>
+                    </a> */}
+                    <HoverText href={`/story/${item.slug}`}>{item.title}</HoverText>
                   </CardTitle>
                   {/* <Link to="" className="mt-0 small">
                 Read More

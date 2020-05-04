@@ -5,14 +5,14 @@ import {
   Nav,
   TabContent,
   TabPane,
-  Container
+  Container,
 } from "reactstrap";
-
+import { api } from "api";
 import ContentLoaderBlog from "components/ContentLoader";
 import BlogCard from "sections/BlogSections/BlogCard";
-import BlogCategorySection from "sections/BlogSections/BlogCategorySection";
+// import BlogCategorySection from "sections/BlogSections/BlogCategorySection";
 
-const BlogTabs = ({ categories, posts, loading }) => {
+const BlogTabs = ({ categories, posts, loading, category, changeCategory }) => {
   const [hTabs, setHTabs] = React.useState("1");
   return (
     <>
@@ -21,20 +21,30 @@ const BlogTabs = ({ categories, posts, loading }) => {
           <Nav id="tabs" role="tablist" tabs>
             <NavItem>
               <NavLink
+                style={{ cursor: "pointer" }}
                 className={hTabs === "1" ? "active" : ""}
                 onClick={() => {
                   setHTabs("1");
+                  api.get("/story?page=1").then((res) => {
+                    posts = res.data.data;
+                    changeCategory(0, posts);
+                  });
                 }}
               >
                 All
               </NavLink>
             </NavItem>
-            {categories.map(item => ( 
+            {categories.map((item) => (
               <NavItem key={item.id}>
                 <NavLink
+                  style={{ cursor: "pointer" }}
                   className={hTabs === item.id ? "active" : ""}
                   onClick={() => {
                     setHTabs(item.id);
+                    api.get("/category/" + item.id + "?page=1").then((res) => {
+                      posts = res.data.item;
+                      changeCategory(item.id, posts);
+                    });
                   }}
                 >
                   {item.name}
@@ -48,15 +58,22 @@ const BlogTabs = ({ categories, posts, loading }) => {
         <TabPane tabId={"hTabs" + "1"}>
           <Container style={{ minHeight: "100vh" }}>
             {loading &&
-              [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => (
+              [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
                 <ContentLoaderBlog key={item} />
               ))}
             {!loading && <BlogCard posts={posts} />}
           </Container>
         </TabPane>
-        {categories.map(item => (
+        {/* {category != 0 &&} */}
+        {categories.map((item) => (
           <TabPane tabId={"hTabs" + item.id} key={item.id}>
-            <BlogCategorySection category={item} />
+            <Container style={{ minHeight: "100vh" }}>
+              {loading &&
+                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+                  <ContentLoaderBlog key={item} />
+                ))}
+              {!loading && <BlogCard posts={posts} />}
+            </Container>
           </TabPane>
         ))}
       </TabContent>

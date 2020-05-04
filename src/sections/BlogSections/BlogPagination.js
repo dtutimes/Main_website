@@ -8,45 +8,84 @@ import {
   // CardTitle,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
-const BlogPosts = props => {
-  var { pageNo, lastPage, changePage } = props;
+const BlogPosts = (props) => {
+  var {
+    pageNo,
+    lastPage,
+    changePage,
+    category,
+  } = props;
   // console.log(pageNo);
   // console.log("hhhhhhhhaaaaaaa");
   // console.log(lastPage);
   var handlePrevClick = async () => {
-    if (pageNo > 1) {
-      let newpage = pageNo - 1;
-      //call for getting previous page's blog data
-      api
-        .get("/story?page=" + newpage)
-        .then(res => {
-          let temp = [{ ...res.data }];
-          let resData = temp[0]["data"];
-          changePage(newpage, resData);
-        })
-        .catch(err => {
-          console.log(err);
-        });
-      window.scrollTo(0, 0);
+    if (category === 0) {
+      if (pageNo > 1) {
+        let newpage = pageNo - 1;
+        //call for getting previous page's blog data
+        api
+          .get("/story?page=" + newpage)
+          .then((res) => {
+            let temp = [{ ...res.data }];
+            let resData = temp[0]["data"];
+            changePage(newpage, resData);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        window.scrollTo(0, 0);
+      }
+    } else {
+      if (pageNo > 1) {
+        let newpage = pageNo - 1;
+        api
+          .get("/category/" + category + "?page=" + newpage)
+          .then((res) => {
+            let resData = res.data.item;
+            changePage(newpage, resData);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        window.scrollTo(0, 0);
+      }
     }
   };
   var handleNextClick = async () => {
-    if (pageNo < lastPage) {
+    if (category === 0) {
+      if (pageNo < lastPage) {
+        let newpage = pageNo + 1;
+        //call for getting next page's blog data
+        api
+          .get("/story?page=" + newpage)
+          .then((res) => {
+            let temp = [{ ...res.data }];
+            let resData = temp[0]["data"];
+            changePage(newpage, resData);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+          // console.log("XXXXXX");
+        window.scrollTo(0, 0);
+      }
+    } else {
       let newpage = pageNo + 1;
-      //call for getting next page's blog data
+      // console.log(category + " " + newpage)
       api
-        .get("/story?page=" + newpage)
-        .then(res => {
-          let temp = [{ ...res.data }];
-          let resData = temp[0]["data"];
+        .get("/category/" + category + "?page=" + newpage)
+        .then((res) => {
+          let resData = res.data.item;
           changePage(newpage, resData);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
         });
+        
+        // console.log("YYYYYY");
       window.scrollTo(0, 0);
     }
   };

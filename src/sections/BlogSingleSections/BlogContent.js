@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { getInstance } from "../../services/axiosInstance";
 import { Badge, Media, Container, Row, Col } from "reactstrap";
 import { Parser } from "html-to-react";
 const BlogContent = ({ blog }) => {

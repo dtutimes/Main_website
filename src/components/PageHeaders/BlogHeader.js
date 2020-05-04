@@ -61,7 +61,7 @@ const BackgroundBlob = ({ style, props }) => (
     style={{
       position: "absolute",
       top: "-60%",
-      left: "35%",
+      left: "37%",
       zIndex: 0,
       backgroundColor: "#C76D7E",
       color: "white",

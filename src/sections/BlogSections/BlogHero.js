@@ -19,26 +19,32 @@ export default class BlogHero extends Component {
       lastPage: 0,
       totalPages: [],
       loading: true,
-      mob: false
+      mob: false,
+      category: 0,
+      cid: 0,
     };
   }
   componentDidMount() {
-    api.get("/story?page=" + this.state.pageNo).then(res => {
-      this.setState({ blogs: res.data.data });
-      let countPages = [];
-      console.log(res.data.meta.last_page);
-      for (let i = 1; i <= res.data.meta.last_page; i++) {
-        countPages[i - 1] = i;
-      }
-      this.setState({
-        lastPage: res.data.meta.last_page,
-        totalPages: countPages
+    if (this.state.category == 0) {
+      api.get("/story?page=" + this.state.pageNo).then((res) => {
+        this.setState({ blogs: res.data.data });
+        let countPages = [];
+        // console.log(res.data.meta.last_page);
+        for (let i = 1; i <= res.data.meta.last_page; i++) {
+          countPages[i - 1] = i;
+        }
+        this.setState({
+          lastPage: res.data.meta.last_page,
+          totalPages: countPages,
+        });
+        setTimeout(() => {
+          this.setState({ loading: false });
+        }, 1200);
       });
-      setTimeout(() => {
-        this.setState({ loading: false });
-      }, 1200);
-    });
-    api.get("/category").then(res => this.setState({ categories: res.data }));
+    }
+    api.get("/category").then((res) => this.setState({ categories: res.data }));
+    // console.log("adfhkjfhjksadhfkjadhsfkjadshfkjahs");
+    // console.log(this.state.categories);
     // window.addEventListener("resize", () => {
     //   const b = window.innerWidth;
     //   if (b <= 900) {
@@ -57,11 +63,27 @@ export default class BlogHero extends Component {
     this.setState({ pageNo: newpage, blogs: newposts, loading: true });
     setTimeout(() => {
       this.setState({ loading: false });
-    }, 1200);
+    }, 1000);
+  }
+
+  changeCategory(category, posts) {
+    this.setState({ cid: category, blogs: posts, loading: true, pageNo: 1 });
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 1000);
   }
 
   render() {
-    const { blogs, categories, loading, pageNo, lastPage, mob } = this.state;
+    const {
+      blogs,
+      categories,
+      loading,
+      pageNo,
+      lastPage,
+      mob,
+      category,
+      cid,
+    } = this.state;
     if (window.innerWidth > 900) {
       return (
         <>
@@ -71,7 +93,7 @@ export default class BlogHero extends Component {
           >
             <div
               style={{
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             >
               <BackgroundBlob />
@@ -83,11 +105,14 @@ export default class BlogHero extends Component {
                     loading={loading}
                     posts={blogs}
                     categories={categories}
+                    changeCategory={this.changeCategory.bind(this)}
+                    category={category}
                   />
                   <BlogPagination
                     pageNo={pageNo}
                     lastPage={lastPage}
                     changePage={this.changePage.bind(this)}
+                    category={cid}
                   />
                 </Col>
                 <Col className="pt-5" md="4" sm="12" className="abc">
@@ -96,21 +121,21 @@ export default class BlogHero extends Component {
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                     <BlogMagzine />
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                     <BlogSubsciber />
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                   </div>
@@ -134,11 +159,14 @@ export default class BlogHero extends Component {
                     loading={loading}
                     posts={blogs}
                     categories={categories}
+                    changeCategory={this.changeCategory.bind(this)}
+                    category={category}
                   />
                   <BlogPagination
                     pageNo={pageNo}
                     lastPage={lastPage}
                     changePage={this.changePage.bind(this)}
+                    category={cid}
                   />
                 </Col>
                 <Col className="pt-5" md="4" sm="12" className="abc">
@@ -147,21 +175,21 @@ export default class BlogHero extends Component {
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                     <BlogMagzine />
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                     <BlogSubsciber />
                     <hr
                       style={{
                         borderTop: "1px solid black",
-                        borderColor: "black"
+                        borderColor: "black",
                       }}
                     />
                   </div>
@@ -187,7 +215,7 @@ const BackgroundBlob = ({ style, props }) => (
       color: "white",
       opacity: 0.25,
       fontSize: "50vh",
-      ...style
+      ...style,
     }}
     {...props}
   />

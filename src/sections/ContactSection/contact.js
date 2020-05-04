@@ -311,6 +311,21 @@ function LoginPage() {
                       </UncontrolledTooltip>
                       <i className="fa fa-instagram" />
                     </Button>
+                    <Button
+                      className="btn-just-icon mr-1"
+                      color="linkedin"
+                      id="top4"
+                      href="https://www.linkedin.com/company/dtutimes/"
+                    >
+                      <UncontrolledTooltip
+                        placement="top"
+                        target="top4"
+                        delay={0}
+                      >
+                        Connect with us on LinkedIn
+                      </UncontrolledTooltip>
+                      <i className="fa fa-linkedin" />
+                    </Button>
                   </Col>
                 </Row>
               </Animated>

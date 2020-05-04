@@ -13,7 +13,7 @@ export default class BlogMagzine extends Component {
     api.get("/edition").then(res => {
       this.setState({ magzines: [res.data[0], res.data[1]] });
       // console.log("hhelllllloooooooooooooooooo")
-      console.log(this.state.magzines);
+      // console.log(this.state.magzines);
       setTimeout(() => {
         this.setState({ loading: false });
       }, 2000);

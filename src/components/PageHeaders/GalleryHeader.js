@@ -1,21 +1,9 @@
 import React from "react";
 import {
-  Button,
-  Card,
-  CardBody,
-  UncontrolledCollapse,
-  FormGroup,
-  Form,
-  Input,
-  NavbarBrand,
-  Navbar,
-  Nav,
   Container,
-  Row,
-  Col,
   Carousel,
   CarouselItem,
-  CarouselIndicators
+  CarouselIndicators,
 } from "reactstrap";
 import { Animated } from "react-animated-css";
 const items = [
@@ -53,18 +41,22 @@ const items = [
     caption: ""
   },
   {
-    src: "url(" + require("assets/img/campus/10.jpeg") + ")",
+    src: "url(" + require("assets/img/gallery/lamp.jpg") + ")",
     content: (
       <div className="content-center">
         <Container className="text-left">
-          <h1>
-            <strong>Gallery</strong>
-          </h1>
-          <h3>
-            <strong>
-              When we’re not writing, we let our pictures do the talking.
-            </strong>
-          </h3>
+        <Animated
+            animationIn="fadeInUp"
+            animationInDelay={1000}
+            animationInDuration={1000}
+            isVisible={true}
+          >
+            <h3>
+              <strong>
+                Serenity Symbolised
+              </strong>
+            </h3>
+          </Animated>
         </Container>
       </div>
     ),
@@ -72,18 +64,91 @@ const items = [
     caption: ""
   },
   {
-    src: "url(" + require("assets/img/campus/5.jpeg") + ")",
+    src: "url(" + require("assets/img/gallery/engi.JPG") + ")",
     content: (
       <div className="content-center">
         <Container className="text-left">
-          <h1>
-            <strong>Gallery</strong>
-          </h1>
-          <h3>
-            <strong>
-              When we’re not writing, we let our pictures do the talking.
-            </strong>
-          </h3>
+        <Animated
+            animationIn="fadeInUp"
+            animationInDelay={1000}
+            animationInDuration={1000}
+            isVisible={true}
+          >
+            <h3>
+              <strong>
+                Delhi's Largest Events
+              </strong>
+            </h3>
+          </Animated>
+        </Container>
+      </div>
+    ),
+    altText: "",
+    caption: ""
+  },
+  {
+    src: "url(" + require("assets/img/gallery/cricket.JPG") + ")",
+    content: (
+      <div className="content-center">
+        <Container className="text-left">
+        <Animated
+            animationIn="fadeInUp"
+            animationInDelay={1000}
+            animationInDuration={1000}
+            isVisible={true}
+          >
+            <h3>
+              <strong>
+                Budding Athletes Galore
+              </strong>
+            </h3>
+          </Animated>
+        </Container>
+      </div>
+    ),
+    altText: "",
+    caption: ""
+  },
+  {
+    src: "url(" + require("assets/img/gallery/crowd.jpg") + ")",
+    content: (
+      <div className="content-center">
+        <Container className="text-left">
+        <Animated
+            animationIn="fadeInUp"
+            animationInDelay={1000}
+            animationInDuration={1000}
+            isVisible={true}
+          >
+            <h3>
+              <strong>
+                The Crown of DTU
+              </strong>
+            </h3>
+          </Animated>
+        </Container>
+      </div>
+    ),
+    altText: "",
+    caption: ""
+  },
+  {
+    src: "url(" + require("assets/img/campus/9.jpg") + ")",
+    content: (
+      <div className="content-center">
+        <Container className="text-left">
+        <Animated
+            animationIn="fadeInUp"
+            animationInDelay={1000}
+            animationInDuration={1000}
+            isVisible={true}
+          >
+            <h3>
+              <strong>
+                Beautiful By Nature
+              </strong>
+            </h3>
+          </Animated>
         </Container>
       </div>
     ),
@@ -94,7 +159,7 @@ const items = [
 
 const GalleryHeader = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const [animating, setAnimating] = React.useState(false);
+  const [animating, setAnimating] = React.useState(true);
   const onExiting = () => {
     setAnimating(true);
   };
@@ -102,17 +167,17 @@ const GalleryHeader = () => {
     setAnimating(false);
   };
   const next = () => {
-    if (animating) return;
+    // if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
   const previous = () => {
-    if (animating) return;
+    // if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
   const goToIndex = newIndex => {
-    if (animating) return;
+    // if (animating) return;
     setActiveIndex(newIndex);
   };
 
@@ -122,7 +187,7 @@ const GalleryHeader = () => {
         <div className="header-3">
           <div className="page-carousel">
             <div className="filter" />
-            <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+            <Carousel activeIndex={activeIndex} next={next} previous={previous} interval={3500} ride="carousel">
               <CarouselIndicators
                 items={items}
                 activeIndex={activeIndex}
@@ -148,9 +213,10 @@ const GalleryHeader = () => {
               <a
                 className="left carousel-control carousel-control-prev"
                 data-slide="prev"
-                href="#pablo"
+                style={{color : "white"}}
+                // href="#pablo"
                 onClick={e => {
-                  e.preventDefault();
+                  // e.preventDefault();
                   previous();
                 }}
                 role="button"
@@ -161,9 +227,10 @@ const GalleryHeader = () => {
               <a
                 className="right carousel-control carousel-control-next"
                 data-slide="next"
-                href="#pablo"
+                // href="#pablo"
+                style={{color : "white"}}
                 onClick={e => {
-                  e.preventDefault();
+                  // e.preventDefault();
                   next();
                 }}
                 role="button"

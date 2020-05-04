@@ -126,7 +126,7 @@ const Description = () => {
         >
           <Container fluid>
             <Row>
-              <Col md="3">
+              {/* <Col md="3">
                 <div className="icons-nucleo">
                   <i className="first-left-icon nc-icon nc-bulb-63 add-animation" />
                   <i className="second-left-icon nc-icon nc-circle-10 add-animation" />
@@ -139,7 +139,7 @@ const Description = () => {
                   <i className="ninth-left-icon nc-icon nc-caps-small add-animation" />
                   <i className="tenth-left-icon nc-icon nc-html5 add-animation" />
                 </div>
-              </Col>
+              </Col> */}
               <Col className="text-center" md="6">
                 <h2 className="title revealOnScroll">
                   <span style={{ color: "#040403" }}>
@@ -166,7 +166,7 @@ const Description = () => {
                 </h5>
                 <br />
               </Col>
-              <Col md="3">
+              {/* <Col md="3">
                 <div className="icons-nucleo">
                   <i className="first-right-icon nc-icon nc-hat-3 add-animation" />
                   <i className="second-right-icon nc-icon nc-tag-content add-animation" />
@@ -179,7 +179,7 @@ const Description = () => {
                   <i className="ninth-right-icon nc-icon nc-mobile add-animation" />
                   <i className="tenth-right-icon nc-icon nc-email-85 add-animation" />
                 </div>
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div>

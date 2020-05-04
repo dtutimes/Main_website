@@ -83,7 +83,7 @@ const EditorsMessage = () => {
             <Row>
               <Col className="mr-auto mt-5" md="4">
                 <Card>
-                  <img  alt="..." src={require("assets/img/Editors/edit.jpg")}/>
+                  <img  alt="..." src={require("assets/img/campus/IMG_3435.JPG")} style={{}}/>
                 </Card>
                 
               </Col>
@@ -94,7 +94,7 @@ const EditorsMessage = () => {
                     {/* <a href="#pablo" onClick={e => e.preventDefault()}></a> */}
                     <h5
                       className="description"
-                      style={{ color: "#494850" }}
+                      style={{ color: "#494850", textAlign:"justify" }}
                     >
                       January 2009 saw the publication of the first edition of
                       DCE Times, a seven-page issue developed by a team of six.
@@ -184,7 +184,7 @@ else{
         <div className="section">
           <Container>
             <Row>
-              <Col className="ml-auto text-right" md="12">
+              <Col className="ml-auto text-center" md="12">
                 <h2 className="title"><span style={{ color: "#040403" }}><strong>Editors'</strong></span>{" "}
                 <span style={{ color: "#6bd098" }}><strong>Message</strong></span></h2>
                 {/* <h5 className="description"></h5> */}
@@ -193,21 +193,9 @@ else{
             <div className="space-top" />
             <Row>
               <Col className="mr-auto" md="4">
-              <Card
-               data-background="image"
-               style={{
-                 backgroundImage:
-                   "url(" +
-                    require("assets/img/Editors/edit.jpg") +
-                   ")",
-                   
-              }}>
-                <CardBody>
-                  <div className="card-icon">
-                    <i className="fa fa-search" onClick={this.openLightbox} style={{cursor:'pointer'}}/>
-                  </div>
-                </CardBody>  
-              </Card>
+              <Card>
+                  <img  alt="..." src={require("assets/img/campus/IMG_3435.JPG")} style={{}}/>
+                </Card>
               </Col>
               <Col className="ml-auto" md="7">
                 <Card className="card-plain">
@@ -216,7 +204,7 @@ else{
                     {/* <a href="#pablo" onClick={e => e.preventDefault()}></a> */}
                     <h5
                       className="description"
-                      style={{ color: "#494850" }}
+                      style={{ color: "#494850", textAlign: "justify" }}
                     >
                       January 2009 saw the publication of the first edition of
                       DCE Times, a seven-page issue developed by a team of six.
