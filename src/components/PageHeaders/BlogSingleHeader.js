@@ -135,7 +135,7 @@ const BlogSingleHeader = ({ title, biliner, timestamp }) => {
 
 const BackgroundBlob = ({ style, props }) => (
   <Blob
-    size="75vh"
+    size="85vh"
     style={{
       position: "absolute",
       top: "-60%",
@@ -153,7 +153,7 @@ const BackgroundBlob = ({ style, props }) => (
 
 const BackgroundBlobSmallRight = ({ style, props }) => (
   <Blob
-    size="55vh"
+    size="63vh"
     style={{
       position: "absolute",
       top: "-15%",
