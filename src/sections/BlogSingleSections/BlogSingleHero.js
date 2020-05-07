@@ -82,7 +82,7 @@ export default class BlogSingleHero extends Component {
         <ProgressBar bgcolor="#e15a97" />
         {/* <Progress scroll={`${this.state.scrollPosition}%`}  /> */}
         <BlogSingleHeader
-          timestamp={blog.updated_at}
+          timestamp={blog.published_at}
           title={blog.title}
           biliner={blog.biliner}
         />
