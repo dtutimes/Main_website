@@ -30,12 +30,12 @@ export default class BlogHero extends Component {
         this.setState({ blogs: res.data.data });
         let countPages = [];
         // console.log(res.data.meta.last_page);
-        for (let i = 1; i <= res.data.meta.last_page; i++) {
-          countPages[i - 1] = i;
-        }
+        // for (let i = 1; i <= res.data.meta.last_page; i++) {
+        //   countPages[i - 1] = i;
+        // }
         this.setState({
           lastPage: res.data.meta.last_page,
-          totalPages: countPages,
+          // totalPages: countPages,
         });
         setTimeout(() => {
           this.setState({ loading: false });
@@ -43,7 +43,6 @@ export default class BlogHero extends Component {
       });
     }
     api.get("/category").then((res) => this.setState({ categories: res.data }));
-    // console.log("adfhkjfhjksadhfkjadhsfkjadshfkjahs");
     // console.log(this.state.categories);
     // window.addEventListener("resize", () => {
     //   const b = window.innerWidth;
@@ -66,8 +65,8 @@ export default class BlogHero extends Component {
     }, 1000);
   }
 
-  changeCategory(category, posts) {
-    this.setState({ cid: category, blogs: posts, loading: true, pageNo: 1 });
+  changeCategory(category, posts, lpage) {
+    this.setState({ cid: category, blogs: posts, loading: true, pageNo: 1, lastPage: lpage });
     setTimeout(() => {
       this.setState({ loading: false });
     }, 1000);
@@ -107,6 +106,7 @@ export default class BlogHero extends Component {
                     categories={categories}
                     changeCategory={this.changeCategory.bind(this)}
                     category={category}
+                    lpage={lastPage}
                   />
                   <BlogPagination
                     pageNo={pageNo}

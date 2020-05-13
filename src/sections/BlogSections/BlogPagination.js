@@ -12,12 +12,7 @@ import {
 } from "reactstrap";
 
 const BlogPosts = (props) => {
-  var {
-    pageNo,
-    lastPage,
-    changePage,
-    category,
-  } = props;
+  var { pageNo, lastPage, changePage, category } = props;
   // console.log(pageNo);
   // console.log("hhhhhhhhaaaaaaa");
   // console.log(lastPage);
@@ -44,7 +39,7 @@ const BlogPosts = (props) => {
         api
           .get("/category/" + category + "?page=" + newpage)
           .then((res) => {
-            let resData = res.data.item;
+            let resData = res.data.data;
             changePage(newpage, resData);
           })
           .catch((err) => {
@@ -69,24 +64,25 @@ const BlogPosts = (props) => {
           .catch((err) => {
             console.log(err);
           });
-          // console.log("XXXXXX");
+        // console.log("XXXXXX");
         window.scrollTo(0, 0);
       }
     } else {
-      let newpage = pageNo + 1;
-      // console.log(category + " " + newpage)
-      api
-        .get("/category/" + category + "?page=" + newpage)
-        .then((res) => {
-          let resData = res.data.item;
-          changePage(newpage, resData);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-        
-        // console.log("YYYYYY");
-      window.scrollTo(0, 0);
+      if (pageNo < lastPage) {
+        let newpage = pageNo + 1;
+        // console.log(category + " " + newpage)
+        api
+          .get("/category/" + category + "?page=" + newpage)
+          .then((res) => {
+            let resData = res.data.data;
+            changePage(newpage, resData);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
+        window.scrollTo(0, 0);
+      }
     }
   };
   return (

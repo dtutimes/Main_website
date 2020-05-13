@@ -12,7 +12,14 @@ import ContentLoaderBlog from "components/ContentLoader";
 import BlogCard from "sections/BlogSections/BlogCard";
 // import BlogCategorySection from "sections/BlogSections/BlogCategorySection";
 
-const BlogTabs = ({ categories, posts, loading, category, changeCategory }) => {
+const BlogTabs = ({
+  categories,
+  posts,
+  loading,
+  category,
+  changeCategory,
+  lpage,
+}) => {
   const [hTabs, setHTabs] = React.useState("1");
   return (
     <>
@@ -27,7 +34,8 @@ const BlogTabs = ({ categories, posts, loading, category, changeCategory }) => {
                   setHTabs("1");
                   api.get("/story?page=1").then((res) => {
                     posts = res.data.data;
-                    changeCategory(0, posts);
+                    lpage = res.data.meta.last_page;
+                    changeCategory(0, posts, lpage);
                   });
                 }}
               >
@@ -43,7 +51,8 @@ const BlogTabs = ({ categories, posts, loading, category, changeCategory }) => {
                     setHTabs(item.id);
                     api.get("/category/" + item.id + "?page=1").then((res) => {
                       posts = res.data.data;
-                      changeCategory(item.id, posts);
+                      lpage = res.data.meta.last_page;
+                      changeCategory(item.id, posts, lpage);
                     });
                   }}
                 >
