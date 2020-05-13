@@ -42,7 +42,7 @@ const BlogTabs = ({ categories, posts, loading, category, changeCategory }) => {
                   onClick={() => {
                     setHTabs(item.id);
                     api.get("/category/" + item.id + "?page=1").then((res) => {
-                      posts = res.data.item;
+                      posts = res.data.data;
                       changeCategory(item.id, posts);
                     });
                   }}
