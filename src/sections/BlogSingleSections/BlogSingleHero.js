@@ -16,7 +16,6 @@ import ProgressBar from "react-scroll-progress-bar";
 //   height: 5px;
 //   z-index: 1;
 // `;
-
 export default class BlogSingleHero extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,10 @@ export default class BlogSingleHero extends Component {
   }
 
   componentDidMount() {
-    const slug = window.location.pathname;
+    var slug = window.location.pathname;
+    slug = slug.substring(5);
+    slug = "/story" + slug;
+    // console.log(typeof(slug));
     api.get(slug).then((res) => {
       this.setState({ blog: res.data });
       setTimeout(() => {
@@ -89,7 +91,7 @@ export default class BlogSingleHero extends Component {
         {!this.state.loaded && (
           <>
             {/* <div style={{ marginRight: "200px",/ marginLeft: "200px" }}> */}
-              <ContentLoaderBlogSingle />
+            <ContentLoaderBlogSingle />
             {/* </div> */}
           </>
         )}

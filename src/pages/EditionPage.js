@@ -5,8 +5,13 @@ import LoaderComponent from "components/LoaderComponent";
 
 // import EditionTagline from "sections/EditionSections/EditionTagline";
 import EditionFeature from "sections/EditionSections/EditionFeature";
+import {Helmet} from 'react-helmet';
+const title = "DTU Times | Editions"
 const Sections = () => (
   <>
+  <Helmet>
+    <title>{title}</title>
+  </Helmet>
     <Header />
     {/* <div style={bgStyle}> */}
 

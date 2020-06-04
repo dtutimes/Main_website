@@ -13,9 +13,6 @@ import {
 
 const BlogPosts = (props) => {
   var { pageNo, lastPage, changePage, category } = props;
-  // console.log(pageNo);
-  // console.log("hhhhhhhhaaaaaaa");
-  // console.log(lastPage);
   var handlePrevClick = async () => {
     if (category === 0) {
       if (pageNo > 1) {
@@ -64,13 +61,11 @@ const BlogPosts = (props) => {
           .catch((err) => {
             console.log(err);
           });
-        // console.log("XXXXXX");
         window.scrollTo(0, 0);
       }
     } else {
       if (pageNo < lastPage) {
         let newpage = pageNo + 1;
-        // console.log(category + " " + newpage)
         api
           .get("/category/" + category + "?page=" + newpage)
           .then((res) => {

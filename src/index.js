@@ -11,10 +11,10 @@ import "assets/demo/react-demo.css";
 // pages
 import Pages from "pages";
 // import Index from "views/Index";
-import GalleryIndex from "views/GalleryIndex";
-import GallerySingle from "views/GallerySingle";
+// import GalleryIndex from "views/GalleryIndex";
+// import GallerySingle from "views/GallerySingle";
 // import BlogPosts from "views/BlogPosts";
-import BlogSingle from "views/BlogSingle"
+// import BlogSingle from "views/BlogSingle"
 // import Team from "views/Team";
 import ContactUs from "pages/ContactPage";
 // import Editions from "views/Editions";
@@ -34,7 +34,7 @@ const Routes = () => (
             <Route path="/about" component={Pages.AboutPage} />
             <Route path="/editions" component={Pages.EditionPage} />
             <Route exact path="/blog" component={Pages.BlogPage} />
-            <Route path="/story/:slug" component={Pages.BlogSinglePage} />
+            <Route path="/blog/:slug" component={Pages.BlogSinglePage} />
             <Route exact path="/gallery" component={Pages.GalleryPage} />
             <Route path="/gallery/:slug" component={Pages.GallerySinglePage} />
             <Route path="/team" component={Pages.TeamPage} />

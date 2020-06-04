@@ -12,7 +12,7 @@ const BlogCard = ({ posts }) => {
           <Card className="card-plain card-blog text-left">
             <CardBody>
               <CardTitle tag="h3">
-                <Link to={`/story/${post.slug}`} onClick={()=> {
+                <Link to={`/blog/${post.slug}`} onClick={()=> {
                   window.scrollTo(0,0);
                 }}>
                   {post.title}
@@ -21,7 +21,7 @@ const BlogCard = ({ posts }) => {
               <br />
             </CardBody>
             <div className="card-image">
-              <Link to={`/story/${post.slug}`} onClick={()=> {
+              <Link to={`/blog/${post.slug}`} onClick={()=> {
                   window.scrollTo(0,0);
                 }}>
                 <img alt="..." className="img img-raised" src={post.imgUrl} />
@@ -31,7 +31,7 @@ const BlogCard = ({ posts }) => {
               <p className="card-description" style={{ marginBottom: "1rem",color:"#494850",lineHeight:"2rem !important" }}>
                 <strong>{post.biliner}</strong>
                 ..... <Link
-                    to={`/story/${post.slug}`}
+                    to={`/blog/${post.slug}`}
                     color="primay"
                     onClick={()=> {
                       window.scrollTo(0,0);

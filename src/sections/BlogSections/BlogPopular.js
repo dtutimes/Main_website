@@ -77,7 +77,7 @@ export default class BlogPopular extends Component {
                     >
                       {item.title}
                     </a> */}
-                    <HoverText href={`/story/${item.slug}`}>{item.title}</HoverText>
+                    <HoverText href={`/blog/${item.slug}`}>{item.title}</HoverText>
                   </CardTitle>
                   {/* <Link to="" className="mt-0 small">
                 Read More
