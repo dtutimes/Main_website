@@ -85,6 +85,7 @@ export default class GalleryCarousel extends React.Component {
           {this.props.albums &&
             this.props.albums.map(album => {
               const style = {
+                // eslint-disable-next-line no-useless-concat
                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),'+ 'url("' + album.album_imgUrl + '")',
                 backgroundSize: "cover",
                 

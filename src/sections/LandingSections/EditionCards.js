@@ -18,8 +18,8 @@ const EditionCards = () => {
         setMob(false);
       }
     });
-  });
-  if (mob == false) {
+  },[mob]);
+  if (mob === false) {
     return (
       <>
         <div
@@ -272,7 +272,7 @@ const EditionCards = () => {
                     href="/editions"
                     //   onClick={e => e.preventDefault()}
                   >
-                    //1
+                    {/*1*/}
                     <img
                       alt="..."
                       className="grid__img layer"

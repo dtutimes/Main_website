@@ -107,12 +107,12 @@ export default class Example extends React.Component {
   render() {
     if (this.state.loaded === true) {
       const { data } = this.state;
-      var arr1 = data.filter(this.council);
-      var arr2 = data.filter(this.columnist);
-      var arr3 = data.filter(this.designer);
-      var arr4 = data.filter(this.photographer);
-      var arr5 = data.filter(this.illustrator);
-      var arr6 = data.filter(this.developer);
+      const arr1 = data.filter(this.council);
+      const arr2 = data.filter(this.columnist);
+      const arr3 = data.filter(this.designer);
+      const arr4 = data.filter(this.photographer);
+      const arr5 = data.filter(this.illustrator);
+      const arr6 = data.filter(this.developer);
       // var arr7 = data.filter(this.advisor);
       // var arr8 = data.filter(this.alumni);
 

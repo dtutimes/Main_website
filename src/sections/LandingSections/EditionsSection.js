@@ -27,7 +27,7 @@ const EditionsHeading = () => {
           document.body.classList.remove("presentation-page");
           window.removeEventListener("scroll", checkScroll);
         };
-    });
+    },[]);
     
     return <EditionCards />
 }

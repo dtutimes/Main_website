@@ -37,8 +37,8 @@ const Description = () => {
         setMob(false);
       }
     });
-  });
-  if (mob == false) {
+  }, []);
+  if (mob === false) {
     return (
       <>
         <div

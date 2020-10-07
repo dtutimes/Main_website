@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {useState,useEffect} from 'react';
 
-import { BoxLoading, LadderLoading } from "react-loadingg";
+import { BoxLoading } from "react-loadingg";
 
 export const Loader = () => (
     <>
@@ -18,27 +18,18 @@ export const Loader = () => (
     </>
 );
 
-
-export default class LoaderComponent extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            loading: false
-        }
-    }
-
-    componentDidMount() {
+const LoaderComponent = (props) => {
+    const [loading,setLoading] = useState(false);
+    useEffect(()=>{
         setTimeout(() => {
-            this.setState({loading: false})
+            setLoading(false)
         }, 2000);
-    }
-    
-    render() {
-        if (this.state.loading) return (<><Loader /></>)
-        return (
-            <div>
-                {this.props.component}
-            </div>
-        )
-    }
+    },[]);
+    if (loading) return (<><Loader /></>)
+    return (
+        <div>
+            {props.component}
+        </div>
+    )
 }
+export default LoaderComponent

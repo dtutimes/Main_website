@@ -8,6 +8,8 @@ import SocietyPage from './SocietyPage';
 import TeamPage from './TeamPage';
 import EditionPage from './EditionPage';
 import GallerySinglePage from "./GallerySinglePage";
+import SocietySinglePage from "./SocietiesSingleCategory";
+import SocietySingleSingle from "./SocSingle";
 export default {
     LandingPage, 
     AboutPage, 
@@ -19,4 +21,6 @@ export default {
     TeamPage ,
     EditionPage,
     GallerySinglePage,
+    SocietySinglePage,
+    SocietySingleSingle
 }

@@ -1,16 +1,15 @@
 import React from 'react'
 
-import Contact from "sections/ContactSection/contact";
-// import ContactHeader from "components/PageHeaders/ContactHeader";
-import LoaderComponent from "components/LoaderComponent";
 import {Helmet} from 'react-helmet';
+
+import Contact from "sections/ContactSection/contact";
+import LoaderComponent from "components/LoaderComponent";
 const title = "DTU Times | Contact Us";
 const Sections = () => (
     <>
         <Helmet>
             <title>{title}</title>
         </Helmet>
-        {/* <ContactHeader /> */}
         <Contact />
     </>
 );

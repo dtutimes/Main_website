@@ -14,10 +14,13 @@ const customStyles = {
     background: 'rgba(21,21,21,0.0)',
     color:'white',
     border: 'none',
-    overflow:'hidden'
+    zIndex: "500",
+    overflow: "auto"
   },
   overlay: {
     background: 'rgba(21,21,21,0.9)',
+    zIndex: "50000",
+    overflow: "hidden"
   }
 };
 const GalleryImages = ({ images }) => {
@@ -101,9 +104,8 @@ const GalleryImages = ({ images }) => {
               isOpen={viewerIsOpen}
               onRequestClose={closeLightbox}
               style= {customStyles}
-              
               >
-                <a role="button" onClick={closeLightbox} style={{marginLeft:'99%',cursor:'pointer'}}><img src={require("assets/icons/2.png")} height="28px" width="28px" /></a>
+                <a role="button" onClick={closeLightbox} href="#pablo" style={{marginLeft:'99%',cursor:'pointer'}}><img src={require("assets/icons/2.png")} height="28px" width="28px" alt="x"/></a>
                 <Row>
                   <Col md="6">
                   <Animated
@@ -111,13 +113,13 @@ const GalleryImages = ({ images }) => {
                   animationInDelay={50}
                   isVisible={true}
                   >
-                    <img src={photos[currentImage].src} width='90%' height='90%'/>
+                    <img src={photos[currentImage].src} width='80%' height='80%' alt="..."/>
                     </Animated>
                   </Col>
                   <Col>
                   <Animated
                   animationIn='zoomIn'
-                  animationInDelay={500}
+                  animationInDelay={400}
                   isVisible={true}
                   >
                     <div style={{marginTop:'20%'}}>

@@ -10,21 +10,11 @@ import "assets/demo/react-demo.css";
 
 // pages
 import Pages from "pages";
-// import Index from "views/Index";
-// import GalleryIndex from "views/GalleryIndex";
-// import GallerySingle from "views/GallerySingle";
-// import BlogPosts from "views/BlogPosts";
-// import BlogSingle from "views/BlogSingle"
-// import Team from "views/Team";
-import ContactUs from "pages/ContactPage";
-// import Editions from "views/Editions";
 
 // Components 
 import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import Presentation from "sections/SocSection/SocietiesIndex";
-import SocietySingle from "pages/SocietiesSingleCategory";
-import SocietySingleSingle from "pages/SocSingle";
 
 const Routes = () => (
     <>
@@ -38,14 +28,10 @@ const Routes = () => (
             <Route exact path="/gallery" component={Pages.GalleryPage} />
             <Route path="/gallery/:slug" component={Pages.GallerySinglePage} />
             <Route path="/team" component={Pages.TeamPage} />
-            {/* 
-            <Route path="/team" component={Team} />
-            
-            {/* <Route path="/team" component={Team} /> */}
-            <Route path="/contact" component={ContactUs} />
+            <Route path="/contact" component={Pages.ContactPage} />
             <Route path='/societies' component={Presentation} exact />
-            <Route path='/societies/:slug' component={SocietySingle} exact/>
-            <Route path='/societies/:slug/:slug2' component={SocietySingleSingle} />
+            <Route path='/societies/:slug' component={Pages.SocietySinglePage} exact/>
+            <Route path='/societies/:slug/:slug2' component={Pages.SocietySingleSingle} />
         </Switch>
         <MainFooter />
     </>
