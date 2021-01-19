@@ -273,7 +273,17 @@ a {
   position: sticky;
   top: 0;
 }
-
+.slider-list li .news_soc_card{
+    background-color: rgb(29, 27, 27) !important;
+    color: blanchedalmond !important;
+}
+.slider-list li .news_soc_card div.description p,h4{
+    color: rgb(238, 234, 229) !important;
+}
+.slider-list li .news_soc_card:hover{
+    background-color: rgb(85, 83, 83) !important;
+    color: blanchedalmond !important;
+}
 .section {
     padding: 70px 0;
     position: relative;

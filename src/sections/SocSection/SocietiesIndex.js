@@ -29,6 +29,7 @@ function Presentation() {
   // function that is being called on scroll of the page
   const checkScroll = () => {
     // it takes all the elements that have the .add-animation class on them
+    
     const componentPosition = document.getElementsByClassName("add-animation");
     const scrollPosition = window.pageYOffset;
     for (var i = 0; i < componentPosition.length; i++) {
@@ -81,13 +82,12 @@ function Presentation() {
       window.removeEventListener("scroll", checkScroll);
     };
   },[]);
-  if (mob === false && loaded===true)
+  if (mob === false && loaded===true){
     return (
       <>
       {console.log(data)}
         <SocHeader />
         <Container>
-        <BackgroundBlob/>
         <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">News</h2>
@@ -118,10 +118,10 @@ function Presentation() {
             >
                 {data.map(x=>{
                   return (
-                  <Card width="90%">
+                <Card width="90%" className="news_soc_card">
                   <div className="info">
-                    <div className="icon icon-success">
-                      <i className="nc-icon nc-palette" />
+                    <div className="icon icon-neutral">
+                      <i className="nc-icon nc-alert-circle-i" />
                     </div>
                     <div className="description">
                       <h4 className="info-title">{x.title}</h4>
@@ -136,88 +136,93 @@ function Presentation() {
                 </Carousel>
             </Row>
             </Container>
-        <Row>
+        
           <SectionComponents />
-        </Row>
+        
       </>
     );
+  }
   else if(mob===true && loaded===true) {
     return (
       <>
         <SocHeader />
-        <Carousel
-          slidesToShow={1}
-          swiping={true}
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button
-              onClick={previousSlide}
-              className="btn-move-left btn-round btn btn-default"
-            >
-              <i className="nc-icon nc-minimal-left"></i>
-            </button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button
-              className="btn-move-right btn-round btn btn-default"
-              onClick={nextSlide}
-            >
-              <i className="nc-icon nc-minimal-right"></i>
-            </button>
-          )}
-          renderBottomCenterControls={""}
-          cellSpacing={20}
+        {
+        //   <Carousel
+        //   slidesToShow={1}
+        //   swiping={true}
+        //   renderCenterLeftControls={({ previousSlide }) => (
+        //     <button
+        //       onClick={previousSlide}
+        //       className="btn-move-left btn-round btn btn-default"
+        //     >
+        //       <i className="nc-icon nc-minimal-left"></i>
+        //     </button>
+        //   )}
+        //   renderCenterRightControls={({ nextSlide }) => (
+        //     <button
+        //       className="btn-move-right btn-round btn btn-default"
+        //       onClick={nextSlide}
+        //     >
+        //       <i className="nc-icon nc-minimal-right"></i>
+        //     </button>
+        //   )}
+        //   renderBottomCenterControls={""}
+        //   cellSpacing={20}
 
-        >
-            <Card>
-              <Link to="/societies/cultural">
-              <img
-                alt="CULTURAL"
-                className=""
-                src={imgurl}
-                style={{ height: "400px" }}
-              />
-              </Link>
-            </Card>
-
-
-            <Card>
-              <Link to="/societies/tech_team">
-                <img
-                  alt="C"
-                  className=""
-                  src={imgurl2}
-                  style={{ height: "400px" }}
-                />
-              </Link>
-            </Card>
+        // >
+        //     <Card>
+        //       <Link to="/societies/cultural">
+        //       <img
+        //         alt="CULTURAL"
+        //         className=""
+        //         src={imgurl}
+        //         style={{ height: "400px" }}
+        //       />
+        //       </Link>
+        //     </Card>
 
 
+        //     <Card>
+        //       <Link to="/societies/tech_team">
+        //         <img
+        //           alt="C"
+        //           className=""
+        //           src={imgurl2}
+        //           style={{ height: "400px" }}
+        //         />
+        //       </Link>
+        //     </Card>
 
-            <Card>
-              <Link to="/societies/miscellaneous">
-                <img
-                  alt="..."
-                  className=""
-                  src={imgurl3}
-                  style={{ height: "400px" }}
-                />
-              </Link>
-            </Card>
 
 
-            <Card>
-              <Link to="/societies/technical">
-                <img
-                  alt="..."
-                  className=""
-                  src={imgurl4}
-                  style={{ height: "400px" }}
-                />
-              </Link>
-            </Card>
+        //     <Card>
+        //       <Link to="/societies/miscellaneous">
+        //         <img
+        //           alt="..."
+        //           className=""
+        //           src={imgurl3}
+        //           style={{ height: "400px" }}
+        //         />
+        //       </Link>
+        //     </Card>
+
+
+        //     <Card>
+        //       <Link to="/societies/technical">
+        //         <img
+        //           alt="..."
+        //           className=""
+        //           src={imgurl4}
+        //           style={{ height: "400px" }}
+        //         />
+        //       </Link>
+        //     </Card>
           
-        </Carousel>
-        <Container>
+        // </Carousel>
+        
+          }
+          <SectionComponents/>
+          <Container>
         <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">News</h2>
@@ -225,6 +230,7 @@ function Presentation() {
           </Row>
           <Row>
               <Carousel
+                style={{marginBottom:'50px'}}
                 slidesToShow={1}
                 swiping={true}
                 renderCenterLeftControls={({ previousSlide }) => (
@@ -248,10 +254,10 @@ function Presentation() {
             >
                 {data.map(x=>{
                   return (
-                  <Card>
+                    <Card  className="news_soc_card" >
                   <div className="info">
-                    <div className="icon icon-danger">
-                      <i className="nc-icon nc-palette" />
+                    <div className="icon icon-neutral">
+                      <i className="nc-icon nc-alert-circle-i" />
                     </div>
                     <div className="description">
                       <h4 className="info-title">{x.title}</h4>
@@ -261,6 +267,19 @@ function Presentation() {
                     </div>
                   </div>
                 </Card>
+                //   <Card>
+                //   <div className="info">
+                //     <div className="icon icon-danger">
+                //       <i className="nc-icon nc-palette" />
+                //     </div>
+                //     <div className="description">
+                //       <h4 className="info-title">{x.title}</h4>
+                //       <p className="description">
+                //         {x.description.slice(0,100)}
+                //       </p>
+                //     </div>
+                //   </div>
+                // </Card>
                   )
                 })}
                 </Carousel>
