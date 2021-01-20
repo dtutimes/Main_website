@@ -50,7 +50,7 @@ class SectionComponents extends React.Component {
             <Link to='/societies/technical'>
               <button className="soccard__btn">Explore</button>
             </Link>
-            </div>
+          </div>
         </div>
         <div className="soccard" style={{marginRight:"0"}}>
           <div className="soccard__content">

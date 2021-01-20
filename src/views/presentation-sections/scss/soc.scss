@@ -24,7 +24,7 @@ html, body {
   display: grid;
   grid-gap: 1rem 3rem;
   padding: 1rem;
-  max-width: 1024px;
+  max-width: 80%;
   margin: 0 auto;
   font-family: var(--font-sans);
   
@@ -214,6 +214,10 @@ html, body {
     }
   }
 }
+.soccard__page-content:hover> .soccard:not(:hover){
+  filter: brightness(0.5) saturate(0) contrast(1) blur(2px) !important;
+}
+
 
 $orange: #DA4D1D;
 $blue: #2b26c3;
