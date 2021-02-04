@@ -33,8 +33,8 @@ class SectionComponents extends React.Component {
     isVisible={true}
     >
     
-      <div className = "soccard__page-content" style={{marginTop:"150px", marginBottom: "100px"}}>
-        <div className="soccard" style={{marginRight:"30px", marginBottom: "30px"}}>
+      <div className = "soccard__page-content" style={{marginTop:"4rem", marginBottom: "100px"}}>
+        <div className="soccard" >
             <div className="soccard__content">
               <h2 className="soccard__title">Cultural</h2>
               <p className="soccard__copy">DUMMY TEXT</p>
@@ -43,7 +43,7 @@ class SectionComponents extends React.Component {
               </Link>
             </div>
         </div>
-        <div className="soccard" style={{marginLeft:"30px", marginBottom: "30px"}}>
+        <div className="soccard" >
           <div className="soccard__content">
             <h2 className="soccard__title">Technical</h2>
             <p className="soccard__copy">DUMMY TEXT</p>
@@ -52,7 +52,7 @@ class SectionComponents extends React.Component {
             </Link>
           </div>
         </div>
-        <div className="soccard" style={{marginRight:"30px"}}>
+        <div className="soccard" >
           <div className="soccard__content">
             <h2 className="soccard__title">Tech-Teams</h2>
             <p className="soccard__copy">DUMMY TEXT</p>
@@ -61,7 +61,7 @@ class SectionComponents extends React.Component {
             </Link>
           </div>
         </div>
-        <div className="soccard" style={{marginLeft:"30px"}}>
+        <div className="soccard" >
           <div className="soccard__content">
             <h2 className="soccard__title">Miscellaneous</h2>
             <p className="soccard__copy">DUMMY TEXT</p>

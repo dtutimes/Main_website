@@ -12,14 +12,14 @@ import SectionComponents from "../../views/presentation-sections/SectionComponen
 import SocHeader from "components/PageHeaders/SocHeader.js";
 // import Axios from "axios";
 import { Loader } from "components/LoaderComponent.js";
-
+import './SocietiesIndex.scss';
 
 function Presentation() {
   const [mob, setMob] = useState(false);
   const [data,setData] = useState([]);
   const [loaded,setLoaded] = useState(false);
   document.documentElement.classList.remove("nav-open");
-
+  const logodtu = require("assets/img/icons/W.png");
   const checkScroll = () => {
 
     
@@ -80,7 +80,7 @@ function Presentation() {
         <Container>
         <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title mb-5">News</h2>
+                <h1 className="title mb-5">News</h1>
               </Col> 
           </Row>
           <Row>
@@ -111,10 +111,10 @@ function Presentation() {
                 <Card width="90%" className="news_soc_card">
                   <div className="info">
                     <div className="icon icon-neutral">
-                      <i className="nc-icon nc-alert-circle-i" />
+                      <img src={logodtu}></img>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">{x.title}</h4>
+                      <h5 className="info-title">{x.title}</h5>
                       <p className="description">
                         {x.description.slice(0,100)}
                       </p>
@@ -171,11 +171,11 @@ function Presentation() {
                   return (
                     <Card  className="news_soc_card" >
                   <div className="info">
-                    <div className="icon icon-neutral">
-                      <i className="nc-icon nc-alert-circle-i" />
+                    <div className="icon icon-neutral" >
+                      <img src={logodtu}></img>
                     </div>
                     <div className="description">
-                      <h4 className="info-title">{x.title}</h4>
+                      <h5 className="info-title">{x.title}</h5>
                       <p className="description">
                         {x.description.slice(0,100)}
                       </p>

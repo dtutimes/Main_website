@@ -1,4 +1,4 @@
-h2 {
+h2.title {
 	color: #696969;
 	font-size: 26px;
 	font-weight: 300;
@@ -8,7 +8,7 @@ h2 {
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
 }
-h2::after {
+h2.title::after {
 	content: "";
 	width: 100%;
 	position: absolute;
@@ -18,9 +18,9 @@ h2::after {
 	background: #d4d4d4;
 	left: 0;
 	right: 0;
-	bottom: 14px;
+	bottom: 0px;
 }
-h2 span {
+h2.title span {
 	display: inline-block;
 	padding: 0 25px;
 	background:#ebebeb;
@@ -77,4 +77,8 @@ h2 span {
 }
 .carousel-indicators li.active {
 	background: #555;
+}
+.icon-neutral{
+	width: 40%;
+	margin:auto;
 }
