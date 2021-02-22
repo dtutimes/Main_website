@@ -18,11 +18,12 @@ function Presentation() {
   const [mob, setMob] = useState(false);
   const [data,setData] = useState([]);
   const [loaded,setLoaded] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
+  const [heightMode, setHeightMode] = useState('max');
+  const [initialSlideHeight, setinitialSlideHeight] = useState(200);
   document.documentElement.classList.remove("nav-open");
   const logodtu = require("assets/img/icons/W.png");
   const checkScroll = () => {
-
-    
     const componentPosition = document.getElementsByClassName("add-animation");
     const scrollPosition = window.pageYOffset;
     for (var i = 0; i < componentPosition.length; i++) {
@@ -85,8 +86,15 @@ function Presentation() {
           </Row>
           <Row>
               <Carousel
-                slidesToShow={3}
+                autoplay={autoplay}
+                framePadding ={"20px"}
+                pauseOnHover = {true}
+                wrapAround = {true}
+                slidesToShow={4}
                 swiping={true}
+                initialSlideHeight={initialSlideHeight}
+                heightMode={heightMode}
+                
                 renderCenterLeftControls={({ previousSlide }) => (
                     <button
                     onClick={previousSlide}
@@ -108,14 +116,14 @@ function Presentation() {
             >
                 {data.map(x=>{
                   return (
-                <Card width="90%" className="news_soc_card">
-                  <div className="info">
+                <Card className="news_soc_card">
+                  <div className="info news_info">
                     <div className="icon icon-neutral">
                       <img src={logodtu}></img>
                     </div>
                     <div className="description">
                       <h5 className="info-title">{x.title}</h5>
-                      <p className="description">
+                      <p className="description news_description">
                         {x.description.slice(0,100)}
                       </p>
                     </div>
@@ -145,9 +153,13 @@ function Presentation() {
           </Row>
           <Row>
               <Carousel
+                autoplay={autoplay}
+                pauseOnHover = {true}
                 style={{marginBottom:'50px'}}
                 slidesToShow={1}
+                wrapAround = {true}
                 swiping={true}
+                heightMode = {heightMode}
                 renderCenterLeftControls={({ previousSlide }) => (
                     <button
                     onClick={previousSlide}
@@ -170,13 +182,13 @@ function Presentation() {
                 {data.map(x=>{
                   return (
                     <Card  className="news_soc_card" >
-                  <div className="info">
+                  <div className=" info news_info_small">
                     <div className="icon icon-neutral" >
                       <img src={logodtu}></img>
                     </div>
                     <div className="description">
                       <h5 className="info-title">{x.title}</h5>
-                      <p className="description">
+                      <p className="description news_description">
                         {x.description.slice(0,100)}
                       </p>
                     </div>
