@@ -1,0 +1,121 @@
+$sz: 300px;
+$mainC: #f1f3f6;
+$secC: #9dabc0;
+$svgC: rgba(#929cd0, .8);
+.soc_text-left{
+    width: 70% !important;
+    margin-left: 2em !important;
+}
+h2.socsingle_news_title{
+    border-bottom: 6px solid #a8ddec;
+}
+.news_container{
+    padding-left: 10px;
+    padding-right:10px;
+}
+@media(min-width:600px){
+    .news_container{
+        padding-left: 20px;
+        padding-right:0;
+    }
+}
+.news_hr{
+    margin-top: 0;
+    border-top: 1px solid #51bcda;
+    border-right-color: #a8ddec;
+    border-bottom-color: #e2fafb;
+    border-left-color: #e2fafb;
+}
+
+.news_box {
+
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    flex-direction: column;
+    background: #f1f3f6;
+
+    border-radius: 20px;
+    box-shadow: 
+      inset 0 0 15px rgba(55, 84, 170,0),
+      inset 0 0 20px rgba(255, 255, 255,0),
+      7px 7px 15px rgba(55, 84, 170,.15),
+      -7px -7px 20px rgba(255, 255, 255,1),
+      inset 0px 0px 4px rgba(255, 255, 255,.2);
+  }
+  
+  .news_box_text {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    // background: red;
+    h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 2em;
+      line-height: 1.45em;
+    }
+  }
+
+ 
+  .slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .slider-wrapper {
+    width: 760px;
+    margin: auto;
+  }
+  .slick-slide {
+    height: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .slick-slide:focus {
+    outline: none;
+  }
+  .slick-slide-title {
+    text-transform: capitalize;
+  }
+  .slick-slide-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3),
+      0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  }
+  .slick-slide-label {
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    left: 0px;
+    font-size: 1.5em;
+    bottom: 0px;
+    width: 100%;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #065786;
+  }
+  .thumbnail-slider-wrap {
+    margin-top: 15px;
+    height: 85px;
+  }
+  .thumbnail-slider-wrap .slick-track .slick-slide {
+    text-align: center;
+  }
+  .thumbnail-slider-wrap .slick-track .slick-slide img {
+    width: 70%;
+  }
+  .App{
+    margin: auto;
+  }
+  .thumbnail-img-slick{
+      height:100px;
+  }

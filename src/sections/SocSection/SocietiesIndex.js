@@ -81,7 +81,7 @@ function Presentation() {
         <Container>
         <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
-                <h1 className="title mb-5">News</h1>
+                <h1 className="socnews_title mb-5">News</h1>
               </Col> 
           </Row>
           <Row>
