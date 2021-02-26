@@ -17,6 +17,7 @@ import ImageGallery from 'react-image-gallery';
 import SingleSocCard from "./SingleSocCard";
 import SingleSocGallery from "./SingleSocGallery";
 import '../../assets/scss/_singlesinglesoc.scss';
+import './Soc.css'
 
 
 class SocSingleMain extends React.Component {
@@ -161,7 +162,7 @@ window.addEventListener('resize',()=>{
             </Row>
             <Row>
               
-              <SingleSocGallery items={this.props.src}/>
+              <SingleSocGallery items={this.props.src} className="soc_gallery"/>
             </Row>
             
             <Row>

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function SingleSocGallery({items}) {
-    const [nav1, setNav1] = useState(null);
+  const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [slider1, setSlider1] = useState(null);
   const [slider2, setSlider2] = useState(null);
@@ -71,7 +71,7 @@ function SingleSocGallery({items}) {
     //   };
     
       const settingsThumbs = {
-          arrows:true,
+        arrows:true,
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
@@ -92,23 +92,23 @@ function SingleSocGallery({items}) {
               breakpoint: 500,
               settings: {
                 arrows: true,
-                slidesToShow: 3
+                slidesToShow: 2
               }
             },
             {
               breakpoint: 400,
               settings: {
                 arrows: true,
-                slidesToShow: 3
+                slidesToShow: 2
               }
             }
           ]
       };
       return (
 
-        <div className="App">
+        <div className="App" >
     
-          <div className="slider-wrapper">
+          <div className="slider-wrapper soc_gallery">
     
             <Slider
               {...settingsMain}
