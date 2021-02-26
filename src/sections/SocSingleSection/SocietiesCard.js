@@ -34,9 +34,9 @@ const SocietiesCard = props => {
     //   </CardBody>
     // </Card>
     <div className="card transition">
-      <h2 className="transition h2_soc">Vibe DTU<br /><small className="small_soc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </small></h2>
+      <h2 className="transition h2_soc">{props.name}<br /><small className="small_soc">{props.des} </small></h2>
       <div className="cta-container transition"></div>
-      <div className="card_circle transition" style={{background: `url(${props.img})`}}></div>
+      <div className="card_circle transition" style={{background: `url(${props.img})`, backgroundSize:"cover"}}></div>
     </div>
 
 

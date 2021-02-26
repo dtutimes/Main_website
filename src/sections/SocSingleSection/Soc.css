@@ -94,3 +94,8 @@
     width: 420px !important;
   }
 }
+@media screen and (max-width: 480px) {
+  .soc_gallery {
+    width: 300px !important;
+  }
+}
