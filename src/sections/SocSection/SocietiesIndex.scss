@@ -84,6 +84,8 @@ h2.socnews_title span {
 }
 .slider-list li .news_soc_card{
 	height:100%;
+	display: flex;
+    align-items: center;
 }
 .news_info{
 	padding: 0.9em;

@@ -184,7 +184,7 @@ function Presentation() {
                     <Card  className="news_soc_card" >
                   <div className=" info news_info_small">
                     <div className="icon icon-neutral" >
-                      <img src={logodtu}></img>
+                      <img src={logodtu} style={{maxWidth:"70%"}}></img>
                     </div>
                     <div className="description">
                       <h5 className="info-title">{x.title}</h5>
