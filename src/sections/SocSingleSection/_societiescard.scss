@@ -1,0 +1,112 @@
+$dark: #111;
+$gray: #777;
+$gray-light: #999;
+$light: #ececec;
+$lighter: #f8f8f8;
+$light-bg: #f4f4f4;
+$white: #fff;
+$error-red: #e80000;
+$success-green: #0F9D58;
+$highlight-text-bg: #17DA5B;
+$body-font: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$heading-font: 'Montserrat', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$alt-heading-font: 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+
+.t-item {
+    display: block;
+    border-top: 1px solid $lighter;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+
+        .t-image {
+
+            .t-description {
+                bottom: 0;
+
+                .content-wrapper {
+                    padding-top: 0;
+                    border-bottom: 1px solid rgba(235,235,236, 1);
+                    opacity: 1;
+                }
+            }
+        }
+    } // &:hover
+
+    .t-image {
+        position: relative;
+        height: 375px;
+        overflow: hidden;
+
+        .t-description {
+            display: block;
+            position: absolute;
+            padding: 100px 30px 30px 30px;
+            bottom: -100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255,255,255, 1);
+            transition: bottom .4s;
+
+            .content-wrapper {
+                opacity: 0;
+                padding-top: 100px;
+                padding-bottom: 73px;
+                border-bottom: 1px solid rgba(235,235,236, 0);
+                transition: opacity 1s, padding-top .8s, border 1.5s ease-out;
+
+                h4 {
+                    margin: 0;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    } // .t-image
+
+    .t-info {
+        padding: 25px 30px;
+
+        h4 {
+            margin: 0;
+        }
+
+        .t-name {
+            font-size: 16px;
+        }
+
+        .t-role {
+            @extend h4;
+            display: block;
+            font-family: $alt-heading-font;
+            font-size: 13px;
+            letter-spacing: 3.5px;
+            color: $gray-light;
+        }
+
+        .social-links {
+            margin: 0;
+            padding: 15px 0 0 0;
+            list-style: none;
+
+            li {
+                display: inline-block;
+
+                a {
+                    display: block;
+                    padding-right: 12px;
+                    font-size: 21px;
+                    color: $dark;
+
+                    &:hover {
+                        color: $gray-light;
+                    }
+                }
+            }
+        } // .social-links
+    } // .t-info
+} 
