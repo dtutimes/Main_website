@@ -18,6 +18,7 @@ import SingleSocCard from "./SingleSocCard";
 import SingleSocGallery from "./SingleSocGallery";
 import '../../assets/scss/_singlesinglesoc.scss';
 import './Soc.css'
+import NewsSection from './NewsSection'
 
 
 class SocSingleMain extends React.Component {
@@ -69,7 +70,7 @@ window.addEventListener('resize',()=>{
               <Col className="ml-auto mr-auto text-center" md="8" sm="12">
                 <SingleSocCard des={this.props.des} img={this.props.img}></SingleSocCard>
               </Col>
-              <Col md="4" sm="12" className="news_container">
+              <Col md="4" sm="12" className="news_container" style={{paddingRight: '0px'}}>
                   <h2 className="socsingle_news_title">News</h2>
                   
                   <NewsTicker
@@ -99,6 +100,13 @@ window.addEventListener('resize',()=>{
                 />
               </Col>
             </Row>
+            
+            <Row>
+            <Col className="ml-auto mr-auto text-center" md="8">
+              <NewsSection />
+              </Col>
+            </Row>
+
             <Row>
                 <Col className="ml-auto mr-auto text-center" md="8">
                   <Animated

@@ -8,3 +8,10 @@
     width: 300px !important;
   }
 }
+
+.news_carousal {
+  height: 300px;
+  background-color: lightgrey;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
