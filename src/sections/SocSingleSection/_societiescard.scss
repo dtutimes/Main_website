@@ -1,112 +1,215 @@
-$dark: #111;
-$gray: #777;
-$gray-light: #999;
-$light: #ececec;
-$lighter: #f8f8f8;
-$light-bg: #f4f4f4;
-$white: #fff;
-$error-red: #e80000;
-$success-green: #0F9D58;
-$highlight-text-bg: #17DA5B;
-$body-font: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-$heading-font: 'Montserrat', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-$alt-heading-font: 'Open Sans', 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
 
-.t-item {
-    display: block;
-    border-top: 1px solid $lighter;
-    background: #fff;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-    transition: all .3s;
+@mixin radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
+}
 
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 22px 43px rgba(0, 0, 0, 0.15);
+@mixin cardsOpen() {
+    &::before {
+      background: rgba(10,72,112, 0.6);
+    }
+    .book-container {
+      .content {
+        opacity: 1;
 
-        .t-image {
+        transform: translateY(0px);
+      }
+    }
 
-            .t-description {
-                bottom: 0;
+    .informations-container {      
+      transform: translateY(0px);
+      .more-information {
+        opacity: 1;
+      }
+    }
+}
 
-                .content-wrapper {
-                    padding-top: 0;
-                    border-bottom: 1px solid rgba(235,235,236, 1);
-                    opacity: 1;
-                }
-            }
-        }
-    } // &:hover
+.soc_sectioncard_title{
+  color: #0a4870;
+  font-weight: 500;
+}
 
-    .t-image {
+ul.soc_sectioncard{
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+    padding:0;
+  
+  .booking-card{
+    position: relative;
+    width: 300px;
+    display: flex;
+    // flex: 0 0 300px;
+    flex-direction: column;
+    
+    // margin: 20px;
+    margin-bottom: 30px;
+    @include radius(10px);
+    
+    overflow: hidden;
+    
+    background-position: center center;
+    background-size: cover;
+    
+    text-align: center;
+    color: #0a4870;
+    
+    transition: .3s;
+    
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      
+      background: rgba(10,72,112, 0);
+      
+      transition: .3s;
+    }
+    
+    .book-container {
+      height: 120px;
+      .content {
         position: relative;
-        height: 375px;
-        overflow: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        
+        transform: translateY(-200px);
+        
+        transition: .3s;
+        
+        .btn {      
+          border: 3px solid white;
+          padding: 10px 15px;
+          
+          background: none;
+          
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 1.3em;
+          color: white;
+          
+          cursor: pointer;
+          
+          transition: .3s;
+          
+          &:hover {
+            background: white;
+            
+            border: 0px solid white;
+            
+            color: #0a4870;
+          }
+        }
+      }
+    }
+    
+    .informations-container{      
+      flex: 1 0 auto;
+      
+      padding: 20px;
+      
+      background: #f0f0f0;
+      
+      transform: translateY(206px);
+      
+      transition: .3s;
+      
+      .soc_sectioncard_title {
+        position: relative;
+        
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        
+        font-weight: bold;
+        font-size: 1.2em;
+        
+        &::after{
+          content: '';
+          
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          
+          height: 3px;
+          width: 50px;
+          
+          margin: auto;
+          
+          background: #0a4870;
+        }
+      }
+      
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        margin-top: 10px;
+        
+        .icon {
+          margin-right: 10px;
+        }
+      }
+      
+      .more-information {
+        opacity: 0;
+        
+        transition: .3s;
+        .info-and-date-container {
+          display: flex;
 
-        .t-description {
-            display: block;
-            position: absolute;
-            padding: 100px 30px 30px 30px;
-            bottom: -100%;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(255,255,255, 1);
-            transition: bottom .4s;
+          .box {
+            flex: 1 0;
 
-            .content-wrapper {
-                opacity: 0;
-                padding-top: 100px;
-                padding-bottom: 73px;
-                border-bottom: 1px solid rgba(235,235,236, 0);
-                transition: opacity 1s, padding-top .8s, border 1.5s ease-out;
+            padding: 15px;
+            margin-top: 20px;
+            @include radius(10px);
 
-                h4 {
-                    margin: 0;
-                    padding-bottom: 25px;
-                }
+            background: white;
+
+            font-weight: bold;
+            font-size: 0.9em;
+
+            .icon {
+              margin-bottom: 5px;
             }
-        }
-    } // .t-image
 
-    .t-info {
-        padding: 25px 30px;
+            &.info{
+              color: #ec992c;
 
-        h4 {
-            margin: 0;
-        }
-
-        .t-name {
-            font-size: 16px;
-        }
-
-        .t-role {
-            @extend h4;
-            display: block;
-            font-family: $alt-heading-font;
-            font-size: 13px;
-            letter-spacing: 3.5px;
-            color: $gray-light;
-        }
-
-        .social-links {
-            margin: 0;
-            padding: 15px 0 0 0;
-            list-style: none;
-
-            li {
-                display: inline-block;
-
-                a {
-                    display: block;
-                    padding-right: 12px;
-                    font-size: 21px;
-                    color: $dark;
-
-                    &:hover {
-                        color: $gray-light;
-                    }
-                }
+              margin-right: 10px;
             }
-        } // .social-links
-    } // .t-info
-} 
+          }
+        }
+        .disclaimer {
+          margin-top: 20px;
+
+          font-size: 0.8em;
+          color: #7d7d7d;
+        }
+      }
+    }
+    
+    &:hover {
+      @include cardsOpen();
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  ul.soc_sectioncard {
+    .booking-card{
+      @include cardsOpen();
+    }
+  }
+}

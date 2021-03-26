@@ -65,12 +65,13 @@ export default class SocietySingle extends React.Component {
                     isVisible={true}
                   >
                     <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`}>
-                      <SocietiesCard
+                      <SocietiesCard 
                         img={this.state.data[cs].society_imgUrl}
                         name={this.state.data[cs].name}
                         des={this.state.data[cs].description}
                         head={this.state.data[cs].head_incharge}
                         prHead={this.state.data[cs].pr_incharge}
+                        category = {this.state.data[cs].category}
                       />
                     </Link>
                   </Animated>
@@ -106,6 +107,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[tts].description}
                       head={this.state.data[tts].head_incharge}
                       prHead={this.state.data[tts].pr_incharge}
+                      category = {this.state.data[tts].category}
                     />
                     </Link>
                   </Animated>
@@ -141,6 +143,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[ts].description}
                       head={this.state.data[ts].head_incharge}
                       prHead={this.state.data[ts].pr_incharge}
+                      category = {this.state.data[ts].category}
                     />
                     </Link>
                   </Animated>
@@ -176,6 +179,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[ms].description}
                       head={this.state.data[ms].head_incharge}
                       prHead={this.state.data[ms].pr_incharge}
+                      category = {this.state.data[ms].category}
                     />
                     </Link>
                   </Animated>
