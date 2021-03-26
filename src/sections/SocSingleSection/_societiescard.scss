@@ -7,7 +7,7 @@
 
 @mixin cardsOpen() {
     &::before {
-      background: rgba(10,72,112, 0.6);
+      background: rgba(2, 28, 46, 0.6);
     }
     .book-container {
       .content {
@@ -26,7 +26,7 @@
 }
 
 .soc_sectioncard_title{
-  color: #0a4870;
+  color: #f8f9fa;
   font-weight: 500;
 }
 
@@ -36,7 +36,7 @@ ul.soc_sectioncard{
 
     list-style: none;
     padding:0;
-  
+	
   .booking-card{
     position: relative;
     width: 300px;
@@ -54,7 +54,7 @@ ul.soc_sectioncard{
     background-size: cover;
     
     text-align: center;
-    color: #0a4870;
+    color: #dee2e6;
     
     transition: .3s;
     
@@ -117,7 +117,7 @@ ul.soc_sectioncard{
       
       padding: 20px;
       
-      background: #f0f0f0;
+      background: #212529;
       
       transform: translateY(206px);
       
@@ -145,7 +145,7 @@ ul.soc_sectioncard{
           
           margin: auto;
           
-          background: #0a4870;
+          background: #f8f9fa;
         }
       }
       
@@ -185,17 +185,23 @@ ul.soc_sectioncard{
             }
 
             &.info{
-              color: #ec992c;
+              color: #0d0d25;
 
               margin-right: 10px;
             }
+			&.date{
+				color: #0d0d25;
+  
+				margin-right: 10px;
+			  }
           }
         }
         .disclaimer {
-          margin-top: 20px;
-
-          font-size: 0.8em;
-          color: #7d7d7d;
+			margin-top: 20px;
+			font-size: 0.9em;
+			font-weight: 500;
+			color: #f8f9fa;
+			height:5em;
         }
       }
     }
