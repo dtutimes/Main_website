@@ -61,7 +61,7 @@ export default class SocietySingle extends React.Component {
             <Row>
             {c.map(cs => {
               return (
-                <Col md="4" className="mt-5" >
+                <Col md="4" className="mt-5 p-0">
                   <Animated
                     animationIn="fadeIn"
                     animationInDelay={1500}
