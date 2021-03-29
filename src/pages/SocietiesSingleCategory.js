@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 import { Col,Row,Card,Button, Container } from "reactstrap";
 import { Loader } from "components/LoaderComponent";
 import Carousel from "nuka-carousel";
+import { PageTransition } from '@steveeeie/react-page-transition';
+import "./styles.css";
+
 
 let c = [];
 let tt = [];
@@ -159,8 +162,7 @@ export default class SocietySingle extends React.Component {
           <>
             <SocietySingleHeader
               name="Miscellaneous Societies"
-              des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it.
-"
+              des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it."
             />
             <Container>
             <Row>
