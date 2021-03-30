@@ -8,9 +8,15 @@ import { Link } from "react-router-dom";
 import { Col,Row,Card,Button, Container } from "reactstrap";
 import { Loader } from "components/LoaderComponent";
 import Carousel from "nuka-carousel";
-import { PageTransition } from '@steveeeie/react-page-transition';
-import "./styles.css";
+// import { PageTransition } from '@steveeeie/react-page-transition';
+// import "./styles.css";
+// import "react-tiger-transition/styles/main.min.css";
+// import { Link, glide } from "react-tiger-transition";
 
+// glide({
+//   name: "glide-right",
+//   direction: "right",
+// });
 
 let c = [];
 let tt = [];
@@ -38,6 +44,7 @@ export default class SocietySingle extends React.Component {
   }
   componentWillUnmount() {}
   render() {
+    const { location } = this.props;
     if (this.state.loaded) {
       for (let i = 0; i < this.state.data.length; i++) {
         if (this.state.data[i].category === "cultural") {
@@ -53,6 +60,7 @@ export default class SocietySingle extends React.Component {
       if (this.props.match.params.slug === "cultural") {
         return (
           <>
+          
             <SocietySingleHeader
               name="Cultural Societies"
               des="The Cultural Societies of DTU blow the stereotypical image of an engineer to smithereens. These societies exude vibrancy and encompass every shade of the spectrum."
@@ -61,12 +69,14 @@ export default class SocietySingle extends React.Component {
             <Row>
             {c.map(cs => {
               return (
+                
                 <Col md="4" className="mt-5 p-0">
                   <Animated
                     animationIn="fadeIn"
                     animationInDelay={1500}
                     isVisible={true}
                   >
+                  
                     <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`}>
                       <SocietiesCard 
                         img={this.state.data[cs].society_imgUrl}
@@ -77,12 +87,16 @@ export default class SocietySingle extends React.Component {
                         category = {this.state.data[cs].category}
                       />
                     </Link>
+                    
                   </Animated>
                 </Col>
+                
               );
+              
             })}
             </Row>
             </Container>
+            
           </>
         );
       } else if (this.props.match.params.slug === "tech_team") {

@@ -23,7 +23,25 @@
     }
   }
 }
+@mixin cardsOpen1() {
+  &::before {
+    background: rgba(2, 28, 46, 0.6);
+  }
+  .book-container {
+    .content {
+      opacity: 1;
 
+      transform: translateY(0px);
+    }
+  }
+
+  .informations-container {
+    transform: translateY(211px);
+    .more-information {
+      opacity: 1;
+    }
+  }
+}
 .soc_sectioncard_title {
   color: #f8f9fa;
   font-weight: 500;
@@ -216,7 +234,7 @@ ul.soc_sectioncard {
 @media (max-width: 768px) {
   ul.soc_sectioncard {
     .booking-card {
-      @include cardsOpen();
+      @include cardsOpen1();
     }
   }
 }
