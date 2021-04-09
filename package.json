@@ -9,6 +9,7 @@
     "classnames": "^2.2.6",
     "headroom.js": "0.9.4",
     "html-to-react": "^1.4.2",
+    "jquery": "^3.6.0",
     "moment": "2.24.0",
     "node-sass": "^4.13.0",
     "nouislider": "14.0.2",
@@ -45,6 +46,7 @@
     "react-transition-group": "^4.4.1",
     "reactstrap": "8.0.0",
     "slick-carousel": "^1.8.1",
+    "slider-pro": "^1.5.0",
     "styled-components": "^4.4.1"
   },
   "scripts": {

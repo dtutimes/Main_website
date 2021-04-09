@@ -24,11 +24,13 @@ import NewsSection from './NewsSection'
 class SocSingleMain extends React.Component {
 
   state = {
-    mob: false
+    mob: false,
+    news: this.props.news
 }
+
 componentDidMount() {
 const a =  window.innerWidth;
-
+// console.log(this.state.news);
 console.log(a);
 if(a<=800) {
     this.setState({
@@ -59,6 +61,7 @@ window.addEventListener('resize',()=>{
 })
 } 
   render() {
+    console.log(this.props.news);
   return (
     <>
       {/* <div className="section section-feature cd-section" id="features"> */}
@@ -103,7 +106,7 @@ window.addEventListener('resize',()=>{
             
             <Row>
             <Col className="ml-auto mr-auto text-center" md="8">
-              <NewsSection />
+              <NewsSection news={this.props.news}/>
               </Col>
             </Row>
 
