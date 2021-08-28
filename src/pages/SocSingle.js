@@ -2,6 +2,7 @@ import React from 'react';
 import SocietySingle from '../components/PageHeaders/SocSingleSingle'
 import SocSingleMain from 'sections/SocSingleSection/SocSingleMain';
 import { Loader } from 'components/LoaderComponent';
+
 import api from "api";
 export default class SocietySingleSingle extends React.Component {
     state ={
@@ -30,6 +31,7 @@ export default class SocietySingleSingle extends React.Component {
     
     }
     render() {
+      
         console.log(this.state.news)
         if(this.state.loaded && this.state.newsLoad) {
             return (
@@ -38,7 +40,7 @@ export default class SocietySingleSingle extends React.Component {
                         <SocietySingle img={this.state.data.society_imgUrl} name={this.state.data.name} des={this.state.data.description.slice(0,220)} /> 
                     </div>
                     <div>
-                        <SocSingleMain des={this.state.data.description} head={this.state.data.head_incharge} headC={this.state.data.head_contact_number} pr={this.state.data.pr_incharge} prC={this.state.data.pr_contact_number} src={['https://i.ytimg.com/vi/Cfn4xfl5weM/maxresdefault.jpg','https://www.hothiphopmusic.com/wp-content/uploads/2019/07/luh-soldier-10-bands.jpg']} news ={this.state.news} />
+                        <SocSingleMain img={this.state.data.society_imgUrl} des={this.state.data.description} head={this.state.data.head_incharge} headC={this.state.data.head_contact_number} pr={this.state.data.pr_incharge} prC={this.state.data.pr_contact_number} src={['https://i.ytimg.com/vi/Cfn4xfl5weM/maxresdefault.jpg','https://picsum.photos/800/400?img=6','https://picsum.photos/800/400?img=5','https://picsum.photos/800/400?img=4']} news ={this.state.news} />
                     </div>
                 </>
             )
