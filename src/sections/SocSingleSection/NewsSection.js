@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import './Soc.css';
 import jQuery from 'jquery';
 import $ from 'jquery';
-import '../../../node_modules/slider-pro/dist/css/slider-pro.css';
+import 'slider-pro/dist/css/slider-pro.min.css';
 import sliderPro from 'slider-pro';
 
 
