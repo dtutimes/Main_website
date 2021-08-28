@@ -1,8 +1,5 @@
 import React from "react";
 import './Soc.css'
-import {
-  Card, CardBody, CardTitle, CardFooter, Row, Col
-} from "reactstrap";
 
 const SocietiesCard = props => {
   return (
