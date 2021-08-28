@@ -6,7 +6,6 @@ import $ from 'jquery';
 import 'slider-pro/dist/css/slider-pro.min.css';
 import sliderPro from 'slider-pro';
 
-
 export default class SimpleSlider extends Component {
   componentDidMount(){
       $( '#my-slider' ).sliderPro({

@@ -4,16 +4,10 @@ import NewsTicker from "react-advanced-news-ticker";
 import {
   Container,
   Row,
-  Col,
-  Button,
-  Card
-} from "reactstrap";
-import Carousel from "nuka-carousel";
+  Col} from "reactstrap";
 import { Animated } from "react-animated-css";
 // core components
 import { Blob } from "react-blob";
-import { CardBody, CardTitle } from "reactstrap";
-import ImageGallery from 'react-image-gallery';
 import SingleSocCard from "./SingleSocCard";
 import SingleSocGallery from "./SingleSocGallery";
 import '../../assets/scss/_singlesinglesoc.scss';
