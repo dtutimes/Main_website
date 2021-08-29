@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@steveeeie/react-page-transition": "^1.2.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "classnames": "^2.2.6",
     "headroom.js": "0.9.4",
