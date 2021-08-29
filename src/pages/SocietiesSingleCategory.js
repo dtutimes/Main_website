@@ -8,6 +8,15 @@ import { Link } from "react-router-dom";
 import { Col,Row,Card,Button, Container } from "reactstrap";
 import { Loader } from "components/LoaderComponent";
 import Carousel from "nuka-carousel";
+// import { PageTransition } from '@steveeeie/react-page-transition';
+// import "./styles.css";
+// import "react-tiger-transition/styles/main.min.css";
+// import { Link, glide } from "react-tiger-transition";
+
+// glide({
+//   name: "glide-right",
+//   direction: "right",
+// });
 
 let c = [];
 let tt = [];
@@ -35,6 +44,7 @@ export default class SocietySingle extends React.Component {
   }
   componentWillUnmount() {}
   render() {
+    const { location } = this.props;
     if (this.state.loaded) {
       for (let i = 0; i < this.state.data.length; i++) {
         if (this.state.data[i].category === "cultural") {
@@ -50,6 +60,7 @@ export default class SocietySingle extends React.Component {
       if (this.props.match.params.slug === "cultural") {
         return (
           <>
+          
             <SocietySingleHeader
               name="Cultural Societies"
               des="The Cultural Societies of DTU blow the stereotypical image of an engineer to smithereens. These societies exude vibrancy and encompass every shade of the spectrum."
@@ -58,27 +69,34 @@ export default class SocietySingle extends React.Component {
             <Row>
             {c.map(cs => {
               return (
-                <Col md="4" className="mt-5" >
+                
+                <Col md="4" className="mt-5 p-0">
                   <Animated
                     animationIn="fadeIn"
                     animationInDelay={1500}
                     isVisible={true}
                   >
+                  
                     <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`}>
-                      <SocietiesCard
+                      <SocietiesCard 
                         img={this.state.data[cs].society_imgUrl}
                         name={this.state.data[cs].name}
                         des={this.state.data[cs].description}
                         head={this.state.data[cs].head_incharge}
                         prHead={this.state.data[cs].pr_incharge}
+                        category = {this.state.data[cs].category}
                       />
                     </Link>
+                    
                   </Animated>
                 </Col>
+                
               );
+              
             })}
             </Row>
             </Container>
+            
           </>
         );
       } else if (this.props.match.params.slug === "tech_team") {
@@ -106,6 +124,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[tts].description}
                       head={this.state.data[tts].head_incharge}
                       prHead={this.state.data[tts].pr_incharge}
+                      category = {this.state.data[tts].category}
                     />
                     </Link>
                   </Animated>
@@ -141,6 +160,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[ts].description}
                       head={this.state.data[ts].head_incharge}
                       prHead={this.state.data[ts].pr_incharge}
+                      category = {this.state.data[ts].category}
                     />
                     </Link>
                   </Animated>
@@ -156,8 +176,7 @@ export default class SocietySingle extends React.Component {
           <>
             <SocietySingleHeader
               name="Miscellaneous Societies"
-              des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it.
-"
+              des="These societies are too unique to be labeled. These encompass social work, competitive quizzing. The range is so diverse, you name it, we have it."
             />
             <Container>
             <Row>
@@ -176,6 +195,7 @@ export default class SocietySingle extends React.Component {
                       des={this.state.data[ms].description}
                       head={this.state.data[ms].head_incharge}
                       prHead={this.state.data[ms].pr_incharge}
+                      category = {this.state.data[ms].category}
                     />
                     </Link>
                   </Animated>

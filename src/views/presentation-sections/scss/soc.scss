@@ -1,6 +1,6 @@
 $imageIds: '1517021897933-0e0319cfbc28', '1533903345306-15d1c30952de', '1545243424-0ce743321e11', '1531306728370-e2ebd9d7bb99';
 
-$bp-md: 700px;
+$bp-md: 720px;
 $bp-lg: 800px;
 
 :root {
@@ -22,17 +22,17 @@ html, body {
 
 .soccard__page-content {
   display: grid;
-  grid-gap: 1rem 3rem;
+  grid-gap: 2rem 4rem;
   padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: var(--font-sans);
+  max-width: 90%;
+  margin: auto;
   
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, 1fr);
+  font-family: var(--font-sans);
+  @media (max-width: $bp-md) {
+    margin-top: 50px !important;
   }
   
-  @media (min-width: $bp-lg) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -50,6 +50,7 @@ html, body {
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
+  max-width:80%;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
     0 2px 2px rgba(0,0,0,0.1), 
     0 4px 4px rgba(0,0,0,0.1), 
@@ -58,7 +59,7 @@ html, body {
   
   @media (min-width: $bp-md) {
     height: 250px;
-    width:370px;
+    max-width:470px;
   }
   
   &:before {
@@ -214,6 +215,10 @@ html, body {
     }
   }
 }
+// .soccard__page-content:hover> .soccard:not(:hover){
+//   filter: brightness(0.5) saturate(0) contrast(1) blur(2px) !important;
+// }
+
 
 $orange: #DA4D1D;
 $blue: #2b26c3;

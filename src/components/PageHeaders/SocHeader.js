@@ -34,7 +34,7 @@ class SocHeader extends React.Component {
           <Container>
             
             <Animated
-              animationIn="fadeIn"
+              animationIn="zoomIn"
               animationInDelay={500}
               isVisible={true}
             >

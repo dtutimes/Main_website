@@ -16,10 +16,30 @@ import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import Presentation from "sections/SocSection/SocietiesIndex";
 
+// import "./assets/css/styles.css";
+// import { PageTransition } from '@steveeeie/react-page-transition';
+
 const Routes = () => (
     <>
-        <Navbar />
-        <Switch>
+    <Navbar />
+    {
+        // <Route
+        // render={({ location }) => {
+        //   return (
+        //     <PageTransition
+        //       preset="moveToLeftFromRight"
+        //       transitionKey={location.pathname}
+        //     >
+               
+                
+
+
+        //             </PageTransition>
+        //         );
+        //     }}
+        // />
+    }
+        <Switch >
             <Route exact path="/" component={Pages.LandingPage} />
             <Route path="/about" component={Pages.AboutPage} />
             <Route path="/editions" component={Pages.EditionPage} />
@@ -32,7 +52,7 @@ const Routes = () => (
             <Route path='/societies' component={Presentation} exact />
             <Route path='/societies/:slug' component={Pages.SocietySinglePage} exact/>
             <Route path='/societies/:slug/:slug2' component={Pages.SocietySingleSingle} />
-        </Switch>
+        </Switch>         
         <MainFooter />
     </>
 );
