@@ -10,6 +10,13 @@ import {
 import Carousel from "nuka-carousel";
 import { Animated } from "react-animated-css";
 // core components
+import { Blob } from "react-blob";
+import SingleSocCard from "./SingleSocCard";
+import SingleSocGallery from "./SingleSocGallery";
+import '../../assets/scss/_singlesinglesoc.scss';
+import './Soc.css'
+import NewsSection from './NewsSection'
+
 
 class SocSingleMain extends React.Component {
 
