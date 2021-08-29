@@ -1,0 +1,12 @@
+diff --git a/node_modules/slider-pro/dist/js/jquery.sliderPro.js b/node_modules/slider-pro/dist/js/jquery.sliderPro.js
+index c848d20..5ed1c2d 100644
+--- a/node_modules/slider-pro/dist/js/jquery.sliderPro.js
++++ b/node_modules/slider-pro/dist/js/jquery.sliderPro.js
+@@ -4,6 +4,7 @@
+ * Author: bqworks
+ * Author URL: http://bqworks.com/
+ */
++import jQuery from 'jquery';
+ ;(function( window, $ ) {
+ 
+ 	"use strict";
