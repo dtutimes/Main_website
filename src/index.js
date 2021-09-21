@@ -52,6 +52,7 @@ const Routes = () => (
             <Route path='/societies' component={Presentation} exact />
             <Route path='/societies/:slug' component={Pages.SocietySinglePage} exact/>
             <Route path='/societies/:slug/:slug2' component={Pages.SocietySingleSingle} />
+            <Route path='/quiz' component={Pages.QuizPage} />
         </Switch>         
         <MainFooter />
     </>

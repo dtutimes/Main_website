@@ -1,12 +1,19 @@
 import React, { Component } from "react";
 import { Badge, Media, Container, Row, Col } from "reactstrap";
 import { Parser } from "html-to-react";
+import MetaTags from 'react-meta-tags';
+
 const BlogContent = ({ blog }) => {
   const body = Parser().parse(blog.body);
 
   return (
     <>
       <div className="section pt-1">
+          <MetaTags>
+            <meta name="description" content={blog.biliner} />
+            <meta property="og:title" content={blog.title} />
+            <meta property="og:image" content={blog.imgUrl} />
+          </MetaTags>
         <Container>
           <Row>
             <Col></Col>
