@@ -11,7 +11,8 @@ const LandingHeader = () => {
         ref={pageHeader}
         style={{
           backgroundImage:
-            "url(" + require("assets/img/header/image-1.jpg") + ")"
+            "url(" + require("assets/img/header/image-1.jpg") + ")",
+          zIndex:"2"
         }}
       >
         <div className="filter " />
