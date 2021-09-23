@@ -10,9 +10,13 @@ const BlogContent = ({ blog }) => {
     <>
       <div className="section pt-1">
           <MetaTags>
-            <meta name="description" content={blog.biliner} />
+            <meta property="og:description" content={blog.biliner} />
             <meta property="og:title" content={blog.title} />
-            <meta property="og:image" content={blog.imgUrl} />
+            <meta property="og:image:secure_url" itemprop="image" content={blog.imgUrl} />
+            <meta property="og:type" content="website" />
+            <meta property="og:image:type" content="image/jpeg" />
+            <meta property="og:image:width" content="300" />
+            <meta property="og:image:height" content="300" />
           </MetaTags>
         <Container>
           <Row>
