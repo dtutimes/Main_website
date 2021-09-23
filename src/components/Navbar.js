@@ -76,7 +76,7 @@ function ColorNavbar(props) {
               The Official Newsletter of DTU
             </UncontrolledTooltip> */}
             <DarkModeToggle
-          className ="ml-auto"
+          className ="ml-auto dark-mode__button"
            onChange={darkMode.toggle}
            checked={darkMode.value}
            size={50}
