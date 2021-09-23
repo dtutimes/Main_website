@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import Headroom from "headroom.js";
+import useDarkMode from 'use-dark-mode';
+
 import {
   Collapse,
   NavbarBrand,
@@ -10,11 +12,15 @@ import {
   Nav,
   Container,
 } from "reactstrap";
+import DarkModeToggle from "react-dark-mode-toggle";
 
-function ColorNavbar() {
+function ColorNavbar(props) {
+  const darkMode = useDarkMode(false);
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [bodyClick, setBodyClick] = React.useState(false);
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(darkMode);
+  
   React.useEffect(() => {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
@@ -57,17 +63,24 @@ function ColorNavbar() {
         id="navbar-main"
       >
         <Container>
-          <div className="navbar-translate">
+          <div className="navbar-translate flex-grow-2">
             
-            <NavbarBrand id="navbar-brand" to="/" tag={Link} style={{fontSize:"14px"}}>
+            <NavbarBrand id="navbar-brand" to="/" tag={Link} style={{fontSize:"14px"}} className="flex-grow-0">
             {/* <a href="#pablo"> */}
             <img alt="..." id="img" src={require("assets/img/icons/W.png")} style={{height:"60px", paddingRight:"1rem"}}/>
             {/* </a> */}
               DTU TIMES
             </NavbarBrand>
+            
             {/* <UncontrolledTooltip placement="bottom" target="navbar-brand">
               The Official Newsletter of DTU
             </UncontrolledTooltip> */}
+            <DarkModeToggle
+          className ="ml-auto dark-mode__button"
+           onChange={darkMode.toggle}
+           checked={darkMode.value}
+           size={50}
+         />
             <button
               className="navbar-toggler"
               id="navigation"
@@ -83,8 +96,11 @@ function ColorNavbar() {
               <span className="navbar-toggler-bar bar3" />
             </button>
           </div>
-          <Collapse navbar isOpen={collapseOpen}>
+          
+          <Collapse navbar isOpen={collapseOpen} className="flex-grow-0">
+          
             <Nav className="ml-auto" navbar>
+              
               <NavItem>
                 <Link className="navlink nav-link" to="/about" style={{fontSize:"14px"}}>
                   about

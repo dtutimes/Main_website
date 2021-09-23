@@ -1,7 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import {Interpolator} from 'react-apply-darkmode';
+import useDarkMode from 'use-dark-mode';
+import {
+    enable as enableDarkMode,
+    setFetchMethod as setFetch
+    } from 'darkreader';
+    
+    
 // styles
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
@@ -16,11 +23,19 @@ import Navbar from "components/Navbar";
 import MainFooter from "components/Footers/MainFooter";
 import Presentation from "sections/SocSection/SocietiesIndex";
 
+// DarkReader.setFetchMethod(window.fetch);
+// DarkReader.enable();
 // import "./assets/css/styles.css";
 // import { PageTransition } from '@steveeeie/react-page-transition';
 
-const Routes = () => (
-    <>
+const Routes = () => {
+    const darkMode = useDarkMode(false);
+    setFetch(window.fetch);
+    return (
+        <Interpolator
+      appearance= {darkMode.value?"dark":"light"}
+      watchSystem={false}
+      filter={{brightness: 200, contrast:90}}>
     <Navbar />
     {
         // <Route
@@ -52,10 +67,13 @@ const Routes = () => (
             <Route path='/societies' component={Presentation} exact />
             <Route path='/societies/:slug' component={Pages.SocietySinglePage} exact/>
             <Route path='/societies/:slug/:slug2' component={Pages.SocietySingleSingle} />
+            <Route path='/quiz' component={Pages.QuizPage} />
         </Switch>         
         <MainFooter />
-    </>
-);
+    </Interpolator>
+
+    );
+};
 
 ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
 
