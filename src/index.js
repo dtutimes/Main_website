@@ -35,7 +35,7 @@ const Routes = () => {
         <Interpolator
       appearance= {darkMode.value?"dark":"light"}
       watchSystem={false}
-      filter={{brightness: 200, contrast:90}}>
+      filter={{brightness: 100, contrast:90}}>
     <Navbar />
     {
         // <Route
