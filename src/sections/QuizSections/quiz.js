@@ -72,7 +72,7 @@ export default function App() {
                                 <br/>
                                 
                                 <FacebookShareButton
-                                    url={'http://dtutime.dtu.ac.in'}
+                                    url={'http://dtutimes.dtu.ac.in'}
                                     quote={'YAYYYY. try it out'}
                                     className="Demo__some-network__share-button"
                                 >
@@ -82,7 +82,7 @@ export default function App() {
                                 <WhatsappShareButton
                                     title={'DTU Times Quiz'}
                                     quote={'YAYYYY. try it out'}
-                                    url={'http://dtutime.dtu.ac.in'}
+                                    url={'http://dtutimes.dtu.ac.in'}
                                 >    
                                     <WhatsappIcon size={32} round/>
                                 </WhatsappShareButton>
@@ -90,7 +90,7 @@ export default function App() {
                                 <EmailShareButton
                                     subject= {'DTU Times Quiz'}
                                     body={'Yay! I tried it. You too do.'}
-                                    url={'http://dtutime.dtu.ac.in'}
+                                    url={'http://dtutimes.dtu.ac.in'}
                                 >
                                     <EmailIcon size={32} round/>
                                 </EmailShareButton>
@@ -103,7 +103,7 @@ export default function App() {
                                 Share on Facebook
                                 <br/>
                             <FacebookShareButton
-                                url={'http://dtutime.dtu.ac.in'}
+                                url={'http://dtutimes.dtu.ac.in'}
                                 quote={'NOOO. try again'}
                                 className="Demo__some-network__share-button"
                             >
@@ -112,7 +112,7 @@ export default function App() {
                             <WhatsappShareButton
                                 title={'DTU Times Quiz'}
                                 quote={'NOOO. try again'}
-                                url={'http://dtutime.dtu.ac.in'}
+                                url={'http://dtutimes.dtu.ac.in'}
                             >    
                                 <WhatsappIcon size={32} round/>
                             </WhatsappShareButton>
@@ -120,7 +120,7 @@ export default function App() {
                             <EmailShareButton
                                 subject= {'DTU Times Quiz'}
                                 body={'Yay! I tried it. You too do.'}
-                                url={'http://dtutime.dtu.ac.in'}
+                                url={'http://dtutimes.dtu.ac.in'}
                             >
                                 <EmailIcon size={32} round/>
                             </EmailShareButton>
