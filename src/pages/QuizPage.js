@@ -14,8 +14,9 @@ const Sections = () => (
     {
         <Countdown></Countdown>
     }
-
-  
+    {
+      // <Quiz></Quiz>
+    }
   </>
 );
 

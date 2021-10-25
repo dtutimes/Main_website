@@ -30,7 +30,12 @@ function ColorNavbar(props) {
         document.documentElement.scrollTop > 499 ||
         document.body.scrollTop > 499
       ) {
-        document.getElementById("img").src = require("assets/img/icons/B.png");
+        if(!darkMode.value){
+          document.getElementById("img").src = require("assets/img/icons/B.png");
+        }else{
+          document.getElementById("img").src = require("assets/img/icons/W.png");
+        }
+        
         setNavbarColor("");
       } else if (
         document.documentElement.scrollTop < 500 ||
@@ -77,7 +82,14 @@ function ColorNavbar(props) {
             </UncontrolledTooltip> */}
             <DarkModeToggle
           className ="ml-auto dark-mode__button"
-           onChange={darkMode.toggle}
+           onChange={()=>{
+             darkMode.toggle();
+             if(darkMode.value){
+                document.getElementById("img").src = require("assets/img/icons/B.png");
+              }else{
+                document.getElementById("img").src = require("assets/img/icons/W.png");
+              }
+            }}
            checked={darkMode.value}
            size={50}
          />
