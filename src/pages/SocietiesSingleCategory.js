@@ -77,7 +77,9 @@ export default class SocietySingle extends React.Component {
                     isVisible={true}
                   >
                   
-                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`}>
+                    <Link to={`/societies/${this.props.match.params.slug}/${this.state.data[cs].slug}`} onClick={()=> {
+                      window.scrollTo(0,0);
+                    }}>
                       <SocietiesCard 
                         img={this.state.data[cs].society_imgUrl}
                         name={this.state.data[cs].name}

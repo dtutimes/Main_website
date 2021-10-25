@@ -104,11 +104,17 @@
     background-color: #555e7d;
   }
   .correct {
-    background-color: #2f922f !important;
+    color: rgb(0 0 0) !important;
+    font-weight: 500 !important;
+    background-color: rgb(138 155 231) !important;
+    /* background-color: #93acf8 !important; */
   }
   
   .incorrect {
-    background-color: #ff3333 !important;
+    color: rgb(0 0 0) !important;
+    font-weight: 500 !important;
+    background-color: rgb(138 155 231) !important;
+    /* background-color: #93acf8 !important; */
   }
   
   

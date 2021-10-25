@@ -38,7 +38,9 @@ class SectionComponents extends React.Component {
             <div className="soccard__content">
               <h2 className="soccard__title">Cultural</h2>
               <p className="soccard__copy">DUMMY TEXT</p>
-              <Link to='/societies/cultural'>
+              <Link to='/societies/cultural' onClick={()=> {
+                window.scrollTo(0,0);
+              }}>
                 <button className="soccard__btn">Explore</button>
               </Link>
             </div>
@@ -47,7 +49,9 @@ class SectionComponents extends React.Component {
           <div className="soccard__content">
             <h2 className="soccard__title">Technical</h2>
             <p className="soccard__copy">DUMMY TEXT</p>
-            <Link to='/societies/technical'>
+            <Link to='/societies/technical' onClick={()=> {
+              window.scrollTo(0,0);
+            }}>
               <button className="soccard__btn">Explore</button>
             </Link>
           </div>
@@ -56,7 +60,9 @@ class SectionComponents extends React.Component {
           <div className="soccard__content">
             <h2 className="soccard__title">Tech-Teams</h2>
             <p className="soccard__copy">DUMMY TEXT</p>
-            <Link to='/societies/tech_team'>
+            <Link to='/societies/tech_team' onClick={()=> {
+              window.scrollTo(0,0);
+            }}>
               <button className="soccard__btn">Explore</button>
             </Link>
           </div>
@@ -65,7 +71,9 @@ class SectionComponents extends React.Component {
           <div className="soccard__content">
             <h2 className="soccard__title">Miscellaneous</h2>
             <p className="soccard__copy">DUMMY TEXT</p>
-            <Link to='/societies/miscellaneous'>
+            <Link to='/societies/miscellaneous' onClick={()=> {
+                  window.scrollTo(0,0);
+                }}>
               <button className="soccard__btn">Explore</button>
             </Link>
           </div>

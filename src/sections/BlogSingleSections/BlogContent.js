@@ -5,11 +5,12 @@ import MetaTags from 'react-meta-tags';
 
 const BlogContent = ({ blog }) => {
   const body = Parser().parse(blog.body);
-
+  
   return (
     <>
       <div className="section pt-1">
-          <MetaTags>
+        {
+            <MetaTags>
             <meta property="og:description" content={blog.biliner} />
             <meta property="og:title" content={blog.title} />
             <meta property="og:image:secure_url" itemprop="image" content={blog.imgUrl} />
@@ -18,6 +19,7 @@ const BlogContent = ({ blog }) => {
             <meta property="og:image:width" content="300" />
             <meta property="og:image:height" content="300" />
           </MetaTags>
+        }
         <Container>
           <Row>
             <Col></Col>
