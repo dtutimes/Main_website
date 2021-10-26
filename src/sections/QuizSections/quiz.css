@@ -14,7 +14,7 @@
   }
   .app {
     margin: auto;
-    margin-top: 14em;
+    margin-top: 10em;
     margin-bottom: 14em;
 
     color: #ffffff;
@@ -31,7 +31,7 @@
   }
   @media screen and (max-width:400px){
       .app{
-          margin-top:17em;
+          margin-top:12em;
           margin-left:20px;
           margin-right:20px;
       }
@@ -65,7 +65,9 @@
   }
   
   .question-text {
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;;
     margin-bottom: 12px;
+    font-size: 16px;
   }
   
   .timer-text {
@@ -87,14 +89,16 @@
   }
   
   .quiz_button {
+    font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+    text-align: left;
     margin-top: 20px;
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     color: #ffffff;
     background-color: #252d4a;
     border-radius: 15px;
     display: flex;
-    padding: 5px;
+    padding: 10px;
     justify-content: flex-start;
     align-items: center;
     border: 5px solid #234668;

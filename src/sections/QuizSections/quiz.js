@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { FacebookShareButton, FacebookIcon, WhatsappIcon, WhatsappShareButton, EmailIcon, EmailShareButton} from 'react-share';
 import { Animated } from 'react-animated-css';
 import useDelayedState from 'use-delayed-state';
@@ -29,6 +30,10 @@ export default function App() {
             }, 900)
 		} else {
 			setShowScore(true,500);
+            ReactGA.event({
+                category:'Analytics',
+                action:'Reached the end of the quiz'
+            })
 		}
     }
 	const handleAnswerOptionClick = (isCorrect) => {
@@ -54,6 +59,10 @@ export default function App() {
 			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
+            ReactGA.event({
+                category:'Analytics',
+                action:'Reached the end of the quiz'
+            })
 		}
     }
     
@@ -68,15 +77,16 @@ export default function App() {
                                 <br/>
                                 {score}
                                 <br/>
-                                <p style={{fontSize:"0.7em"}}>Share on Facebook</p>
                                 <br/>
+                                <p style={{fontSize:"0.7em"}}> Share with your friends</p>
+                                
                                 
                                 <FacebookShareButton
                                     url={'http://dtutimes.dtu.ac.in'}
                                     quote={'YAYYYY. try it out'}
                                     className="Demo__some-network__share-button"
                                 >
-                                    <FacebookIcon size={32} round />
+                                    <FacebookIcon size={36} round />
                                 </FacebookShareButton>
     
                                 <WhatsappShareButton
@@ -84,7 +94,7 @@ export default function App() {
                                     quote={'YAYYYY. try it out'}
                                     url={'http://dtutimes.dtu.ac.in'}
                                 >    
-                                    <WhatsappIcon size={32} round/>
+                                    <WhatsappIcon size={36} round/>
                                 </WhatsappShareButton>
                                 
                                 <EmailShareButton
@@ -92,7 +102,7 @@ export default function App() {
                                     body={'Yay! I tried it. You too do.'}
                                     url={'http://dtutimes.dtu.ac.in'}
                                 >
-                                    <EmailIcon size={32} round/>
+                                    <EmailIcon size={36} round/>
                                 </EmailShareButton>
                             </div>):
                             (<div>
@@ -100,21 +110,22 @@ export default function App() {
                                 <br/>
                                 {score}
                                 <br/>
-                                Share on Facebook
                                 <br/>
+                                <p style={{fontSize:"0.7em"}}> Share with your friends</p>
+                                
                             <FacebookShareButton
                                 url={'http://dtutimes.dtu.ac.in'}
                                 quote={'NOOO. try again'}
                                 className="Demo__some-network__share-button"
                             >
-                                <FacebookIcon size={32} round />
+                                <FacebookIcon size={50} round style={{margin:"5px"}}/>
                             </FacebookShareButton> 
                             <WhatsappShareButton
                                 title={'DTU Times Quiz'}
                                 quote={'NOOO. try again'}
                                 url={'http://dtutimes.dtu.ac.in'}
                             >    
-                                <WhatsappIcon size={32} round/>
+                                <WhatsappIcon size={50} round style={{margin:"5px"}}/>
                             </WhatsappShareButton>
                             
                             <EmailShareButton
@@ -122,7 +133,7 @@ export default function App() {
                                 body={'Yay! I tried it. You too do.'}
                                 url={'http://dtutimes.dtu.ac.in'}
                             >
-                                <EmailIcon size={32} round/>
+                                <EmailIcon size={50} round style={{margin:"5px"}}/>
                             </EmailShareButton>
                             
                             
