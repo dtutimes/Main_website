@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
+import ReactGA from "react-ga";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {Interpolator} from 'react-apply-darkmode';
 import useDarkMode from 'use-dark-mode';
@@ -29,6 +30,10 @@ import Presentation from "sections/SocSection/SocietiesIndex";
 // import { PageTransition } from '@steveeeie/react-page-transition';
 
 const Routes = () => {
+    useEffect(()=>{
+        ReactGA.initialize('G-4WBQ5PH2E6');
+        ReactGA.pageview(window.location.pathname);
+    }, [])
     const darkMode = useDarkMode(false);
     setFetch(window.fetch);
     return (
