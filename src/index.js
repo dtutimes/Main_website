@@ -31,7 +31,7 @@ import Presentation from "sections/SocSection/SocietiesIndex";
 
 const Routes = () => {
     useEffect(()=>{
-        ReactGA.initialize('G-4WBQ5PH2E6');
+        ReactGA.initialize('UA-164542121-2');
         ReactGA.pageview(window.location.pathname);
     }, [])
     const darkMode = useDarkMode(false);
