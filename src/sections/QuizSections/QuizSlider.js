@@ -19,7 +19,14 @@ export default function App() {
       key: uuidv4(),
       content: <CardNews title={"questions"}/>
     },
-
+    {
+      key: uuidv4(),
+      content: <CardNews title={"questions"}/>
+    },
+    {
+      key: uuidv4(),
+      content: <CardNews title={"questions"}/>
+    }
   ]; /*.map((element, index) => {
     return { ...element, onClick: () => setGoToSlide(index) };
   });*/
