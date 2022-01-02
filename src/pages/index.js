@@ -10,7 +10,8 @@ import EditionPage from './EditionPage';
 import GallerySinglePage from "./GallerySinglePage";
 import SocietySinglePage from "./SocietiesSingleCategory";
 import SocietySingleSingle from "./SocSingle";
-import QuizPage from "./QuizPage";
+import QuizPage from "./QuizPage"
+import QuizSinglePage from "./QuizSinglePage";
 
 export default {
     LandingPage, 
@@ -25,5 +26,6 @@ export default {
     GallerySinglePage,
     SocietySinglePage,
     SocietySingleSingle,
-    QuizPage
+    QuizPage,
+    QuizSinglePage
 }

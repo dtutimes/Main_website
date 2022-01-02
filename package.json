@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui-treasury/components": "^1.10.1",
+    "@mui-treasury/styles": "^1.13.1",
     "@steveeeie/react-page-transition": "^1.2.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
@@ -50,6 +54,8 @@
     "react-select": "3.0.4",
     "react-share": "^4.4.0",
     "react-slick": "^0.28.0",
+    "react-spring": "^9.3.2",
+    "react-spring-3d-carousel": "^1.2.1",
     "react-sticky": "^6.0.3",
     "react-tagsinput": "3.19.0",
     "react-tiger-transition": "^4.1.2",
@@ -58,6 +64,7 @@
     "slick-carousel": "^1.8.1",
     "slider-pro": "^1.5.0",
     "styled-components": "^4.4.1",
+    "swiper": "^6.0.2",
     "use-dark-mode": "^2.3.1",
     "use-delayed-state": "^1.2.0"
   },

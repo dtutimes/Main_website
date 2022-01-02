@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import { useLocation } from "react-router-dom";
 import ReactDOM from "react-dom";
 import ReactGA from "react-ga";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -28,7 +29,15 @@ import Presentation from "sections/SocSection/SocietiesIndex";
 // DarkReader.enable();
 // import "./assets/css/styles.css";
 // import { PageTransition } from '@steveeeie/react-page-transition';
-
+function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
 const Routes = () => {
     useEffect(()=>{
         ReactGA.initialize('UA-164542121-2');
@@ -72,7 +81,8 @@ const Routes = () => {
             <Route path='/societies' component={Presentation} exact />
             <Route path='/societies/:slug' component={Pages.SocietySinglePage} exact/>
             <Route path='/societies/:slug/:slug2' component={Pages.SocietySingleSingle} />
-            <Route path='/quiz' component={Pages.QuizPage} />
+            <Route path='/quiz' component={Pages.QuizPage} exact />
+            <Route path='/quiz/:slug' component={Pages.QuizSinglePage} exact/>
         </Switch>         
         <MainFooter />
     </Interpolator>
@@ -80,5 +90,5 @@ const Routes = () => {
     );
 };
 
-ReactDOM.render(<BrowserRouter><Routes /></BrowserRouter>, document.getElementById("root"))
+ReactDOM.render(<BrowserRouter><ScrollToTop/><Routes /></BrowserRouter>, document.getElementById("root"))
 

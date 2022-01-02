@@ -5,6 +5,9 @@ import Quiz from './quiz';
 import './countdown.scss';
 
 const App = () => {
+    React.useEffect(()=>{
+        document.body.scrollTop = 0;
+    },[]);
     const [repaintClass, setRepaintClass] = useState('');
     const [second, setSecond] = useState(3);
     let grid = [];
