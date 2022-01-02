@@ -1,0 +1,44 @@
+.QuizSliderApp {
+    font-family: sans-serif;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .cardContainer {
+    background-color: blue;
+    /*margin: 20px;*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    align-items: center;
+    box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.4);
+  }
+  .titleContainer {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 5px;
+  }
+  #title {
+    flex-grow: 3;
+    position: relative;
+  }
+  
+  #rating {
+    width: 40%;
+    background-color: orange;
+    flex-direction: row;
+  }
+  .cardImgContainer {
+    background-color: green;
+  }
+  
+  .cardImgContainer img {
+    object-fit: fill;
+  }
+  
+  .cardTextContainer {
+    background-color: red;
+  }
+  

@@ -5,9 +5,15 @@ import { FacebookShareButton, FacebookIcon, WhatsappIcon, WhatsappShareButton, E
 import { Animated } from 'react-animated-css';
 import useDelayedState from 'use-delayed-state';
 import './quiz.css';
-export default function App() {
-	const questions = require("./questions.json");
-
+export default function App(props) {
+    var slug = window.location.pathname;
+    slug = slug.substring(6);
+    // console.log(slug);
+    React.useEffect(()=>{
+        document.body.scrollTop = 0;
+    },[]);
+	const questions = require(`./data/${slug}.json`);
+    // const questions = require(`./data/questions.json`);
 	const [currentQuestion, setCurrentQuestion] = useDelayedState(0);
 	const [showScore, setShowScore] = useDelayedState(false);
 	const [score, setScore] = useState(0);
