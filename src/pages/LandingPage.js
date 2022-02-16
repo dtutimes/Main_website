@@ -12,6 +12,9 @@ const Sections = () => {
     <div>
         <Helmet>
             <title>{title}</title>
+            <meta name="description" content="Dive headlong into a world of illuminating interviews, enlightening editorials and potent prose written by some of the brightest minds of DTU." />
+            <meta property="og:description" content="Dive headlong into a world of illuminating interviews, enlightening editorials and potent prose written by some of the brightest minds of DTU." />
+            <meta property="og:title" content={title} />
         </Helmet>
         <Header />
         <div>
