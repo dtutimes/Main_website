@@ -22,12 +22,12 @@ const useStyles = makeStyles(() => ({
     borderRadius: 15
   },
   content: {
-    padding: 24
+    // padding: 24
   },
   cta: {
-    marginTop: 24,
     textTransform: "initial"
-  }
+  },
+  
 }));
 
 /*interface CardNews {
@@ -58,27 +58,34 @@ export const NewsCardDemo = React.memo(function NewsCard(props) {
   const shadowStyles = useBouncyShadowStyles();
   const n = 6;
     // console.log(props.title);
+    let str = props.title || "";
+    str = str.replace(/\s+/g, '-').toLowerCase();
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
       <CardMedia
         classes={mediaStyles}
+        style={{"padding-bottom":"98.25%"}}
         image={
-          "https://images.unsplash.com/photo-1468774871041-fc64dd5522f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
+          require("assets/img/quiz/"+props.img)
         }
       />
       <CardContent className={styles.content}>
-        
-        <TextInfoContent
-        color={"primary"}
-          classes={textCardContentStyles}
-          //overline={"March 20, 2019"}
-          heading={props.title}
-          body={
-            "Kayaks crowd Three Sisters Springs, where people and manatees maintain controversial coexistence."
-          }
-        ></TextInfoContent>
+        <div className = "quizCard_content">
+          <h1 className="quizCard_content_heading">{props.title}</h1>
+          <p>{props.description}</p>
+        </div>
+      {
+        //   <TextInfoContent
+        //   color={"primary"}
+        //   classes={textCardContentStyles}
+        //   //overline={"March 20, 2019"}
+        //   heading={props.title}
+        //   body={props.description}
+          
+        // ></TextInfoContent>
+      }
         <Button color={"primary"} fullWidth className={styles.cta}>
-          <Link to={"/quiz/"+props.title}>Find Out More <ChevronRightRounded /></Link>
+          <Link to={"/quiz/"+str}>Let's Play<ChevronRightRounded /></Link>
         </Button>
       </CardContent>
     </Card>

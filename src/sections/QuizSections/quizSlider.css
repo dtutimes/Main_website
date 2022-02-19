@@ -41,4 +41,13 @@
   .cardTextContainer {
     background-color: red;
   }
-  
+  .quizCard_content_heading{
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .quizCard_content p{
+    font-weight: 400;
+  }

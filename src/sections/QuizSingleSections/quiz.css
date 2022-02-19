@@ -37,14 +37,37 @@
       }
   }
   .score-section {
-    margin: 20%;
+    margin: 8%;
     /* display: flex; */
     font-size: 24px;
     text-align: center;
   }
+  .score-section h1{
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .score-section button{
+    margin:5px;
+  }
+  .submitBlock{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .submitQues{
+    text-align: right;
+    padding: 10px;
+    font-size: 1.2em;
+    background: #597998;
+    border-radius: 0.8em;
+  }
+  .submitQues:hover{
+    background: #234668;
+    cursor: pointer;
+}
   .skipQues{
     text-align: right;
-    padding: 1em 1em 0;
+    padding: 10px;
     font-size: 1.2em;
   }
   .skipQues:hover{
@@ -107,7 +130,7 @@
   .quiz_button:hover {
     background-color: #555e7d;
   }
-  .correct {
+  .clicked {
     color: rgb(0 0 0) !important;
     font-weight: 500 !important;
     background-color: rgb(138 155 231) !important;
@@ -129,4 +152,7 @@
   
   .quiz_button svg {
     margin-right: 5px;
+  }
+  .css-1qzevvg{
+    margin-top:3rem !important;
   }
