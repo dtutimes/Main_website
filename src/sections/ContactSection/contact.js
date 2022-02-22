@@ -239,15 +239,15 @@ function LoginPage() {
                         <h3 className="title" style={{}}>
                           <strong>Editor-in-Chief</strong>
                         </h3>
-                        <strong>Shivam Jha
+                        <strong>Angad Sethi
                         <br />
-                        shivam.jha3@gmail.com</strong>
+                        angadsethi18@gmail.com</strong>
                       </Col>
                       <Col>
                         <h3 className="title"><strong>Student Head</strong></h3>
-                        <strong>Zara Khan
+                        <strong>Mandeep Singh
                         <br />
-                        zarakhan9278@gmail.com</strong>
+                        mandeepsrr@gmail.com</strong>
                       </Col>
                     </Row>
                   </Animated>
