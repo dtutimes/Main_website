@@ -13,7 +13,7 @@ const TeamCard = props => {
     <>
       <Card className="card-profile card-plain">
         <CardImg top tag="div">
-          <img alt="..." className="img" src={img} style={{ aspectRatio: "1/1", objectFit: "cover" }}/>
+          <img alt="..." className="img" src={img} style={{ aspectRatio: 1/1, objectFit: "cover" }}/>
         </CardImg>
         <CardBody>
           <CardTitle tag="h4">{name}</CardTitle>
