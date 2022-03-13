@@ -9,8 +9,9 @@
     min-height: 100vh;
     /* margin: auto; */
     display: flex;
-    background-image: url("../../assets/img/space-bgd.jpg");
-    background-size: cover;
+    background-image: linear-gradient(to right top, #051937, #0a1736, #0e1634, #121433, #151231);
+    /* background-image: url("../../assets/img/space-bgd.jpg"); */
+    /* background-size: cover; */
   }
   .app {
     margin: auto;
@@ -37,7 +38,7 @@
       }
   }
   .score-section {
-    margin: 8%;
+    /* margin: 8%; */
     /* display: flex; */
     font-size: 24px;
     text-align: center;
@@ -48,6 +49,9 @@
   }
   .score-section button{
     margin:5px;
+  }
+  .score-section p{
+    font-size: 17px;
   }
   .submitBlock{
     margin-top: 15px;
@@ -128,13 +132,14 @@
     cursor: pointer;
   }
   .quiz_button:hover {
-    background-color: #555e7d;
+    color: rgb(38 46 75) !important;
+    font-weight: 600 !important;
+    background-color: rgb(224 225 230) !important;
   }
   .clicked {
-    color: rgb(0 0 0) !important;
+    color: rgb(38 46 75) !important;
     font-weight: 500 !important;
-    background-color: rgb(138 155 231) !important;
-    /* background-color: #93acf8 !important; */
+    background-color: rgb(224 225 230) !important;
   }
   
   .incorrect {

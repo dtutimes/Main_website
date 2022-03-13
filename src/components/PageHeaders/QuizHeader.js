@@ -19,7 +19,7 @@ const LandingHeader = () => {
               animationInDelay={500}
               isVisible={true}
             >
-              <h1 style={{"fontSize":"5em"}}>
+              <h1 style={{"fontSize":"5em", "marginTop":"1em"}}>
                 <strong>पहेली</strong>
               </h1>
             </Animated>
