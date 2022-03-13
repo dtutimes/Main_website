@@ -17,22 +17,22 @@ export default function App() {
       />
         
     },
-    {
-      key: uuidv4(),
-      content: <CardNews title={"Coming Soon"} img = {"comingsoon.jpg"}/>
-    },
-    {
-      key: uuidv4(),
-      content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
-    },
-    {
-      key: uuidv4(),
-      content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
-    },
-    {
-      key: uuidv4(),
-      content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
-    }
+    // {
+    //   key: uuidv4(),
+    //   content: <CardNews title={"Coming Soon"} img = {"comingsoon.jpg"}/>
+    // },
+    // {
+    //   key: uuidv4(),
+    //   content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
+    // },
+    // {
+    //   key: uuidv4(),
+    //   content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
+    // },
+    // {
+    //   key: uuidv4(),
+    //   content: <CardNews title={"Coming Soon"}  img = {"comingsoon.jpg"}/>
+    // }
   ]; /*.map((element, index) => {
     return { ...element, onClick: () => setGoToSlide(index) };
   });*/

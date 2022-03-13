@@ -1,9 +1,10 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import { FacebookShareButton, FacebookIcon, WhatsappIcon, WhatsappShareButton, EmailIcon, EmailShareButton} from 'react-share';
 import { Animated } from 'react-animated-css';
 import './quiz.css';
+
 export default function App(props) {
     var slug = window.location.pathname;
     slug = slug.substring(6);
@@ -18,11 +19,31 @@ export default function App(props) {
     const [total, setTotal] = useState(0);
 	const [score, setScore] = useState(0);
     const [clickedItem, setClickedItem] = useState(null);
-    
+
     const handleCSS = (e, sscore) => {
         let selectedTag = e ? parseInt(e.target.id, 10) : null;
         setClickedItem(selectedTag);
+        console.log(sscore);
 		setScore(sscore);
+        setTotal(total => total+sscore);
+ 
+        // console.log(total);
+        setTimeout(() => {
+            setScore(0);
+            setClickedItem(null);
+            const nextQuestion = currentQuestion + 1;
+            if (nextQuestion < questions.length) {
+                setCurrentQuestion(nextQuestion);
+            } else {
+                setShowScore(true);
+                console.log(total);
+                ReactGA.event({
+                    category:'Analytics',
+                    action:'Reached the end of the quiz'
+                })
+            }
+        }, 500);
+
         // console.log(sscore);
     }
     const submit = () => {
@@ -35,7 +56,6 @@ export default function App(props) {
             const nextQuestion = currentQuestion + 1;
             if (nextQuestion < questions.length) {
                 setCurrentQuestion(nextQuestion);
-    
             } else {
                 setShowScore(true);
                 ReactGA.event({
@@ -45,8 +65,6 @@ export default function App(props) {
             }
         }
         // console.log(total);
-        
-        
     }
     const moveToNext = () =>{
         const nextQuestion = currentQuestion + 1;
@@ -61,7 +79,8 @@ export default function App(props) {
 		}
     }
     const result = () =>{
-        if(total >= 56 && total <= 28){
+       
+        if(total >= -56 && total <= -28){
             return (
                 <div>
                     <h1>Anaari</h1><br/>
@@ -167,7 +186,9 @@ export default function App(props) {
                             ))}
                         </div>
                         <div className="submitBlock">
-                            <div className="submitQues" onClick = {submit}>Submit</div>
+                            {
+                                // <div className="submitQues" onClick = {submit}>Submit</div>
+                            }
                             <div className="skipQues" onClick ={moveToNext}>Skip</div>
                         </div>
                         
