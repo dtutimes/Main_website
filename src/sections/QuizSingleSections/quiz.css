@@ -131,14 +131,17 @@
     border: 5px solid #234668;
     cursor: pointer;
   }
-  .quiz_button:hover {
-    color: rgb(38 46 75) !important;
-    font-weight: 600 !important;
-    background-color: rgb(224 225 230) !important;
-  }
+  @media screen and (min-width:768px){
+    .quiz_button:hover {
+      color: rgb(38 46 75) !important;
+      font-weight: 600 !important;
+      background-color: rgb(224 225 230) !important;
+    }
+}
+  
   .clicked {
     color: rgb(38 46 75) !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     background-color: rgb(224 225 230) !important;
   }
   
