@@ -15,7 +15,7 @@ const Sections = () => (
     </Helmet>
     <Header />
     <IconSections />
-    <EditiorsMessage />
+    {/* <EditiorsMessage /> */}
   </>
 );
 
