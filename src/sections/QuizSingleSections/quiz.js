@@ -86,7 +86,7 @@ export default function App(props) {
 		}
     }
     const result = () =>{
-       const maxResult = Math.max(results);
+       const maxResult = Math.max(...results);
        const predictedResult = results.indexOf(maxResult);
        const { heading, body } = resultData[predictedResult];
 
