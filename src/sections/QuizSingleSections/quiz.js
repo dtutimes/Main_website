@@ -32,6 +32,7 @@ export default function App(props) {
         const tempResults = [...results];
         tempResults[res]++;
         setResults(tempResults);
+        console.log(results);
  
         // console.log(total);
         setTimeout(() => {
