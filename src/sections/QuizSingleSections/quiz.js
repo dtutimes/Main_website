@@ -12,20 +12,26 @@ export default function App(props) {
     React.useEffect(()=>{
         document.body.scrollTop = 0;
     },[]);
-	const questions = require(`./data/${slug}.json`);
+	const questionData = require(`./data/${slug}.json`);
+    const questions = questionData.questions;
+    const resultData = questionData.results;
     // const questions = require(`./data/questions.json`);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
     const [total, setTotal] = useState(0);
 	const [score, setScore] = useState(0);
+    const [results, setResults] = useState(new Array(resultData.length).fill(0));
     const [clickedItem, setClickedItem] = useState(null);
 
-    const handleCSS = (e, sscore) => {
+    const handleCSS = (e, sscore, res) => {
         let selectedTag = e ? parseInt(e.target.id, 10) : null;
         setClickedItem(selectedTag);
         console.log(sscore);
 		setScore(sscore);
         setTotal(total => total+sscore);
+        const tempResults = [...results];
+        tempResults[res]++;
+        setResults(tempResults);
  
         // console.log(total);
         setTimeout(() => {
@@ -79,57 +85,16 @@ export default function App(props) {
 		}
     }
     const result = () =>{
-       
-        if(total >= -56 && total <= -28){
-            return (
-                <div>
-                    <h1>Anaari</h1><br/>
-                    <p>
-                        You learnt absolutely nothing; zilch in two years. 
-                        You count your blessings after two years because even you don't know how you survived online classes. 
-                        But you are here, so there's that 🤷‍♂️
-                    </p>
-                </div>
-            )
-        }else if(total >= -27 && total <= 0){
-            return (
-                <div>
-                    <h1>Survivor</h1><br/>
-                    <p>
-                    You barely got away with your life, barely being the operating term here. 
-                    You most probably dozed off in your classes (more power to you), 
-                    and skipped the remaining classes. 
-                    That is the only rational explanation for your ignorance.
-                     Or was this your silent rebellion all along 
-                     (well played, in that case) 👏?
-                    </p>
-                </div>
-            )
-        }else if(total >= 1 && total <= 28){
-            return (
-                <div>
-                <h1>Fuccha</h1><br/>
-                    <p>
-                    Congratulations! You are on the right path. If online classes continue, you'll probably get better with time. 
-                    You have both time and potential to get better at a redundant skill. Go you! 💃
-                    </p>
-                </div>
-            )
-        }else{
-            return (
-                <div>
-                <h1>Khilaadi</h1>
-                <br/>
-                    <p>
-                    You are hereby christened Supreme Lord of Online Classes. 
-                    Please send us a picture of yourself with sunglasses. 
-                    We'll post it in the nearest temple, 
-                    so fucchas can seek your blessings before diving into the GMeet link. 
-                    Donations will strictly be 50-50 though 😎
-                    </p>
-                </div>
-            )
-        }
+       const maxResult = Math.max(results);
+       const predictedResult = results.indexOf(maxResult);
+       const { heading, body } = resultData[predictedResult];
+
+       return (
+            <div>
+                <h1>{heading}</h1><br/>
+                <p>{body}</p>
+            </div>
+        );
     }
 	return (
         <div className="quizDiv">
@@ -180,7 +145,7 @@ export default function App(props) {
                                     key={index} 
                                     id={index}
                                     className={`quiz_button ${index == clickedItem ? 'clicked':''}`} 
-                                    onClick={(e) => {handleCSS(e, answerOption.score)}} >
+                                    onClick={(e) => {handleCSS(e, answerOption.score, answerOption.result)}} >
                                     {answerOption.answerText}
                                 </button>
                             ))}

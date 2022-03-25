@@ -1,170 +1,222 @@
-[
-    {
-        "questionText": "You are asking yourself whether Leo's top stopped spinning, when the professor asks you to answer a question that is significantly tougher. What do you do?",
-        "answerOptions": [
-            {
-                "answerText": "Panic, and leave the meeting that very instant.",
-                "score": -2
-            },
-            {
-                "answerText": "Unmute yourself, and mimic TV static.",
-                "score": 3
-            },
-            {
-                "answerText": "Unmute yourself, and truthfully admit you don't know shit.",
-                "score": 1
-            },
-            {
-                "answerText": "Lie on the floor and play dead.",
-                "score": -5
-            }
-        ]
-    },
-    {
-        "questionText": "It’s your least favorite class at the end of the day. The professor starts talking but has forgotten to unmute themselves. What do you do?",
-        "answerOptions": [
-            {
-                "answerText": "Go with the flow and enjoy a nice nap",
-                "score": 5
-            },
-            {
-                "answerText": "Say something like, \"Ma’am, your audio isn’t audible\"",
-                "score": -5
-            },
-            {
-                "answerText": "Unmute and say, \"The class has been canceled\"",
-                "score": 8
-            },
-            {
-                "answerText": "Leave and never return.",
-                "score": -3
-            }
-        ]
-    },
-    {
-        "questionText": "You had photoshopped an assignment, and the Professor finds out. What’s the best excuse?",
-        "answerOptions": [
-            {
-                "answerText": "Admit your mistake",
-                "score": -4
-            },
-            {
-                "answerText": "Explain how EVERYONE'S assignments look exactly the same. That can't be a coincidence, right?",
-                "score": 4
-            },
-            {
-                "answerText": "\"Sir, why will I photoshop the assignment, it doesn’t get me any likes on Instagram!\"",
-                "score": 3
-            },
-            {
-                "answerText": "\"Umm... we were twinning!\"",
-                "score": 2
-            }
-        ]
-    },
-    {
-        "questionText": "It’s a two-hour long class. Choose a snack to go with it.",
-        "answerOptions": [
-            {
-                "answerText": "Popcorn",
-                "score": -2
-            },
-            {
-                "answerText": "Bhel",
-                "score": 4
-            },
-            {
-                "answerText": "Lay’s ke blue waale chips",
-                "score": -5
-            },
-            {
-                "answerText": "Rich-people-pringles",
-                "score": -7
-            }
-        ]
-    },
-    {
-        "questionText": "How often have you been removed from a meeting?",
-        "answerOptions": [
-            {
-                "answerText": "More than 5 times.",
-                "score": 10
-            },
-            {
-                "answerText": "Twice or thrice.",
-                "score": 4
-            },
-            {
-                "answerText": "Once, but I was allowed back in.",
-                "score": -4
-            },
-            {
-                "answerText": "Hawwww. Neverrr",
-                "score": -6
-            }
-        ]
-    },
-    {
-        "questionText": "How well do you remember your timetable?",
-        "answerOptions": [
-            {
-                "answerText": "I remind teachers to start the meeting.",
-                "score": -4
-            },
-            {
-                "answerText": "I’m on time for most of them.",
-                "score": -8
-            },
-            {
-                "answerText": "I’d be detained if my friends didn’t remind me of my classes.",
-                "score": 3
-            },
-            {
-                "answerText": "Timetable? Are there timetables for online classes?",
-                "score": -2
-            }
-        ]
-    },
-    {
-        "questionText": "Choose your preferred method of attempting an online test.",
-        "answerOptions": [
-            {
-                "answerText": "14 tabs for the 14 questions.",
-                "score": 0
-            },
-            {
-                "answerText": "Study a little. 5 tabs for the rest.",
-                "score": 4
-            },
-            {
-                "answerText": "Smash the phone-a-friend button.",
-                "score": 8
-            },
-            {
-                "answerText": "Study diligently for each test. Never, ever cheat. Maa kasam",
-                "score": -4
-            }
-        ]
-    },
-    {
-        "questionText": "If all classes could have a background track, what would you choose?",
-        "answerOptions": [
-            {
-                "answerText": "Faded",
-                "score": -15
-            },
-            {
-                "answerText": "Dynamite",
-                "score": -10
-            },
-            {
-                "answerText": "Bachpan ka Pyaar (The original one, ofc)",
-                "score": 10
-            },
-            {
-                "answerText": "Pyaar hume kis mod pe le aaya",
-                "score": 14
-            }
-        ]
-    }
-]
+{
+    "results": [
+        {
+            "heading": "Anaari",
+            "body": "You learnt absolutely nothing; zilch in two years. You count your blessings after two years because even you don't know how you survived online classes. But you are here, so there's that 🤷‍♂️"
+        },
+        {
+            "heading": "Survivor",
+            "body": "You barely got away with your life, barely being the operating term here. You most probably dozed off in your classes (more power to you), and skipped the remaining classes. That is the only rational explanation for your ignorance. Or was this your silent rebellion all along (well played, in that case) 👏?"
+        },
+        {
+            "heading": "Fuccha",
+            "body": "Congratulations! You are on the right path. If online classes continue, you'll probably get better with time. You have both time and potential to get better at a redundant skill. Go you! 💃"
+        },
+        {
+            "heading": "Khilaadi",
+            "body": "You are hereby christened Supreme Lord of Online Classes. Please send us a picture of yourself with sunglasses. We'll post it in the nearest temple, so fucchas can seek your blessings before diving into the GMeet link. Donations will strictly be 50-50 though 😎"
+        }
+    ],
+    "questions":[
+        {
+            "questionText": "You are asking yourself whether Leo's top stopped spinning, when the professor asks you to answer a question that is significantly tougher. What do you do?",
+            "answerOptions": [
+                {
+                    "answerText": "Panic, and leave the meeting that very instant.",
+                    "score": -2,
+                    "result": 1
+                },
+                {
+                    "answerText": "Unmute yourself, and mimic TV static.",
+                    "score": 3,
+                    "result": 3
+                },
+                {
+                    "answerText": "Unmute yourself, and truthfully admit you don't know shit.",
+                    "score": 1,
+                    "result": 2
+                },
+                {
+                    "answerText": "Lie on the floor and play dead.",
+                    "score": -5,
+                    "result": 0
+                }
+            ]
+        },
+        {
+            "questionText": "It's your least favorite class at the end of the day. The professor starts talking but has forgotten to unmute themselves. What do you do?",
+            "answerOptions": [
+                {
+                    "answerText": "Go with the flow and enjoy a nice nap",
+                    "score": 5,
+                    "result": 2
+                },
+                {
+                    "answerText": "Say something like, \"Ma'am, your audio isn't audible\"",
+                    "score": -5,
+                    "result": 0
+                },
+                {
+                    "answerText": "Unmute and say, \"The class has been canceled\"",
+                    "score": 8,
+                    "result": 3
+                },
+                {
+                    "answerText": "Leave and never return.",
+                    "score": -3,
+                    "result": 1
+                }
+            ]
+        },
+        {
+            "questionText": "You had photoshopped an assignment, and the Professor finds out. What’s the best excuse?",
+            "answerOptions": [
+                {
+                    "answerText": "Admit your mistake",
+                    "score": -4,
+                    "result": 0
+                },
+                {
+                    "answerText": "Explain how EVERYONE'S assignments look exactly the same. That can't be a coincidence, right?",
+                    "score": 4,
+                    "result": 3
+                },
+                {
+                    "answerText": "\"Sir, why will I photoshop the assignment, it doesn’t get me any likes on Instagram!\"",
+                    "score": 3,
+                    "result": 2
+                },
+                {
+                    "answerText": "\"Umm... we were twinning!\"",
+                    "score": 2,
+                    "result": 1
+                }
+            ]
+        },
+        {
+            "questionText": "It’s a two-hour long class. Choose a snack to go with it.",
+            "answerOptions": [
+                {
+                    "answerText": "Popcorn",
+                    "score": -2,
+                    "result": 2
+                },
+                {
+                    "answerText": "Bhel",
+                    "score": 4,
+                    "result": 3
+                },
+                {
+                    "answerText": "Lay’s ke blue waale chips",
+                    "score": -5,
+                    "result": 1
+                },
+                {
+                    "answerText": "Rich-people-pringles",
+                    "score": -7,
+                    "result": 0
+                }
+            ]
+        },
+        {
+            "questionText": "How often have you been removed from a meeting?",
+            "answerOptions": [
+                {
+                    "answerText": "More than 5 times.",
+                    "score": 10,
+                    "result": 3
+                },
+                {
+                    "answerText": "Twice or thrice.",
+                    "score": 4,
+                    "result": 2
+                },
+                {
+                    "answerText": "Once, but I was allowed back in.",
+                    "score": -4,
+                    "result": 1
+                },
+                {
+                    "answerText": "Hawwww. Neverrr",
+                    "score": -6,
+                    "result": 0
+                }
+            ]
+        },
+        {
+            "questionText": "How well do you remember your timetable?",
+            "answerOptions": [
+                {
+                    "answerText": "I remind teachers to start the meeting.",
+                    "score": -4,
+                    "result": 1
+                },
+                {
+                    "answerText": "I’m on time for most of them.",
+                    "score": -8,
+                    "result": 0
+                },
+                {
+                    "answerText": "I’d be detained if my friends didn’t remind me of my classes.",
+                    "score": 3,
+                    "result": 3
+                },
+                {
+                    "answerText": "Timetable? Are there timetables for online classes?",
+                    "score": -2,
+                    "result": 2
+                }
+            ]
+        },
+        {
+            "questionText": "Choose your preferred method of attempting an online test.",
+            "answerOptions": [
+                {
+                    "answerText": "14 tabs for the 14 questions.",
+                    "score": 0,
+                    "result": 1
+                },
+                {
+                    "answerText": "Study a little. 5 tabs for the rest.",
+                    "score": 4,
+                    "result": 2
+                },
+                {
+                    "answerText": "Smash the phone-a-friend button.",
+                    "score": 8,
+                    "result": 3
+                },
+                {
+                    "answerText": "Study diligently for each test. Never, ever cheat. Maa kasam",
+                    "score": -4,
+                    "result": 0
+                }
+            ]
+        },
+        {
+            "questionText": "If all classes could have a background track, what would you choose?",
+            "answerOptions": [
+                {
+                    "answerText": "Faded",
+                    "score": -15,
+                    "result": 0
+                },
+                {
+                    "answerText": "Dynamite",
+                    "score": -10,
+                    "result": 1
+                },
+                {
+                    "answerText": "Bachpan ka Pyaar (The original one, ofc)",
+                    "score": 10,
+                    "result": 2
+                },
+                {
+                    "answerText": "Pyaar hume kis mod pe le aaya",
+                    "score": 14,
+                    "result": 3
+                }
+            ]
+        }
+    ]
+}
