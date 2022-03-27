@@ -144,10 +144,16 @@ function ColorNavbar(props) {
                 </Link>
               </NavItem>
               <NavItem>
+                <Link className="navlink nav-link" to="/quiz" style={{fontSize:"14px"}}>
+                  quiz
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Link className="navlink nav-link" to="/contact" style={{fontSize:"14px"}}>
                   contact us
                 </Link>
               </NavItem>
+              
             </Nav>
           </Collapse>
         </Container>
