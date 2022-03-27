@@ -10,7 +10,7 @@ const customStyles = {
   },
   overlay: {
     background: 'rgba(21,21,21,0.9)',
-  }
+  },
 };
 
 
@@ -105,7 +105,7 @@ closeLightbox = () => {
             isOpen={this.state.viewerIsOpen}
             toggle={this.closeLightbox}
             className="yumpu_ed"
-            style={{width:'820px',height:'566px'}}
+            style={{"width":'820px',"height":'566px',"maxWidth":'700px'}}
             >
               <iframe height="566px" width="700px" src={this.props.ajax} frameBorder={0} allowFullScreen="true" allowTransparency="true" />
             </Modal>):null}
