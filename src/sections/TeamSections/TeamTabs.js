@@ -510,7 +510,7 @@ export default class Example extends React.Component {
                         <Row>
                               <Col md="3">
                                 <TeamCard2
-                                  name="Prof. Yogesh Singh"
+                                  name="Prof. J.P. Saini"
                                   bio="Hon'ble Vice Chancellor"
                                   img={require("assets/img/faculty/VC.jpg")}
                                   // linkedin={element && element.linkedin}
@@ -520,18 +520,8 @@ export default class Example extends React.Component {
                               </Col>
                               <Col md="3">
                                 <TeamCard2
-                                  name="Sh. Anoop Lather"
-                                  bio="Public Relations Officer"
-                                  img={require("assets/img/faculty/Anoop.jpg")}
-                                  // linkedin={element && element.linkedin}
-                                  // facebook={element && element.facebook}
-                                  // instagram={element && element.instagram}
-                                />
-                              </Col>
-                              <Col md="3">
-                                <TeamCard2
                                   name="Prof. S. Indu"
-                                  bio="Dean of Student Welfare "
+                                  bio="Dean, Student Welfare"
                                   img={require("assets/img/faculty/sindu.jpg")}
                                   // linkedin={element && element.linkedin}
                                   // facebook={element && element.facebook}
@@ -541,8 +531,30 @@ export default class Example extends React.Component {
                               <Col md="3">
                                 <TeamCard2
                                   name="Prof. Rajeshwari Pandey"
-                                  bio="Associate Dean-Academics (UG)"
+                                  bio="Associate Dean, Academics (UG)"
                                   img={require("assets/img/faculty/rpandey.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
+                                />
+                              </Col>
+                        </Row>
+                        <Row>
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Dr. Yashna Sharma"
+                                  bio="Assistant Professor, Dept. of Electronics & Communication Engineering"
+                                  img={require("assets/img/faculty/yashna.jpg")}
+                                  // linkedin={element && element.linkedin}
+                                  // facebook={element && element.facebook}
+                                  // instagram={element && element.instagram}
+                                />
+                              </Col>
+                              <Col md="3">
+                                <TeamCard2
+                                  name="Mrs. Parinita Sinha"
+                                  bio="Assistant Professor, Dept. of Humanities"
+                                  img={require("assets/img/faculty/sinha.jpeg")}
                                   // linkedin={element && element.linkedin}
                                   // facebook={element && element.facebook}
                                   // instagram={element && element.instagram}
