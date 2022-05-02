@@ -33,7 +33,7 @@ export default class Example extends React.Component {
     //   });
     // });
     api.get("/user/").then((res) => {
-      const info = res.data.sort((a, b) => a.localeCompare(b));
+      const info = res.data.sort((a, b) => a.name.localeCompare(b.name));
       this.setState({ data: info, loaded: true });
     });
     // axios({
