@@ -538,8 +538,6 @@ export default class Example extends React.Component {
                                   // instagram={element && element.instagram}
                                 />
                               </Col>
-                        </Row>
-                        <Row>
                               <Col md="3">
                                 <TeamCard2
                                   name="Dr. Yashna Sharma"
@@ -550,6 +548,8 @@ export default class Example extends React.Component {
                                   // instagram={element && element.instagram}
                                 />
                               </Col>
+                        </Row>
+                        <Row>
                               <Col md="3">
                                 <TeamCard2
                                   name="Mrs. Parinita Sinha"
