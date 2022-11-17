@@ -63,7 +63,7 @@ class SectionHeader extends React.Component {
           <EditionCard
             id = {editions[index].id}
             title={editions[index].name}
-            img={editions[index].imgUrl}
+            img={`https://nix.dtutimes.com${editions[index].imgUrl}`}
             ajax = {editions[index].ajax}
             height={'420px'}
             width = {'90%'}
