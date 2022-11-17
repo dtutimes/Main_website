@@ -93,7 +93,7 @@ closeLightbox = () => {
                   <img
                     alt="..."
                     className="grid__img layer"
-                    src={this.state.data[0].imgUrl}
+                    src={`https://nix.dtutimes.com${this.state.data[0].imgUrl}`}
                     style={{ height: "128px", width: "100px",cursor:'pointer' }}
                     onClick={this.state.mob?null:this.openLightbox}
                   /></a>
