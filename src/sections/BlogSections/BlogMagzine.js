@@ -40,7 +40,7 @@ export default class BlogMagzine extends Component {
                 <Col md="6" key={magzine.id}>
                   <div className="card-image">
                     <a href="/editions">
-                    <img alt="..." className="img" src={magzine.imgUrl} />
+                    <img alt="..." className="img" src={`https://nix.dtutimes.com${magzine.imgUrl}`} />
                     </a>
                   </div>
                   <CardTitle tag="h5" className="text-center mt-2">
