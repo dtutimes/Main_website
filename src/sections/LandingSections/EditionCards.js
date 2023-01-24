@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap";
 
 const EditionCards = () => {
   const [mob, setMob] = React.useState(true);
+
   React.useEffect(() => {
     const a = window.innerWidth;
     if (a <= 900) {
@@ -88,7 +89,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/740/conversions/Screen-Shot-2020-03-07-at-2.16.20-PM-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/981/conversions/edition57-cover.jpg"
                     />
                   </a>
                 </li>
@@ -102,7 +103,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/632/conversions/48-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/986/conversions/edition49-cover.jpg"
                     />
                   </a>
                 </li>
@@ -116,7 +117,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/652/conversions/43-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/983/conversions/edition48-cover.jpg"
                     />
                   </a>
                 </li>
@@ -144,7 +145,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/650/conversions/45-cover.jpg"
+                      src="https://nix.dtutimes.com//storage/984/conversions/47-edition-cover.jpg"
                     />
                   </a>
                 </li>
@@ -158,7 +159,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/651/conversions/44-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/985/conversions/edition-46-cover.jpg"
                     />
                   </a>
                 </li>
@@ -172,7 +173,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/648/conversions/47-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/987/conversions/edition-45-final-cover.jpg"
                     />
                   </a>
                 </li>
@@ -186,7 +187,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/649/conversions/46-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/988/conversions/dtu-times-edition-44-cover.jpg"
                     />
                   </a>
                 </li>
@@ -200,7 +201,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/653/conversions/42-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/989/conversions/edition-43-cover.jpg"
                     />
                   </a>
                 </li>
@@ -276,7 +277,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/740/conversions/Screen-Shot-2020-03-07-at-2.16.20-PM-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/981/conversions/edition57-cover.jpg"
                     />
                   </a>
                 </li>
@@ -290,7 +291,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/632/conversions/48-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/986/conversions/edition49-cover.jpg"
                     />
                   </a>
                 </li>
@@ -304,7 +305,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/652/conversions/43-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/983/conversions/edition48-cover.jpg"
                     />
                   </a>
                 </li>
@@ -318,7 +319,7 @@ const EditionCards = () => {
                   <img
                     alt="..."
                     className="grid__img layer"
-                    src="http://dtutimes.dtu.ac.in/img/47.png"
+                    src="https://nix.dtutimes.com/storage/984/conversions/47-edition-cover.jpg"
                   />
                 </a>
               </li> */}
@@ -332,7 +333,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/650/conversions/45-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/985/conversions/edition-46-cover.jpg"
                     />
                   </a>
                 </li>
@@ -346,7 +347,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/651/conversions/44-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/987/conversions/edition-45-final-cover.jpg"
                     />
                   </a>
                 </li>
@@ -360,7 +361,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/648/conversions/47-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/988/conversions/dtu-times-edition-44-cover.jpg"
                     />
                   </a>
                 </li>
@@ -374,7 +375,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/649/conversions/46-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/989/conversions/edition-43-cover.jpg"
                     />
                   </a>
                 </li>
@@ -388,7 +389,7 @@ const EditionCards = () => {
                     <img
                       alt="..."
                       className="grid__img layer"
-                      src="https://nix.dtutimes.com/storage/653/conversions/42-cover.jpg"
+                      src="https://nix.dtutimes.com/storage/990/conversions/edition-42-cover.jpg"
                     />
                   </a>
                 </li>

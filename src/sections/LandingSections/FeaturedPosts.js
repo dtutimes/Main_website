@@ -23,9 +23,9 @@ export default class FeaturedPosts extends Component {
     };
   }
 
-  componentDidMount = () =>
+  componentDidMount = () => 
     api
-      .get("/")
+      .get("/story")
       .then(res => this.setState({ posts: res.data.data, loaded: true }));
 
   render() {
@@ -274,7 +274,7 @@ export default class FeaturedPosts extends Component {
                       className="card-description"
                       style={{ color: "#EBEBEB" }}
                     >
-                      {posts[12].biliner}
+                      {posts[4].biliner}
                     </div>
                     <CardFooter>
                       <Button
