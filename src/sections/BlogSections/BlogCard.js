@@ -8,12 +8,12 @@ const BlogCard = ({ posts }) => {
   return (
     <>
       {posts.map(post => (
-        <div key={post.id}>
+        <div key={post._id}>
           <Card className="card-plain card-blog text-left">
             <CardBody>
               <CardTitle tag="h3">
-                <Link to={`/blog/${post.slug}`} onClick={()=> {
-                  window.scrollTo(0,0);
+                <Link to={`/blog/${post.slug}`} onClick={() => {
+                  window.scrollTo(0, 0);
                 }}>
                   {post.title}
                 </Link>
@@ -21,23 +21,23 @@ const BlogCard = ({ posts }) => {
               <br />
             </CardBody>
             <div className="card-image">
-              <Link to={`/blog/${post.slug}`} onClick={()=> {
-                  window.scrollTo(0,0);
-                }}>
-                <img alt="..." className="img img-raised" src={post.imgUrl} />
+              <Link to={`/blog/${post.slug}`} onClick={() => {
+                window.scrollTo(0, 0);
+              }}>
+                <img alt="..." className="img img-raised" src={`https://team.dtutimes.com/api/v1/images/get/${post.cover}`} />
               </Link>
             </div>
             <CardBody>
-              <p className="card-description" style={{ marginBottom: "1rem",color:"#494850",lineHeight:"2rem !important" }}>
-                <strong>{post.biliner}</strong>
+              <p className="card-description" style={{ marginBottom: "1rem", color: "#494850", lineHeight: "2rem !important" }}>
+                <strong>{post.byliner}</strong>
                 ..... <Link
-                    to={`/blog/${post.slug}`}
-                    color="primay"
-                    onClick={()=> {
-                      window.scrollTo(0,0);
-                    }}
+                  to={`/blog/${post.slug}`}
+                  color="primay"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
-                    Read More
+                  Read More
                 </Link>
               </p>
             </CardBody>

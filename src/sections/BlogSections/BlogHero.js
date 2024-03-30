@@ -9,12 +9,30 @@ import BlogSubsciber from "sections/BlogSections/BlogSubsciber";
 import BlogPopular from "sections/BlogSections/BlogPopular";
 import BlogMagzine from "./BlogMagzine";
 import BlogPagination from "./BlogPagination";
+import { newApi } from "api";
 export default class BlogHero extends Component {
   constructor(params) {
     super(params);
     this.state = {
       blogs: [],
-      categories: [],
+      categories: [
+        {
+          name: "Editorial",
+          id: 1
+        },
+        {
+          name: "Blog",
+          id: 2
+        },
+        {
+          name: "Interviews",
+          id: 3
+        },
+        {
+          name: "Announcements",
+          id: 4
+        }
+      ],
       pageNo: 1,
       lastPage: 0,
       totalPages: [],
@@ -26,15 +44,19 @@ export default class BlogHero extends Component {
   }
   componentDidMount() {
     if (this.state.category == 0) {
-      api.get("/story?page=" + this.state.pageNo).then((res) => {
-        this.setState({ blogs: res.data.data });
+      // api.get("/story?page=" + this.state.pageNo).then((res) => {
+      newApi.get("/blog/published-blogs").then((res) => {
+        this.setState({ blogs: res.data.data.slice(0, 10) });
+        const totalPages = Math.floor(res.data.data.length / 10) + 1;
         let countPages = [];
         // console.log(res.data.meta.last_page);
         // for (let i = 1; i <= res.data.meta.last_page; i++) {
         //   countPages[i - 1] = i;
         // }
         this.setState({
-          lastPage: res.data.meta.last_page,
+          // lastPage: res.data.meta.last_page,
+          pageNo: 1,
+          lastPage: totalPages,
           // totalPages: countPages,
         });
         setTimeout(() => {
@@ -42,8 +64,7 @@ export default class BlogHero extends Component {
         }, 1200);
       });
     }
-    api.get("/category").then((res) => this.setState({ categories: res.data }));
-    // console.log(this.state.categories);
+    // api.get("/category").then((res) => this.setState({ categories: res.data }));
     // window.addEventListener("resize", () => {
     //   const b = window.innerWidth;
     //   if (b <= 900) {

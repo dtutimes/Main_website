@@ -4,6 +4,10 @@ const instance = axios.create({
     baseURL: 'https://api.dtutimes.com/v1/',
 })
 
+const newInstance = axios.create({
+  baseURL: 'https://team.dtutimes.com/api/v1/',
+})
+
 // let AUTH_TOKEN = localStorage.getItem('token');
 
 // if (AUTH_TOKEN) { instance.defaults.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`; }
@@ -20,6 +24,6 @@ const instance = axios.create({
 //     return res.data;
 // } 
 
-export { instance as api };
+export { instance as api, newInstance as newApi };
 
 export default instance;

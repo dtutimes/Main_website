@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { api } from "api";
 import { Row, Card, Col, CardTitle } from "reactstrap";
 import { ContentLoaderMagzine } from "components/ContentLoader";
+import { newApi } from "api";
 
 export default class BlogMagzine extends Component {
   state = {
@@ -10,8 +11,16 @@ export default class BlogMagzine extends Component {
   };
 
   componentDidMount() {
-    api.get("/edition").then(res => {
-      this.setState({ magzines: [res.data[0], res.data[1]] });
+    // api.get("/edition").then(res => {
+    //   this.setState({ magzines: [res.data[0], res.data[1]] });
+    //   // console.log("hhelllllloooooooooooooooooo")
+    //   // console.log(this.state.magzines);
+    //   setTimeout(() => {
+    //     this.setState({ loading: false });
+    //   }, 2000);
+    // });
+    newApi.get("/edition/published-editions").then(res => {
+      this.setState({ magzines: [res.data.data[0], res.data.data[1]] });
       // console.log("hhelllllloooooooooooooooooo")
       // console.log(this.state.magzines);
       setTimeout(() => {
@@ -37,10 +46,10 @@ export default class BlogMagzine extends Component {
             {!loading &&
               magzines.length &&
               magzines.map(magzine => (
-                <Col md="6" key={magzine.id}>
+                <Col md="6" key={magzine._id}>
                   <div className="card-image">
                     <a href="/editions">
-                    <img alt="..." className="img" src={`https://nix.dtutimes.com${magzine.imgUrl}`} />
+                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/edition-${magzine.edition_id}?thumbnail=true`} />
                     </a>
                   </div>
                   <CardTitle tag="h5" className="text-center mt-2">

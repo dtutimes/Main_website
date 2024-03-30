@@ -4,6 +4,7 @@ import { api } from "api";
 import { ContentLoaderPopular } from "components/ContentLoader";
 import { CardTitle } from "reactstrap";
 import styled from "styled-components";
+import { newApi } from "api";
 const HoverText = styled.a`
 	:hover {
 		color: #E85D75;
@@ -38,9 +39,17 @@ export default class BlogPopular extends Component {
   };
 
   componentDidMount() {
-    api.get("/story").then((res) => {
+    // api.get("/story").then((res) => {
+    //   this.setState({
+    //     popular: [res.data.data[0], res.data.data[1], res.data.data[3]],
+    //   });
+    //   setTimeout(() => {
+    //     this.setState({ loading: false });
+    //   }, 2000);
+    // });
+    newApi.get("/blog/published-blogs").then((res) => {
       this.setState({
-        popular: [res.data.data[0], res.data.data[1], res.data.data[3]],
+        popular: [res.data.data[0], res.data.data[1], res.data.data[2]],
       });
       setTimeout(() => {
         this.setState({ loading: false });
@@ -69,20 +78,20 @@ export default class BlogPopular extends Component {
           ))}
         {!loading &&
           popular.map((item) => (
-                <div className="mb-3" key={item.id}>
-                  <CardTitle tag="h5" className="mb-2">
-                    {/* <a
+            <div className="mb-3" key={item._id}>
+              <CardTitle tag="h5" className="mb-2">
+                {/* <a
                       href={`/story/${item.slug}`}
                       // onClick={e => window.scrollTo(0, 0)}
                     >
                       {item.title}
                     </a> */}
-                    <HoverText href={`/blog/${item.slug}`}>{item.title}</HoverText>
-                  </CardTitle>
-                  {/* <Link to="" className="mt-0 small">
+                <HoverText href={`/blog/${item.slug}`}>{item.title}</HoverText>
+              </CardTitle>
+              {/* <Link to="" className="mt-0 small">
                 Read More
               </Link> */}
-                </div>
+            </div>
           ))}
       </div>
     );

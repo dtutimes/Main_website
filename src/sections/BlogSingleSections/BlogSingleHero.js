@@ -5,6 +5,7 @@ import BlogSingleHeader from "components/PageHeaders/BlogSingleHeader";
 import BlogContent from "./BlogContent";
 import { ContentLoaderBlogSingle } from "components/ContentLoader";
 import ProgressBar from "react-scroll-progress-bar";
+import { newApi } from "api";
 // const Progress = styled.div`
 //   position: fixed;
 //   background: linear-gradient(
@@ -28,15 +29,22 @@ export default class BlogSingleHero extends Component {
 
   componentDidMount() {
     var slug = window.location.pathname;
-    slug = slug.substring(5);
-    slug = "/story" + slug;
-    // console.log(typeof(slug));
-    api.get(slug).then((res) => {
-      this.setState({ blog: res.data });
+    slug = slug.substring(6);
+    console.log(slug)
+    newApi.get(`/blog/get-published-blog/${slug}`).then((res) => {
+      this.setState({ blog: res.data.data })
       setTimeout(() => {
         this.setState({ loaded: true });
       }, 1200);
     });
+    // slug = "/story" + slug;
+    // // console.log(typeof(slug));
+    // api.get(slug).then((res) => {
+    //   this.setState({ blog: res.data });
+    //   setTimeout(() => {
+    //     this.setState({ loaded: true });
+    //   }, 1200);
+    // });
     // this.listenToScrollEvent();
   }
 
@@ -86,7 +94,7 @@ export default class BlogSingleHero extends Component {
         <BlogSingleHeader
           timestamp={blog.published_at}
           title={blog.title}
-          biliner={blog.biliner}
+          byliner={blog.byliner}
         />
         {!this.state.loaded && (
           <>
