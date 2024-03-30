@@ -81,12 +81,12 @@ closeLightbox = () => {
         <CardBody className="takeOnMe">
           <h6 className="card-category">{this.props.title}</h6>
           <div className="card-icon">
-          {this.state.mob||this.props.id>38?(<a href={this.props.link} ><i className="fa fa-search" style={{cursor:'pointer'}}/></a>):(
+          {true || this.state.mob||this.props.id>38?(<a target="_blank" href={this.props.link} ><i className="fa fa-search" style={{cursor:'pointer'}}/></a>):(
             <i className="fa fa-search" onClick={this.openLightbox} style={{cursor:'pointer'}}/>
           )}
           </div>
           <CardFooter style={{marginTop:"10%"}}>
-            {this.state.mob||this.props.id>38?(<a href={this.props.link} >Show More</a>):(
+            {true || this.state.mob||this.props.id>38?(<a target="_blank" href={this.props.link} >Show More</a>):(
             <Button
               className="btn-neutral"
               color="link"
