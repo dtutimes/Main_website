@@ -26,4 +26,4 @@ const newInstance = axios.create({
 
 export { instance as api, newInstance as newApi };
 
-export default instance;
+export default instance; 
