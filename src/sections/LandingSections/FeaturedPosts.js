@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import { Blob } from "react-blob";
 import api from "api";
+import newApi from "api"
 import { Loader } from "components/LoaderComponent";
 
 import {
@@ -23,10 +24,11 @@ export default class FeaturedPosts extends Component {
     };
   }
 
-  componentDidMount = () => 
+  componentDidMount = () => {
     api
       .get("/story")
       .then(res => this.setState({ posts: res.data.data, loaded: true }));
+  }
 
   render() {
     if (!this.state.loaded) return <Loader />;
@@ -111,9 +113,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[0].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[0].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[0].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -153,9 +155,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[3].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[6].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[6].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -195,9 +197,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[6].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[2].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[2].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -239,9 +241,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[1].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[7].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[7].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -281,9 +283,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[4].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[4].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[4].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -324,9 +326,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[7].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[8].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[8].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -334,22 +336,22 @@ export default class FeaturedPosts extends Component {
                   </CardBody>
                 </Card>
 
-                
+
               </Col>
-              
+
               <Col md="4" sm="6">
-              <Card className="card-blog cardx">
+                <Card className="card-blog cardx">
                   <div className="card-image">
-                  <Link to={"/blog/" + posts[2].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[2].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <img alt="..." className="img" src={posts[2].imgUrl} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
-                  <Link to={"/blog/" + posts[2].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[2].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
                         <strong>{posts[2].title}</strong>
                       </CardTitle>
@@ -365,9 +367,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[2].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[5].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[5].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -376,16 +378,16 @@ export default class FeaturedPosts extends Component {
                 </Card>
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                  <Link to={"/blog/" + posts[5].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[5].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <img alt="..." className="img" src={posts[5].imgUrl} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
-                  <Link to={"/blog/" + posts[5].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[5].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
                         <strong>{posts[5].title}</strong>
                       </CardTitle>
@@ -401,9 +403,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[5].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[1].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[1].slug);
+                      //   }}
                       >
                         View Article
                       </Button>
@@ -413,16 +415,16 @@ export default class FeaturedPosts extends Component {
 
                 <Card className="card-blog cardx">
                   <div className="card-image">
-                  <Link to={"/blog/" + posts[8].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[8].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <img alt="..." className="img" src={posts[8].imgUrl} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
-                  <Link to={"/blog/" + posts[8].slug} onClick={() => {
-                    window.scrollTo(0,0);
-                  }}>
+                    <Link to={"/blog/" + posts[8].slug} onClick={() => {
+                      window.scrollTo(0, 0);
+                    }}>
                       <CardTitle tag="h4" style={{ color: "#EBEBEB" }}>
                         <strong>{posts[8].title}</strong>
                       </CardTitle>
@@ -438,9 +440,9 @@ export default class FeaturedPosts extends Component {
                         className="btn-round"
                         color="success"
                         href={"/blog/" + posts[8].slug}
-                        //   onClick={() => {
-                        //     window.open("/blog/" + posts[3].slug);
-                        //   }}
+                      //   onClick={() => {
+                      //     window.open("/blog/" + posts[3].slug);
+                      //   }}
                       >
                         View Article
                       </Button>

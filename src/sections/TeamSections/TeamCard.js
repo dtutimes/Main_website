@@ -13,7 +13,7 @@ const TeamCard = props => {
     <>
       <Card className="card-profile card-plain">
         <CardImg top tag="div">
-          <img alt={name} className="img" src={`https://nix.dtutimes.com/${img}`} />
+          <img alt={name} className="img" src={`${img}`} />
         </CardImg>
         <CardBody>
           <CardTitle tag="h4">{name}</CardTitle>
