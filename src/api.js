@@ -5,9 +5,8 @@ const instance = axios.create({
 })
 
 const newInstance = axios.create({
-    baseURL: 'https://team.dtutimes.com/api/v1/',
+  baseURL: 'https://team.dtutimes.com/api/v1/',
 })
-
 
 // let AUTH_TOKEN = localStorage.getItem('token');
 

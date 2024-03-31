@@ -4,16 +4,17 @@ import { Parser } from "html-to-react";
 import MetaTags from 'react-meta-tags';
 
 const BlogContent = ({ blog }) => {
+  // console.log(blog);
   const body = Parser().parse(blog.body);
-  
+
   return (
     <>
       <div className="section pt-1">
         {
-            <MetaTags>
-            <meta property="og:description" content={blog.biliner} />
-            <meta property="og:title" content={blog.title} />
-            <meta property="og:image:secure_url" itemprop="image" content={blog.imgUrl} />
+          <MetaTags>
+            <meta property="og:description" content={blog.meta_description} />
+            <meta property="og:title" content={blog.meta_title} />
+            <meta property="og:image:secure_url" itemProp="image" content={blog.cover} />
             <meta property="og:type" content="website" />
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:width" content="300" />
@@ -36,7 +37,7 @@ const BlogContent = ({ blog }) => {
                 <img
                   alt="..."
                   className="img-rounded img-responsive mb-5"
-                  src={blog.imgUrl}
+                  src={`https://team.dtutimes.com/api/v1/images/get/${blog.cover}`}
                   style={{ zIndex: "99" }}
                 />
                 {body}
@@ -47,9 +48,9 @@ const BlogContent = ({ blog }) => {
                       <a className="pull-left">
                         <div className="avatar big-avatar">
                           <Media
-                            alt="..."
+                            alt={blog.user.name}
                             object
-                            src={blog.user && blog.user.imgUrl}
+                            src={blog.user && `https://team.dtutimes.com/api/v1/images/get-avatar/${blog.user._id}`}
                           />
                         </div>
                       </a>
@@ -87,9 +88,9 @@ class Single extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.setState({ loaded: true});
+      this.setState({ loaded: true });
     }, 1200);
-    
+
   }
   render() {
     if (this.state.loaded === true) {
@@ -210,7 +211,7 @@ class Single extends Component {
     } else {
       return (
         <>
-        Loading...
+          Loading...
         </>
       );
     }

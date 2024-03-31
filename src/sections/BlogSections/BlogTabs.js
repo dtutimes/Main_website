@@ -10,6 +10,7 @@ import {
 import { api } from "api";
 import ContentLoaderBlog from "components/ContentLoader";
 import BlogCard from "sections/BlogSections/BlogCard";
+import { newApi } from "api";
 // import BlogCategorySection from "sections/BlogSections/BlogCategorySection";
 
 const BlogTabs = ({
@@ -32,10 +33,16 @@ const BlogTabs = ({
                 className={hTabs === "1" ? "active" : ""}
                 onClick={() => {
                   setHTabs("1");
-                  api.get("/story?page=1").then((res) => {
+                  // api.get("/story?page=1").then((res) => {
+                  //   console.log(res.data);
+                  //   posts = res.data.data;
+                  //   lpage = res.data.meta.last_page;
+                  //   changeCategory(0, posts, lpage);
+                  // });
+                  newApi.get("/blog/published-blogs").then((res) => {
                     posts = res.data.data;
-                    lpage = res.data.meta.last_page;
-                    changeCategory(0, posts, lpage);
+                    lpage = Math.floor(posts.length / 10) + 1;
+                    changeCategory(0, posts.slice(0, 10), lpage);
                   });
                 }}
               >
@@ -49,10 +56,15 @@ const BlogTabs = ({
                   className={hTabs === item.id ? "active" : ""}
                   onClick={() => {
                     setHTabs(item.id);
-                    api.get("/category/" + item.id + "?page=1").then((res) => {
-                      posts = res.data.data;
-                      lpage = res.data.meta.last_page;
-                      changeCategory(item.id, posts, lpage);
+                    // api.get("/category/" + item.id + "?page=1").then((res) => {
+                    //   posts = res.data.data;
+                    //   lpage = res.data.meta.last_page;
+                    //   changeCategory(item.id, posts, lpage);
+                    // });
+                    newApi.get("/blog/published-blogs").then((res) => {
+                      posts = res.data.data.filter((post) => post.category_id == item.id - 1);
+                      lpage = Math.floor(posts.length / 10) + 1;
+                      changeCategory(item.id, posts.slice(0, 10), lpage);
                     });
                   }}
                 >
@@ -64,7 +76,7 @@ const BlogTabs = ({
         </div>
       </div>
       <TabContent className="text-center" activeTab={"hTabs" + hTabs}>
-        <TabPane tabId={"hTabs" + "1"}>
+        {/* <TabPane tabId={"hTabs" + "1"}>
           <Container style={{ minHeight: "100vh" }}>
             {loading &&
               [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
@@ -72,7 +84,7 @@ const BlogTabs = ({
               ))}
             {!loading && <BlogCard posts={posts} />}
           </Container>
-        </TabPane>
+        </TabPane> */}
         {/* {category != 0 &&} */}
         {categories.map((item) => (
           <TabPane tabId={"hTabs" + item.id} key={item.id}>
