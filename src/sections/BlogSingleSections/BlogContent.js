@@ -14,7 +14,7 @@ const BlogContent = ({ blog }) => {
           <MetaTags>
             <meta property="og:description" content={blog.meta_description} />
             <meta property="og:title" content={blog.meta_title} />
-            <meta property="og:image:secure_url" itemProp="image" content={blog.cover} />
+            <meta property="og:image:secure_url" itemProp="image" content={`https://team.dtutimes.com/api/v1/images/get/${blog.cover}?thumbnail=true`} />
             <meta property="og:type" content="website" />
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:width" content="300" />
@@ -50,7 +50,7 @@ const BlogContent = ({ blog }) => {
                           <Media
                             alt={blog.user.name}
                             object
-                            src={blog.user && `https://team.dtutimes.com/api/v1/images/get-avatar/${blog.user._id}`}
+                            src={blog.user && `https://team.dtutimes.com/api/v1/images/get-avatar/${blog.user._id}?thumbnail=true`}
                           />
                         </div>
                       </a>
