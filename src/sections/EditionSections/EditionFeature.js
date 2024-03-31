@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Carousel from "nuka-carousel";
 import { Loader } from "components/LoaderComponent";
-import api from "api";
 
 import EditionCard from "views/edition_section/editionCards";
+import { newApi } from "api";
 class SectionHeader extends React.Component {
   state = {
     mob: false,
@@ -12,7 +12,10 @@ class SectionHeader extends React.Component {
     loaded:false,
   };
   componentDidMount() {
-    api.get("/edition").then(res => this.setState({ editions: res.data, loaded:true }));
+    newApi.get("/edition/published-editions").then(res => {
+      console.log(res.data.data);
+      this.setState({ editions: res.data.data, loaded: true });
+    });
 
     const a = window.innerWidth;
     if (a <= 800) {
@@ -49,25 +52,25 @@ class SectionHeader extends React.Component {
           <Col md="4" className="mb-5" key={index}>
             <EditionCard
               title={editions[index].name}
-              des="Aug-19-Oct-19"
-              img={`https://nix.dtutimes.com${editions[index].imgUrl}`}
-              ajax = {editions[index].ajax}
-              link = {editions[index].link}
+              des={editions[index].published_at}
+              img={`https://team.dtutimes.com/api/v1/images/get/edition-${editions[index].edition_id}`}
+              ajax={editions[index].edition_link}
+              link={editions[index].edition_link}
               height = "420px"
             />
           </Col>
         );
       else
         carousels.push(
-          <div key={editions[index].id}>
+          <div key={editions[index].edition_id}>
           <EditionCard
-            id = {editions[index].id}
+            id={editions[index].edition_id}
             title={editions[index].name}
-            img={`https://nix.dtutimes.com${editions[index].imgUrl}`}
-            ajax = {editions[index].ajax}
+            img={`https://team.dtutimes.com/api/v1/images/get/edition-${editions[index].edition_id}?thumbnail=true`}
+            ajax = {editions[index].edition_link}
             height={'420px'}
             width = {'90%'}
-            link = {editions[index].link}
+            link={editions[index].edition_link}
           />
           </div>
         );
