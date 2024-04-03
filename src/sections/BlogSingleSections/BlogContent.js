@@ -6,6 +6,7 @@ import MetaTags from 'react-meta-tags';
 const BlogContent = ({ blog }) => {
   // console.log(blog);
   const body = Parser().parse(blog.body);
+  const biliner = Parser().parse(`<b>${blog.byliner}</b>`);
 
   return (
     <>
@@ -40,6 +41,9 @@ const BlogContent = ({ blog }) => {
                   src={`https://team.dtutimes.com/api/v1/images/get/${blog.cover}`}
                   style={{ zIndex: "99" }}
                 />
+                <br />
+                <b><i>{biliner}</i></b>
+                <hr />
                 {body}
                 <hr />
                 <Container>

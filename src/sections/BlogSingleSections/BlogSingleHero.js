@@ -94,7 +94,7 @@ export default class BlogSingleHero extends Component {
         <BlogSingleHeader
           timestamp={blog.published_at}
           title={blog.title}
-          byliner={blog.byliner}
+          biliner={blog.biliner}
         />
         {!this.state.loaded && (
           <>
