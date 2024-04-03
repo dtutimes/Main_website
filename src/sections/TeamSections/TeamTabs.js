@@ -121,7 +121,7 @@ export default class Example extends React.Component {
       const arr5 = data.filter(this.illustrator);
       const arr6 = data.filter(this.developer);
       // var arr7 = data.filter(this.advisor);
-      // var arr8 = data.filter(this.alumni);
+      var arr8 = data.filter(this.alumni);
 
       return (
         <>
@@ -145,7 +145,7 @@ export default class Example extends React.Component {
                     scenes to bring you piping hot news, everyday.
                   </h5>
                 </Col>
-               
+
               </Row>
             </Container>
           </div>
@@ -267,7 +267,7 @@ export default class Example extends React.Component {
                       </NavLink>
                     </NavItem>
 
-                    {/* <NavItem>
+                    <NavItem>
                       <NavLink
                         className={
                           this.state.activePill === "8" ? "active" : ""
@@ -280,9 +280,9 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Alumni Advisors
+                        Alumni
                       </NavLink>
-                    </NavItem> */}
+                    </NavItem>
                   </Nav>
                   {/* Pill panes */}
                   <div style={{ display: "flex" }}>
@@ -451,7 +451,7 @@ export default class Example extends React.Component {
                           </Col>
                         </Row>
                       </TabPane>
-                      {/* <TabPane tabId={"pill-8"}>
+                      <TabPane tabId={"pill-8"}>
                         <Row>
                           {arr8.map((element) => {
                             return (
@@ -459,16 +459,16 @@ export default class Example extends React.Component {
                                 <TeamCard
                                   name={element.name}
                                   bio={element.bio}
-                                  img={element.userImg}
-                                  linkedin={element && element.linkedin}
-                                  facebook={element && element.facebook}
-                                  instagram={element && element.instagram}
+                                  img={`https://team.dtutimes.com/api/v1/images/get-avatar/${element.id}?thumbnail=true`}
+                                // linkedin={element && element.linkedin}
+                                // facebook={element && element.facebook}
+                                // instagram={element && element.instagram}
                                 />
                               </Col>
                             );
                           })}
                         </Row>
-                      </TabPane> */}
+                      </TabPane>
                     </TabContent>
                   </div>
                 </div>
