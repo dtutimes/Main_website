@@ -17,6 +17,19 @@ import TeamCard from "./TeamCard";
 import "./team.css";
 import { Loader } from "components/LoaderComponent";
 import TeamCard2 from "./TeamCard2";
+
+// simulate enum
+const roles_enum = {
+  "Advisor": 1,
+  "Coordinator": 2,
+  "Columnist": 3,
+  "Designer": 4,
+  "Photographer": 5,
+  "Illustrator": 6,
+  "Developer": 7,
+  "Alumni": 8,
+};
+
 export default class Example extends React.Component {
   // const [activePill, setActivePill] = React.useState("1");
   state = {
@@ -56,7 +69,7 @@ export default class Example extends React.Component {
     // console.log(this.state.data);
   }
   Coordinator(element) {
-    if (element.role === "Coordinator") {
+    if (element.team_role === roles_enum.Coordinator) {
       return true;
     } else {
       return false;
@@ -70,42 +83,42 @@ export default class Example extends React.Component {
   //   }
   // }
   columnist(element) {
-    if (element.role === "Columnist") {
+    if (element.team_role === roles_enum.Columnist) {
       return true;
     } else {
       return false;
     }
   }
   designer(element) {
-    if (element.role === "Designer") {
+    if (element.team_role === roles_enum.Designer) {
       return true;
     } else {
       return false;
     }
   }
   photographer(element) {
-    if (element.role === "Photographer") {
+    if (element.team_role === roles_enum.Photographer) {
       return true;
     } else {
       return false;
     }
   }
   illustrator(element) {
-    if (element.role === "Illustrator") {
+    if (element.team_role === roles_enum.Illustrator) {
       return true;
     } else {
       return false;
     }
   }
   developer(element) {
-    if (element.role === "Developer") {
+    if (element.team_role === roles_enum.Developer) {
       return true;
     } else {
       return false;
     }
   }
   alumni(element) {
-    if (element.role === "Alumni") {
+    if (element.team_role === roles_enum.Alumni) {
       return true;
     } else {
       return false;
