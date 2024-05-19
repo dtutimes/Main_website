@@ -12,8 +12,8 @@ const TeamCard = props => {
   return (
     <>
       <Card className="card-profile card-plain">
-        <CardImg top tag="div">
-          <img alt={name} className="img" src={`${img}`} />
+        <CardImg top tag="div" style={{}}>
+          <img alt={name} className="img" src={`${img}`} style={{height:'250px' , aspectRatio:'1/1',objectFit:'cover'}}/>
         </CardImg>
         <CardBody>
           <CardTitle tag="h4">{name}</CardTitle>
@@ -21,7 +21,7 @@ const TeamCard = props => {
           <p className="card-description">
             <strong>{bio}</strong>
           </p>
-          <CardFooter>
+          {/* <CardFooter>
             <Button
               className="btn-link btn-just-icon mr-1"
               color="linkedin"
@@ -43,7 +43,7 @@ const TeamCard = props => {
             >
               <i className="fa fa-instagram" />
             </Button>
-          </CardFooter>
+          </CardFooter> */}
         </CardBody>
       </Card>
     </>
