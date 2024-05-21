@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Badge, Media, Container, Row, Col } from "reactstrap";
 import { Parser } from "html-to-react";
 import MetaTags from 'react-meta-tags';
+import './blog.css';
 
 const BlogContent = ({ blog }) => {
   // console.log(blog);
