@@ -102,6 +102,7 @@
     "typescript": "3.5.2"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "serve": "^14.2.3"
   }
 }
