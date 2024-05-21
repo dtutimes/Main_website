@@ -24,7 +24,7 @@ const BlogCard = ({ posts }) => {
               <Link to={`/blog/${post.slug}`} onClick={() => {
                 window.scrollTo(0, 0);
               }}>
-                <img alt="..." className="img img-raised" src={`https://team.dtutimes.com/api/v1/images/get/${post.cover}`} />
+                <img alt={post.title} className="img img-raised" src={`https://team.dtutimes.com/api/v1/images/get/${post.cover}?thumbnail=true`} />
               </Link>
             </div>
             <CardBody>

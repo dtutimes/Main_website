@@ -96,7 +96,7 @@ class EditionHeader extends React.Component {
                     > <a
                       href={(true || this.state.mob) ? this.state.data[0].link : null}>
                         <img
-                          alt="..."
+                          alt={this.state.data[0].name}
                           className="grid__img layer"
                           // src={`https://nix.dtutimes.com${this.state.data[0].imgUrl}`}
                           src={`https://team.dtutimes.com/api/v1/images/get/edition-${this.state.data[0].edition_id}?thumbnail=true`}

@@ -24,7 +24,7 @@
 1. Run on port 5173
 
    ```bash
-    docker run -p5173:3000 -i -t localhost/dtutimes:latest  
+    docker run -p5173:3000 -i -t dtutimes:latest
     ```
 
 1. Navigate to [http://localhost:5173](http://localhost:5173)
