@@ -47,7 +47,7 @@ export default class FeaturedPosts extends Component {
                   minWidth: "4rem"
                 }}
                 src={require("assets/img/campus/post.png")}
-                alt="..."
+                alt="Campus"
               />
               <h2
                 style={{
@@ -89,7 +89,7 @@ export default class FeaturedPosts extends Component {
                       }}
                     >
                       {/* <a href={"/blog/" + posts[0].slug}> */}
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[0].cover}`} />
+                      <img alt={posts[0].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[0].cover}?thumbnail=true`} />
                       {/* </a> */}
                     </Link>
                   </div>
@@ -132,7 +132,7 @@ export default class FeaturedPosts extends Component {
                         window.scrollTo(0, 0);
                       }}
                     >
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[3].cover}`} />
+                      <img alt={posts[3].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[3].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -174,7 +174,7 @@ export default class FeaturedPosts extends Component {
                         window.scrollTo(0, 0);
                       }}
                     >
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[6].cover}`} />
+                      <img alt={posts[6].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[6].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -218,7 +218,7 @@ export default class FeaturedPosts extends Component {
                         window.scrollTo(0, 0);
                       }}
                     >
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[1].cover}?thumbnail=true`} />
+                      <img alt={posts[1].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[1].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -303,7 +303,7 @@ export default class FeaturedPosts extends Component {
                         window.scrollTo(0, 0);
                       }}
                     >
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[7].cover}?thumbnail=true`} />
+                      <img alt={posts[7].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[7].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -347,7 +347,7 @@ export default class FeaturedPosts extends Component {
                     <Link to={"/blog/" + posts[2].slug} onClick={() => {
                       window.scrollTo(0, 0);
                     }}>
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[2].cover}?thumbnail=true`} />
+                      <img alt={posts[2].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[2].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -383,7 +383,7 @@ export default class FeaturedPosts extends Component {
                     <Link to={"/blog/" + posts[5].slug} onClick={() => {
                       window.scrollTo(0, 0);
                     }}>
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[5].cover}?thumbnail=true`} />
+                      <img alt={posts[5].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[5].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
@@ -420,7 +420,7 @@ export default class FeaturedPosts extends Component {
                     <Link to={"/blog/" + posts[8].slug} onClick={() => {
                       window.scrollTo(0, 0);
                     }}>
-                      <img alt="..." className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[8].cover}?thumbnail=true`} />
+                      <img alt={posts[8].title} className="img" src={`https://team.dtutimes.com/api/v1/images/get/${posts[8].cover}?thumbnail=true`} />
                     </Link>
                   </div>
                   <CardBody className="text-center">
