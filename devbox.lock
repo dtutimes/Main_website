@@ -1,0 +1,77 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "nodejs@14": {
+      "last_modified": "2023-02-24T09:01:09Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/7d0ed7f2e5aea07ab22ccb338d27fbe347ed2f11#nodejs-14_x",
+      "source": "devbox-search",
+      "version": "14.21.3",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kynkkdchsgm650jmx794jjad7h7iifbi-nodejs-14.21.3",
+              "default": true
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/b4k1nzfr06xg2qbajnhj6wf6zm8yqags-nodejs-14.21.3-libv8"
+            }
+          ],
+          "store_path": "/nix/store/kynkkdchsgm650jmx794jjad7h7iifbi-nodejs-14.21.3"
+        }
+      }
+    },
+    "python2@latest": {
+      "last_modified": "2025-02-23T09:42:26Z",
+      "plugin_version": "0.0.4",
+      "resolved": "github:NixOS/nixpkgs/2d068ae5c6516b2d04562de50a58c682540de9bf#python2",
+      "source": "devbox-search",
+      "version": "2.7.18.8",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/van6r64nv3j7w3fp9m4in256kcv6imdf-python-2.7.18.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/van6r64nv3j7w3fp9m4in256kcv6imdf-python-2.7.18.8"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j9vxjklpydjkghiq7awnrj8yxgs363jv-python-2.7.18.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/j9vxjklpydjkghiq7awnrj8yxgs363jv-python-2.7.18.8"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/axdnx15icg157hmvif8h71k02w0gcmpg-python-2.7.18.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/axdnx15icg157hmvif8h71k02w0gcmpg-python-2.7.18.8"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/krkd48j760za4d9fa13l4cs8rsjsiqzy-python-2.7.18.8",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/krkd48j760za4d9fa13l4cs8rsjsiqzy-python-2.7.18.8"
+        }
+      }
+    }
+  }
+}

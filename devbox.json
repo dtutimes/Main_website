@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
+  "packages": {
+    "nodejs": "14",
+    "python2": {
+      "version": "latest",
+      "allow_insecure": ["python-2.7.18.8"]
+    }
+  },
+  "env": {
+//   "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
+  "shell": {}
+}
