@@ -3051,7 +3051,7 @@ pre.prettyprint {
 }
 
 .second-card {
-  top: 55px !important;
+  top: 95px !important;
   left: 0 !important;
 }
 
@@ -3068,7 +3068,7 @@ pre.prettyprint {
 }
 
 .fourth-card {
-  top: 490px !important;
+  top: 990px !important;
 }
 
 .fourth-card .grid__img {
@@ -3080,11 +3080,32 @@ pre.prettyprint {
   top: 400px !important;
   left: 400px !important;
 }
+
+
+@media only screen and (max-width: 600px){
+  .first-card{
+    transform: translate(0%, -50%) !important;
+  }
+  .second-card .grid__img {
+    width: 200px !important;
+  }
+  .second-card{
+    transform: translate(0%, 50%) !important;
+  }
+  .first-card{
+    transform: translate(0%, 0%) !important;
+  }
+ 
+  .fourth-card{
+    transform: translate(0%, 85%) !important;
+  }
+}
 @media only screen and (max-width: 1300px){
   .fifth-card {
     top: 360px !important;
     left: 400px !important;
   }
+  
 }
 .fifth-card .grid__img {
   width: 400px !important;
@@ -3118,6 +3139,7 @@ pre.prettyprint {
   top: 425px !important;
   left: 800px !important;
 }
+
 
 .ninth-card .grid__link:before {
   width: 285px;
