@@ -412,7 +412,7 @@ export default class Example extends React.Component {
                         <Row>
                           <Col md="3">
                             <TeamCard2
-                              name="Prof. J.P. Saini"
+                              name="Prof. Prateek Sharma"
                               bio="Hon'ble Vice Chancellor"
                               img={require("assets/img/faculty/VC.jpg")}
                             // linkedin={element && element.linkedin}
