@@ -196,7 +196,7 @@ export default class Example extends React.Component {
                           });
                         }}
                       >
-                        Coordinator
+                        Council
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -409,10 +409,11 @@ export default class Example extends React.Component {
                         </Row>
                       </TabPane>
                       <TabPane tabId={"pill-1"}>
-                        <Row>
+                        <Row className="justify-content-center">
+
                           <Col md="3">
                             <TeamCard2
-                              name="Prof. J.P. Saini"
+                              name="Prof. Prateek Sharma"
                               bio="Hon'ble Vice Chancellor"
                               img={require("assets/img/faculty/VC.jpg")}
                             // linkedin={element && element.linkedin}
@@ -420,6 +421,8 @@ export default class Example extends React.Component {
                             // instagram={element && element.instagram}
                             />
                           </Col>
+                                                  </Row>
+                        <Row>
                           <Col md="3">
                             <TeamCard2
                               name="Prof. S. Indu"
@@ -450,8 +453,7 @@ export default class Example extends React.Component {
                             // instagram={element && element.instagram}
                             />
                           </Col>
-                        </Row>
-                        <Row>
+                        
                           <Col md="3">
                             <TeamCard2
                               name="Mrs. Parinita Sinha"
