@@ -426,7 +426,7 @@ export default class Example extends React.Component {
                           <Col md="3">
                             <TeamCard2
                               name="Prof. S. Indu"
-                              bio="Dean, Student Welfare"
+                              bio="Dean, Digital Education"
                               img={require("assets/img/faculty/sindu.jpg")}
                             // linkedin={element && element.linkedin}
                             // facebook={element && element.facebook}
@@ -446,7 +446,7 @@ export default class Example extends React.Component {
                           <Col md="3">
                             <TeamCard2
                               name="Dr. Yashna Sharma"
-                              bio="Assistant Professor, Dept. of Electronics & Communication Engineering"
+                              bio="Public Relation Officer (PRO) & Coordinator, Edusat"
                               img={require("assets/img/faculty/yashna.jpg")}
                             // linkedin={element && element.linkedin}
                             // facebook={element && element.facebook}
