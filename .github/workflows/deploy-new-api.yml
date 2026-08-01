@@ -1,0 +1,62 @@
+name: Deploy Main Website (new-API)
+
+on:
+  push:
+    branches: ["new-API"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main-website-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 14
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci || npm i
+
+      - name: Build
+        run: npm run build
+
+      - name: Select build output directory
+        id: output
+        run: |
+          if [ -d dist ]; then
+            echo "path=dist/" >> "$GITHUB_OUTPUT"
+          elif [ -d build ]; then
+            echo "path=build/" >> "$GITHUB_OUTPUT"
+          else
+            echo "Neither dist/ nor build/ exists after npm run build"
+            exit 1
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: ${{ steps.output.outputs.path }}
+
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    permissions: {}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./site
+
+      - name: Deploy to DigitalOcean web root
+        run: rsync -vz --delete --recursive site/ /var/www/main_website/
