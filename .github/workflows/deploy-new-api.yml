@@ -27,7 +27,7 @@ jobs:
         run: npm ci || npm i
 
       - name: Build
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Select build output directory
         id: output
